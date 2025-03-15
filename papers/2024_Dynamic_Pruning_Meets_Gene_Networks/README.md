@@ -52,5 +52,10 @@ Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 [![Watch on YouTube](https://img.youtube.com/vi/JRHKFsH98nc/0.jpg)](https://youtu.be/JRHKFsH98nc)
 
 
+## 🎥 Watch the Video (English Version)
+
+[![Watch on YouTube](https://img.youtube.com/vi/SLEso_arnvo/0.jpg)](https://youtu.be/SLEso_arnvo)
+
+
 ⬆ **画像をクリックすると YouTube で動画が再生されます！** 🎬  
 
