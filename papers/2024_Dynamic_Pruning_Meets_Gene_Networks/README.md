@@ -29,7 +29,7 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 
 ### Figure 1: Non-zero Parameters vs Pruning Efficiency
 
-![Supplementary Figure](https://github.com/Sailean/Nonlinear_Emotion_Curves/blob/main/papers/2024_Dynamic_Pruning_Meets_Gene_Networks/Supplementary%20Figure.png)
+[[Supplementary Figure](https://github.com/Sailean/!Nonlinear_Emotion_Curves/blob/main/papers/2024_Dynamic_Pruning_Meets_Gene_Networks/Supplementary%20Figure.png)](https://youtu.be/JRHKFsH98nc?si=29oxt_Ebl7oCVxoV)
 
 This figure illustrates the relationship between pruning percentage and model efficiency.  
 Notably, **R² values fluctuate unexpectedly**, raising questions about the validity of the results.  
