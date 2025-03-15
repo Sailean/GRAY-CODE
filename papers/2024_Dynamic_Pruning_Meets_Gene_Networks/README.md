@@ -45,9 +45,6 @@ Notably, **R² values fluctuate unexpectedly**, raising questions about the vali
 Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 
 ### 図1: 非ゼロパラメータ数とプルーニング効率の関係
-
-![補足図](https://github.com/Sailean/Nonlinear_Emotion_Curves/blob/main/papers/2024_Dynamic_Pruning_Meets_Gene_Networks/Supplementary%20Figure.png)
-
 この図は、プルーニングの割合とモデルの効率の関係を示しています。  
 特に、**R²値が予想外に変動している点**が注目され、結果の妥当性に疑問を投げかけています。  
 これは本当に画期的な発見なのか、それともただの **AI生成の異常値** なのか？ 🤔  
