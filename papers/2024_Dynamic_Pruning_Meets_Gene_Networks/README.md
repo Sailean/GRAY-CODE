@@ -1,3 +1,13 @@
+📝 **I was writing an SF story while chatting with AI... and somehow, a research paper was created.**   **AIと会話しながらSFストーリーを執筆していたら、論文が出来てしまいました。**  
+🤯 **It turned out to be quite interesting, so I decided to publish it.**   **面白かったので、公開します。**  
+
+
+📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイク論文です。ユーモアとしてお楽しみください！**
+
+
+📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
+
+
 # 2024 Dynamic Pruning Meets Gene Networks
 
 This repository contains the paper **"Dynamic Pruning Meets Gene Networks: A Biologically Inspired AI Model for Emotion Recognition and Cultural Adaptation"**.
@@ -20,11 +30,6 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 - パフォーマンスを向上させながら **モデル サイズを 50% 削減しました**。 → **ウソです。**  
 - さまざまな文化的背景にわたって **高い安定性を実証しました**。 → **そうなら良いですね。**  
 
-
-📜 **本論文はフェイク論文です。ユーモアとしてお楽しみください！** 😆  
-
-
-📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
 
 
 ### Figure 1: Non-zero Parameters vs Pruning Efficiency
