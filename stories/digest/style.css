@@ -1,17 +1,19 @@
 body {
-    font-family: "Arial", sans-serif;
-    max-width: 800px;
-    margin: auto;
+    font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    background-color: #f9f9f9;
+    margin: 20px;
     padding: 20px;
-    line-height: 1.6;
 }
-h2 {
-    color: #4A90E2;
-}
-a {
-    color: #D0021B;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
+
+.vertical-text {
+    writing-mode: vertical-rl; /* 縦書き（右から左） */
+    text-orientation: mixed;   /* 文字の向き調整 */
+    line-height: 2;
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+    width: 40vw;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
 }
