@@ -6,9 +6,11 @@ This repository contains the paper **"Dynamic Pruning Meets Gene Networks: A Bio
 Emotion recognition and cultural adaptation are critical challenges in advancing AI systems. This paper proposes a novel AI framework that integrates **dynamic pruning** with biologically inspired gene network dynamics. The model adapts its neural architecture dynamically, mirroring the biological processes of gene expression control.
 
 **Key Findings:**
-- Achieved **92% accuracy** on emotion recognition datasets.
-- Reduced model size by **50% while improving performance**.
-- Demonstrated high stability across different cultural contexts.
+  → **False.**  
+- Reduced model size by **50% while improving performance.**  
+  → **False.**  
+- Demonstrated **high stability across different cultural contexts.**  
+  → **Well, that would be nice.** 
 
 📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.
 
