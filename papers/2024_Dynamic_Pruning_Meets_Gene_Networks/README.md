@@ -3,6 +3,7 @@
 This repository contains the paper **"Dynamic Pruning Meets Gene Networks: A Biologically Inspired AI Model for Emotion Recognition and Cultural Adaptation"**.
 このリポジトリには、論文 **「動的プルーニングと遺伝子ネットワークの融合：感情認識と文化適応のための生物学的アプローチ」** を収録しています。
 
+
 ## Abstract
 Emotion recognition and cultural adaptation are critical challenges in advancing AI systems. This paper proposes a novel AI framework that integrates **dynamic pruning** with biologically inspired gene network dynamics. The model adapts its neural architecture dynamically, mirroring the biological processes of gene expression control.
 
@@ -19,7 +20,9 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 - パフォーマンスを向上させながら **モデル サイズを 50% 削減しました**。 → **ウソです。**  
 - さまざまな文化的背景にわたって **高い安定性を実証しました**。 → **そうなら良いですね。**  
 
+
 📜 **本論文はフェイク論文です。ユーモアとしてお楽しみください！** 😆  
+
 
 📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
 
@@ -44,6 +47,7 @@ Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 [![Watch on YouTube](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
 
 ⬆ **画像をクリックすると YouTube で動画が再生されます！** 🎬  
+
 ---
 
 ### **✅ 手順**
