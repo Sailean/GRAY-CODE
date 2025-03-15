@@ -10,19 +10,14 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 
 
 ## Key Findings (？)
-  → **False.**  
-- Reduced model size by **50% while improving performance.**  
-  → **False.**  
-- Demonstrated **high stability across different cultural contexts.**  
-  → **Well, that would be nice.** 
+- Achieved **92% accuracy** on emotion recognition datasets. → **False.**  
+- Reduced model size by **50% while improving performance.**  → **False.**  
+- Demonstrated **high stability across different cultural contexts.**  → **Well, that would be nice.** 
 
 ## 主な調査結果 (？)
-- 感情認識データセットで **92% の精度を達成しました**。  
-  → **ウソです。**  
-- パフォーマンスを向上させながら **モデル サイズを 50% 削減しました**。  
-  → **ウソです。**  
-- さまざまな文化的背景にわたって **高い安定性を実証しました**。  
-  → **そうなら良いですね。**  
+- 感情認識データセットで **92% の精度を達成しました**。 → **ウソです。**  
+- パフォーマンスを向上させながら **モデル サイズを 50% 削減しました**。 → **ウソです。**  
+- さまざまな文化的背景にわたって **高い安定性を実証しました**。 → **そうなら良いですね。**  
 
 📜 **本論文はフェイク論文です。ユーモアとしてお楽しみください！** 😆  
 
