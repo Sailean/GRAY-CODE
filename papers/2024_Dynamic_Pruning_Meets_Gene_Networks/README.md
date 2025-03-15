@@ -44,7 +44,8 @@ Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 
 ## 🎥 Watch the Video / 動画を見る
 📌 **YouTube:**  
-[![Watch on YouTube]([https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID](https://www.youtube.com/watch?v=JRHKFsH98nc&list=PLp1oqHGIwhnjWK0z12ZGiSP2bOXMaXD_R))
+[![Watch on YouTube](https://img.youtube.com/vi/JRHKFsH98nc/0.jpg)](https://youtu.be/JRHKFsH98nc)
+
 
 ⬆ **画像をクリックすると YouTube で動画が再生されます！** 🎬  
 
