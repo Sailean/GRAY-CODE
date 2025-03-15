@@ -54,20 +54,3 @@ Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 
 ⬆ **画像をクリックすると YouTube で動画が再生されます！** 🎬  
 
----
-
-### **✅ 手順**
-1. **GitHub Web UIで追加する方法**
-   1. `papers/2024_Dynamic_Pruning_Meets_Gene_Networks/` に移動
-   2. 「Add file」→「Create new file」
-   3. **ファイル名:** `README.md`
-   4. **内容をコピペ**
-   5. 「Commit changes」で保存！🎉
-
-2. **Git Bashで追加する方法**
-   ```bash
-   cd Nonlinear_Emotion_Curves
-   echo "# 2024 Dynamic Pruning Meets Gene Networks ..." > papers/2024_Dynamic_Pruning_Meets_Gene_Networks/README.md
-   git add .
-   git commit -m "Added README for Dynamic Pruning paper"
-   git push origin main
