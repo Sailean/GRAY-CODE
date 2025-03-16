@@ -18,40 +18,29 @@
  * 3. Style
  */
 
-@charset "UTF-8";
+ @charset "UTF-8";
 
-html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "游ゴシック", "Yu Gothic" "Noto Color Emoji";
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  background: #f2f2f2;
-  color: #312d2d;
-  font-variant-ligatures: none;
-}
-
-body {
-    font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
-    background-color: #f9f9f9;
-    margin: 0; /* 余白を完全になくす */
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* 画面上部から配置 */
-    height: 100vh; /* 画面いっぱいにする */
-    overflow: hidden; /* 余計なスクロールを防ぐ */
-}
-
-.wrapper {
-    display: flex;
-    justify-content: flex-start; /* 左端寄せ */
-    width: 100%;
-    max-width: 100vw; /* 画面幅いっぱい */
-    overflow-x: auto; /* 横スクロール可能にする */
-    padding-left: 2em; /* 左端の余白 */
-}
-
+ html {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "游ゴシック", "Yu Gothic" "Noto Color Emoji";
+   font-size: 16px;
+   font-weight: normal;
+   line-height: 1.5;
+   -webkit-text-size-adjust: 100%;
+   background: #f2f2f2;
+   color: #312d2d;
+   font-variant-ligatures: none;
+ }
+ 
+ /* ルビ（フリガナ）フォントを指定 */
+ 
+ rt {
+   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+   font-size: 60%;
+   /*フリガナのフォントサイズを指定 */
+   color: rgb(79, 70, 70);
+   /*フリガナの色を指定 */
+ }
+ 
 /* 縦書き用カスタムクラス */
 .uk-vertical-text {
     writing-mode: vertical-rl;
@@ -59,11 +48,10 @@ body {
     line-height: 2;
     font-size: 1.2em;
     width: auto;
-    max-width: 40vw; /* レスポンシブ対応 */
+    /* max-width: 40vw; /* レスポンシブ対応 */
     margin: 0 auto;
     padding: 20px;
     background-color: none;
-    border: opx solid #ccc;
 }
 
 .japanese-text p {
@@ -72,6 +60,13 @@ body {
 /* かぎかっこ、括弧で始まる段落は字下げしない */
 .japanese-text p::first-letter {
     text-indent: 0;
+
+}
+
+.japanese-text p {
+  text-indent: 1em; /* 通常の段落は字下げする */
+}
+
 
 /* ルビ（フリガナ）フォントを指定 */
 ruby {
@@ -220,11 +215,12 @@ h6,
   margin: 0 0 25px 0;
   font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
   color: #333;
-  text-transform: none;
+  text-transform: bold;
 }
 
 .heading {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, "Hiragino Mincho ProN", Noto Serif JP;
+  color: #333;
 }
 
 /* Add margin if adjacent element */
