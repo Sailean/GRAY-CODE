@@ -28,8 +28,25 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 ## 主な調査結果 (？)
 - 感情認識データセットで **92% の精度を達成しました**。 → **ウソです。**  
 - パフォーマンスを向上させながら **モデル サイズを 50% 削減しました**。 → **ウソです。**  
-- さまざまな文化的背景にわたって **高い安定性を実証しました**。 → **そうなら良いですね。**  
+- さまざまな文化的背景にわたって **高い安定性を実証しました**。 → **そうなら良いですね。**
 
+## Why was this dataset chosen?
+To develop the Nonlinear Emotion Curves, we needed a dataset with complex variables and strong nonlinearity to test the model’s adaptive dynamics.
+In this paper, we chose the Diamond Price Dataset, which at first glance seems completely unrelated to the theme.
+Here’s why:
+・It exhibits high-dimensional interactions.
+・The results look literally shiny. 💎
+・The researcher (@Sailean514) could easily run it on Google Colab.
+🎭 The truth is always simple. Thank you.
+
+## 実験データセット選定の理由
+「非線形感情曲線」の構築において、モデルの動的適応性をテストするためには、多様な変数を持ち、かつ非線形性の強いデータが求められます。
+この論文では、一見、論文テーマとはまるで関係がないと思われる 「ダイヤモンド価格データセット」 を選択しました。
+理由は以下の通りです。
+・高次元の相互作用が存在する。
+・実験結果がキラキラして見える（物理的に）。
+・検証者（@Sailean514 ）が Google Colab で簡単に実行できるから。
+🎭 真実はいつもシンプルです。ありがとう。
 
 
 ### Figure 1: Non-zero Parameters vs Pruning Efficiency
