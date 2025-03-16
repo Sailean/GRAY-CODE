@@ -5,7 +5,9 @@
 📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイクです。ユーモアとしてお楽しみください！**
 
 
-📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
+
+👉👉👉📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
+
 
 
 # 2024 Dynamic Pruning Meets Gene Networks
