@@ -1,5 +1,5 @@
-📝 **I was writing an SF story while chatting with AI... and somehow, a research paper was created.**   **AIと会話しながらSFストーリーを執筆していたら、論文が出来てしまいました。**  
-🤯 **It turned out to be quite interesting, so I decided to publish it.**   **面白かったので、公開します。**  
+📝 I was writing an SF story while chatting with AI... and somehow, a research paper was created.   AIと会話しながらSFストーリーを執筆していたら、論文が出来てしまいました。 
+🤯 It turned out to be quite interesting, so I decided to publish it.   面白かったので、公開します。
 
 
 📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイク論文です。ユーモアとしてお楽しみください！**
