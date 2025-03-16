@@ -17,3 +17,16 @@ body {
     padding: 10px;
     background-color: white;
 }
+
+/* ✅ 改行（<br>）と段落（<p>）の行間を調整 */
+.vertical-text p {
+    margin: 1em 0; /* 段落間の余白 */
+    text-indent: 1em; /* ✅ 段落の最初を字下げ */
+}
+
+.vertical-text br {
+    content: ""; /* ✅ 改行の視認性UP（<p>と差をつける） */
+    display: block;
+    height: 1em;
+}
+
