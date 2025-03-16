@@ -1,53 +1,34 @@
 body {
     font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
     background-color: #f9f9f9;
-    margin: 0;
+    margin: 0; /* 余白を完全になくす */
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* 画面いっぱいに調整 */
+    align-items: flex-start; /* 画面上部から配置 */
+    height: 100vh; /* 画面いっぱいにする */
+    overflow: hidden; /* 余計なスクロールを防ぐ */
 }
 
 .wrapper {
     display: flex;
-    justify-content: flex-start; /* 左端に固定 */
+    justify-content: flex-start; /* 左端寄せ */
     width: 100%;
-    max-width: 90vw; /* 画面の90%を使う */
-    overflow-x: auto; /* はみ出たらスクロール可能に */
+    max-width: 100vw; /* 画面幅いっぱい */
+    overflow-x: auto; /* 横スクロール可能にする */
+    padding-left: 2em; /* 左端の余白 */
 }
 
 .vertical-text {
-    writing-mode: vertical-rl; /* 縦書き（右から左） */
-    text-orientation: mixed;   /* 文字の向き調整 */
+    writing-mode: vertical-rl; /* 縦書き */
+    text-orientation: mixed; /* 文字の向き調整 */
     line-height: 2;
     letter-spacing: 0.1em;
     font-size: 1.2em;
-    width: 40vw;
-    height: auto;
+    width: auto;
+    max-height: 90vh; /* 画面の高さに収める */
+    padding: 20px;
     border: 1px solid #ccc;
-    padding: 10px;
     background-color: white;
-
-    /* ここを追加・変更 */
-    margin-left: auto;  /* 左側の余白を自動調整 */
-    margin-right: auto; /* 右側の余白を自動調整 */
-    text-align: start;  /* テキストの開始位置を調整 */
-    overflow-wrap: break-word; /* 長すぎる単語の折り返し */
-    white-space: normal; /* テキストの折り返しを許可 */
+    white-space: normal; /* 必要に応じて改行 */
 }
-
-/* ✅ 改行（<br>）と段落（<p>）の行間を調整 */
-.vertical-text p {
-    margin: 1em 0; /* 段落間の余白 */
-    text-indent: 1em; /* ✅ 段落の最初を字下げ */
-}
-
-.vertical-text br {
-    content: ""; /* ✅ 改行の視認性UP（<p>と差をつける） */
-    display: block;
-    height: 1em;
-}
-
-
-
