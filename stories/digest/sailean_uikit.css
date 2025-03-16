@@ -48,7 +48,9 @@ html {
 
 
 /* ルビ（フリガナ）フォントを指定 */
-
+ruby {
+    font-size: 1.1em;
+}
 rt {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
   font-size: 60%;
