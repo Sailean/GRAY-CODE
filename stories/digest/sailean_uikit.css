@@ -72,7 +72,8 @@ body {
 /* かぎかっこ、括弧で始まる段落は字下げしない */
 .japanese-text p:has(「), 
 .japanese-text p:has(（), 
-.japanese-text p:has(『') {
+.japanese-text p:has(─), 
+.japanese-text p:has(『) {
     text-indent: 0;
 }
 
