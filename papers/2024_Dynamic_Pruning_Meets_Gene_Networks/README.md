@@ -51,7 +51,7 @@ Here’s why:
 - 🎭 真実はいつもシンプルです。ありがとう。
 
 
-### Figure 1: Non-zero Parameters vs Pruning Efficiency
+### Figure 1: Non-zero Parameters vs Pruning Efficiency　図1: 非ゼロパラメータ数とプルーニング効率の関係
 
 ![Supplementary Figure](https://github.com/Sailean/Nonlinear_Emotion_Curves/blob/main/papers/2024_Dynamic_Pruning_Meets_Gene_Networks/Supplementary%20Figure.png)
 
@@ -59,7 +59,6 @@ This figure illustrates the relationship between pruning percentage and model ef
 Notably, **R² values fluctuate unexpectedly**, raising questions about the validity of the results.  
 Could this be a true breakthrough, or just an AI-generated anomaly? 🤔
 
-### 図1: 非ゼロパラメータ数とプルーニング効率の関係
 この図は、プルーニングの割合とモデルの効率の関係を示しています。  
 特に、**R²値が予想外に変動している点**が注目され、結果の妥当性に疑問を投げかけています。  
 これは本当に画期的な発見なのか、それともただの **AI生成の異常値** なのか？ 🤔  
