@@ -2,7 +2,7 @@
 🤯 It turned out to be quite interesting, so I decided to publish it.   面白かったので、公開します。
 
 
-📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイク論文です。ユーモアとしてお楽しみください！**
+📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイクです。ユーモアとしてお楽しみください！**
 
 
 📄 **[Read the full paper here](2024_Dynamic%20Pruning%20Meets%20Gene%20Networks.pdf)**.（論文のフルバージョンはこちら）
