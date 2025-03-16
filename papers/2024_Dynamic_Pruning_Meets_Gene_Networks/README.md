@@ -34,7 +34,7 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 
 ### Figure 1: Non-zero Parameters vs Pruning Efficiency
 
-[[Supplementary Figure]
+[Supplementary Figure]
 
 This figure illustrates the relationship between pruning percentage and model efficiency.  
 Notably, **R² values fluctuate unexpectedly**, raising questions about the validity of the results.  
