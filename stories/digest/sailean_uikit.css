@@ -62,8 +62,8 @@ body {
     max-width: 40vw; /* レスポンシブ対応 */
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: none;
+    border: opx solid #ccc;
 }
 
 
