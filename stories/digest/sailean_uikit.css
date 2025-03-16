@@ -70,12 +70,8 @@ body {
     text-indent: 1em; /* 通常の段落は字下げする */
 }
 /* かぎかっこ、括弧で始まる段落は字下げしない */
-.japanese-text p:has(「), 
-.japanese-text p:has(（), 
-.japanese-text p:has(─), 
-.japanese-text p:has(『) {
+.japanese-text p::first-letter {
     text-indent: 0;
-}
 
 /* ルビ（フリガナ）フォントを指定 */
 ruby {
