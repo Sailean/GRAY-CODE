@@ -31,6 +31,27 @@ html {
   font-variant-ligatures: none;
 }
 
+body {
+    font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    background-color: #f9f9f9;
+    margin: 0; /* 余白を完全になくす */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 画面上部から配置 */
+    height: 100vh; /* 画面いっぱいにする */
+    overflow: hidden; /* 余計なスクロールを防ぐ */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start; /* 左端寄せ */
+    width: 100%;
+    max-width: 100vw; /* 画面幅いっぱい */
+    overflow-x: auto; /* 横スクロール可能にする */
+    padding-left: 2em; /* 左端の余白 */
+}
+
 /* 縦書き用カスタムクラス */
 .uk-vertical-text {
     writing-mode: vertical-rl;
