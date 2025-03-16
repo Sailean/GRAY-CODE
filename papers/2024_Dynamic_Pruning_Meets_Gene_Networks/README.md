@@ -34,10 +34,11 @@ Emotion recognition and cultural adaptation are critical challenges in advancing
 To develop the Nonlinear Emotion Curves, we needed a dataset with complex variables and strong nonlinearity to test the model’s adaptive dynamics.
 In this paper, we chose the Diamond Price Dataset, which at first glance seems completely unrelated to the theme.
 Here’s why:
-・It exhibits high-dimensional interactions.
-・The results look literally shiny. 💎
-・The researcher (@Sailean514) could easily run it on Google Colab.
-🎭 The truth is always simple. Thank you.
+- It exhibits high-dimensional interactions.
+- The results look literally shiny. 💎
+- The researcher (@Sailean514) could easily run it on Google Colab.
+  
+- 🎭 The truth is always simple. Thank you.
 
 ## 実験データセット選定の理由
 「非線形感情曲線」の構築において、モデルの動的適応性をテストするためには、多様な変数を持ち、かつ非線形性の強いデータが求められます。
