@@ -16,6 +16,13 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     background-color: white;
+
+    /* ここを追加・変更 */
+    margin-left: auto;  /* 左側の余白を自動調整 */
+    margin-right: auto; /* 右側の余白を自動調整 */
+    text-align: start;  /* テキストの開始位置を調整 */
+    overflow-wrap: break-word; /* 長すぎる単語の折り返し */
+    white-space: normal; /* テキストの折り返しを許可 */
 }
 
 /* ✅ 改行（<br>）と段落（<p>）の行間を調整 */
@@ -29,4 +36,6 @@ body {
     display: block;
     height: 1em;
 }
+
+
 
