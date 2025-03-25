@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -108,3 +109,115 @@
     <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事ページ</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="css/sailean_uikit.css">
+  <link rel="stylesheet" href="css/uikit.css">
+</head>
+<body>
+  <div class="uk-section uk-section-default uk-section-small uk-padding">
+    <div class="uk-container uk-container-small">
+      <nav class="chapter-nav uk-margin">
+        <a id="prev-link" href="#">← 前へ</a>
+        <a href="index.html">目次へ</a>
+        <a id="next-link" href="#">次へ →</a>
+      </nav>      
+    <p id="article-date">📜 記事を読み込み中...</p>
+    <div id="article-content" class="uk-card uk-card-default uk-card-body"></div>
+  </div>
+</div>
+
+<!-- 上へ戻るボタン -->
+<div id="topbutton" onclick="scrollToTop()" class="arrow" title="上へ戻る">↑</div>
+
+  <script>
+    // Markdownを読み込んでHTMLに変換し、本文に表示する(URLパラメータから記事ファイル名を取得)
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
+
+    if (file) {
+      fetch(`articles/${file}`)
+        .then(response => response.text())
+        .then(text => {
+          document.getElementById('article-content').innerHTML = marked.parse(text);
+          document.getElementById('article-date').innerText = file.replace('.md', '');
+        })
+        .catch(error => {
+          document.getElementById('article-content').innerHTML = '<p>⚠ 記事が見つかりません。</p>';
+          console.error('Error loading article:', error);
+        });
+    } else {
+      document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
+    }
+  </script>
+
+
+<!-- ナビゲーションリンクとタイトル表示の処理 -->
+<script>
+  fetch('articles.json')
+    .then(res => res.json())
+    .then(data => {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get('file');
+      const index = data.findIndex(item => item.file === file);
+      if (index > -1) {
+        const prev = data[index - 1];
+        const next = data[index + 1];
+        if (prev) {
+          document.getElementById('prev-link').href = `article.html?file=${prev.file}`;
+          document.getElementById('prev-link').innerText = `← ${prev.title}`;
+        } else {
+          document.getElementById('prev-link').style.visibility = 'hidden';
+        }
+        if (next) {
+          document.getElementById('next-link').href = `article.html?file=${next.file}`;
+          document.getElementById('next-link').innerText = `${next.title} →`;
+        } else {
+          document.getElementById('next-link').style.visibility = 'hidden';
+        }
+
+        // BONUS: 記事タイトルを表示
+        const titleElem = document.getElementById('article-title');
+        if (titleElem) {
+          titleElem.textContent = data[index].title;
+        }
+      }
+    });
+</script>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<script>
+  // スクロール位置で表示・非表示
+  window.addEventListener("scroll", function () {
+    const topBtn = document.getElementById("topbutton");
+    if (window.scrollY > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+</script>
+
+
+    <script src="js/load_articles.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/uikit.js" async></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
+</body>
+</html>
+>>>>>>> a6b766a51b08c6e9b2d1ef465a2a8517683cb890
