@@ -1,0 +1,7725 @@
+/*!
+ * Title: Sailean UIkit Custom Styles (REM Version)
+ * Description: This file contains custom styles for the Ryuko website, converted to use rem units.
+ * Author: [@Sailean514]
+ * Created: [2025.03.16]
+ * Last Modified: [2025.03.19]
+ *
+ * Original UIkit 3.17.5 Framework by YOOtheme
+ * Licensed under the MIT License (MIT)
+ * UIkit's documentation: https://getuikit.com/docs
+ */
+
+/* ========================================================================
+   Component: Base
+ ========================================================================== */
+
+ @charset "UTF-8";
+
+ html {
+   font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif, "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   font-size: 1rem; /* 16px → 1rem */
+   font-weight: normal;
+   line-height: 1.5;
+   -webkit-text-size-adjust: 100%;
+   background: #f2f2f2;
+   color: #1f1b1b;
+   font-variant-ligatures: none;
+ }
+ 
+ body {
+  font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif; /* 例: 日本語小説向けフォント */
+}
+
+.article-item {
+  padding: 0.625rem; /* 10px → 0.625rem */
+  border-bottom: 0.0625rem solid #ddd; /* 1px → 0.0625rem */
+}
+
+#article-title {
+  font-size: 1.75rem; /* 28px → 1.75rem */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.3125rem; /* 5px → 0.3125rem */
+}
+
+#article-date {
+  font-size: 1rem; /* 16px → 1rem */
+  color: #434343;
+  margin-bottom: 0.9375rem; /* 15px → 0.9375rem */
+}
+
+#article-content {
+  font-size: 1.125rem; /* 18px → 1.125rem */
+  line-height: 1.8; /* 相対値の方が調整しやすい */
+  text-align: justify;
+}
+
+#articles-list{
+  font-size: 1.25rem; line-height: 1.4;
+  text-align: justify;
+}
+
+.chapter-nav { /* ナビゲーション表示 */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.chapter-nav a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.uk-list li {
+  padding: 0.625rem; /* 10px */
+  border-bottom: 0.0625rem;
+}
+
+/* ルビ（フリガナ）フォント指定 */
+rt {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  font-size: 60%; /* パーセンテージはそのままで OK */
+  color: rgb(57, 50, 50);
+}
+
+/* 縦書き用カスタムクラス */
+.uk-vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 2;
+  font-size: 1.2rem; /* em → rem */
+  width: auto;
+  margin: 0 auto;
+  padding: 1.25rem; /* 例: 20px → 1.25rem */
+  background-color: transparent;
+}
+
+.japanese-text p {
+  text-indent: 1rem; /* 1em → 1rem */
+}
+
+/* かぎかっこ、括弧で始まる段落は字下げしない */
+.japanese-text p::first-letter {
+  text-indent: 0;
+}
+
+
+/* ルビ（フリガナ）フォントを指定 */
+ruby {
+    font-size: 1em;
+}
+rt {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  font-size: 60%;
+  /*フリガナのフォントサイズを指定 */
+  color: rgb(79, 70, 70);
+  /*フリガナの色を指定 */
+}
+
+/* Links
+ ========================================================================== */
+/*
+ * Style
+ */
+a:active,
+/*拡張?： 要確認 */
+a:hover {
+  outline: none;
+}
+
+a,
+.uk-link {
+  color: #00742c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+.uk-link:hover,
+.uk-link-toggle:hover .uk-link,
+.uk-link-toggle:focus .uk-link {
+  color: #51ad41;
+  text-decoration: none;
+}
+
+/* Text-level semantics
+ ========================================================================== */
+/*
+ * 1. Add the correct text decoration in Edge.
+ * 2. The shorthand declaration `underline dotted` is not supported in Safari.
+ */
+
+.anchor {
+  /*拡張?： 要確認 */
+  display: block;
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+/* 画像に影をつける
+ ========================================================================== */
+/*
+/* 通常の画像スタイル */
+img {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+a:hover img {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 影をつけない */
+.no-shadow {
+  box-shadow: none;
+}
+
+/* Embedded content
+ ========================================================================== */
+/*
+ * Deprecated: only needed for `img` elements with `uk-img`
+ * 1. Hide `alt` text for lazy load images.
+ * 2. Fix lazy loading images if parent element is set to `display: inline` and has `overflow: hidden`.
+ */
+
+/* Block elements
+ ========================================================================== */
+/*
+ * Margins
+ */
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure {
+  margin: 0 0 20px 0;
+  /* 上 右 下 左 */
+}
+
+/* Add margin if adjacent element */
+*+p,
+*+ul,
+*+ol,
+*+dl,
+*+pre,
+*+address,
+*+fieldset,
+*+figure {
+  margin-top: 20px;
+}
+
+/* 段落で字下げ */
+p.indent {
+  /* 拡張 */
+  text-indent: 1em;
+  margin: 0 0 5px 0;
+}
+
+.p-small {
+  /* 要確認 */
+  margin: 0 0 0.3em 0;
+}
+
+*+.p-small {
+  /* 要確認 */
+  margin-top: 0.3em;
+}
+
+
+/* Headings
+ ========================================================================== */
+ h1,
+ .uk-h1,
+ h2,
+ .uk-h2,
+ h3,
+ .uk-h3,
+ h4,
+ .uk-h4,
+ h5,
+ .uk-h5,
+ h6,
+ .uk-h6,
+ .uk-heading-small,
+ .uk-heading-medium,
+ .uk-heading-large,
+ .uk-heading-xlarge,
+ .uk-heading-2xlarge {
+   margin: 0 0 1.5625rem 0; /* 25px → 1.5625rem */
+   color: #333;
+   text-transform: bold;
+ }
+
+.heading {
+  font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  color: #333;
+}
+
+/* Add margin if adjacent element */
+*+h1,
+*+.uk-h1,
+*+h2,
+*+.uk-h2,
+*+h3,
+*+.uk-h3,
+*+h4,
+*+.uk-h4,
+*+h5,
+*+.uk-h5,
+*+h6,
+*+.uk-h6,
+*+.uk-heading-small,
+*+.uk-heading-medium,
+*+.uk-heading-large,
+*+.uk-heading-xlarge,
+*+.uk-heading-2xlarge {
+  margin-top: 1.5625rem; /* 25px → 1.5625rem */
+  /* 変更（元:40px） */
+}
+
+/* Sizes for headings */
+h1, .uk-h1 { font-size: 2.23125rem; line-height: 1.2; }
+h2, .uk-h2 { font-size: 1.7rem; line-height: 1.3; }
+h3, .uk-h3 { font-size: 1.5rem; line-height: 1.4; }
+h4, .uk-h4 { font-size: 1.25rem; line-height: 1.4; }
+h5, .uk-h5 { font-size: 1rem; line-height: 1.4; }
+h6, .uk-h6 { font-size: 0.875rem; line-height: 1.4; }
+
+
+.uk-position-center.uk-transition-slide-top .heading.uk-dark {
+  color: #432c2c;
+}
+
+/* 半角スペース分のマージンを右に追加 */
+.heading .fas {
+  margin-right: 0.5em;
+  /* または希望のスペースに調整 */
+}
+
+
+/* Lists
+ ========================================================================== */
+ul,
+ol {
+  padding-left: 30px;
+}
+
+/*
+ * Reset margin for nested lists
+ */
+ul>li>ul,
+ul>li>ol,
+ol>li>ol,
+ol>li>ul {
+  margin: 0;
+}
+
+/* Description lists
+ ========================================================================== */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Horizontal rules
+ ========================================================================== */
+/*
+ * 1. Show the overflow in Chrome, Edge and IE.
+ * 2. Add the correct text-align in Edge and IE.
+ * 3. Style
+ */
+hr,
+.uk-hr {
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  text-align: inherit;
+  /* 3 */
+  margin-top: 50px;
+  border: 0;
+  border-top: 1px solid #a5a2a2;
+}
+
+.uk-hr-dark {
+  /* 要確認 */
+  overflow: visible;
+  text-align: inherit;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #cabebe;
+  background-color: #151515;
+}
+
+/* Add margin if adjacent element */
+*+hr,
+*+.uk-hr {
+  margin-top: 20px;
+}
+
+/* Address
+ ========================= */
+address {
+  font-style: normal;
+}
+
+/* Blockquotes
+ ======================== */
+blockquote {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #171717;
+}
+
+/* Add margin if adjacent element */
+*+blockquote {
+  margin-top: 20px;
+}
+
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+blockquote footer {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+blockquote footer::before {
+  content: "— ";
+}
+
+/* Preformatted text
+ ========================================================================== */
+/*
+ * 1. Contain overflow in all browsers.
+ */
+pre {
+  font: 0.875rem / 1.5 Consolas, monaco, monospace;
+  color: #555;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #cabebe;
+  border-radius: 3px;
+  background: #ebeae9ec;
+}
+
+pre code {
+  font-family: Consolas, monaco, monospace;
+}
+
+/* Focus
+ ========================================================================== */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px dotted #333;
+}
+
+/* Selection pseudo-element
+ ========================================================================== */
+::selection {
+  background: #f5f5f5;
+  color: #65c294;
+  text-shadow: none;
+}
+
+/* HTML5 elements
+ ========================================================================== */
+/*
+ * 1. Add the correct display in Edge, IE 10+, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+details,
+main {
+  /* 2 */
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+   * Add the correct display in IE.
+   */
+template {
+  display: none;
+}
+
+/* Pass media breakpoints to JS　ブレークポイント
+ ========================================================================== */
+/*
+ * Breakpoints
+ */
+:root {
+  /* ブレークポイント変更あり。要確認 */
+  --uk-breakpoint-s: 640px;
+  --uk-breakpoint-m: 960px;
+  --uk-breakpoint-l: 1200px;
+  --uk-breakpoint-xl: 1600px;
+}
+
+.uk-breakpoint-s::before {
+  content: '640px';
+}
+
+.uk-breakpoint-m::before {
+  content: '960px';
+}
+
+.uk-breakpoint-l::before {
+  content: '1200px';
+}
+
+.uk-breakpoint-xl::before {
+  content: '1600px';
+}
+
+/* ========================================================================
+   Component: Link
+ ========================================================================== */
+/* Muted
+ ========================================================================== */
+a.uk-link-muted,
+.uk-link-muted a,
+.uk-link-toggle .uk-link-muted {
+  color: #2a302b;
+}
+
+a.uk-link-muted:hover,
+.uk-link-muted a:hover,
+.uk-link-toggle:hover .uk-link-muted {
+  color: #555;
+}
+
+a.uk-link-tertiary,
+/* 拡張 */
+.uk-link-tertiary a {
+  color: #666;
+}
+
+a.uk-link-tertiary:hover,
+/* 拡張 */
+.uk-link-tertiary a:hover,
+.uk-link-toggle:hover .uk-link-tertiary,
+.uk-link-toggle:focus .uk-link-tertiary {
+  color: #6666667e;
+}
+
+/* Text
+ ========================================================================== */
+a.uk-link-text,
+.uk-link-text a,
+.uk-link-toggle .uk-link-text {
+  color: inherit;
+}
+
+a.uk-link-text:hover,
+.uk-link-text a:hover,
+.uk-link-toggle:hover .uk-link-text {
+  color: #666;
+}
+
+/* Heading　ヘディング
+  ========================================================================== */
+a.uk-link-heading,
+.uk-link-heading a {
+  color: inherit;
+}
+
+a.uk-link-heading:hover,
+.uk-link-heading a:hover,
+.uk-link-toggle:hover .uk-link-heading,
+.uk-link-toggle:focus .uk-link-heading {
+  color: #2a302b;
+  text-decoration: none;
+}
+
+/* Toggle
+  ========================================================================== */
+
+.uk-link-toggle:focus {
+  /* 要確認（新に無し？） */
+  outline: none;
+}
+
+/* ========================================================================
+   Component: Heading Media Queries の単位も rem に変換
+ ========================================================================== */
+.uk-heading-3xlarge {
+  /* 新 */
+  font-size: 8rem;
+  line-height: 1;
+}
+
+/* Tablet Landscape and bigger */
+@media (min-width: 60rem) {  /* 960px → 60rem */
+  h1, .uk-h1 {
+    font-size: 2.625rem;
+  }
+  h2, .uk-h2 { font-size: 2rem; }
+}
+
+/* Laptop and bigger */
+@media (min-width: 75rem) {  /* 1200px → 75rem */
+  /* 必要なプロパティをここで上書き */
+}
+
+@media (min-width: 100rem) { /* 1600px → 100rem */
+  /* 必要なプロパティをここで上書き */
+}
+
+/* Primary
+   Deprecated: Use `uk-heading-medium` instead
+ ========================================================================== */
+/* Tablet landscape and bigger */
+/* Desktop and bigger */
+/* Hero
+   Deprecated: Use `uk-heading-xlarge` instead
+ ========================================================================== */
+/* Tablet landscape and bigger */
+/* Desktop and bigger */
+/* Divider
+ ========================================================================== */
+.uk-heading-divider {
+  padding-bottom: calc(5px + 0.1em);
+  border-bottom: calc(0.2px + 0.05em) solid #e5e5e5;
+}
+
+/* Bullet
+ ========================================================================== */
+/*
+ * 1. Using `inline-block` to make it work with text alignment
+ * 2. Center vertically
+ * 3. Style
+ */
+.uk-heading-bullet::before {
+  content: "";
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  top: calc(-0.1 * 1em);
+  vertical-align: middle;
+  /* 3 */
+  height: calc(4px + 0.7em);
+  margin-right: calc(5px + 0.2em);
+  border-left: calc(5px + 0.1em) solid #e5e5e5;
+}
+
+/* Line
+ ========================================================================== */
+/*
+ * Clip the child element
+ */
+
+/*
+ * 1. Center vertically
+ * 2. Make the element as large as possible. It's clipped by the container.
+ * 3. Style
+ */
+.uk-heading-line> ::before,
+.uk-heading-line> ::after {
+  content: "";
+  /* 1 */
+  position: absolute;
+  top: calc(50% - (calc(0.2px + 0.05em) / 2));
+  /* 2 */
+  width: 2000px;
+  /* 3 */
+  border-bottom: calc(0.2px + 0.05em) solid #b4b3b3;
+}
+
+/* ========================================================================
+   Component: Divider
+ ========================================================================== */
+/*
+ * 1. Reset default `hr`
+ * 2. Set margin if a `div` is used for semantical reason
+ */
+/* Icon
+ ========================================================================== */
+.uk-divider-icon {
+  position: relative;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23e5e5e5%22%20stroke-width%3D%222%22%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.uk-divider-icon::before,
+.uk-divider-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  max-width: calc(50% - (50px / 2));
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Small
+ ========================================================================== */
+/*
+ * 1. Fix height because of `inline-block`
+ * 2. Using ::after and inline-block to make `text-align` work
+ */
+/* 1 */
+.uk-divider-small {
+  line-height: 0;
+}
+
+/* 2 */
+.uk-divider-small::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  max-width: 100%;
+  border-top: 1px solid #bfbbbb;
+  vertical-align: top;
+}
+
+/* Vertical
+ ========================================================================== */
+.uk-divider-vertical {
+  width: max-content;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 1px solid #e5e5e5;
+}
+
+/* ========================================================================
+   Component: List
+ ========================================================================== */
+
+/* Marker modifiers
+ * Moving `::marker` inside `::before` to style it differently
+ * To style the `::marker` is currently only supported in Firefox and Safari
+ ========================================================================== */
+/*
+   * Color modifiers
+   */
+.uk-list-muted> ::before {
+  color: #999 !important;
+}
+
+.uk-list-emphasis> ::before {
+  color: #333 !important;
+}
+
+.uk-list-primary> ::before {
+  color: #2a302b !important;
+}
+
+.uk-list-secondary> ::before {
+  color: #222 !important;
+}
+
+/* Image bullet modifier
+   ========================================================================== */
+.uk-list-bullet>* {
+  padding-left: 30px;
+}
+
+.uk-list-bullet> ::before {
+  content: "";
+  display: list-item;
+  position: relative;
+  left: -30px;
+  width: 30px;
+  height: 1.5em;
+  margin-bottom: -1.5em;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23666%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Divider
+   */
+.uk-list-divider> :nth-child(n+2) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/*
+   * Striped
+   */
+.uk-list-striped>* {
+  padding: 10px 10px;
+}
+
+.uk-list-striped>*:nth-of-type(odd) {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.uk-list-striped> :nth-of-type(odd) {
+  background: #f2f2f2;
+}
+
+.uk-list-striped> :nth-child(n+2) {
+  margin-top: 0;
+}
+
+/* ========================================================================
+   Component: Description list
+ ========================================================================== */
+/*
+ * Term
+ */
+.uk-description-list>dt {
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.uk-description-list>dt:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+/*
+   * Description
+   */
+/* Style modifier
+   ========================================================================== */
+/*
+   * Line
+   */
+.uk-description-list-divider>dt:nth-child(n+2) {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+/*
+ * 1. Remove most spacing between table cells.
+ * 2. Behave like a block element
+ * 3. Style
+ */
+/* Header cell
+   ========================================================================== */
+/*
+   * 1. Style
+   */
+.uk-table th {
+  padding: 16px 12px;
+  text-align: left;
+  vertical-align: bottom;
+  /* 1 */
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #666;
+  text-transform: uppercase;
+}
+
+/* Caption
+   ========================================================================== */
+.uk-table caption {
+  font-size: 0.875rem;
+  text-align: left;
+  color: #666;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Divider
+   */
+.uk-table-divider>tr:not(:first-child),
+.uk-table-divider> :not(:first-child)>tr,
+.uk-table-divider> :first-child>tr:not(:first-child) {
+  border-top: 1px solid #e5e5e5;
+}
+
+/*
+   * Striped
+   */
+.uk-table-striped>tr:nth-of-type(odd),
+.uk-table-striped tbody tr:nth-of-type(odd) {
+  background: #f2f2f2;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/*
+   * Hover
+   */
+.uk-table-hover>tr:hover,
+.uk-table-hover tbody tr:hover {
+  background: #ffd;
+}
+
+/* Active state
+   ========================================================================== */
+.uk-table>tr.uk-active,
+.uk-table tbody tr.uk-active {
+  background: #ffd;
+}
+
+/* Responsive table
+   ========================================================================== */
+/* Phone landscape and smaller */
+.uk-table-striped>tr:nth-of-type(even):last-child,
+.uk-table-striped tbody tr:nth-of-type(even):last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ========================================================================
+   Component: Icon
+ ========================================================================== */
+/*
+ * Note: 1. - 7. is required for `button` elements. Needed for Close and Form Icon component.
+ * 1. Remove margins in Chrome, Safari and Opera.
+ * 2. Remove borders for `button`.
+ * 3. Remove border-radius in Chrome.
+ * 4. Address `overflow` set to `hidden` in IE.
+ * 5. Correct `font` properties and `color` not being inherited for `button`.
+ * 6. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 7. Remove default `button` padding and background color
+ * 8. Style
+ * 9. Fill all SVG elements with the current text color if no `fill` attribute is set
+ * 10. Let the container fit the height of the icon
+ */
+
+/* Required for `button`. */
+button.uk-icon:not(:disabled) {
+  cursor: pointer;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Link
+   * 1. Allow text within link
+   */
+.uk-icon-link {
+  color: #999;
+  /* 1 */
+  text-decoration: none !important;
+}
+
+.uk-icon-link:hover {
+  color: #666;
+}
+
+/* OnClick + Active */
+.uk-icon-link:active,
+.uk-active>.uk-icon-link {
+  color: #595959;
+}
+
+/*
+   * Button
+   * 1. Center icon vertically and horizontally
+   */
+.uk-icon-button {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  border-radius: 500px;
+  background: #f2f2f2;
+  color: #999;
+  vertical-align: middle;
+  /* 1 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color;
+}
+
+/* Hover */
+.uk-icon-button:hover {
+  background-color: #ebebeb;
+  color: #666;
+}
+
+/* OnClick + Active */
+.uk-icon-button:active,
+.uk-active>.uk-icon-button {
+  background-color: #dfdfdf;
+  color: #666;
+}
+
+/* 上へ行くボタンのスタイル */
+#topbutton {
+  position: fixed;
+  /* 画面の右下に固定 */
+  bottom: 20px;
+  /* 下から20pxの位置 */
+  right: 20px;
+  /* 右から20pxの位置 */
+  cursor: pointer;
+  /* ホバー時にカーソルをポインターに変更 */
+  z-index: 1000;
+  /* 他の要素より上に表示 */
+}
+
+/* 矢印のスタイル */
+.arrow {
+  width: 50px;
+  /* 幅 */
+  height: 50px;
+  /* 高さ */
+  background-color: #666;
+  /* 背景色 */
+  color: white;
+  /* 色 */
+  border-radius: 50%;
+  /* 円形にする */
+  text-align: center;
+  /* テキスト（アイコン）を中央に配置 */
+  line-height: 50px;
+  /* テキスト（アイコン）の縦位置を中央に */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  /* 影をつける */
+}
+
+/* 矢印のホバー時のスタイル */
+.arrow:hover {
+  background-color: #333;
+  /* ホバー時の背景色を変更 */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  /* 影を大きくする */
+}
+
+/* 矢印のクリック時のアニメーション */
+.arrow:active {
+  transform: translateY(-2px);
+  /* クリック時にボタンを少し上に移動 */
+}
+
+#topbutton {
+  display: none;
+}
+
+
+
+/* ========================================================================
+   Component: Form Range
+ ========================================================================== */
+/*
+ * 1. Remove default style.
+ * 2. Define consistent box sizing.
+ * 3. Remove `margin` in all browsers.
+ * 4. Align to the center of the line box.
+ * 5. Prevent content overflow if a fixed width is used.
+ * 6. Take the full width.
+ * 7. Remove white background in Chrome.
+ */
+
+/* Focus */
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+  outline: none;
+  background-color: #fff;
+  color: #666;
+  border-color: #2a302b;
+}
+
+/*
+ * Checked
+ */
+.uk-radio:checked,
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate {
+  background-color: #2a302b;
+  border-color: transparent;
+}
+
+/* Focus */
+.uk-radio:checked:focus,
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+  background-color: #2a302b;
+}
+
+/*
+  * Icons
+  */
+.uk-radio:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23fff%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.uk-checkbox:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.uk-checkbox:indeterminate {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23fff%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+/*
+  * Disabled
+  */
+.uk-radio:disabled,
+.uk-checkbox:disabled {
+  background-color: #f2f2f2;
+  border-color: #e5e5e5;
+}
+
+.uk-radio:disabled:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.uk-checkbox:disabled:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.uk-checkbox:disabled:indeterminate {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23999%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+/*
+   * Track
+   * 1. Safari doesn't have a focus state. Using active instead.
+   */
+/* Webkit */
+.uk-range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #ebebeb;
+  border-radius: 500px;
+}
+
+.uk-range:focus::-webkit-slider-runnable-track,
+.uk-range:active::-webkit-slider-runnable-track {
+  background: #dedede;
+}
+
+/* Firefox */
+.uk-range::-moz-range-track {
+  height: 3px;
+  background: #ebebeb;
+  border-radius: 500px;
+}
+
+.uk-range:focus::-moz-range-track {
+  background: #dedede;
+}
+
+/*
+   * Thumb
+   * 1. Reset
+   * 2. Style
+   */
+/* Webkit */
+.uk-range::-webkit-slider-thumb {
+  /* 1 */
+  -webkit-appearance: none;
+  margin-top: -7px;
+  /* 2 */
+  height: 15px;
+  width: 15px;
+  border-radius: 500px;
+  background: #ebeae9ec;
+  border: 1px solid #cccccc;
+}
+
+/* Firefox */
+.uk-range::-moz-range-thumb {
+  /* 1 */
+  border: none;
+  /* 2 */
+  height: 15px;
+  width: 15px;
+  margin-top: -7px;
+  border-radius: 500px;
+  background: #ebeae9ec;
+  border: 1px solid #cccccc;
+}
+
+/* ========================================================================
+   Component: Form
+ ========================================================================== */
+/*
+ * 1. Define consistent box sizing.
+ *    Default is `content-box` with following exceptions set to `border-box`
+ *    `select`, `input[type="checkbox"]` and `input[type="radio"]`
+ *    `input[type="search"]` in Chrome, Safari and Opera
+ *    `input[type="color"]` in Firefox
+ * 2. Address margins set differently in Firefox/IE and Chrome/Safari/Opera.
+ * 3. Remove `border-radius` in iOS.
+ * 4. Change font properties to `inherit` in all browsers.
+ */
+.uk-input,
+.uk-select,
+.uk-textarea,
+.uk-radio,
+.uk-checkbox {
+  /* 1 */
+  box-sizing: border-box;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  border-radius: 0;
+  /* 4 */
+  font: inherit;
+}
+
+/*
+  * Show the overflow in Edge.
+  */
+.uk-input {
+  overflow: visible;
+}
+
+/*
+  * Remove the inheritance of text transform in Firefox.
+  */
+.uk-select {
+  text-transform: none;
+}
+
+/*
+  * 1. Change font properties to `inherit` in all browsers
+  * 2. Don't inherit the `font-weight` and use `bold` instead.
+  * NOTE: Both declarations don't work in Chrome, Safari and Opera.
+  */
+.uk-select optgroup {
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  font-weight: bold;
+}
+
+/*
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+.uk-textarea {
+  overflow: auto;
+}
+
+/*
+  * Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
+  */
+.uk-input[type="search"]::-webkit-search-cancel-button,
+.uk-input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+.uk-input[type="number"]::-webkit-inner-spin-button,
+.uk-input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+  * Removes placeholder transparency in Firefox.
+  */
+.uk-input::-moz-placeholder,
+.uk-textarea::-moz-placeholder {
+  opacity: 1;
+}
+
+/*
+  * Improves consistency of cursor style for clickable elements
+  */
+.uk-radio:not(:disabled),
+.uk-checkbox:not(:disabled) {
+  cursor: pointer;
+}
+
+/*
+  * Define consistent border, margin, and padding.
+  * 1. Reset `min-width`
+  */
+.uk-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  /* 1 */
+  min-width: 0;
+}
+
+/* Input, select and textarea
+  * Allowed: `text`, `password`, `datetime-local`, `date`,  `month`,
+             `time`, `week`, `number`, `email`, `url`, `search`, `tel`, `color`
+  * Disallowed: `range`, `radio`, `checkbox`, `file`, `submit`, `reset` and `image`
+  ========================================================================== */
+/*
+  * Remove default style in iOS.
+  */
+.uk-input,
+.uk-textarea {
+  -webkit-appearance: none;
+}
+
+/*
+  * 1. Prevent content overflow if a fixed width is used
+  * 2. Take the full width
+  * 3. Reset default
+  * 4. Style
+  */
+.uk-input,
+.uk-select,
+.uk-textarea {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  border: 0 none;
+  /* 4 */
+  padding: 0 10px;
+  background: #ebeae9ec;
+  color: #555;
+  border: 1px solid #e5e5e5;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border;
+}
+
+/*
+  * Single-line
+  * 1. Allow any element to look like an `input` or `select` element
+  * 2. Make sure line-height is not larger than height
+  *    Also needed to center the text vertically
+  */
+.uk-input,
+.uk-select:not([multiple]):not([size]) {
+  height: 40px;
+  vertical-align: middle;
+  /* 1 */
+  display: inline-block;
+}
+
+/* 2 */
+.uk-input:not(input),
+.uk-select:not(select) {
+  line-height: 38px;
+}
+
+/*
+  * Multi-line
+  */
+.uk-select[multiple],
+.uk-select[size],
+.uk-textarea {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  vertical-align: top;
+}
+
+.uk-select[multiple],
+.uk-select[size] {
+  resize: vertical;
+}
+
+/* Focus */
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+  outline: none;
+  background-color: #fff;
+  color: #555;
+  border-color: #1e87f0;
+}
+
+/* Disabled */
+.uk-input:disabled,
+.uk-select:disabled,
+.uk-textarea:disabled {
+  background-color: #f2f2f2;
+  color: #666;
+  border-color: #e5e5e5;
+}
+
+/*
+  * Placeholder
+  */
+.uk-input::placeholder {
+  color: #666;
+}
+
+.uk-textarea::placeholder {
+  color: #666;
+}
+
+/* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
+  ========================================================================== */
+/*
+  * Small
+  */
+.uk-form-small {
+  font-size: 0.875rem;
+}
+
+/* Single-line */
+.uk-form-small:not(textarea):not([multiple]):not([size]) {
+  height: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Multi-line */
+textarea.uk-form-small,
+[multiple].uk-form-small,
+[size].uk-form-small {
+  padding: 5px 8px;
+}
+
+.uk-form-small:not(select):not(input):not(textarea) {
+  line-height: 28px;
+}
+
+/*
+  * Large
+  */
+.uk-form-large {
+  font-size: 1.25rem;
+}
+
+/* Single-line */
+.uk-form-large:not(textarea):not([multiple]):not([size]) {
+  height: 55px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Multi-line */
+textarea.uk-form-large,
+[multiple].uk-form-large,
+[size].uk-form-large {
+  padding: 7px 12px;
+}
+
+.uk-form-large:not(select):not(input):not(textarea) {
+  line-height: 53px;
+}
+
+/* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
+  ========================================================================== */
+/*
+  * Error
+  */
+.uk-form-danger,
+.uk-form-danger:focus {
+  color: #f0506e;
+  border-color: #f0506e;
+}
+
+/*
+  * Success
+  */
+.uk-form-success,
+.uk-form-success:focus {
+  color: #32d296;
+  border-color: #32d296;
+}
+
+/*
+  * Blank
+  */
+.uk-form-blank {
+  background: none;
+  border-color: transparent;
+}
+
+.uk-form-blank:focus {
+  border-color: #e5e5e5;
+  border-style: solid;
+}
+
+/* Width modifiers (`uk-input`, `uk-select` and `uk-textarea`)
+  ========================================================================== */
+/*
+  * Fixed widths
+  * Different widths for mini sized `input` and `select` elements
+  */
+input.uk-form-width-xsmall {
+  width: 50px;
+}
+
+select.uk-form-width-xsmall {
+  width: 75px;
+}
+
+.uk-form-width-small {
+  width: 130px;
+}
+
+.uk-form-width-medium {
+  width: 200px;
+}
+
+.uk-form-width-large {
+  width: 500px;
+}
+
+/* Select
+  ========================================================================== */
+/*
+  * 1. Remove default style. Also works in Firefox
+  * 2. Style
+  * 3. Set `color` for options in the select dropdown, because the inherited `color` might be too light.
+  */
+.uk-select:not([multiple]):not([size]) {
+  /* 1 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 2 */
+  padding-right: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+/* 3 */
+.uk-select:not([multiple]):not([size]) option {
+  color: #555;
+}
+
+/*
+  * Disabled
+  */
+.uk-select:not([multiple]):not([size]):disabled {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+/* Datalist
+  ========================================================================== */
+/*
+  * 1. Remove default style in Chrome
+  */
+.uk-input[list] {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.uk-input[list]:hover,
+.uk-input[list]:focus {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+/* 1 */
+.uk-input[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+/* Radio and checkbox
+  ========================================================================== */
+/*
+  * 1. Style
+  * 2. Make box more robust so it clips the child element
+  * 3. Vertical alignment
+  * 4. Remove default style
+  * 5. Fix black background on iOS
+  * 6. Center icons
+  */
+.uk-radio,
+.uk-checkbox {
+  /* 1 */
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  /* 2 */
+  overflow: hidden;
+  /* 3 */
+  margin-top: -4px;
+  vertical-align: middle;
+  /* 4 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 5 */
+  background-color: transparent;
+  /* 6 */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid #cccccc;
+  transition: 0.2s ease-in-out;
+  transition-property: background-color, border;
+}
+
+.uk-radio {
+  border-radius: 50%;
+}
+
+/* Focus */
+.uk-radio:focus,
+.uk-checkbox:focus {
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border-color: #2a302b;
+}
+
+/*
+  * Checked
+  */
+.uk-radio:checked,
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate {
+  background-color: #2a302b;
+  border-color: transparent;
+}
+
+/* Focus */
+.uk-radio:checked:focus,
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+  background-color: #434b44;
+}
+
+/* Custom controls
+ ========================================================================== */
+/*
+ * 1. Container fits its content
+ * 2. Create position context
+ * 3. Prevent content overflow
+ * 4. Behave like most inline-block elements
+ */
+.uk-form-custom {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: middle;
+}
+
+/*
+ * 1. Position and resize the form control to always cover its container
+ * 2. Required for Firefox for positioning to the left
+ * 3. Required for Webkit to make `height` work
+ * 4. Hide controle and show cursor
+ * 5. Needed for the cursor
+ * 6. Clip height caused by 5. Needed for Webkit only
+ */
+.uk-form-custom select,
+.uk-form-custom input[type="file"] {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /* 2 */
+  left: 0;
+  /* 3 */
+  -webkit-appearance: none;
+  /* 4 */
+  opacity: 0;
+  cursor: pointer;
+}
+
+.uk-form-custom input[type="file"] {
+  /* 5 */
+  font-size: 500px;
+  /* 6 */
+  overflow: hidden;
+}
+
+/* Label
+  ========================================================================== */
+.uk-form-label {
+  color: #333;
+  font-size: 0.875rem;
+}
+
+/* Icons
+  ========================================================================== */
+/*
+  * 1. Set position
+  * 2. Set width
+  * 3. Center icon vertically and horizontally
+  * 4. Style
+  */
+.uk-form-icon {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  /* 2 */
+  width: 40px;
+  /* 3 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* 4 */
+  color: #666;
+}
+
+/*
+  * Required for `a`.
+  */
+.uk-form-icon:hover {
+  color: #555;
+}
+
+/* ========================================================================
+   Component: Button
+ ========================================================================== */
+/*
+ * 1. Remove margins in Chrome, Safari and Opera.
+ * 2. Remove borders for `button`.
+ * 3. Address `overflow` set to `hidden` in IE.
+ * 4. Correct `font` properties and `color` not being inherited for `button`.
+ * 5. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 6. Remove default style for `input type="submit"`in iOS.
+ * 7. Style
+ * 8. `line-height` is used to create a height because it also centers the text vertically for `a` elements.
+ *    Better would be to use height and flexbox to center the text vertically but flexbox doesn't work in Firefox on `button` elements.
+ * 9. Align text if button has a width
+ * 10. Required for `a`.
+ */
+
+/* OnClick + Active */
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Default
+   */
+.uk-button-default {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #e5e5e5;
+}
+
+/* Hover */
+.uk-button-default:hover {
+  background-color: transparent;
+  color: #333;
+  border-color: #b2b2b2;
+}
+
+/* OnClick + Active */
+.uk-button-default:active,
+.uk-button-default.uk-active {
+  background-color: transparent;
+  color: #333;
+  border-color: #999999;
+}
+
+/*
+   * Primary
+   */
+.uk-button-primary {
+  background-color: #373737;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover */
+.uk-button-primary:hover {
+  background-color: #2a302b;
+  color: #fff;
+}
+
+/* OnClick + Active */
+.uk-button-primary:active,
+.uk-button-primary.uk-active {
+  background-color: #2a302b;
+  color: #fff;
+}
+
+/*
+   * Secondary
+   */
+.uk-button-secondary {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover */
+.uk-button-secondary:hover {
+  background-color: #151515;
+  color: #fff;
+}
+
+/* OnClick + Active */
+.uk-button-secondary:active,
+.uk-button-secondary.uk-active {
+  background-color: #080808;
+  color: #fff;
+}
+
+/*
+   * Danger
+   */
+.uk-button-danger {
+  background-color: #f0506e;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover */
+.uk-button-danger:hover {
+  background-color: #ee395b;
+  color: #fff;
+}
+
+/* OnClick + Active */
+.uk-button-danger:active,
+.uk-button-danger.uk-active {
+  background-color: #ec2147;
+  color: #fff;
+}
+
+/*
+   * Disabled
+   * The same for all style modifiers
+   */
+.uk-button-default:disabled,
+.uk-button-primary:disabled,
+.uk-button-secondary:disabled,
+.uk-button-danger:disabled {
+  background-color: transparent;
+  color: #666;
+  border-color: #e5e5e5;
+}
+
+/* Size modifiers
+   ========================================================================== */
+.uk-button-small {
+  padding: 0 15px;
+  line-height: 28px;
+  font-size: 0.875rem;
+}
+
+.uk-button-large {
+  padding: 0 40px;
+  line-height: 53px;
+  font-size: 0.875rem;
+}
+
+/* Text modifiers
+   ========================================================================== */
+/*
+   * Text
+   * 1. Reset
+   * 2. Style
+   */
+.uk-button-text {
+  /* 1 */
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  /* 2 */
+  color: #333;
+  position: relative;
+}
+
+.uk-button-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  border-bottom: 1px solid currentColor;
+  transition: right 0.3s ease-out;
+}
+
+/* Hover */
+.uk-button-text:hover {
+  color: #333;
+}
+
+/* Disabled */
+.uk-button-text:disabled {
+  color: #999;
+}
+
+/*
+   * Link
+   * 1. Reset
+   * 2. Style
+   */
+.uk-button-link {
+  /* 1 */
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  /* 2 */
+  color: #333;
+}
+
+/* Hover */
+.uk-button-text:hover {
+  color: #333;
+}
+
+.uk-button-text:hover::before {
+  right: 0;
+}
+
+/* Disabled */
+.uk-button-text:disabled {
+  color: #999;
+}
+
+/* sticky-GO-UP */
+#sticky-button {
+  position: fixed;
+  bottom: 3rem;
+  left: 20px;
+  /* 任意の位置に調整 */
+  z-index: 999;
+  /* 必要に応じて調整 */
+}
+
+/* Group
+ ========================================================================== */
+/*
+/* ========================================================================
+   Component: Progress（新？）
+ ========================================================================== */
+/*
+ * 1. Add the correct vertical alignment in all browsers.
+ * 2. Behave like a block element.
+ * 3. Remove borders in Firefox.
+ * 4. Remove default style in Chrome, Safari and Edge.
+ * 5. Style
+ */
+.uk-progress {
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+  display: block;
+  width: 100%;
+  /* 3 */
+  border: 0;
+  /* 4 */
+  background-color: #f2f2f2;
+  /* 5 */
+  margin-bottom: 20px;
+  height: 15px;
+  border-radius: 500px;
+  overflow: hidden;
+}
+
+/*
+   * Progress Bar
+   * 1. Transitions don't work on `::-moz-progress-bar` pseudo element in Firefox yet.
+   *    https://bugzilla.mozilla.org/show_bug.cgi?id=662351
+   */
+.uk-progress::-webkit-progress-value {
+  background-color: #2a302b;
+  transition: width 0.6s ease;
+}
+
+.uk-progress::-moz-progress-bar {
+  background-color: #2a302b;
+  /* 1 */
+  transition: width 0.6s ease;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Default
+   */
+.uk-section-default {
+  background: #ebeae9ec;
+}
+
+/*
+ * Muted
+ */
+.uk-section-muted {
+  background: #f2f2f2;
+  --uk-navbar-color: dark;
+}
+
+/*
+ * Primary
+ */
+.uk-section-primary {
+  background: #373737;
+}
+
+/*
+ * Secondary
+ */
+.uk-section-secondary {
+  background: #1c1b1b;
+  --uk-navbar-color: light;
+}
+
+/*
+ * Tertiary
+ */
+.uk-section-tertiary {
+  background: #d5d4d3f3;
+}
+
+/* ========================================================================
+* 画像をタイル状に作品を並べる 
+ ========================================================================== */
+
+.grid-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.grid-item {
+  border: 1px solid black;
+  /* For visual reference */
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.medium {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* ========================================================================
+   Component: Tile (新？) 
+ ========================================================================== */
+.uk-tile {
+  display: flow-root;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-tile {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-tile {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-tile> :last-child {
+  margin-bottom: 0;
+}
+
+/* Size modifiers
+   ========================================================================== */
+/*
+   * XSmall
+   */
+.uk-tile-xsmall {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*
+   * Small
+   */
+.uk-tile-small {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*
+   * Large
+   */
+.uk-tile-large {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-tile-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+
+/*
+   * XLarge
+   */
+.uk-tile-xlarge {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-tile-xlarge {
+    padding-top: 210px;
+    padding-bottom: 210px;
+  }
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Default
+   */
+.uk-tile-default {
+  background-color: #ebeae9ec;
+}
+
+/*
+   * Muted
+   */
+.uk-tile-muted {
+  background-color: #f2f2f2;
+}
+
+/*
+   * Primary
+   */
+.uk-tile-primary {
+  background-color: #2a302b;
+}
+
+/*
+   * Secondary
+   */
+.uk-tile-secondary {
+  background-color: #222;
+}
+
+/* ========================================================================
+   Component: Card カード
+ ========================================================================== */
+.uk-card {
+  position: relative;
+  box-sizing: border-box;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+/* Sections
+   ========================================================================== */
+.uk-card-body {
+  display: flow-root;
+  padding: 30px 30px;
+}
+
+
+.uk-card-header {
+  display: flow-root;
+  padding: 15px 30px;
+}
+
+.uk-card-footer {
+  display: flow-root;
+  padding: 15px 30px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-card-body {
+    padding: 40px 40px;
+  }
+
+  .uk-card-header {
+    padding: 20px 40px;
+  }
+
+  .uk-card-footer {
+    padding: 20px 40px;
+  }
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-card-body> :last-child,
+.uk-card-header> :last-child,
+.uk-card-footer> :last-child {
+  margin-bottom: 0;
+}
+
+/*
+   * cardの高さを文字数出揃える
+   */
+.equal-card-height {
+  min-height: 10rem; /* 例としての高さ */
+}
+
+
+/* Media
+   ========================================================================== */
+/*
+   * Reserved alignment modifier to style the media element, e.g. with `border-radius`
+   * Implemented by the theme
+   */
+/* Title
+   ========================================================================== */
+.uk-card-title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Badge
+   ========================================================================== */
+/*
+   * 1. Position
+   * 2. Size
+   * 3. Style
+   * 4. Center child vertically
+   */
+.uk-card-badge {
+  /* 1 */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  /* 2 */
+  height: 22px;
+  padding: 0 10px;
+  /* 3 */
+  background: #2a302b;
+  color: #fff;
+  font-size: 0.875rem;
+  /* 4 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* Hover modifier
+   ========================================================================== */
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+  background-color: #fff;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Default
+   * Note: Header and Footer are only implemented for the default style
+   */
+.uk-card-default {
+  background-color: #f6f5f4ec;
+  color: #555;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-card-default .uk-card-title {
+  color: #333;
+}
+
+.uk-card-default.uk-card-hover:hover {
+  background-color: #ebeae9ec;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+.uk-card-default .uk-card-header {
+  border-bottom: 1px solid #f6f5f4ec;
+}
+
+.uk-card-default .uk-card-footer {
+  border-top: 1px solid #d5d4d3f3;
+}
+
+/*
+   * Primary
+   */
+.uk-card-primary {
+  background-color: #2a302b;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-card-primary .uk-card-title {
+  color: #fff;
+}
+
+.uk-card-primary.uk-card-hover:hover {
+  background-color: #2a302b;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+/*
+   * Default
+   * Note: Header and Footer are only implemented for the default style
+   */
+.uk-card-muted {
+  background-color: #f2f2f2;
+  color: #555;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-card-muted .uk-card-title {
+  color: #333;
+}
+
+.uk-card-muted.uk-card-hover:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+.uk-card-muted .uk-card-header {
+  border-bottom: 1px solid #d5d4d3f3;
+}
+
+.uk-card-muted .uk-card-footer {
+  border-top: 1px solid #d5d4d3f3;
+}
+
+
+/*
+   * Secondary
+   */
+.uk-card-secondary {
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-card-secondary .uk-card-title {
+  color: #fff;
+}
+
+.uk-card-secondary.uk-card-hover:hover {
+  background-color: #222;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* Size modifier:card
+   ========================================================================== */
+.square-card {
+  /* 拡張：1：1（cardを使ったギャラリー） */
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.square-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* カードの幅に合わせて画像を拡大 */
+  height: 100%;
+  /* カードの高さに合わせて画像を拡大 */
+  object-fit: cover;
+  /* 画像のアスペクト比を保ちながらカバーする */
+  object-position: center;
+  /* 画像を中央に配置 */
+}
+
+.square-card-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========================================================================
+   Component: Close
+ ========================================================================== */
+/*
+ * Adopts `uk-icon`
+ */
+.uk-close {
+  color: #666;
+  transition: 0.1s ease-in-out;
+  transition-property: color, opacity;
+}
+
+/* Hover */
+.uk-close:hover {
+  color: #555;
+}
+
+/* ========================================================================
+     Component: Totop
+   ========================================================================== */
+/*
+   * Addopts `uk-icon`
+   */
+.uk-totop {
+  padding: 5px;
+  color: #666;
+  transition: color 0.1s ease-in-out;
+}
+
+/* Hover */
+.uk-totop:hover {
+  color: #555;
+}
+
+/* OnClick */
+.uk-totop:active {
+  color: #333;
+}
+
+/* ========================================================================
+     Component: Marker
+   ========================================================================== */
+/*
+   * Addopts `uk-icon`
+   */
+.uk-marker {
+  padding: 5px;
+  background: #222;
+  color: #fff;
+  border-radius: 500px;
+}
+
+/* Hover */
+.uk-marker:hover {
+  color: #fff;
+}
+
+/* ========================================================================
+     Component: Alert
+   ========================================================================== */
+.uk-alert {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 29px 15px 15px;
+  background: #f2f2f2;
+  color: #555;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Primary
+   */
+.uk-alert-primary {
+  background: #d8eafc;
+  color: #2a302b;
+}
+
+/*
+   * Success
+   */
+.uk-alert-success {
+  background: #edfbf6;
+  color: #32d296;
+}
+
+/*
+   * Warning
+   */
+.uk-alert-warning {
+  background: #fff6ee;
+  color: #faa05a;
+}
+
+/*
+   * Danger
+   */
+.uk-alert-danger {
+  background: #fef4f6;
+  color: #f0506e;
+}
+
+/* ========================================================================
+   Component: Placeholder
+ ========================================================================== */
+.uk-placeholder {
+  margin-bottom: 20px;
+  padding: 30px 30px;
+  background: transparent;
+  border: 1px dashed #e5e5e5;
+}
+
+/* ========================================================================
+   Component: Badge
+ ========================================================================== */
+/*
+ * 1. Style
+ * 2. Center child vertically and horizontally
+ */
+.uk-badge {
+  box-sizing: border-box;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 500px;
+  vertical-align: middle;
+  /* 1 */
+  background: #2a302b;
+  color: #fff !important;
+  font-size: 11px;
+  /* 2 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+/* ========================================================================
+     Component: Label
+   ========================================================================== */
+.uk-label {
+  display: inline-block;
+  padding: 0 10px;
+  background: #2a302b;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* Color modifiers
+   ========================================================================== */
+/*
+   * Success
+   */
+.uk-label-success {
+  background-color: #76ab99;
+  color: #fff;
+}
+
+/*
+   * Warning
+   */
+.uk-label-warning {
+  background-color: #faa05a;
+  color: #fff;
+}
+
+/*
+   * Danger
+   */
+.uk-label-danger {
+  background-color: #f0506e;
+  color: #fff;
+}
+
+/* ========================================================================
+   Component: Overlay
+ ========================================================================== */
+.uk-overlay {
+  padding: 30px 30px;
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-overlay> :last-child {
+  margin-bottom: 0;
+}
+
+/* Icon
+   ========================================================================== */
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Default
+   */
+.uk-overlay-default {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/*
+   * Primary
+   */
+.uk-overlay-primary {
+  background: rgba(34, 34, 34, 0.8);
+}
+
+/* オーバーレイをかけるcontainer */
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* 画像全体の幅に合わせる場合 */
+  height: 270px;
+  /* ラインの位置までの高さに合わせる */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.text-overlay {
+  position: absolute;
+}
+
+.linehight-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* 画像全体の幅に合わせる場合 */
+  height: 200px;
+  /* ラインの位置までの高さに合わせる */
+  background: linear-gradient(to top, rgba(0, 0.3, 0.5, 0.7), transparent);
+}
+
+.texthight-overlay {
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0.3, 0.5, 0.7), transparent);
+  height: calc(1rem * 5);
+  /* 8文字分の高さで透明色をかける */
+}
+
+/* ========================================================================
+     Component: Article
+   ========================================================================== */
+.uk-article {
+  display: flow-root;
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-article> :last-child {
+  margin-bottom: 0;
+}
+
+/* Adjacent sibling
+   ========================================================================== */
+.uk-article+.uk-article {
+  margin-top: 70px;
+}
+
+/* Title
+   ========================================================================== */
+.uk-article-title {
+  font-size: 2.23125rem;
+  line-height: 1.2;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-article-title {
+    font-size: 2.625rem;
+  }
+}
+
+/* Meta
+   ========================================================================== */
+.uk-article-meta {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.uk-article-meta a {
+  color: #666;
+}
+
+.uk-article-meta a:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Meta
+   ========================================================================== */
+.uk-comment-meta {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+/* Style modifier
+   ========================================================================== */
+.uk-comment-primary {
+  padding: 30px;
+  background-color: #f2f2f2;
+}
+
+
+/* Default modifier
+ ========================================================================== */
+/*
+   * Input
+   */
+.uk-search-default .uk-search-input {
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: transparent;
+  border: 1px solid #e5e5e5;
+}
+
+/* Focus */
+.uk-search-default .uk-search-input:focus {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #2a302b;
+}
+
+/* Toggle
+ ========================================================================== */
+.uk-search-toggle {
+  color: #666;
+}
+
+/* Hover */
+.uk-search-toggle:hover {
+  color: #555;
+}
+
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+/* Title
+   ========================================================================== */
+.uk-accordion-title {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Hover */
+.uk-accordion-title:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+/* ========================================================================
+     Component: Dropbar
+   ========================================================================== */
+/*
+   * Adopts `uk-drop`
+   * 1. Reset drop
+   * 2. Style
+   */
+.uk-dropbar {
+  --uk-position-offset: 0;
+  --uk-position-shift-offset: 0;
+  --uk-position-viewport-offset: 0;
+  /* 1 */
+  width: auto;
+  /* 2 */
+  padding: 25px 15px 25px 15px;
+  background: #fff;
+  color: #555;
+}
+
+.uk-dropbar :focus-visible {
+  outline-color: #333 !important;
+}
+
+/* Direction modifier
+   ========================================================================== */
+.uk-dropbar-top {
+  box-shadow: 0 12px 7px -6px rgba(0, 0, 0, 0.05);
+}
+
+.uk-dropbar-bottom {
+  box-shadow: 0 -12px 7px -6px rgba(0, 0, 0, 0.05);
+}
+
+.uk-dropbar-left {
+  box-shadow: 12px 0 7px -6px rgba(0, 0, 0, 0.05);
+}
+
+.uk-dropbar-right {
+  box-shadow: -12px 0 7px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================================================
+     Component: Modal
+   ========================================================================== */
+/*
+   * 1. Hide by default
+   * 2. Set position
+   * 3. Allow scrolling for the modal dialog
+   * 4. Horizontal padding
+   * 5. Mask the background page
+   * 6. Fade-in transition
+   */
+.uk-modal {
+  /* 1 */
+  display: none;
+  /* 2 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  /* 3 */
+  overflow-y: auto;
+  /* 4 */
+  padding: 15px 15px;
+  /* 5 */
+  background: rgba(0, 0, 0, 0.6);
+  /* 6 */
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+/* Dialog
+   ========================================================================== */
+/*
+   * 1. Create position context for spinner and close button
+   * 2. Dimensions
+   * 3. `!important` is needed to overwrite `uk-width-auto`. See `#modal-media-image` in tests
+   * 4. Style
+   * 5. Slide-in transition
+   */
+.uk-modal-dialog {
+  /* 1 */
+  position: relative;
+  /* 2 */
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 600px;
+  /* 3 */
+  max-width: 100% !important;
+  /* 4 */
+  background: #fff;
+  /* 5 */
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 0.3s linear;
+  transition-property: opacity, transform;
+}
+
+/* Size modifier
+   ========================================================================== */
+/* Sections
+   ========================================================================== */
+.uk-modal-header {
+  display: flow-root;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.uk-modal-footer {
+  display: flow-root;
+  padding: 10px 20px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Close
+   * Adopts `uk-close`
+   ========================================================================== */
+/*
+   * Hover
+   */
+/*
+   * Default
+   */
+/*
+   * Outside
+   * 1. Prevent scrollbar on small devices
+   */
+.uk-modal-close-outside {
+  top: 0;
+  /* 1 */
+  right: -5px;
+  transform: translate(0, -100%);
+  color: #ffffff;
+}
+
+.uk-modal-close-outside:hover {
+  color: #fff;
+}
+
+/*
+   * Full
+   */
+.uk-modal-close-full {
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: #fff;
+}
+
+/* ========================================================================
+   Component: Slideshow(スライドショー)
+ ========================================================================== */
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+.uk-slideshow {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.uk-slideshow-container img {
+  box-shadow: none;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * 1. Create position and stacking context
+   * 2. Reset list
+   * 3. Clip child elements
+   * 4. Prevent displaying the callout information on iOS.
+   * 5. Disable horizontal panning gestures
+   */
+.uk-slideshow-items {
+  /* 1 */
+  position: relative;
+  z-index: 0;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 3 */
+  overflow: hidden;
+  /* 4 */
+  -webkit-touch-callout: none;
+  /* 5 */
+  touch-action: pan-y;
+}
+
+/* Item
+   ========================================================================== */
+/*
+   * 1. Position items above each other
+   * 2. Take the full width
+   * 3. Clip child elements, e.g. for `uk-cover`
+   * 4. Optimize animation
+   */
+.uk-slideshow-items>* {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 2 */
+  right: 0;
+  bottom: 0;
+  /* 3 */
+  overflow: hidden;
+  /* 4 */
+  will-change: transform, opacity;
+}
+
+/*
+   * Hide not active items
+   */
+.uk-slideshow-items> :not(.uk-active) {
+  display: none;
+}
+
+
+/* スライド上の文字に影をつける */
+.slideshow-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* X軸, Y軸, ブラーの大きさ, 色 */
+}
+
+
+/*
+   * スライドショーのテキストを固定する
+   */
+/*.fixed-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: #555;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* この値は必要に応じて調整 */
+/*}*/
+
+/* ポーズ＆プレイボタンのsection：このクラス名でのみ特定のスタイルを適用 */
+.uk-navigation-section > :last-child {
+  margin-bottom: 15px; /* 0から元の値に戻す */
+  margin-bottom: var(--uk-position-margin-offset, 15px); /* デフォルト値0を上書き */
+}
+
+
+/*
+   * スライドショーにポーズ＆プレイボタンをつける
+   */
+.slideshow-control-button {
+  position: absolute;
+  /*bottom: 1rem;*/
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #555;
+  border: none;
+  width: 2.5rem;
+  /* 幅 */
+  height: 2.5rem;
+  /* 高さ */
+  border-radius: 50%;
+  /* これで円形になります */
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 1rem;
+  z-index: 100;
+  /* 必要に応じてz-indexを調整してください */
+}
+
+#playButton {
+  display: none;
+}
+
+/*
+   * スピナー
+   */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  position: absolute; /* またはabsolute */
+  transform: translate(-50%, -50%);
+  border: 5px solid #f3f3f3;
+  /* Light grey */
+  border-top: 5px solid #4f7f5c;
+  /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.5s linear infinite;
+}
+
+.bird-spinner svg {
+  position: absolute; /* またはabsolute */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* スピナーのサイズが決まっている場合は、widthとheightを指定します */
+  width: 100px; /* これはあなたのスピナーの幅に依存します */
+  height: 100px; /* これはあなたのスピナーの高さに依存します */
+  animation: spin 4s linear infinite;
+}
+.svg-rotating {
+  animation: spin 4s linear infinite;
+}
+
+/*
+ * 猫のアニメーション
+ */
+.walk {
+  position: absolute;
+  bottom: 0; /* スライドの一番下に配置 */
+  left: 0;
+  width: 100px; /* 猫の画像のサイズに合わせて調整 */
+  height: auto;
+  animation: walk 5s linear infinite, fade 20s step-start infinite; /* アニメーション設定 */
+  z-index: 11;
+}
+
+@keyframes walk {
+  from {
+      left: -100px; /* 画面外から開始 */
+  }
+  to {
+      left: 100%; /* 画面の左から右へ移動 */
+  }
+  0%, 100% { opacity: 0; }
+      5%, 20% { opacity: 1; }
+      25% { opacity: 0; }
+}
+.cat-1 { animation-delay: 0s; }
+.cat-2 { animation-delay: 1s; }
+.cat-3 { animation-delay: 2s; }
+.cat-4 { animation-delay: 3s; }
+
+/* アニメーションのキーフレームは同じままです */
+
+/* ========================================================================
+     Component: Slider（スライダー）
+   ========================================================================== */
+/*
+   * 1. Prevent tab highlighting on iOS.
+   */
+.uk-slider {
+  /* 1 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Container
+   ========================================================================== */
+/*
+   * 1. Clip child elements
+   * 2. Prevent accidental scrolling through elements in slide getting focused
+   */
+.uk-slider-container {
+  /* 1 */
+  overflow: hidden;
+  /* 2 */
+  overflow: clip;
+}
+
+/*
+   * Widen container to prevent box-shadows from clipping, `large-box-shadow`
+   */
+.uk-slider-container-offset {
+  margin: -11px -25px -39px -25px;
+  padding: 11px 25px 39px 25px;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * 1. Optimize animation
+   * 2. Create a containing block. In Safari it's neither created by `transform` nor `will-change`.
+   * 3. Disable horizontal panning gestures
+   */
+.uk-slider-items {
+  /* 1 */
+  will-change: transform;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  touch-action: pan-y;
+}
+
+/*
+   * 1. Reset list style without interfering with grid
+   * 2. Prevent displaying the callout information on iOS.
+   */
+.uk-slider-items:not(.uk-grid) {
+  display: flex;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 2 */
+  -webkit-touch-callout: none;
+}
+
+.uk-slider-items.uk-grid {
+  flex-wrap: nowrap;
+}
+
+/* Item
+   ========================================================================== */
+/*
+   * 1. Let items take content dimensions (0 0 auto)
+   *    `max-width` needed to keep image responsiveness and prevent content overflow
+   * 2. Create position context
+   */
+.uk-slider-items>* {
+  /* 1 */
+  flex: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  /* 2 */
+  position: relative;
+}
+
+.uk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+/* ========================================================================
+     Component: Off-canvas（モバイルで出てくるcanvas）
+   ========================================================================== */
+
+/* Bar
+   ========================================================================== */
+/*
+   * 1. Set position
+   * 2. Size and style
+   * 3. Allow scrolling
+   */
+.uk-offcanvas-bar {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -270px;
+  /* 2 */
+  box-sizing: border-box;
+  width: 270px;
+  padding: 20px 20px;
+  background: #222;
+  /* 3 */
+  overflow-y: auto;
+}
+
+/* Overlay
+   ========================================================================== */
+/*
+   * Overlay the whole page. Needed for the `::before`
+   * 1. Using `100vw` so no modification is needed when off-canvas is flipped
+   * 2. Allow for closing with swipe gesture on devices with pointer events.
+   */
+/*
+   * 1. Mask the whole page
+   * 2. Fade-in transition
+   */
+.uk-offcanvas-overlay::before {
+  /* 1 */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  /* 2 */
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.uk-offcanvas-overlay.uk-open::before {
+  opacity: 1;
+}
+
+/* ========================================================================
+     Component: Notification
+   ========================================================================== */
+/*
+   * 1. Set position
+   * 2. Dimensions
+   */
+/* Style modifiers
+   ========================================================================== */
+/*
+   * Primary
+   */
+.uk-notification-message-primary {
+  color: #2a302b;
+}
+
+/*
+   * Success
+   */
+.uk-notification-message-success {
+  color: #32d296;
+}
+
+/*
+   * Warning
+   */
+.uk-notification-message-warning {
+  color: #faa05a;
+}
+
+/*
+   * Danger
+   */
+.uk-notification-message-danger {
+  color: #f0506e;
+}
+
+/* ========================================================================
+   Component: Tooltip
+ ========================================================================== */
+/*
+ * 1. Hide by default
+ * 2. Position
+ * 3. Remove tooltip from document flow to keep the UIkit container from changing its size when injected into the document initially
+ * 4. Dimensions
+ * 5. Style
+ */
+.uk-tooltip {
+  /* 1 */
+  display: none;
+  /* 2 */
+  position: absolute;
+  z-index: 1030;
+  --uk-position-offset: 10px;
+  --uk-position-viewport-offset: 10;
+  /* 3 */
+  top: 0;
+  /* 4 */
+  box-sizing: border-box;
+  max-width: 200px;
+  padding: 3px 6px;
+  /* 5 */
+  background: #666;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* Divider
+   ========================================================================== */
+.uk-grid-divider>* {
+  position: relative;
+}
+
+.uk-grid-divider> :not(.uk-first-column)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #e5e5e5;
+}
+
+/* Vertical */
+.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ========================================================================
+   Component: Nav
+ ========================================================================== */
+/* Default modifier
+  ========================================================================== */
+.uk-nav-default {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+/*
+  * Items
+  */
+.uk-nav-default>li>a {
+  color: #666;
+}
+
+/* Hover */
+.uk-nav-default>li>a:hover {
+  color: #171717;
+}
+
+/* Active */
+.uk-nav-default>li.uk-active>a {
+  color: #171717;
+}
+
+/*
+  * Subtitle
+  */
+.uk-nav-default .uk-nav-subtitle {
+  font-size: 12px;
+}
+
+/*
+  * Header
+  */
+.uk-nav-default .uk-nav-header {
+  color: #333;
+}
+
+/*
+  * Divider
+  */
+.uk-nav-default .uk-nav-divider {
+  border-top: 1px solid #cabebe;
+}
+
+/*
+  * Sublists
+  */
+.uk-nav-default .uk-nav-sub {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.uk-nav-default .uk-nav-sub a {
+  color: #666;
+}
+
+.uk-nav-default .uk-nav-sub a:hover {
+  color: #898585;
+}
+
+.uk-nav-default .uk-nav-sub li.uk-active>a {
+  color: #171717;
+}
+
+/* Primary modifier
+  ========================================================================== */
+.uk-nav-primary {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/*
+  * Items
+  */
+.uk-nav-primary>li>a {
+  color: #666;
+}
+
+/* Hover */
+.uk-nav-primary>li>a:hover {
+  color: #898585;
+}
+
+/* Active */
+.uk-nav-primary>li.uk-active>a {
+  color: #171717;
+}
+
+/*
+  * Subtitle
+  */
+.uk-nav-primary .uk-nav-subtitle {
+  font-size: 1.25rem;
+}
+
+/*
+  * Header
+  */
+.uk-nav-primary .uk-nav-header {
+  color: #333;
+}
+
+/*
+  * Divider
+  */
+.uk-nav-primary .uk-nav-divider {
+  border-top: 1px solid #cabebe;
+}
+
+/*
+  * Sublists
+  */
+.uk-nav-primary .uk-nav-sub {
+  font-size: 0.9375rem;
+  ;
+  line-height: 1.5;
+}
+
+.uk-nav-primary .uk-nav-sub a {
+  color: #666;
+}
+
+.uk-nav-primary .uk-nav-sub a:hover {
+  color: #171717;
+}
+
+.uk-nav-primary .uk-nav-sub li.uk-active>a {
+  color: #333;
+}
+
+/* naviのdrop down：直接の子要素だけでなく、子孫の a 要素全てに色を適用する */
+.uk-navbar-dropdown .uk-nav.uk-navbar-dropdown-nav a {
+  color: #333;
+  /* 文字色をダークに */
+}
+
+/* ドロップダウン内の区切り線に続く a 要素のスタイル */
+.uk-navbar-dropdown .uk-nav-divider+a {
+  color: #333;
+  /* 文字色をダークに */
+}
+
+
+/* Secondary modifier
+  ========================================================================== */
+.uk-nav-secondary {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.uk-nav-secondary> :not(.uk-nav-divider)+ :not(.uk-nav-header, .uk-nav-divider) {
+  margin-top: 0;
+}
+
+/*
+  * Items
+  */
+.uk-nav-secondary>li>a {
+  color: #333;
+  padding: 10px 10px;
+}
+
+/* Hover */
+.uk-nav-secondary>li>a:hover {
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+/* Active */
+.uk-nav-secondary>li.uk-active>a {
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+/*
+  * Subtitle
+  */
+.uk-nav-secondary .uk-nav-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Hover */
+.uk-nav-secondary>li>a:hover .uk-nav-subtitle {
+  color: #555;
+}
+
+/* Active */
+.uk-nav-secondary>li.uk-active>a .uk-nav-subtitle {
+  color: #333;
+}
+
+/*
+  * Header
+  */
+.uk-nav-secondary .uk-nav-header {
+  color: #333;
+}
+
+/*
+  * Divider
+  */
+.uk-nav-secondary .uk-nav-divider {
+  border-top: 1px solid #e5e5e5;
+}
+
+/*
+  * Sublists
+  */
+.uk-nav-secondary .uk-nav-sub {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.uk-nav-secondary .uk-nav-sub a {
+  color: #666;
+}
+
+.uk-nav-secondary .uk-nav-sub a:hover {
+  color: #555;
+}
+
+.uk-nav-secondary .uk-nav-sub li.uk-active>a {
+  color: #333;
+}
+
+/* Alignment modifier
+  ========================================================================== */
+/*
+  * 1. Center header
+  * 2. Center items
+  */
+/* 1 */
+.uk-nav-center {
+  text-align: center;
+}
+
+/* 2 */
+.uk-nav-center li>a {
+  justify-content: center;
+}
+
+/* Sublists */
+.uk-nav-center .uk-nav-sub,
+.uk-nav-center .uk-nav-sub ul {
+  padding-left: 0;
+}
+
+/* Parent icon  */
+.uk-nav-center .uk-nav-parent-icon {
+  margin-left: 0.25em;
+}
+
+/* Style modifier
+  ========================================================================== */
+/*
+  * Divider
+  * Naming is in plural to prevent conflicts with divider sub object.
+  */
+.uk-nav.uk-nav-divider> :not(.uk-nav-header, .uk-nav-divider)+ :not(.uk-nav-header, .uk-nav-divider) {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ========================================================================
+   Component: Navbar
+ ========================================================================== */
+/*
+ * 1. Create position context to center navbar group
+ * 2. Pass dropbar behind color to JS
+ */
+.uk-navbar {
+  display: flex;
+  /* 1 */
+  position: relative;
+  /* 2 */
+  --uk-navbar-dropbar-behind-color: dark;
+}
+
+/* Container
+   ========================================================================== */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #f2f2f2;
+  z-index: 1000;
+}
+
+/* Groups
+   ========================================================================== */
+/*
+   * 1. Align navs and items vertically if they have a different height
+   */
+.uk-navbar-left,
+.uk-navbar-right,
+[class*='uk-navbar-center'] {
+  display: flex;
+  gap: 15px;
+  /* 1 */
+  align-items: center;
+}
+
+/*
+   * Horizontal alignment
+   * 1. Create position context for centered navbar with sub groups (left/right)
+   * 2. Fix text wrapping if content is larger than 50% of the container.
+   * 3. Needed for dropdowns because a new position context is created
+   *    `z-index` must be smaller than off-canvas
+   * 4. Align sub groups for centered navbar
+   */
+.uk-navbar-right {
+  margin-left: auto;
+}
+
+.uk-navbar-center:only-child {
+  margin-left: auto;
+  margin-right: auto;
+  /* 1 */
+  position: relative;
+}
+
+.uk-navbar-center:not(:only-child) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 2 */
+  width: max-content;
+  box-sizing: border-box;
+  /* 3 */
+  z-index: 990;
+}
+
+/* 4 */
+.uk-navbar-center-left,
+.uk-navbar-center-right {
+  position: absolute;
+  top: 0;
+}
+
+.uk-navbar-center-left {
+  right: calc(100% + 15px);
+}
+
+.uk-navbar-center-right {
+  left: calc(100% + 15px);
+}
+
+[class*='uk-navbar-center-'] {
+  width: max-content;
+  box-sizing: border-box;
+}
+
+/* Nav
+   ========================================================================== */
+/*
+   * 1. Reset list
+   */
+.uk-navbar-nav {
+  display: flex;
+  gap: 30px;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+   * Allow items to wrap into the next line
+   * Only not `absolute` positioned groups
+   */
+.uk-navbar-left,
+.uk-navbar-right,
+.uk-navbar-center:only-child {
+  flex-wrap: wrap;
+}
+
+/*
+   * Items
+   * 1. Center content vertically and horizontally
+   * 2. Imitate white space gap when using flexbox
+   * 3. Dimensions
+   * 4. Style
+   * 5. Required for `a`
+   */
+.uk-navbar-nav>li>a,
+.uk-navbar-item,
+.uk-navbar-toggle {
+  /* 1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 2 */
+  column-gap: 0.25em;
+  /* 3 */
+  box-sizing: border-box;
+  min-height: 80px;
+  /* 4 */
+  font-size: 0.9375rem;
+  font-weight: 600;
+  /* より細かい太さの調整 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 5 */
+  text-decoration: none;
+}
+
+/*
+   * Nav items
+   */
+.uk-navbar-nav>li>a {
+  padding: 0 0;
+  color: #1e1200;
+  text-transform: none;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color;
+}
+
+/*
+   * Hover
+   * Apply hover style also if dropdown is opened
+   */
+.uk-navbar-nav>li:hover>a,
+.uk-navbar-nav>li>a[aria-expanded="true"] {
+  color: #535353;
+}
+
+/* OnClick */
+.uk-navbar-nav>li>a:active {
+  color: #171717;
+}
+
+/* Active */
+.uk-navbar-nav>li.uk-active>a {
+  color: #171717;
+}
+
+/* Parent icon modifier
+   ========================================================================== */
+.uk-navbar-parent-icon {
+  margin-left: 4px;
+  transition: transform 0.3s ease-out;
+}
+
+.uk-navbar-nav>li>a[aria-expanded="true"] .uk-navbar-parent-icon {
+  transform: rotateX(180deg);
+}
+
+/* Item
+   ========================================================================== */
+.uk-navbar-item {
+  padding: 0 0;
+  color: #898585;
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-navbar-item> :last-child {
+  margin-bottom: 0;
+}
+
+/* Toggle
+   ========================================================================== */
+.uk-navbar-toggle {
+  padding: 0 0;
+  color: #1e1200;
+}
+
+.uk-navbar-toggle:hover,
+.uk-navbar-toggle[aria-expanded="true"] {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+   * Icon
+   * Adopts `uk-icon`
+   */
+/* Hover */
+/* Subtitle
+   ========================================================================== */
+.uk-navbar-subtitle {
+  font-size: 0.875rem;
+}
+
+/* Justify modifier
+   ========================================================================== */
+.uk-navbar-justify .uk-navbar-left,
+.uk-navbar-justify .uk-navbar-right,
+.uk-navbar-justify .uk-navbar-nav,
+.uk-navbar-justify .uk-navbar-nav>li,
+.uk-navbar-justify .uk-navbar-item,
+.uk-navbar-justify .uk-navbar-toggle {
+  flex-grow: 1;
+}
+
+/* Style modifiers
+   ========================================================================== */
+/* Dropdown
+   ========================================================================== */
+/*
+   * Adopts `uk-drop`
+   * 1. Set a default width
+   * 2. Style
+   */
+.uk-navbar-dropdown {
+  --uk-position-offset: 15px;
+  --uk-position-shift-offset: 0;
+  --uk-position-viewport-offset: 15px;
+  /* 1 */
+  width: 200px;
+  /* 2 */
+  padding: 25px;
+  background: #fff;
+  color: #898585;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-navbar-dropdown> :last-child {
+  margin-bottom: 0;
+}
+
+.uk-navbar-dropdown :focus-visible {
+  outline-color: #333 !important;
+}
+
+/*
+   * Grid
+   * Adopts `uk-grid`
+   */
+/* Gutter Horizontal */
+.uk-navbar-dropdown .uk-drop-grid {
+  margin-left: -30px;
+}
+
+.uk-navbar-dropdown .uk-drop-grid>* {
+  padding-left: 30px;
+}
+
+/* Gutter Vertical */
+.uk-navbar-dropdown .uk-drop-grid>.uk-grid-margin {
+  margin-top: 30px;
+}
+
+/*
+   * Width modifier
+   */
+.uk-navbar-dropdown-width-2:not(.uk-drop-stack) {
+  width: 400px;
+}
+
+.uk-navbar-dropdown-width-3:not(.uk-drop-stack) {
+  width: 600px;
+}
+
+.uk-navbar-dropdown-width-4:not(.uk-drop-stack) {
+  width: 800px;
+}
+
+.uk-navbar-dropdown-width-5:not(.uk-drop-stack) {
+  width: 1000px;
+}
+
+/*
+   * Size modifier
+   */
+.uk-navbar-dropdown-large {
+  --uk-position-shift-offset: 0;
+  padding: 40px;
+}
+
+/*
+   * Dropbar modifier
+   * 1. Reset dropdown width to prevent to early shifting
+   * 2. Reset style
+   * 3. Padding
+   */
+.uk-navbar-dropdown-dropbar {
+  /* 1 */
+  width: auto;
+  /* 2 */
+  background: transparent;
+  /* 3 */
+  padding: 25px 0 25px 0;
+  --uk-position-offset: 0;
+  --uk-position-shift-offset: 0;
+  --uk-position-viewport-offset: 15px;
+  box-shadow: none;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-navbar-dropdown-dropbar {
+    --uk-position-viewport-offset: 30px;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-navbar-dropdown-dropbar {
+    --uk-position-viewport-offset: 40px;
+  }
+}
+
+.uk-navbar-dropdown-dropbar-large {
+  --uk-position-shift-offset: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Dropdown Nav
+   * Adopts `uk-nav`
+   ========================================================================== */
+.uk-navbar-dropdown-nav {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+/*
+   * Items
+   */
+.uk-navbar-dropdown-nav>li>a {
+  color: #666;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+/* Hover */
+.uk-navbar-dropdown-nav>li>a:hover {
+  color: #898585;
+}
+
+/* Active */
+.uk-navbar-dropdown-nav>li.uk-active>a {
+  color: #171717;
+}
+
+/*
+   * Subtitle
+   */
+.uk-navbar-dropdown-nav .uk-nav-subtitle {
+  font-size: 12px;
+}
+
+/*
+   * Header
+   */
+.uk-navbar-dropdown-nav .uk-nav-header {
+  color: #171717;
+}
+
+/*
+   * Divider
+   */
+.uk-navbar-dropdown-nav .uk-nav-divider {
+  border-top: 1px solid #cabebe;
+}
+
+/*
+   * Sublists
+   */
+.uk-navbar-dropdown-nav .uk-nav-sub a {
+  color: #666;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+.uk-navbar-dropdown-nav .uk-nav-sub a:hover {
+  color: #898585;
+}
+
+.uk-navbar-dropdown-nav .uk-nav-sub li.uk-active>a {
+  color: #171717;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * Items must target `a` elements to exclude other elements (e.g. dropdowns)
+   * Using `:first-child` instead of `a` to support `span` elements for text
+   * 1. Center content vertically, e.g. an icon
+   * 2. Imitate white space gap when using flexbox
+   * 3. Style
+   
+  /* Hover */
+.uk-subnav>*>a:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Active */
+.uk-subnav>.uk-active>a {
+  color: #333;
+  border-color: #2a302b;
+}
+
+/* Disabled */
+.uk-tab>.uk-disabled>a {
+  color: #999;
+}
+
+/* Divider modifier
+   ========================================================================== */
+/*
+   * Set gutter
+   */
+/* 1 */
+.uk-subnav-divider> :nth-child(n+2):not(.uk-first-column)::before {
+  border-left-color: #b4b3b3;
+}
+
+/* Pill modifier
+   ========================================================================== */
+.uk-subnav-pill>*> :first-child {
+  padding: 5px 10px;
+  background: transparent;
+  color: #1e1200;
+  ;
+}
+
+/* Hover */
+.uk-subnav-pill>*>a:hover {
+  background-color: #f2ece1;
+  color: #555;
+}
+
+/* OnClick */
+.uk-subnav-pill>*>a:active {
+  background-color: #f2ece1;
+  color: #555;
+}
+
+/* Active */
+.uk-subnav-pill>.uk-active>a {
+  background-color: #00633a;
+  color: #fff;
+}
+
+/* Disabled
+   * The same for all style modifiers
+   ========================================================================== */
+.uk-subnav>.uk-disabled>a {
+  color: #666;
+}
+
+/* Flexbox footerを下部にくっつける　*/
+.uk-flex-between {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+/* ========================================================================
+   Component: Breadcrumb
+ ========================================================================== */
+/* Items
+   ========================================================================== */
+.uk-breadcrumb>*>* {
+  font-size: 0.875rem;
+  color: #1e1200;
+}
+
+/* Hover */
+.uk-breadcrumb>*> :hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Disabled */
+/* Active */
+.uk-breadcrumb> :last-child>span,
+.uk-breadcrumb> :last-child>a:not([href]) {
+  color: #555;
+}
+
+/*
+   * Divider
+   * `nth-child` makes it also work without JS if it's only one row
+   * 1. Remove space between inline block elements.
+   * 2. Style
+   */
+.uk-breadcrumb> :nth-child(n+2):not(.uk-first-column)::before {
+  content: "/";
+  display: inline-block;
+  /* 1 */
+  margin: 0 20px 0 calc(20px - 4px);
+  /* 2 */
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* ========================================================================
+   Component: Pagination
+ ========================================================================== */
+/*
+ * 1. Allow items to wrap into the next line
+ * 2. Center items vertically if they have a different height
+ * 3. Gutter
+ * 4. Reset list
+ */
+.uk-pagination {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  align-items: center;
+  /* 3 */
+  margin-left: 0;
+  /* 4 */
+  padding: 0;
+  list-style: none;
+}
+
+/*
+   * 1. Space is allocated solely based on content dimensions: 0 0 auto
+   * 2. Gutter
+   * 3. Create position context for dropdowns
+   */
+.uk-pagination>* {
+  /* 1 */
+  flex: none;
+  /* 2 */
+  padding-left: 0;
+  /* 3 */
+  position: relative;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * 1. Center content vertically, e.g. an icon
+   * 2. Imitate white space gap when using flexbox
+   * 3. Style
+   */
+.uk-pagination>*>* {
+  /* 1 */
+  display: flex;
+  align-items: center;
+  /* 2 */
+  column-gap: 0.25em;
+  /* 3 */
+  padding: 5px 10px;
+  color: #666;
+  transition: color 0.1s ease-in-out;
+}
+
+/* Hover */
+.uk-pagination>*> :hover {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Active */
+.uk-pagination>.uk-active>* {
+  color: #555;
+}
+
+/* Disabled */
+.uk-pagination>.uk-disabled>* {
+  color: #666;
+}
+
+/* ========================================================================
+     Component: Tab
+   ========================================================================== */
+/*
+   * 1. Allow items to wrap into the next line
+   * 2. Gutter
+   * 3. Reset list
+   */
+.uk-tab {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  margin-left: -20px;
+  /* 3 */
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.uk-tab::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/*
+   * 1. Space is allocated solely based on content dimensions: 0 0 auto
+   * 2. Gutter
+   * 3. Create position context for dropdowns
+   */
+.uk-tab>* {
+  /* 1 */
+  flex: none;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  position: relative;
+}
+
+/* Items
+ ========================================================================== */
+/*
+ * Items must target `a` elements to exclude other elements (e.g. dropdowns)
+ * 1. Center content vertically, e.g. an icon
+ * 2. Imitate white space gap when using flexbox
+ * 3. Center content if a width is set
+ * 4. Style
+ */
+.uk-tab>*>a {
+  /* 1 */
+  display: flex;
+  align-items: center;
+  /* 2 */
+  column-gap: 0.25em;
+  /* 3 */
+  justify-content: center;
+  /* 4 */
+  padding: 5px 10px;
+  color: #666;
+  border-bottom: 1px solid transparent;
+  font-size: 0.875rem;
+  text-transform: none;
+  transition: color 0.1s ease-in-out;
+}
+
+/* Hover */
+.uk-tab>*>a:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Active */
+.uk-tab>.uk-active>a {
+  color: #333;
+  border-color: #00633a;
+}
+
+/* Disabled */
+.uk-tab>.uk-disabled>a {
+  color: #666;
+}
+
+/* Position modifier
+ ========================================================================== */
+/*
+ * Bottom
+ */
+.uk-tab-bottom::before {
+  top: 0;
+  bottom: auto;
+}
+
+.uk-tab-bottom>*>a {
+  border-top: 1px solid transparent;
+  border-bottom: none;
+}
+
+/*
+   * Left + Right
+   * 1. Reset Gutter
+   */
+.uk-tab-left,
+.uk-tab-right {
+  flex-direction: column;
+  /* 1 */
+  margin-left: 0;
+}
+
+/* 1 */
+.uk-tab-left>*,
+.uk-tab-right>* {
+  padding-left: 0;
+}
+
+.uk-tab-left::before {
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: none;
+}
+
+.uk-tab-right::before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: none;
+}
+
+.uk-tab-left>*>a {
+  justify-content: left;
+  border-right: 1px solid transparent;
+  border-bottom: none;
+}
+
+.uk-tab-right>*>a {
+  justify-content: left;
+  border-left: 1px solid transparent;
+  border-bottom: none;
+}
+
+.uk-tab .uk-dropdown {
+  margin-left: 30px;
+}
+
+/* ========================================================================
+   Component: Slidenav
+ ========================================================================== */
+/*
+ * Adopts `uk-icon`
+ */
+.uk-slidenav {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px;
+  color: rgba(102, 102, 102, 0.5);
+  transition: color 0.1s ease-in-out;
+}
+
+/* Hover */
+.uk-slidenav:hover {
+  color: rgba(102, 102, 102, 0.9);
+}
+
+/* OnClick */
+.uk-slidenav:active {
+  color: rgba(102, 102, 102, 0.5);
+}
+
+/* Icon modifier
+   ========================================================================== */
+/*
+   * Previous
+   */
+/*
+   * Next
+   */
+/* Size modifier
+   ========================================================================== */
+.uk-slidenav-large {
+  padding: 10px 10px;
+}
+
+/* Container
+   ========================================================================== */
+.uk-slidenav-container {
+  display: flex;
+}
+
+/* ========================================================================
+     Component: Dotnav
+   ========================================================================== */
+/*
+   * 1. Allow items to wrap into the next line
+   * 2. Reset list
+   * 3. Gutter
+   */
+.uk-dotnav {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 3 */
+  margin-left: -12px;
+}
+
+/*
+   * 1. Space is allocated solely based on content dimensions: 0 0 auto
+   * 2. Gutter
+   */
+.uk-dotnav>* {
+  /* 1 */
+  flex: none;
+  /* 2 */
+  padding-left: 12px;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * Items
+   * 1. Hide text if present
+   */
+.uk-dotnav>*>* {
+  display: block;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  /* 1 */
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid rgba(102, 102, 102, 0.4);
+  transition: 0.2s ease-in-out;
+  transition-property: background-color, border-color;
+}
+
+/* Hover */
+.uk-dotnav>*> :hover {
+  background-color: rgba(102, 102, 102, 0.6);
+  border-color: transparent;
+}
+
+/* OnClick */
+.uk-dotnav>*> :active {
+  background-color: rgba(102, 102, 102, 0.2);
+  border-color: transparent;
+}
+
+/* Active */
+.uk-dotnav>.uk-active>* {
+  background-color: rgba(102, 102, 102, 0.6);
+  border-color: transparent;
+}
+
+/* Modifier: 'uk-dotnav-vertical'
+   ========================================================================== */
+/*
+   * 1. Change direction
+   * 2. Gutter
+   */
+.uk-dotnav-vertical {
+  /* 1 */
+  flex-direction: column;
+  /* 2 */
+  margin-left: 0;
+  margin-top: -12px;
+}
+
+/* 2 */
+.uk-dotnav-vertical>* {
+  padding-left: 0;
+  padding-top: 12px;
+}
+
+/* ========================================================================
+     Component: Thumbnav
+   ========================================================================== */
+/*
+   * 1. Allow items to wrap into the next line
+   * 2. Reset list
+   * 3. Gutter
+   */
+.uk-thumbnav {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 3 */
+  margin-left: -15px;
+}
+
+/*
+   * Space is allocated based on content dimensions, but shrinks: 0 1 auto
+   * 1. Gutter
+   */
+.uk-thumbnav>* {
+  /* 1 */
+  padding-left: 15px;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * Items
+   */
+.uk-thumbnav>*>* {
+  display: inline-block;
+  position: relative;
+}
+
+.uk-thumbnav>*>*::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  transition: opacity 0.1s ease-in-out;
+}
+
+/* Hover */
+.uk-thumbnav>*> :hover::after {
+  opacity: 0;
+}
+
+/* Active */
+.uk-thumbnav>.uk-active>*::after {
+  opacity: 0;
+}
+
+/* Modifier: 'uk-thumbnav-vertical'
+   ========================================================================== */
+/*
+   * 1. Change direction
+   * 2. Gutter
+   */
+.uk-thumbnav-vertical {
+  /* 1 */
+  flex-direction: column;
+  /* 2 */
+  margin-left: 0;
+  margin-top: -15px;
+}
+
+/* 2 */
+.uk-thumbnav-vertical>* {
+  padding-left: 0;
+  padding-top: 15px;
+}
+
+/* ========================================================================
+     Component: Iconnav
+   ========================================================================== */
+/*
+   * 1. Allow items to wrap into the next line
+   * 2. Reset list
+   * 3. Gutter
+   */
+.uk-iconnav {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 3 */
+  margin-left: -10px;
+}
+
+/*
+   * Space is allocated based on content dimensions, but shrinks: 0 1 auto
+   * 1. Gutter
+   */
+.uk-iconnav>* {
+  /* 1 */
+  padding-left: 10px;
+}
+
+/* Items
+   ========================================================================== */
+/*
+   * Items must target `a` elements to exclude other elements (e.g. dropdowns)
+   * 1. Center content vertically if there is still some text
+   * 2. Imitate white space gap when using flexbox
+   * 3. Force text not to affect item height
+   * 4. Style
+   * 5. Required for `a` if there is still some text
+   */
+.uk-iconnav>*>a {
+  /* 1 */
+  display: flex;
+  align-items: center;
+  /* 2 */
+  column-gap: 0.25em;
+  /* 3 */
+  line-height: 0;
+  /* 4 */
+  color: #666;
+  /* 5 */
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color;
+}
+
+/* Hover */
+.uk-iconnav>*>a:hover {
+  color: #555;
+}
+
+/* Active */
+.uk-iconnav>.uk-active>a {
+  color: #555;
+}
+
+/* Modifier: 'uk-iconnav-vertical'
+   ========================================================================== */
+/*
+   * 1. Change direction
+   * 2. Gutter
+   */
+.uk-iconnav-vertical {
+  /* 1 */
+  flex-direction: column;
+  /* 2 */
+  margin-left: 0;
+  margin-top: -10px;
+}
+
+/* 2 */
+.uk-iconnav-vertical>* {
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+/* ========================================================================
+   Component: Dropdown
+ ========================================================================== */
+/*
+ * Adopts `uk-drop`
+ * 1. Reset drop and let text expand the width instead of wrapping
+ * 2. Set a default width
+ * 3. Style
+ */
+.uk-dropdown {
+  --uk-position-offset: 10px;
+  --uk-position-viewport-offset: 15px;
+  /* 1 */
+  width: auto;
+  /* 2 */
+  min-width: 200px;
+  /* 3 */
+  padding: 25px;
+  background: #fff;
+  color: #555;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*
+   * Remove margin from the last-child
+   */
+.uk-dropdown> :last-child {
+  margin-bottom: 0;
+}
+
+.uk-dropdown :focus-visible {
+  outline-color: #333 !important;
+}
+
+/* Size modifier
+   ========================================================================== */
+.uk-dropdown-large {
+  padding: 40px;
+}
+
+/* Dropbar modifier
+   ========================================================================== */
+/*
+   * 1. Reset dropdown width to prevent to early shifting
+   * 2. Reset style
+   * 3. Padding
+   */
+.uk-dropdown-dropbar {
+  /* 1 */
+  width: auto;
+  /* 2 */
+  background: transparent;
+  /* 3 */
+  padding: 5px 0 25px 0;
+  --uk-position-viewport-offset: 15px;
+  box-shadow: none;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-dropdown-dropbar {
+    --uk-position-viewport-offset: 30px;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-dropdown-dropbar {
+    --uk-position-viewport-offset: 40px;
+  }
+}
+
+.uk-dropdown-dropbar-large {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Nav
+   * Adopts `uk-nav`
+   ========================================================================== */
+.uk-dropdown-nav {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+/*
+   * Items
+   */
+.uk-dropdown-nav>li>a {
+  color: #666;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+/* Hover + Active */
+.uk-dropdown-nav>li>a:hover,
+.uk-dropdown-nav>li.uk-active>a {
+  color: #555;
+}
+
+/*
+   * Subtitle
+   */
+.uk-dropdown-nav .uk-nav-subtitle {
+  font-size: 12px;
+}
+
+/*
+   * Header
+   */
+.uk-dropdown-nav .uk-nav-header {
+  color: #333;
+}
+
+/*
+   * Divider
+   */
+.uk-dropdown-nav .uk-nav-divider {
+  border-top: 1px solid #e5e5e5;
+}
+
+/*
+   * Sublists
+   */
+.uk-dropdown-nav .uk-nav-sub a {
+  color: #666;
+  line-height: 1.7;
+  /* 行の高さを1.7に設定 */
+}
+
+.uk-dropdown-nav .uk-nav-sub a:hover,
+.uk-dropdown-nav .uk-nav-sub li.uk-active>a {
+  color: #555;
+}
+
+/* ========================================================================
+   Component: Lightbox
+ ========================================================================== */
+/*
+ * 1. Hide by default
+ * 2. Set position
+ * 3. Allow scrolling for the modal dialog
+ * 4. Horizontal padding
+ * 5. Mask the background page
+ * 6. Fade-in transition
+ * 7. Prevent cancellation of pointer events while dragging
+ */
+.uk-lightbox {
+  /* 1 */
+  display: none;
+  /* 2 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  /* 5 */
+  background: #000;
+  /* 6 */
+  opacity: 0;
+  transition: opacity 0.15s linear;
+  /* 7 */
+  touch-action: pinch-zoom;
+}
+
+/*
+   * Open
+   * 1. Center child
+   * 2. Fade-in
+   */
+.uk-lightbox.uk-open {
+  display: block;
+  /* 2 */
+  opacity: 1;
+}
+
+/*
+   * Focus
+   */
+.uk-lightbox :focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Page
+   ========================================================================== */
+/*
+   * Prevent scrollbars
+   */
+.uk-lightbox-page {
+  overflow: hidden;
+}
+
+/* Item
+   ========================================================================== */
+/*
+   * 1. Center child within the viewport
+   * 2. Not visible by default
+   * 3. Color needed for spinner icon
+   * 4. Optimize animation
+   * 5. Responsiveness
+   *    Using `vh` for `max-height` to fix image proportions after resize in Safari and Opera
+   */
+.uk-lightbox-items>* {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* 2 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* 3 */
+  color: rgba(255, 255, 255, 0.7);
+  /* 4 */
+  will-change: transform, opacity;
+}
+
+/* 5 */
+.uk-lightbox-items>*>* {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.uk-lightbox-items>*> :not(iframe) {
+  width: auto;
+  height: auto;
+}
+
+.uk-lightbox-items>.uk-active {
+  display: flex;
+}
+
+/* Toolbar
+   ========================================================================== */
+.uk-lightbox-toolbar {
+  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.uk-lightbox-toolbar>* {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Toolbar Icon (Close)
+   ========================================================================== */
+.uk-lightbox-toolbar-icon {
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*
+   * Hover
+   */
+.uk-lightbox-toolbar-icon:hover {
+  color: #fff;
+}
+
+/* Button (Slidenav)
+   ========================================================================== */
+/*
+   * 1. Center icon vertically and horizontally
+   */
+.uk-lightbox-button {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  /* 1 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover */
+.uk-lightbox-button:hover {
+  color: #fff;
+}
+
+/* OnClick */
+/* Caption
+   ========================================================================== */
+.uk-lightbox-caption:empty {
+  display: none;
+}
+
+/* Iframe
+   ========================================================================== */
+.uk-lightbox-iframe {
+  width: 80%;
+  height: 80%;
+}
+
+/* Magnific-Popup-master：拡張
+   ========================================================================== */
+.mfp-wrap,
+/* 拡張:ギャラリーポップアップ */
+.mfp-content {
+  /* 拡張 */
+  animation-name: uk-fade;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+/* ========================================================================
+   Component: Animation
+ ========================================================================== */
+[class*='uk-animation-'] {
+  animation: 0.5s ease-out both;
+}
+
+/* Animations
+   ========================================================================== */
+/*
+   * Fade
+   */
+.uk-animation-fade {
+  animation-name: uk-fade;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+.uk-animation-fade-top {
+  animation-name: uk-fade;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+/*
+   * Scale
+   */
+.uk-animation-scale-up {
+  animation-name: uk-fade, uk-scale-up;
+}
+
+.uk-animation-scale-down {
+  animation-name: uk-fade, uk-scale-down;
+}
+
+/*
+   * Slide
+   */
+.uk-animation-slide-top {
+  animation-name: uk-fade, uk-slide-top;
+}
+
+.uk-animation-slide-bottom {
+  animation-name: uk-fade, uk-slide-bottom;
+}
+
+.uk-animation-slide-left {
+  animation-name: uk-fade, uk-slide-left;
+}
+
+.uk-animation-slide-right {
+  animation-name: uk-fade, uk-slide-right;
+}
+
+/*
+   * Slide Small
+   */
+.uk-animation-slide-top-small {
+  animation-name: uk-fade, uk-slide-top-small;
+}
+
+.uk-animation-slide-bottom-small {
+  animation-name: uk-fade, uk-slide-bottom-small;
+}
+
+.uk-animation-slide-left-small {
+  animation-name: uk-fade, uk-slide-left-small;
+}
+
+.uk-animation-slide-right-small {
+  animation-name: uk-fade, uk-slide-right-small;
+}
+
+/*
+   * Slide Medium
+   */
+.uk-animation-slide-top-medium {
+  animation-name: uk-fade, uk-slide-top-medium;
+}
+
+.uk-animation-slide-bottom-medium {
+  animation-name: uk-fade, uk-slide-bottom-medium;
+}
+
+.uk-animation-slide-left-medium {
+  animation-name: uk-fade, uk-slide-left-medium;
+}
+
+.uk-animation-slide-right-medium {
+  animation-name: uk-fade, uk-slide-right-medium;
+}
+
+/* 拡張 */
+.custom-animation {
+  animation-duration: 20s;
+  /* 20秒に変更 */
+}
+
+/*
+   * Kenburns
+   */
+.uk-animation-kenburns {
+  animation-name: uk-kenburns;
+  animation-duration: 15s;
+}
+
+/*
+   * Shake
+   */
+.uk-animation-shake {
+  animation-name: uk-shake;
+}
+
+/*
+   * SVG Stroke
+   * The `--uk-animation-stroke` custom property contains the longest path length.
+   * Set it manually or use `uk-svg="stroke-animation: true"` to set it automatically.
+   * All strokes are animated by the same pace and doesn't end simultaneously.
+   * To end simultaneously, `pathLength="1"` could be used, but it's not working in Safari yet.
+   */
+.uk-animation-stroke {
+  animation-name: uk-stroke;
+  animation-duration: 2s;
+  stroke-dasharray: var(--uk-animation-stroke);
+}
+
+/* Direction modifier
+   ========================================================================== */
+.uk-animation-reverse {
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+
+/* Duration modifier
+   ========================================================================== */
+.uk-animation-fast {
+  animation-duration: 0.1s;
+}
+
+/* Toggle animation based on the State of the Parent Element
+   ========================================================================== */
+.uk-animation-toggle:not(:hover):not(:focus) [class*='uk-animation-'] {
+  animation-name: none;
+}
+
+/* Keyframes used by animation classes
+ ========================================================================== */
+/*
+ * Fade
+ */
+@keyframes uk-fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+   * Scale
+   */
+@keyframes uk-scale-up {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes uk-scale-down {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+   * Slide
+   */
+@keyframes uk-slide-top {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes uk-slide-right {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*
+   * Slide Small
+   */
+@keyframes uk-slide-top-small {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-bottom-small {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-left-small {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes uk-slide-right-small {
+  0% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*
+   * Slide Medium
+   */
+@keyframes uk-slide-top-medium {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-bottom-medium {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes uk-slide-left-medium {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes uk-slide-right-medium {
+  0% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*
+   * Kenburns
+   */
+@keyframes uk-kenburns {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* ========================================================================
+   Component: Text
+ ========================================================================== */
+/* Style modifiers
+ ========================================================================== */
+.uk-text-lead {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.uk-text-meta {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #999;
+}
+
+.uk-text-meta>a {
+  color: #999;
+}
+
+.uk-text-meta>a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Size modifiers（テキストのサイズ）
+   ========================================================================== */
+.uk-text-xsmall {
+  font-size: 0.575rem;
+  line-height: 1.5;
+}
+
+/* Weight modifier（テキストの太さ）
+ ========================================================================== */
+.uk-text-bold {
+  font-weight: 600;
+}
+
+/* Color modifiers（テキストの色）
+   ========================================================================== */
+.uk-text-muted {
+  color: #999 !important;
+}
+
+.uk-text-emphasis {
+  color: #333 !important;
+}
+
+.uk-text-primary {
+  color: #2a302b !important;
+}
+
+.uk-text-secondary {
+  color: #222 !important;
+}
+
+.uk-text-success {
+  color: #32d296 !important;
+}
+
+.uk-text-warning {
+  color: #faa05a !important;
+}
+
+.uk-text-danger {
+  color: #f0506e !important;
+}
+
+/* Background modifier
+   ========================================================================== */
+/*
+   * 1. The background clips to the foreground text. Works in all browsers.
+   * 2. Default color is set to transparent.
+   * 3. Container fits the text
+   * 4. Style
+   */
+.uk-text-background {
+  /* 1 */
+  -webkit-background-clip: text;
+  /* 2 */
+  color: transparent !important;
+  /* 3 */
+  display: inline-block;
+  /* 4 */
+  background-color: #1e87f0;
+  background-image: linear-gradient(90deg, #2a302b 0%, #411ef0 100%);
+}
+
+/* 斜体にする
+   ========================================================================== */
+.italic-style {
+  transform: skew(-15deg);
+}
+
+
+/* Alignment modifiers
+   ========================================================================== */
+.uk-text-left {
+  text-align: left !important;
+}
+
+.uk-text-right {
+  text-align: right !important;
+}
+
+.uk-text-center {
+  text-align: center !important;
+}
+
+.uk-text-justify {
+  text-align: justify !important;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-text-left\@s {
+    text-align: left !important;
+  }
+
+  .uk-text-right\@s {
+    text-align: right !important;
+  }
+
+  .uk-text-center\@s {
+    text-align: center !important;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-text-left\@m {
+    text-align: left !important;
+  }
+
+  .uk-text-right\@m {
+    text-align: right !important;
+  }
+
+  .uk-text-center\@m {
+    text-align: center !important;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-text-left\@l {
+    text-align: left !important;
+  }
+
+  .uk-text-right\@l {
+    text-align: right !important;
+  }
+
+  .uk-text-center\@l {
+    text-align: center !important;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-text-left\@xl {
+    text-align: left !important;
+  }
+
+  .uk-text-right\@xl {
+    text-align: right !important;
+  }
+
+  .uk-text-center\@xl {
+    text-align: center !important;
+  }
+}
+
+/*
+   * Vertical
+   */
+.uk-text-top {
+  vertical-align: top !important;
+}
+
+.uk-text-middle {
+  vertical-align: middle !important;
+}
+
+.uk-text-bottom {
+  vertical-align: bottom !important;
+}
+
+.uk-text-baseline {
+  vertical-align: baseline !important;
+}
+
+/* Wrap modifiers
+   ========================================================================== */
+/*
+   * Prevent text from wrapping onto multiple lines
+   */
+.uk-text-nowrap {
+  white-space: nowrap;
+}
+
+/*
+   * 1. Make sure a max-width is set after which truncation can occur
+   * 2. Prevent text from wrapping onto multiple lines, and truncate with an ellipsis
+   * 3. Fix for table cells
+   */
+.uk-text-truncate {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 2 */
+th.uk-text-truncate,
+td.uk-text-truncate {
+  max-width: 0;
+}
+
+/*
+   * Wrap long words onto the next line and break them if they are too long to fit.
+   * 1. Make it work with table cells in all browsers.
+   * Note: Not using `hyphens: auto` because it hyphenates text even if not needed.
+   */
+.uk-text-break {
+  overflow-wrap: break-word;
+}
+
+/* 1 */
+th.uk-text-break,
+td.uk-text-break {
+  word-break: break-word;
+}
+
+/* ========================================================================
+     Component: Column
+   ========================================================================== */
+[class*='uk-column-'] {
+  column-gap: 30px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  [class*='uk-column-'] {
+    column-gap: 40px;
+  }
+}
+
+/*
+   * Fix image 1px line wrapping into the next column in Chrome
+   */
+[class*='uk-column-'] img {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Divider
+   ========================================================================== */
+/*
+   * 1. Double the column gap
+   */
+.uk-column-divider {
+  column-rule: 1px solid #e5e5e5;
+  /* 1 */
+  column-gap: 60px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-column-divider {
+    column-gap: 80px;
+  }
+}
+
+/* Width modifiers
+   ========================================================================== */
+.uk-column-1-2 {
+  column-count: 2;
+}
+
+.uk-column-1-3 {
+  column-count: 3;
+}
+
+.uk-column-1-4 {
+  column-count: 4;
+}
+
+.uk-column-1-5 {
+  column-count: 5;
+}
+
+.uk-column-1-6 {
+  column-count: 6;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-column-1-2\@s {
+    column-count: 2;
+  }
+
+  .uk-column-1-3\@s {
+    column-count: 3;
+  }
+
+  .uk-column-1-4\@s {
+    column-count: 4;
+  }
+
+  .uk-column-1-5\@s {
+    column-count: 5;
+  }
+
+  .uk-column-1-6\@s {
+    column-count: 6;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-column-1-2\@m {
+    column-count: 2;
+  }
+
+  .uk-column-1-3\@m {
+    column-count: 3;
+  }
+
+  .uk-column-1-4\@m {
+    column-count: 4;
+  }
+
+  .uk-column-1-5\@m {
+    column-count: 5;
+  }
+
+  .uk-column-1-6\@m {
+    column-count: 6;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-column-1-2\@l {
+    column-count: 2;
+  }
+
+  .uk-column-1-3\@l {
+    column-count: 3;
+  }
+
+  .uk-column-1-4\@l {
+    column-count: 4;
+  }
+
+  .uk-column-1-5\@l {
+    column-count: 5;
+  }
+
+  .uk-column-1-6\@l {
+    column-count: 6;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-column-1-2\@xl {
+    column-count: 2;
+  }
+
+  .uk-column-1-3\@xl {
+    column-count: 3;
+  }
+
+  .uk-column-1-4\@xl {
+    column-count: 4;
+  }
+
+  .uk-column-1-5\@xl {
+    column-count: 5;
+  }
+
+  .uk-column-1-6\@xl {
+    column-count: 6;
+  }
+}
+
+/* Make element span across all columns
+ * Does not work in Firefox yet
+ ========================================================================== */
+.uk-column-span {
+  column-span: all;
+}
+
+/* ========================================================================
+     Component: Cover（カバー・新？）
+   ========================================================================== */
+/*
+   * Works with embedded content
+   */
+img[uk-cover],
+video[uk-cover],
+img[data-uk-cover],
+video[data-uk-cover] {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*
+   * Works with iframes and embedded content
+   * 1. Use attribute to apply transform instantly. Needed if transform is transitioned.
+   * 2. Reset responsiveness for embedded content
+   * 3. Center object
+   * Note: Percent values on the `top` property only works if this element
+   *       is absolute positioned or if the container has a height
+   */
+/* 1 */
+:not(img, video)[uk-cover],
+:not(img, video)[data-uk-cover] {
+  /* 2 */
+  max-width: none;
+  /* 3 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  --uk-position-translate-x: -50%;
+  --uk-position-translate-y: -50%;
+  transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y));
+}
+
+iframe[uk-cover],
+iframe[data-uk-cover] {
+  pointer-events: none;
+}
+
+/* Container
+ ========================================================================== */
+/*
+ * 1. Parent container which clips resized object
+ * 2. Needed if the child is positioned absolute. See note above
+ */
+.uk-cover-container {
+  /* 1 */
+  overflow: hidden;
+  /* 2 */
+  position: relative;
+}
+
+/* ========================================================================
+     Component: Background
+   ========================================================================== */
+/* Color
+   ========================================================================== */
+.uk-background-default {
+  background-color: #f6f5f4ec;
+}
+
+.uk-background-muted {
+  background-color: #f0f0f1;
+}
+
+.uk-background-primary {
+  background-color: #2a302b;
+}
+
+.uk-background-secondary {
+  background-color: #222;
+}
+
+/* Size
+   ========================================================================== */
+.uk-background-cover,
+.uk-background-contain,
+.uk-background-width-1-1,
+.uk-background-height-1-1 {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.uk-background-cover {
+  background-size: cover;
+}
+
+.uk-background-contain {
+  background-size: contain;
+}
+
+.uk-background-width-1-1 {
+  background-size: 100%;
+}
+
+.uk-background-height-1-1 {
+  background-size: auto 100%;
+}
+
+/* Position
+   ========================================================================== */
+.uk-background-top-left {
+  background-position: 0 0;
+}
+
+.uk-background-top-center {
+  background-position: 50% 0;
+}
+
+.uk-background-top-right {
+  background-position: 100% 0;
+}
+
+.uk-background-center-left {
+  background-position: 0 50%;
+}
+
+.uk-background-center-center {
+  background-position: 50% 50%;
+}
+
+.uk-background-center-right {
+  background-position: 100% 50%;
+}
+
+.uk-background-bottom-left {
+  background-position: 0 100%;
+}
+
+.uk-background-bottom-center {
+  background-position: 50% 100%;
+}
+
+.uk-background-bottom-right {
+  background-position: 100% 100%;
+}
+
+/* Repeat
+   ========================================================================== */
+.uk-background-norepeat {
+  background-repeat: no-repeat;
+}
+
+/* Attachment
+   ========================================================================== */
+/*
+   * 1. Fix bug introduced in Chrome 67: the background image is not visible if any element on the page uses `translate3d`
+   */
+.uk-background-fixed {
+  background-attachment: fixed;
+  /* 1 */
+  backface-visibility: hidden;
+}
+
+/*
+   * Exclude touch devices because `fixed` doesn't work on iOS and Android
+   */
+@media (pointer: coarse) {
+  .uk-background-fixed {
+    background-attachment: scroll;
+  }
+}
+
+/* Image
+ ========================================================================== */
+/* Phone portrait and smaller */
+@media (max-width: 639px) {
+  .uk-background-image\@s {
+    background-image: none !important;
+  }
+}
+
+/* Phone landscape and smaller */
+@media (max-width: 959px) {
+  .uk-background-image\@m {
+    background-image: none !important;
+  }
+}
+
+/* Tablet landscape and smaller */
+@media (max-width: 1199px) {
+  .uk-background-image\@l {
+    background-image: none !important;
+  }
+}
+
+/* Desktop and smaller */
+@media (max-width: 1599px) {
+  .uk-background-image\@xl {
+    background-image: none !important;
+  }
+}
+
+/* Blend modes
+ ========================================================================== */
+.uk-background-blend-multiply {
+  background-blend-mode: multiply;
+}
+
+.uk-background-blend-screen {
+  background-blend-mode: screen;
+}
+
+.uk-background-blend-overlay {
+  background-blend-mode: overlay;
+}
+
+.uk-background-blend-darken {
+  background-blend-mode: darken;
+}
+
+.uk-background-blend-lighten {
+  background-blend-mode: lighten;
+}
+
+.uk-background-blend-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.uk-background-blend-color-burn {
+  background-blend-mode: color-burn;
+}
+
+.uk-background-blend-hard-light {
+  background-blend-mode: hard-light;
+}
+
+.uk-background-blend-soft-light {
+  background-blend-mode: soft-light;
+}
+
+.uk-background-blend-difference {
+  background-blend-mode: difference;
+}
+
+.uk-background-blend-exclusion {
+  background-blend-mode: exclusion;
+}
+
+.uk-background-blend-hue {
+  background-blend-mode: hue;
+}
+
+.uk-background-blend-saturation {
+  background-blend-mode: saturation;
+}
+
+.uk-background-blend-color {
+  background-blend-mode: color;
+}
+
+.uk-background-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+/* ========================================================================
+   Component: Align
+ ========================================================================== */
+/*
+ * Default
+ */
+[class*='uk-align'] {
+  display: block;
+  margin-bottom: 30px;
+}
+
+*+[class*='uk-align'] {
+  margin-top: 30px;
+}
+
+/*
+   * Center
+   */
+.uk-align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+   * Left/Right
+   */
+.uk-align-left {
+  margin-top: 0;
+  margin-right: 30px;
+  float: left;
+}
+
+.uk-align-right {
+  margin-top: 0;
+  margin-left: 30px;
+  float: right;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-align-left\@s {
+    margin-top: 0;
+    margin-right: 30px;
+    float: left;
+  }
+
+  .uk-align-right\@s {
+    margin-top: 0;
+    margin-left: 30px;
+    float: right;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-align-left\@m {
+    margin-top: 0;
+    margin-right: 30px;
+    float: left;
+  }
+
+  .uk-align-right\@m {
+    margin-top: 0;
+    margin-left: 30px;
+    float: right;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-align-left\@l {
+    margin-top: 0;
+    float: left;
+  }
+
+  .uk-align-right\@l {
+    margin-top: 0;
+    float: right;
+  }
+
+  .uk-align-left,
+  .uk-align-left\@s,
+  .uk-align-left\@m,
+  .uk-align-left\@l {
+    margin-right: 40px;
+  }
+
+  .uk-align-right,
+  .uk-align-right\@s,
+  .uk-align-right\@m,
+  .uk-align-right\@l {
+    margin-left: 40px;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-align-left\@xl {
+    margin-top: 0;
+    margin-right: 40px;
+    float: left;
+  }
+
+  .uk-align-right\@xl {
+    margin-top: 0;
+    margin-left: 40px;
+    float: right;
+  }
+}
+
+/* ========================================================================
+   Component: SVG
+ ========================================================================== */
+/*
+ * 1. Fill all SVG elements with the current text color if no `fill` attribute is set
+ * 2. Set the fill and stroke color of all SVG elements to the current text color
+ */
+/* 1 */
+.uk-svg,
+.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+  fill: currentcolor;
+}
+
+.uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+  stroke: currentcolor;
+}
+
+/*
+ * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
+ */
+.uk-svg {
+  transform: translate(0, 0);
+}
+
+/* ========================================================================
+   Component: Utility
+ ========================================================================== */
+/* Panel
+ ========================================================================== */
+.uk-panel {
+  display: flow-root;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/*
+ * Remove margin from the last-child
+ */
+.uk-panel> :last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Scrollable
+ */
+.uk-panel-scrollable {
+  height: 170px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+  resize: both;
+}
+
+/* Clearfix
+ ========================================================================== */
+/*
+ * 1. `table-cell` is used with `::before` because `table` creates a 1px gap when it becomes a flex item, only in Webkit
+ * 2. `table` is used again with `::after` because `clear` only works with block elements.
+ * Note: `display: block` with `overflow: hidden` is currently not working in the latest Safari
+ */
+/* 1 */
+.uk-clearfix::before {
+  content: "";
+  display: table-cell;
+}
+
+/* 2 */
+.uk-clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Float
+ ========================================================================== */
+/*
+ * 1. Prevent content overflow
+ */
+.uk-float-left {
+  float: left;
+}
+
+.uk-float-right {
+  float: right;
+}
+
+/* 1 */
+[class*='uk-float-'] {
+  max-width: 100%;
+}
+
+/* Overfow
+   ========================================================================== */
+.uk-overflow-hidden {
+  overflow: hidden;
+}
+
+/*
+   * Enable scrollbars if content is clipped
+   */
+.uk-overflow-auto {
+  overflow: auto;
+}
+
+.uk-overflow-auto> :last-child {
+  margin-bottom: 0;
+}
+
+/* Box Sizing
+   ========================================================================== */
+.uk-box-sizing-content {
+  box-sizing: content-box;
+}
+
+.uk-box-sizing-border {
+  box-sizing: border-box;
+}
+
+/* Resize（リサイズ）
+   ========================================================================== */
+.uk-resize {
+  resize: both;
+}
+
+.uk-resize-horizontal {
+  resize: horizontal;
+}
+
+.uk-resize-vertical {
+  resize: vertical;
+}
+
+/* Display
+   ========================================================================== */
+.uk-display-block {
+  display: block !important;
+}
+
+.uk-display-inline {
+  display: inline !important;
+}
+
+.uk-display-inline-block {
+  display: inline-block !important;
+}
+
+/* Inline（インライン）
+ ========================================================================== */
+/*
+ * 1. Container fits its content
+ * 2. Create position context
+ * 3. Prevent content overflow
+ * 4. Behave like most inline-block elements
+ * 5. Force new layer without creating a new stacking context
+ *    to fix 1px glitch when combined with overlays and transitions in Webkit
+ * 6. Clip child elements
+ */
+[class*='uk-inline'] {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: middle;
+  /* 5 */
+  -webkit-backface-visibility: hidden;
+}
+
+.uk-inline-clip {
+  /* 6 */
+  overflow: hidden;
+}
+
+/* Responsive objects（レスボンシブ・オブジェクト）
+ ========================================================================== */
+/*
+ * Preserve original dimensions
+ * Because `img, `video`, `canvas` and  `audio` are already responsive by default, see Base component
+ */
+.uk-preserve-width,
+.uk-preserve-width canvas,
+.uk-preserve-width img,
+.uk-preserve-width svg,
+.uk-preserve-width video {
+  max-width: none;
+}
+
+/*
+  * Responsiveness
+  * Corrects `max-width` and `max-height` behavior if padding and border are used
+  */
+.uk-responsive-width,
+.uk-responsive-height {
+  box-sizing: border-box;
+}
+
+/*
+  * 1. Set a maximum width. `important` needed to override `uk-preserve-width img`
+  * 2. Auto scale the height. Only needed if `height` attribute is present
+  */
+.uk-responsive-width {
+  /* 1 */
+  max-width: 100% !important;
+  /* 2 */
+  height: auto;
+}
+
+/*
+  * 1. Set a maximum height. Only works if the parent element has a fixed height
+  * 2. Auto scale the width. Only needed if `width` attribute is present
+  * 3. Reset max-width, which `img, `video`, `canvas` and  `audio` already have by default
+  */
+.uk-responsive-height {
+  /* 1 */
+  max-height: 100%;
+  /* 2 */
+  width: auto;
+  /* 3 */
+  max-width: none;
+}
+
+/*
+  * Fix initial iframe width. Without the viewport is expanded on iOS devices
+  */
+[uk-responsive],
+[data-uk-responsive] {
+  max-width: 100%;
+}
+
+/* Object
+ ========================================================================== */
+.uk-object-cover {
+  object-fit: cover;
+}
+
+.uk-object-contain {
+  object-fit: contain;
+}
+
+.uk-object-fill {
+  object-fit: fill;
+}
+
+.uk-object-none {
+  object-fit: none;
+}
+
+.uk-object-scale-down {
+  object-fit: scale-down;
+}
+
+/*
+   * Position
+   */
+.uk-object-top-left {
+  object-position: 0 0;
+}
+
+.uk-object-top-center {
+  object-position: 50% 0;
+}
+
+.uk-object-top-right {
+  object-position: 100% 0;
+}
+
+.uk-object-center-left {
+  object-position: 0 50%;
+}
+
+.uk-object-center-center {
+  object-position: 50% 50%;
+}
+
+.uk-object-center-right {
+  object-position: 100% 50%;
+}
+
+.uk-object-bottom-left {
+  object-position: 0 100%;
+}
+
+.uk-object-bottom-center {
+  object-position: 50% 100%;
+}
+
+.uk-object-bottom-right {
+  object-position: 100% 100%;
+}
+
+/* Border（ボーダー）
+   ========================================================================== */
+.uk-border-circle {
+  border-radius: 50%;
+}
+
+.uk-border-pill {
+  border-radius: 500px;
+}
+
+.uk-border-rounded {
+  border-radius: 5px;
+}
+
+/*
+   * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
+   */
+.uk-inline-clip[class*='uk-border-'] {
+  -webkit-transform: translateZ(0);
+}
+
+/* Box-shadow（ボックスシャドウ）
+   ========================================================================== */
+.uk-box-shadow-small {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.uk-box-shadow-medium {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-box-shadow-large {
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+.uk-box-shadow-xlarge {
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
+}
+
+/*
+   * Hover
+   */
+[class*='uk-box-shadow-hover'] {
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.uk-box-shadow-hover-small:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.uk-box-shadow-hover-medium:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.uk-box-shadow-hover-large:hover {
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+.uk-box-shadow-hover-xlarge:hover {
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
+}
+
+/* Box-shadow bottom
+   ========================================================================== */
+/*
+   * 1. Set position.
+   * 2. Set style
+   * 3. Fix shadow being clipped in Safari if container is animated
+   */
+@supports (filter: blur(0)) {
+  .uk-box-shadow-bottom {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .uk-box-shadow-bottom::after {
+    content: "";
+    /* 1 */
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* 2 */
+    height: 30px;
+    border-radius: 100%;
+    background: #444;
+    filter: blur(20px);
+    /* 3 */
+    will-change: filter;
+  }
+}
+
+/* Drop cap
+ ========================================================================== */
+/*
+ * 1. Firefox doesn't apply `::first-letter` if the first letter is inside child elements
+ *    https://bugzilla.mozilla.org/show_bug.cgi?id=214004
+ * 2. In Firefox, a floating `::first-letter` doesn't have a line box and there for no `line-height`
+ *    https://bugzilla.mozilla.org/show_bug.cgi?id=317933
+ */
+.uk-dropcap::first-letter,
+.uk-dropcap>p:first-of-type::first-letter {
+  display: block;
+  margin-right: 10px;
+  float: left;
+  font-size: 4.5em;
+  line-height: 1;
+  margin-bottom: -2px;
+}
+
+/* 2 */
+@-moz-document url-prefix() {
+
+  .uk-dropcap::first-letter,
+  .uk-dropcap>p:first-of-type::first-letter {
+    margin-top: 1.1%;
+  }
+}
+
+/* Logo
+  ========================================================================== */
+/*
+  * 1. Style
+  * 2. Required for `a`
+  * 3. Behave like image but can be overridden through flex utility classes
+  */
+.uk-logo {
+  /* 1 */
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #333;
+  /* 2 */
+  text-decoration: none;
+}
+
+/* ロゴ画像（imgタグ）に影をつけない */
+.uk-logo img {
+  box-shadow: none;
+}
+
+/* ロゴ画像（imgタグ）のホバー時にも影をつけない */
+.uk-logo:hover img {
+  box-shadow: none;
+}
+
+/* 3 */
+:where(.uk-logo) {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Hover */
+.uk-logo:hover {
+  color: #333;
+  /* 1 */
+  text-decoration: none;
+}
+
+.uk-logo :where(img, svg, video) {
+  display: block;
+  box-shadow: none;
+}
+
+.uk-logo-inverse {
+  display: none;
+}
+
+/* Disabled State
+  ========================================================================== */
+.uk-disabled {
+  pointer-events: none;
+}
+
+/* Drag State
+  ========================================================================== */
+/*
+  * 1. Needed if moving over elements with have their own cursor on hover, e.g. links or buttons
+  * 2. Fix dragging over iframes
+  */
+.uk-drag,
+.uk-drag * {
+  cursor: move;
+}
+
+/* 2 */
+.uk-drag iframe {
+  pointer-events: none;
+}
+
+/* Dragover State
+  ========================================================================== */
+/*
+  * Create a box-shadow when dragging a file over the upload area
+  */
+.uk-dragover {
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
+}
+
+/* Blend modes（ブレンド）
+ ========================================================================== */
+.uk-blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+.uk-blend-screen {
+  mix-blend-mode: screen;
+}
+
+.uk-blend-overlay {
+  mix-blend-mode: overlay;
+}
+
+.uk-blend-darken {
+  mix-blend-mode: darken;
+}
+
+.uk-blend-lighten {
+  mix-blend-mode: lighten;
+}
+
+.uk-blend-color-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.uk-blend-color-burn {
+  mix-blend-mode: color-burn;
+}
+
+.uk-blend-hard-light {
+  mix-blend-mode: hard-light;
+}
+
+.uk-blend-soft-light {
+  mix-blend-mode: soft-light;
+}
+
+.uk-blend-difference {
+  mix-blend-mode: difference;
+}
+
+.uk-blend-exclusion {
+  mix-blend-mode: exclusion;
+}
+
+.uk-blend-hue {
+  mix-blend-mode: hue;
+}
+
+.uk-blend-saturation {
+  mix-blend-mode: saturation;
+}
+
+.uk-blend-color {
+  mix-blend-mode: color;
+}
+
+.uk-blend-luminosity {
+  mix-blend-mode: luminosity;
+}
+
+/* Transform（トランスフォーム）
+========================================================================== */
+.uk-transform-center {
+  transform: translate(-50%, -50%);
+}
+
+/* Transform Origin
+  ========================================================================== */
+.uk-transform-origin-top-left {
+  transform-origin: 0 0;
+}
+
+.uk-transform-origin-top-center {
+  transform-origin: 50% 0;
+}
+
+.uk-transform-origin-top-right {
+  transform-origin: 100% 0;
+}
+
+.uk-transform-origin-center-left {
+  transform-origin: 0 50%;
+}
+
+.uk-transform-origin-center-right {
+  transform-origin: 100% 50%;
+}
+
+.uk-transform-origin-bottom-left {
+  transform-origin: 0 100%;
+}
+
+.uk-transform-origin-bottom-center {
+  transform-origin: 50% 100%;
+}
+
+.uk-transform-origin-bottom-right {
+  transform-origin: 100% 100%;
+}
+
+/* ========================================================================
+   Component: Flex
+ ========================================================================== */
+.uk-flex {
+  display: flex;
+}
+
+.uk-flex-inline {
+  display: inline-flex;
+}
+
+/* Alignment
+   ========================================================================== */
+/*
+   * Align items along the main axis of the current line of the flex container
+   * Row: Horizontal
+   */
+.uk-flex-left {
+  justify-content: flex-start;
+}
+
+.uk-flex-center {
+  justify-content: center;
+}
+
+.uk-flex-right {
+  justify-content: flex-end;
+}
+
+.uk-flex-between {
+  justify-content: space-between;
+}
+
+.uk-flex-around {
+  justify-content: space-around;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-flex-left\@s {
+    justify-content: flex-start;
+  }
+
+  .uk-flex-center\@s {
+    justify-content: center;
+  }
+
+  .uk-flex-right\@s {
+    justify-content: flex-end;
+  }
+
+  .uk-flex-between\@s {
+    justify-content: space-between;
+  }
+
+  .uk-flex-around\@s {
+    justify-content: space-around;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-flex-left\@m {
+    justify-content: flex-start;
+  }
+
+  .uk-flex-center\@m {
+    justify-content: center;
+  }
+
+  .uk-flex-right\@m {
+    justify-content: flex-end;
+  }
+
+  .uk-flex-between\@m {
+    justify-content: space-between;
+  }
+
+  .uk-flex-around\@m {
+    justify-content: space-around;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-flex-left\@l {
+    justify-content: flex-start;
+  }
+
+  .uk-flex-center\@l {
+    justify-content: center;
+  }
+
+  .uk-flex-right\@l {
+    justify-content: flex-end;
+  }
+
+  .uk-flex-between\@l {
+    justify-content: space-between;
+  }
+
+  .uk-flex-around\@l {
+    justify-content: space-around;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-flex-left\@xl {
+    justify-content: flex-start;
+  }
+
+  .uk-flex-center\@xl {
+    justify-content: center;
+  }
+
+  .uk-flex-right\@xl {
+    justify-content: flex-end;
+  }
+
+  .uk-flex-between\@xl {
+    justify-content: space-between;
+  }
+
+  .uk-flex-around\@xl {
+    justify-content: space-around;
+  }
+}
+
+/*
+   * Align items in the cross axis of the current line of the flex container
+   * Row: Vertical
+   */
+.uk-flex-stretch {
+  align-items: stretch;
+}
+
+.uk-flex-top {
+  align-items: flex-start;
+}
+
+.uk-flex-middle {
+  align-items: center;
+}
+
+.uk-flex-bottom {
+  align-items: flex-end;
+}
+
+/* Direction
+   ========================================================================== */
+.uk-flex-row {
+  flex-direction: row;
+}
+
+.uk-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.uk-flex-column {
+  flex-direction: column;
+}
+
+.uk-flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Wrap（ラップ）
+   ========================================================================== */
+.uk-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.uk-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.uk-flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/*
+ * Aligns items within the flex container when there is extra space in the cross-axis
+ * Only works if there is more than one line of flex items
+ */
+.uk-flex-wrap-stretch {
+  align-content: stretch;
+}
+
+.uk-flex-wrap-top {
+  align-content: flex-start;
+}
+
+.uk-flex-wrap-middle {
+  align-content: center;
+}
+
+.uk-flex-wrap-bottom {
+  align-content: flex-end;
+}
+
+.uk-flex-wrap-between {
+  align-content: space-between;
+}
+
+.uk-flex-wrap-around {
+  align-content: space-around;
+}
+
+/* Item ordering
+   ========================================================================== */
+/*
+   * Default is 0
+   */
+.uk-flex-first {
+  order: -1;
+}
+
+.uk-flex-last {
+  order: 99;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-flex-first\@s {
+    order: -1;
+  }
+
+  .uk-flex-last\@s {
+    order: 99;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-flex-first\@m {
+    order: -1;
+  }
+
+  .uk-flex-last\@m {
+    order: 99;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-flex-first\@l {
+    order: -1;
+  }
+
+  .uk-flex-last\@l {
+    order: 99;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-flex-first\@xl {
+    order: -1;
+  }
+
+  .uk-flex-last\@xl {
+    order: 99;
+  }
+}
+
+/* Item dimensions
+   ========================================================================== */
+/*
+   * Initial: 0 1 auto
+   * Content dimensions, but shrinks
+   */
+/*
+   * No Flex: 0 0 auto
+   * Content dimensions
+   */
+.uk-flex-none {
+  flex: none;
+}
+
+/*
+   * Relative Flex: 1 1 auto
+   * Space is allocated considering content
+   */
+.uk-flex-auto {
+  flex: auto;
+}
+
+/*
+   * Absolute Flex: 1 1 0%
+   * Space is allocated solely based on flex
+   */
+.uk-flex-1 {
+  flex: 1;
+}
+
+/* ========================================================================
+   Component: Margin（マージン）
+ ========================================================================== */
+/*
+ * Default
+ */
+.uk-margin {
+  margin-bottom: 20px;
+}
+
+*+.uk-margin {
+  margin-top: 20px !important;
+}
+
+.uk-margin-top {
+  margin-top: 20px !important;
+}
+
+.uk-margin-bottom {
+  margin-bottom: 20px !important;
+}
+
+.uk-margin-left {
+  margin-left: 20px !important;
+}
+
+.uk-margin-right {
+  margin-right: 20px !important;
+}
+
+/* Small
+   ========================================================================== */
+.uk-margin-small {
+  margin-bottom: 10px;
+}
+
+*+.uk-margin-small {
+  margin-top: 10px !important;
+}
+
+.uk-margin-small-top {
+  margin-top: 10px !important;
+}
+
+.uk-margin-small-bottom {
+  margin-bottom: 10px !important;
+}
+
+.uk-margin-small-left {
+  margin-left: 10px !important;
+}
+
+.uk-margin-small-right {
+  margin-right: 10px !important;
+}
+
+/* Medium
+   ========================================================================== */
+.uk-margin-medium {
+  margin-bottom: 40px;
+}
+
+*+.uk-margin-medium {
+  margin-top: 40px !important;
+}
+
+.uk-margin-medium-top {
+  margin-top: 40px !important;
+}
+
+.uk-margin-medium-bottom {
+  margin-bottom: 40px !important;
+}
+
+.uk-margin-medium-left {
+  margin-left: 40px !important;
+}
+
+.uk-margin-medium-right {
+  margin-right: 40px !important;
+}
+
+/* Large
+   ========================================================================== */
+.uk-margin-large {
+  margin-bottom: 40px;
+}
+
+*+.uk-margin-large {
+  margin-top: 40px !important;
+}
+
+.uk-margin-large-top {
+  margin-top: 40px !important;
+}
+
+.uk-margin-large-bottom {
+  margin-bottom: 40px !important;
+}
+
+.uk-margin-large-left {
+  margin-left: 40px !important;
+}
+
+.uk-margin-large-right {
+  margin-right: 40px !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-margin-large {
+    margin-bottom: 70px;
+  }
+
+  *+.uk-margin-large {
+    margin-top: 70px !important;
+  }
+
+  .uk-margin-large-top {
+    margin-top: 70px !important;
+  }
+
+  .uk-margin-large-bottom {
+    margin-bottom: 70px !important;
+  }
+
+  .uk-margin-large-left {
+    margin-left: 70px !important;
+  }
+
+  .uk-margin-large-right {
+    margin-right: 70px !important;
+  }
+}
+
+/* XLarge
+   ========================================================================== */
+.uk-margin-xlarge {
+  margin-bottom: 70px;
+}
+
+*+.uk-margin-xlarge {
+  margin-top: 70px !important;
+}
+
+.uk-margin-xlarge-top {
+  margin-top: 70px !important;
+}
+
+.uk-margin-xlarge-bottom {
+  margin-bottom: 70px !important;
+}
+
+.uk-margin-xlarge-left {
+  margin-left: 70px !important;
+}
+
+.uk-margin-xlarge-right {
+  margin-right: 70px !important;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-margin-xlarge {
+    margin-bottom: 140px;
+  }
+
+  *+.uk-margin-xlarge {
+    margin-top: 140px !important;
+  }
+
+  .uk-margin-xlarge-top {
+    margin-top: 140px !important;
+  }
+
+  .uk-margin-xlarge-bottom {
+    margin-bottom: 140px !important;
+  }
+
+  .uk-margin-xlarge-left {
+    margin-left: 140px !important;
+  }
+
+  .uk-margin-xlarge-right {
+    margin-right: 140px !important;
+  }
+}
+
+/* Auto
+   ========================================================================== */
+.uk-margin-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.uk-margin-auto-top {
+  margin-top: auto !important;
+}
+
+.uk-margin-auto-bottom {
+  margin-bottom: auto !important;
+}
+
+.uk-margin-auto-left {
+  margin-left: auto !important;
+}
+
+.uk-margin-auto-right {
+  margin-right: auto !important;
+}
+
+.uk-margin-auto-vertical {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-margin-auto\@s {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .uk-margin-auto-left\@s {
+    margin-left: auto !important;
+  }
+
+  .uk-margin-auto-right\@s {
+    margin-right: auto !important;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-margin-auto\@m {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .uk-margin-auto-left\@m {
+    margin-left: auto !important;
+  }
+
+  .uk-margin-auto-right\@m {
+    margin-right: auto !important;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-margin-auto\@l {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .uk-margin-auto-left\@l {
+    margin-left: auto !important;
+  }
+
+  .uk-margin-auto-right\@l {
+    margin-right: auto !important;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-margin-auto\@xl {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .uk-margin-auto-left\@xl {
+    margin-left: auto !important;
+  }
+
+  .uk-margin-auto-right\@xl {
+    margin-right: auto !important;
+  }
+}
+
+/* Remove
+   ========================================================================== */
+.uk-margin-remove {
+  margin: 0 !important;
+}
+
+.uk-margin-remove-top {
+  margin-top: 0 !important;
+}
+
+.uk-margin-remove-bottom {
+  margin-bottom: 0 !important;
+}
+
+.uk-margin-remove-left {
+  margin-left: 0 !important;
+}
+
+.uk-margin-remove-right {
+  margin-right: 0 !important;
+}
+
+.uk-margin-remove-vertical {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.uk-margin-remove-adjacent+*,
+.uk-margin-remove-first-child> :first-child {
+  margin-top: 0 !important;
+}
+
+.uk-margin-remove-last-child> :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 640px) {
+  .uk-margin-remove-left\@s {
+    margin-left: 0 !important;
+  }
+
+  .uk-margin-remove-right\@s {
+    margin-right: 0 !important;
+  }
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: 960px) {
+  .uk-margin-remove-left\@m {
+    margin-left: 0 !important;
+  }
+
+  .uk-margin-remove-right\@m {
+    margin-right: 0 !important;
+  }
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-margin-remove-left\@l {
+    margin-left: 0 !important;
+  }
+
+  .uk-margin-remove-right\@l {
+    margin-right: 0 !important;
+  }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1600px) {
+  .uk-margin-remove-left\@xl {
+    margin-left: 0 !important;
+  }
+
+  .uk-margin-remove-right\@xl {
+    margin-right: 0 !important;
+  }
+}
+
+/* ========================================================================
+   Component: Padding（パディング）
+ ========================================================================== */
+.uk-padding {
+  padding: 30px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-padding {
+    padding: 40px;
+  }
+}
+
+/* Small
+   ========================================================================== */
+.uk-padding-small {
+  padding: 15px;
+}
+
+/* Large
+   ========================================================================== */
+.uk-padding-large {
+  padding: 40px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-padding-large {
+    padding: 70px;
+  }
+}
+
+/* Remove
+   ========================================================================== */
+.uk-padding-remove {
+  padding: 0 !important;
+}
+
+.uk-padding-remove-top {
+  padding-top: 0 !important;
+}
+
+.uk-padding-remove-bottom {
+  padding-bottom: 0 !important;
+}
+
+.uk-padding-remove-left {
+  padding-left: 0 !important;
+}
+
+.uk-padding-remove-right {
+  padding-right: 0 !important;
+}
+
+.uk-padding-remove-vertical {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.uk-padding-remove-horizontal {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ========================================================================
+   Component: Position（ポジション）
+ ========================================================================== */
+:root {
+  --uk-position-margin-offset: 15px;
+}
+
+/* Directions
+   ========================================================================== */
+/*
+   * 1. Prevent content overflow.
+   */
+[class*='uk-position-top'],
+[class*='uk-position-bottom'],
+[class*='uk-position-left'],
+[class*='uk-position-right'],
+[class*='uk-position-center'] {
+  position: absolute !important;
+  /* 1 */
+  max-width: calc(100% - (var(--uk-position-margin-offset) * 2));
+  box-sizing: border-box;
+}
+
+/*
+   * Edges
+   * Don't use `width: 100%` because it's wrong if the parent has padding.
+   */
+.uk-position-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.uk-position-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.uk-position-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.uk-position-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*
+   * Corners
+   */
+.uk-position-top-left {
+  top: 0;
+  left: 0;
+}
+
+.uk-position-top-right {
+  top: 0;
+  right: 0;
+}
+
+.uk-position-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.uk-position-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+/*
+   * Center
+   * 1. Fix text wrapping if content is larger than 50% of the container.
+   *    Using `max-content` requires `max-width` of 100% which is set generally.
+   */
+.uk-position-center {
+  top: calc(50% - var(--uk-position-margin-offset));
+  left: calc(50% - var(--uk-position-margin-offset));
+  --uk-position-translate-x: -50%;
+  --uk-position-translate-y: -50%;
+  transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y));
+  /* 1 */
+  width: max-content;
+}
+
+/* Vertical */
+[class*='uk-position-center-left'],
+[class*='uk-position-center-right'] {
+  top: calc(50% - var(--uk-position-margin-offset));
+  --uk-position-translate-y: -50%;
+  transform: translate(0, var(--uk-position-translate-y));
+}
+
+.uk-position-center-left {
+  left: 0;
+}
+
+.uk-position-center-right {
+  right: 0;
+}
+
+.uk-position-center-left-out {
+  right: 100%;
+  width: max-content;
+}
+
+.uk-position-center-right-out {
+  left: 100%;
+  width: max-content;
+}
+
+/* Horizontal */
+.uk-position-top-center,
+.uk-position-bottom-center {
+  left: calc(50% - var(--uk-position-margin-offset));
+  --uk-position-translate-x: -50%;
+  transform: translate(var(--uk-position-translate-x), 0);
+  /* 1 */
+  width: max-content;
+}
+
+.uk-position-top-center {
+  top: 0;
+}
+
+.uk-position-bottom-center {
+  bottom: 0;
+}
+
+/*
+   * Cover
+   */
+.uk-position-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Margin
+   ========================================================================== */
+.uk-position-small {
+  margin: 15px;
+  --uk-position-margin-offset: 15px;
+}
+
+.uk-position-medium {
+  margin: 30px;
+  --uk-position-margin-offset: 30px;
+}
+
+.uk-position-large {
+  margin: 30px;
+  --uk-position-margin-offset: 30px;
+}
+
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  .uk-position-large {
+    margin: 50px;
+    --uk-position-margin-offset: 50px;
+  }
+}
+
+/* Schemes
+   ========================================================================== */
+.uk-position-relative {
+  position: relative !important;
+}
+
+.uk-position-absolute {
+  position: absolute !important;
+}
+
+.uk-position-fixed {
+  position: fixed !important;
+}
+
+.uk-position-sticky {
+  position: sticky !important;
+}
+
+/* Layer
+   ========================================================================== */
+.uk-position-z-index {
+  z-index: 1;
+}
+
+.uk-position-z-index-zero {
+  z-index: 0;
+}
+
+.uk-position-z-index-negative {
+  z-index: -1;
+}
+
+.uk-position-z-index-high {
+  z-index: 990;
+}
+
+/* ========================================================================
+   Component: Transition（トランジション）
+ ========================================================================== */
+/* Transitions
+ ========================================================================== */
+/*
+ * The toggle is triggered on touch devices by two methods:
+ * 1. Using `:focus` and tabindex
+ * 2. Using `:hover` and a `touchstart` event listener registered on the document
+ *    (Doesn't work on Surface touch devices)
+ */
+:where(.uk-transition-fade),
+:where([class*='uk-transition-scale']),
+:where([class*='uk-transition-slide']) {
+  --uk-position-translate-x: 0;
+  --uk-position-translate-y: 0;
+}
+
+.uk-transition-fade,
+[class*='uk-transition-scale'],
+[class*='uk-transition-slide'] {
+  --uk-translate-x: 0;
+  --uk-translate-y: 0;
+  --uk-scale-x: 1;
+  --uk-scale-y: 1;
+  transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y)) translate(var(--uk-translate-x), var(--uk-translate-y)) scale(var(--uk-scale-x), var(--uk-scale-y));
+  transition: 1s ease-out;
+  transition-property: opacity, transform, filter;
+  opacity: 0;
+}
+
+/*
+  * Fade
+  */
+.uk-transition-toggle:hover .uk-transition-fade,
+.uk-transition-toggle:focus .uk-transition-fade,
+.uk-transition-toggle .uk-transition-fade:focus-within,
+.uk-transition-active.uk-active .uk-transition-fade {
+  opacity: 1;
+}
+
+/*
+  * Scale
+  * 1. Make image rendering the same during the transition as before and after. Prefixed because of Safari.
+  */
+/* 1 */
+[class*='uk-transition-scale'] {
+  -webkit-backface-visibility: hidden;
+}
+
+.uk-transition-scale-up {
+  --uk-scale-x: 1;
+  --uk-scale-y: 1;
+}
+
+.uk-transition-scale-down {
+  --uk-scale-x: 1.03;
+  --uk-scale-y: 1.03;
+}
+
+/* Show */
+.uk-transition-toggle:hover .uk-transition-scale-up,
+.uk-transition-toggle:focus .uk-transition-scale-up,
+.uk-transition-toggle .uk-transition-scale-up:focus-within,
+.uk-transition-active.uk-active .uk-transition-scale-up {
+  --uk-scale-x: 1.03;
+  --uk-scale-y: 1.03;
+  opacity: 1;
+}
+
+.uk-transition-toggle:hover .uk-transition-scale-down,
+.uk-transition-toggle:focus .uk-transition-scale-down,
+.uk-transition-toggle .uk-transition-scale-down:focus-within,
+.uk-transition-active.uk-active .uk-transition-scale-down {
+  --uk-scale-x: 1;
+  --uk-scale-y: 1;
+  opacity: 1;
+}
+
+/*
+  * Slide
+  */
+.uk-transition-slide-top {
+  --uk-translate-y: -100%;
+}
+
+.uk-transition-slide-bottom {
+  --uk-translate-y: 100%;
+}
+
+.uk-transition-slide-left {
+  --uk-translate-x: -100%;
+}
+
+.uk-transition-slide-right {
+  --uk-translate-x: 100%;
+}
+
+.uk-transition-slide-top-small {
+  --uk-translate-y: calc(-1 * 10px);
+}
+
+.uk-transition-slide-bottom-small {
+  --uk-translate-y: 10px;
+}
+
+.uk-transition-slide-left-small {
+  --uk-translate-x: calc(-1 * 10px);
+}
+
+.uk-transition-slide-right-small {
+  --uk-translate-x: 10px;
+}
+
+.uk-transition-slide-top-medium {
+  --uk-translate-y: calc(-1 * 50px);
+}
+
+.uk-transition-slide-bottom-medium {
+  --uk-translate-y: 50px;
+}
+
+.uk-transition-slide-left-medium {
+  --uk-translate-x: calc(-1 * 50px);
+}
+
+.uk-transition-slide-right-medium {
+  --uk-translate-x: 50px;
+}
+
+/* Show */
+.uk-transition-toggle:hover [class*='uk-transition-slide'],
+.uk-transition-toggle:focus [class*='uk-transition-slide'],
+.uk-transition-toggle [class*='uk-transition-slide']:focus-within,
+.uk-transition-active.uk-active [class*='uk-transition-slide'] {
+  --uk-translate-x: 0;
+  --uk-translate-y: 0;
+  opacity: 1;
+}
+
+/* Opacity modifier
+ ========================================================================== */
+.uk-transition-opaque {
+  opacity: 1;
+}
+
+/* Duration modifiers
+   ========================================================================== */
+.uk-transition-slow {
+  transition-duration: 0.7s;
+}
