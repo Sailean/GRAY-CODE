@@ -420,6 +420,7 @@ pre {
 
 pre code {
   font-family: Consolas, monaco, monospace;
+  font-size: 1.2rem;
 }
 
 /* Focus
