@@ -407,7 +407,8 @@ blockquote footer::before {
  * 1. Contain overflow in all browsers.
  */
 pre {
-  font: 0.875rem / 1.5 Consolas, monaco, monospace;
+  font: 1rem / 1.5 Consolas, monaco, monospace;
+  line-height: 1.5;
   color: #555;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -420,8 +421,6 @@ pre {
 
 pre code {
   font-family: Consolas, monaco, monospace;
-  font-size: 1.2rem;
-  line-height: 1.5;
 }
 
 /* Focus
