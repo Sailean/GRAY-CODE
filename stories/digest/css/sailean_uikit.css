@@ -421,6 +421,7 @@ pre {
 pre code {
   font-family: Consolas, monaco, monospace;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 /* Focus
