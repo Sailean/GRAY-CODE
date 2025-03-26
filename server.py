@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 
 class CustomHandler(SimpleHTTPRequestHandler):
@@ -24,4 +23,3 @@ PORT = 5500
 with HTTPServer(("localhost", PORT), CustomHandler) as httpd:
     print(f"Serving on http://localhost:{PORT}")
     httpd.serve_forever()
->>>>>>> a6b766a51b08c6e9b2d1ef465a2a8517683cb890
