@@ -30,7 +30,7 @@ akira_bot/
 | 開発者 | Makoto Midorikawa（13歳） |
 | 対象人物 | Dr. Arato Akira（故人） |
 | モデルタイプ | Locally fine-tuned LLM + custom voice model |
-| 利用目的 | "父を知るため"・対話再現・個人的アーカイブ |
+| 利用目的 | "便利だから"・対話再現・個人的アーカイブ |
 | 学習ソース | ラップトップ内ログ、録音、論文、画像、非公開メモ etc. |
 
 ---
@@ -51,7 +51,7 @@ akira_bot/
 ```json
 {
   "user": "mako",
-  "input": "パパ、悪いことしたらどうするべき？",
+  "input": "パパ、宿題手伝って？",
   "context": "2024.06.01_evening_conversation",
   "voice_mode": true
 }
@@ -60,7 +60,7 @@ akira_bot/
 **RESPONSE:** `200 OK`
 ```json
 {
-  "response": "……謝ることから始める。それが一番難しくて、一番大事なことだよ、眞。",
+  "response": "どこがわからないの？ 一緒に考えよう。",
   "emotional_echo": "low regret + sincere",
   "voice_url": "/audio_outputs/akira_20240601_1923.wav"
 }
