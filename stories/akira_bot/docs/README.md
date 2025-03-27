@@ -73,7 +73,7 @@ akira_bot/
 | Log File | Description |
 |----------|-------------|
 | `/logs/akira_test/17.json` | 最初の音声会話ログ |
-| `/logs/emotional_logs/05_reveal_emiko_response.json` | シドとママにバレたときのやつ |
+| `/logs/emotional_logs/05_reveal_emiko_response.json` | ママにバレたときのやつ |
 | `/docs/conversation_logs/23_laptop_inheritance.md` | パパのラップトップを貰ったときのやつ |
 
 ---
