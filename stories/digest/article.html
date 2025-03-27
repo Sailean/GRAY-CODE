@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="uk-section uk-section-default uk-section-small uk-padding">
-    <div class="uk-container uk-container-small">
+    <div class="uk-container uk-container-expand">
       <nav class="chapter-nav uk-margin">
         <a id="prev-link" href="#">← 前へ</a>
         <a href="index.html">目次へ</a>
@@ -113,15 +113,20 @@
     // 遅延読み込み効果（オプション）
     const messages = document.querySelectorAll('.timestamp');
     messages.forEach((msg, index) => {
-      msg.style.opacity = '0';
-      setTimeout(() => {
-        msg.style.transition = 'opacity 0.1s ease-in';
-        msg.style.opacity = '1';
-      }, index * 50); // 各メッセージを少しずつ表示
-    });
+  msg.style.opacity = '0';
+  // メッセージの長さに応じた遅延（長いメッセージはより時間がかかる）
+  const contentLength = msg.textContent.length;
+  const baseDelay = 150; // 基本遅延時間
+  const lengthFactor = 0.5; // 長さによる追加遅延の係数
+  const randomDelay = Math.floor(Math.random() * 50);
+  setTimeout(() => {
+    msg.style.transition = 'opacity 0.15s ease-in';
+    msg.style.opacity = '1';
+  }, (index * baseDelay) + (contentLength * lengthFactor) + randomDelay);
+});
   });
   </script>
-  
+
     <script src="js/load_articles.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/uikit.js" async></script>
