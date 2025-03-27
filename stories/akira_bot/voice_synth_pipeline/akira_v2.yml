@@ -1,0 +1,11 @@
+model: JA_f01_akira.v2
+voiceprint:
+  gender: male
+  tone: calm
+  tempo: moderate
+  emotional_response:
+    - trigger: "眞"
+      effect: "soften + warmth"
+sampling_rate: 48kHz
+format: WAV
+use_gpu: true

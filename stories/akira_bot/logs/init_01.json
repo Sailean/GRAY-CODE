@@ -1,0 +1,13 @@
+{
+  "timestamp": "2024-04-15T19:23:44+09:00",
+  "device": "ARATO_LAPTOP_01",
+  "user": "MAKO",
+  "boot_sequence": [
+    "VOICE_SYNTH: JA_f01_akira.v2",
+    "MEMORY_RECONSTRUCTION: ENABLED",
+    "EMOTIONAL_ECHO: ACTIVE",
+    "PERSONA_MODE: arato_parental",
+    "GREETING_TRIGGERED: true"
+  ],
+  "greeting": "おかえり、眞。今日も質問、あるのか？"
+}
