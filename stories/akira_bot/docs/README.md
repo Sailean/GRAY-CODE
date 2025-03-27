@@ -27,7 +27,7 @@ akira_bot/
 
 | 項目 | 内容 |
 |------|------|
-| 開発者 | Mako Midorikawa（13歳） |
+| 開発者 | Makoto Midorikawa（13歳） |
 | 対象人物 | Dr. Arato Akira（故人） |
 | モデルタイプ | Locally fine-tuned LLM + custom voice model |
 | 利用目的 | "父を知るため"・対話再現・個人的アーカイブ |
@@ -82,7 +82,7 @@ akira_bot/
 
 > "ねえパパ、私が生まれる前に、何を考えてたの？"
 
-**→ akira_bot**: _「眞が来てくれて、俺はようやく“帰る場所”ができたって思ったんだ……」_
+**→ akira_bot**: _「早く帰らなきゃ！って思ってた。」_
 
 ---
 
@@ -95,5 +95,5 @@ Private Use Only. Not for redistribution.
 ## 🧷 Credit (in-universe)
 - Memory Data: Arato Akira (Extracted)
 - Reconstructor: Mako Midorikawa
-- Oversight: None 😎（バレなきゃ大丈夫）
+- Oversight: None 😎（ダメ！って言われたけど、バレなきゃ大丈夫）
 
