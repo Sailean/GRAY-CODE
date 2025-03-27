@@ -1,4 +1,4 @@
-# 🤖 朗Bot (Arato Akira Memory Reconstruction Project)
+# 🤖 新渡朗Bot (Arato Akira Memory Reconstruction Project)
 
 > A local prototype dialogue agent based on archived personal data from the late Dr. Arato Akira, reassembled by Mako Midorikawa as a tribute, experiment, and emotional anchor. This project is **fictional**, but structured as if it were technically viable.
 
