@@ -34,7 +34,7 @@
 /* モダンターミナル風UIスタイル */
 .uk-pre {
   background-color: #1e1e2e;
-  color: #cdd6f4;
+  color: #c3c9df;
   border-radius: 8px;
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -68,7 +68,7 @@
 
 /* システムメッセージ */
 .system {
-  color: #89b4fa;
+  color: #34f047;
   font-style: italic;
   opacity: 0.8;
 }
@@ -78,14 +78,50 @@
   font-weight: 500;
 }
 
-/* AKIRA発言 */
-span.user:contains("AKIRA") {
+/* AKIRA発言とMAKO発言の色分け */
+.timestamp span.user:has(content: "AKIRA:") {
   color: #94e2d5;
 }
 
-/* MAKO発言 */
-span.user:contains("MAKO") {
+.timestamp span.user:has(content: "MAKO:") {
   color: #f5c2e7;
+}
+
+/* こちらはバックアップとして、上記のセレクタが機能しない場合 */
+.user[class*="AKIRA"] {
+  color: #94e2d5 !important;
+}
+
+.user[class*="MAKO"] {
+  color: #f5c2e7 !important;
+}
+
+/* JavaScript で追加されるクラスに対応するスタイル */
+.akira-text {
+  color: #94e2d5 !important;
+}
+
+.mako-text {
+  color: #f5c2e7 !important;
+}
+
+/* セレクタとして使えるようにクラスを追加するJavaScriptも用意しておく（後述） */
+
+/* オペレーターノート内のルビスタイル */
+.uk-pre code:contains("Operator's Note") rt {
+  font-size: 0.7em;
+  color: #a6e3a1;  /* オペレーターノートの色に合わせる */
+  opacity: 0.9;
+}
+
+/* 通常のルビスタイル - こちらはそのまま */
+ruby {
+  ruby-align: center;
+}
+
+rt {
+  font-size: 0.8em;
+  color: #bdd3f7;
 }
 
 /* ターミナルカーソル効果 */
@@ -145,16 +181,7 @@ span.user:contains("MAKO") {
   margin-top: 1rem;
 }
 
-/* ルビスタイル */
-ruby {
-  ruby-align: center;
-}
 
-rt {
-  font-size: 0.6em;
-  opacity: 0.7;
-  color: #89b4fa;
-}
 
 .article-item {
   padding: 0.625rem; /* 10px → 0.625rem */
