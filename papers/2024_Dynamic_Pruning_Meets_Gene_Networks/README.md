@@ -2,7 +2,8 @@
 🤯 It turned out to be quite interesting, so I decided to publish it.   面白かったので、公開します。
 
 
-📜 **This is a fake paper. Please enjoy it as a piece of humor!** 😆  **本論文はフェイクです。ユーモアとしてお楽しみください！**
+📜 **This is a fake paper. Please enjoy it as a piece of humor!** 
+😆 **本論文はフェイクです。ユーモアとしてお楽しみください！**
 
 
 
@@ -47,7 +48,7 @@ Here’s why:
 この論文では、一見、論文テーマとはまるで関係がないと思われる 「ダイヤモンド価格データセット」 を選択しました。
 理由は以下の通りです。
 - 高次元の相互作用が存在する。
-- 実験結果がキラキラして見える（物理的に）。💎
+- 実験結果がキラキラして見える（物理的に）💎
 - 検証者（@Sailean514 ）が Google Colab で簡単に実行できるから。
   
 - 🎭 真実はいつもシンプルです。ありがとう。
