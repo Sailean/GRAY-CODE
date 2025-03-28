@@ -127,6 +127,39 @@
   });
   </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ターミナルカーソルを最後のログメッセージの後に追加
+    const lastMessage = document.querySelector('.uk-pre p:last-of-type');
+    if (lastMessage) {
+      const cursor = document.createElement('span');
+      cursor.id = 'terminal-cursor';
+      lastMessage.appendChild(cursor);
+    }
+    
+    // 発言者に適切なクラスを追加
+    const userSpans = document.querySelectorAll('.timestamp span.user');
+    userSpans.forEach(span => {
+      const text = span.innerText;
+      if (text.includes('AKIRA:')) {
+        span.classList.add('akira-text');
+      } else if (text.includes('MAKO:')) {
+        span.classList.add('mako-text');
+      }
+    });
+    
+    // 遅延読み込み効果（オプション）
+    const messages = document.querySelectorAll('.timestamp');
+    messages.forEach((msg, index) => {
+      msg.style.opacity = '0';
+      setTimeout(() => {
+        msg.style.transition = 'opacity 0.1s ease-in';
+        msg.style.opacity = '1';
+      }, index * 50); // 各メッセージを少しずつ表示
+    });
+  });
+  </script>
+
     <script src="js/load_articles.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/uikit.js" async></script>
