@@ -32,9 +32,20 @@
 }
 
 /* モダンターミナル風UIスタイル */
-.uk-pre {
+.uk-pre_mako {
   background-color: #1e1e2e;
-  color: #c3c9df;
+  color: #e3e8fa;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  overflow: auto;
+}
+
+.uk-pre_sidney {
+  background-color: #03030b;
+  color: #36a451;
   border-radius: 8px;
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -212,16 +223,16 @@ rt {
   text-align: justify;
 }
 
-.chapter-nav { /* ナビゲーション表示 */
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  font-size: 1rem;
-}
-.chapter-nav a {
-  color: #3498db;
-  text-decoration: none;
+.chapter-nav a { /* ナビゲーション表示 */
   font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.chapter-nav a:hover {
+  background-color: #e0e0e0;
 }
 
 
@@ -258,18 +269,6 @@ rt {
   text-indent: 0;
 }
 
-
-/* ルビ（フリガナ）フォントを指定 */
-ruby {
-    font-size: 1em;
-}
-rt {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
-  font-size: 60%;
-  /*フリガナのフォントサイズを指定 */
-  color: rgb(79, 70, 70);
-  /*フリガナの色を指定 */
-}
 
 /* Links
  ========================================================================== */
