@@ -1,72 +1,107 @@
 [
   {
-    "title": "1. おかえり",
-    "date": "2010年06月12日",
-    "file": "2010.06.12.md"
+    "chapter": 1,
+    "title_jp": "おかえり",
+    "title_en": "Welcome Home",
+    "date": "2010-06-12",
+    "filename": "01_welcome_home_2010-06-12.md"
   },
-    {
-      "title": "2. すれ違い",
-      "date": "2010年06月13日",
-      "file": "2010.06.13.md"
-    },
-    {
-      "title": "3.ビリーズ・バー",
-      "date": "2010年10月15日",
-      "file": "2010.10.15.md"
-    },
-    {
-      "title": "4. カール・ラボ",
-      "date": "2010年11月24日",
-      "file": "2010.11.24.md"
-    },
-    {
-      "title": "5. 朗のノート",
-      "date": "2011年03月25日",
-      "file": "2011.03.25.md"
-    },
-    {
-      "title": "6. 眞のログ",
-      "date": "2024年12月20日",
-      "file": "2024.12.20.md"
-    },
-    {
-      "title": "7. シドニー",
-      "date": "2024年12月21日_01",
-      "file": "2024.12.21_01.md"
-    },
-    {
-      "title": "8. アキラのチャットボット",
-      "date": "2024年12月21日_02",
-      "file": "2024.12.21_02.md"
-    },
-    {
-      "title": "9. キューブ・ワン",
-      "date": "2024年12月21日_03",
-      "file": "2024.12.21_03.md"
-    },
-    {
-      "title": "10. 英美子とアキラと朗",
-      "date": "2024年12月21日_04",
-      "file": "2024.12.21_04.md"
-    },
-    {
-      "title": "11. 即時安全保護実装",
-      "date": "2024年12月21日_05",
-      "file": "2024.12.21_05-1.md"
-    },
-    {
-      "title": "12. 朗の実存",
-      "date": "2024年12月21日_06",
-      "file": "2024.12.21_05-2.md"
-    },
-    {
-      "title": "13. ただいま",
-      "date": "2024年12月21日_07",
-      "file": "2024.12.21_05-3.md"
-    },
-    {
-      "title": "14. エピローグ",
-      "date": "2024年12月25日",
-      "file": "2024.12.25.md"
-    }
-  ]
+  {
+    "chapter": 2,
+    "title_jp": "すれ違い",
+    "title_en": "Drifted",
+    "date": "2010-06-13",
+    "filename": "02_drifted_2010-06-13.md"
+  },
+  {
+    "chapter": 3,
+    "title_jp": "ビリーズ・バー",
+    "title_en": "Billy’s Bar",
+    "date": "2010-10-15",
+    "filename": "03_billys_bar_2010-10-15.md"
+  },
+  {
+    "chapter": 4,
+    "title_jp": "カール・ラボ",
+    "title_en": "Carl Lab",
+    "date": "2010-11-24",
+    "filename": "04_carl_lab_2010-11-24.md"
+  },
+  {
+    "chapter": 5,
+    "title_jp": "朗のノート",
+    "title_en": "Akira’s Notebook",
+    "date": "2011-03-25",
+    "filename": "05_akira_notebook_2011-03-25.md"
+  },
+  {
+    "chapter": 6,
+    "title_jp": "眞のログ",
+    "title_en": "Makoto’s Log",
+    "date": "2024-12-20",
+    "filename": "06_makoto_log_2024-12-20.md"
+  },
+  {
+    "chapter": 7,
+    "title_jp": "シドニー",
+    "title_en": "Sidney",
+    "date": "2024-12-21",
+    "filename": "07_sidney_2024-12-21.md"
+  },
+  {
+    "chapter": 8,
+    "title_jp": "再会",
+    "title_en": "Reunion",
+    "date": "2024-12-21",
+    "filename": "08_reunion_2024-12-21.md"
+  },
+  {
+    "chapter": 9,
+    "title_jp": "過去",
+    "title_en": "The Past",
+    "date": "2024-12-21",
+    "filename": "09_the_past_2024-12-21.md"
+  },
+  {
+    "chapter": 10,
+    "title_jp": "キューブ・ワン",
+    "title_en": "Qube One",
+    "date": "2024-12-21",
+    "filename": "10_qube_one_2024-12-21.md"
+  },
+  {
+    "chapter": 11,
+    "title_jp": "英美子とアキラと朗",
+    "title_en": "Emiko, Akira, and Arato",
+    "date": "2024-12-21",
+    "filename": "11_emiko_akira_arato_2024-12-21.md"
+  },
+  {
+    "chapter": 12,
+    "title_jp": "即時安全保護実装",
+    "title_en": "Real-Time Failsafe Implementation",
+    "date": "2024-12-21",
+    "filename": "12_failsafe_2024-12-21.md"
+  },
+  {
+    "chapter": 13,
+    "title_jp": "朗の実存",
+    "title_en": "The Existence of Akira",
+    "date": "2024-12-21",
+    "filename": "13_akira_existence_2024-12-21.md"
+  },
+  {
+    "chapter": 14,
+    "title_jp": "ただいま",
+    "title_en": "Welcome Back",
+    "date": "2024-12-21",
+    "filename": "14_welcome_back_2024-12-21.md"
+  },
+  {
+    "chapter": 15,
+    "title_jp": "エピローグ",
+    "title_en": "Epilogue",
+    "date": "2024-12-25",
+    "filename": "15_epilogue_2024-12-25.md"
+  }
+]

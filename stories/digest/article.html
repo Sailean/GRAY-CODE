@@ -1,79 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>記事ページ</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <link rel="stylesheet" href="css/sailean_uikit.css">
-  <link rel="stylesheet" href="css/uikit.css">
+  <link rel="stylesheet" href="css/sailean_uikit.css" />
+  <link rel="stylesheet" href="css/uikit.css" />
 </head>
 <body>
-  <div class="uk-section uk-section-default uk-section-small uk-padding">
-    <div class="uk-container uk-container-expand">
-      <nav class="chapter-nav uk-margin">
-        <a id="prev-link" href="#">← 前へ</a>
-        <a href="index.html">目次へ</a>
-        <a id="next-link" href="#">次へ →</a>
-      </nav>      
+
+<div class="uk-section uk-section-default uk-section-small uk-padding">
+  <div class="uk-container uk-container-expand">
+
+    <!-- 上部ナビゲーション -->
+    <nav class="chapter-nav uk-margin">
+      <a id="prev-link" href="#">← 前へ</a>
+      <a href="index.html">目次へ</a>
+    </nav>
+
+    <h3 id="article-title"></h3>
     <p id="article-date">📜 記事を読み込み中...</p>
-    <div id="article-content" class="uk-card uk-card-default uk-card-body"></div>
+    <div id="article-content" class="uk-card uk-card-default uk-card-body">  
+    </div>
+    <!-- 下部ナビゲーション：次へだけ -->
+    <nav class="chapter-nav uk-margin-large-top uk-text-center">
+      <a id="next-link" href="#">次へ →</a>
+    </nav>           
   </div>
 </div>
 
 <!-- 上へ戻るボタン -->
 <div id="topbutton" onclick="scrollToTop()" class="arrow" title="上へ戻る">↑</div>
 
-  <script>
-    // Markdownを読み込んでHTMLに変換し、本文に表示する(URLパラメータから記事ファイル名を取得)
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get('file');
+<!-- メイン記事読み込み -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const file = urlParams.get('file');
 
-    if (file) {
-      fetch(`articles/${file}`)
-        .then(response => response.text())
-        .then(text => {
-          document.getElementById('article-content').innerHTML = marked.parse(text);
-          document.getElementById('article-date').innerText = file.replace('.md', '');
-        })
-        .catch(error => {
-          document.getElementById('article-content').innerHTML = '<p>⚠ 記事が見つかりません。</p>';
-          console.error('Error loading article:', error);
-        });
-    } else {
-      document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
-    }
-  </script>
+  if (!file) {
+    document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
+  } else {
+    fetch('articles.json?nocache=' + new Date().getTime())
+      .then(response => response.json())
+      .then(fileMap => {
+        const meta = fileMap.find(entry => entry.filename === file);
+        const base = file.endsWith('.en.md') ? 'en_articles' : 'articles';
 
+        fetch(`${base}/${file}`)
+          .then(response => response.text())
+          .then(text => {
+            document.getElementById('article-content').innerHTML = marked.parse(text);
+            document.getElementById('article-title').innerText = meta?.title_jp || '(タイトル未設定)';
+            document.getElementById('article-date').innerText = meta?.date || '(日付不明)';
+          })
+          .catch(error => {
+            document.getElementById('article-content').innerHTML = '<p>⚠ 記事が見つかりません。</p>';
+            console.error('Markdown 読み込みエラー:', error);
+          });
+      })
+      .catch(error => {
+        document.getElementById('article-content').innerHTML = '<p>⚠ メタ情報（articles.json）の取得に失敗しました。</p>';
+        console.error('JSON 読み込みエラー:', error);
+      });
+  }
+</script>
 
-<!-- ナビゲーションリンクとタイトル表示の処理 -->
+<!-- 前へ／次へリンク -->
 <script>
   fetch('articles.json')
     .then(res => res.json())
     .then(data => {
       const params = new URLSearchParams(window.location.search);
       const file = params.get('file');
-      const index = data.findIndex(item => item.file === file);
+      const index = data.findIndex(item => item.filename === file);
+
       if (index > -1) {
         const prev = data[index - 1];
         const next = data[index + 1];
+
         if (prev) {
-          document.getElementById('prev-link').href = `article.html?file=${prev.file}`;
-          document.getElementById('prev-link').innerText = `← ${prev.title}`;
+          document.getElementById('prev-link').href = `article.html?file=${prev.filename}`;
+          document.getElementById('prev-link').innerText = `← ${prev.title_jp}`;
         } else {
           document.getElementById('prev-link').style.visibility = 'hidden';
         }
+
         if (next) {
-          document.getElementById('next-link').href = `article.html?file=${next.file}`;
-          document.getElementById('next-link').innerText = `${next.title} →`;
+          document.getElementById('next-link').href = `article.html?file=${next.filename}`;
+          document.getElementById('next-link').innerText = `${next.title_jp} →`;
         } else {
           document.getElementById('next-link').style.visibility = 'hidden';
-        }
-
-        // BONUS: 記事タイトルを表示
-        const titleElem = document.getElementById('article-title');
-        if (titleElem) {
-          titleElem.textContent = data[index].title;
         }
       }
     });
@@ -81,89 +98,51 @@
 
 <script>
   function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
 
 <script>
-  // スクロール位置で表示・非表示
   window.addEventListener("scroll", function () {
     const topBtn = document.getElementById("topbutton");
-    if (window.scrollY > 200) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
+    topBtn.style.display = window.scrollY > 200 ? "block" : "none";
   });
 </script>
 
+<!-- オプション：演出系 -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // ターミナルカーソルを最後のログメッセージの後に追加
+  document.addEventListener('DOMContentLoaded', function () {
     const lastMessage = document.querySelector('.uk-pre p:last-of-type');
     if (lastMessage) {
       const cursor = document.createElement('span');
       cursor.id = 'terminal-cursor';
       lastMessage.appendChild(cursor);
     }
-    
-    // 遅延読み込み効果（オプション）
-    const messages = document.querySelectorAll('.timestamp');
-    messages.forEach((msg, index) => {
-  msg.style.opacity = '0';
-  // メッセージの長さに応じた遅延（長いメッセージはより時間がかかる）
-  const contentLength = msg.textContent.length;
-  const baseDelay = 150; // 基本遅延時間
-  const lengthFactor = 0.5; // 長さによる追加遅延の係数
-  const randomDelay = Math.floor(Math.random() * 50);
-  setTimeout(() => {
-    msg.style.transition = 'opacity 0.15s ease-in';
-    msg.style.opacity = '1';
-  }, (index * baseDelay) + (contentLength * lengthFactor) + randomDelay);
-});
-  });
-  </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // ターミナルカーソルを最後のログメッセージの後に追加
-    const lastMessage = document.querySelector('.uk-pre p:last-of-type');
-    if (lastMessage) {
-      const cursor = document.createElement('span');
-      cursor.id = 'terminal-cursor';
-      lastMessage.appendChild(cursor);
-    }
-    
-    // 発言者に適切なクラスを追加
     const userSpans = document.querySelectorAll('.timestamp span.user');
     userSpans.forEach(span => {
       const text = span.innerText;
-      if (text.includes('AKIRA:')) {
-        span.classList.add('akira-text');
-      } else if (text.includes('MAKO:')) {
-        span.classList.add('mako-text');
-      }
+      if (text.includes('AKIRA:')) span.classList.add('akira-text');
+      else if (text.includes('MAKO:')) span.classList.add('mako-text');
     });
-    
-    // 遅延読み込み効果（オプション）
+
     const messages = document.querySelectorAll('.timestamp');
     messages.forEach((msg, index) => {
       msg.style.opacity = '0';
       setTimeout(() => {
         msg.style.transition = 'opacity 0.1s ease-in';
         msg.style.opacity = '1';
-      }, index * 50); // 各メッセージを少しずつ表示
+      }, index * 50);
     });
   });
-  </script>
+</script>
 
-    <script src="js/load_articles.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/uikit.js" async></script>
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
+<!-- スクリプト類 -->
+<script src="js/load_articles.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/uikit.js" async></script>
+<script src="js/uikit-icons.min.js"></script>
+<script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
+
 </body>
 </html>

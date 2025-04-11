@@ -16,31 +16,24 @@
 
 <body>
 
-<nav class="uk-navbar-container">
+  <nav class="uk-navbar-container">
     <div class="uk-container">
-        <div uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href>Nonlinear Emotion Curves <span uk-navbar-parent-icon></span></a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-parent">
-                                    <a href="#">Digest</a>
-                                    <ul class="uk-nav-sub">
-                                        <li><a href="#">Ⅰ. 2010年6月12日</a></li>
-                                        <li><a href="#">Ⅱ. 2010年6月13日</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="javascript:void(0)">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul id="digest-nav"></ul>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</nav><!--  navigation  -->
+  </nav>
+  <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding-large">
   <div class="uk-container uk-container-small">
@@ -64,6 +57,7 @@
           <li>
             <a class="uk-accordion-title" href>What's New</a>
             <div class="uk-accordion-content">
+              <p>2025.04.02 　「非線形感情曲線」全ストーリーを公開しました。</p>
               <p>2025.03.16 　一部を公開しました。</p>
             </div>
           </li>
@@ -80,28 +74,44 @@
 
 
 
-  <script>
-    // articles.json を読み込んで目次を生成
-    fetch('articles.json')
-      .then(response => response.json()) // JSONを取得
-      .then(data => {
-        let html = '<ul class="uk-list uk-list-divider uk-text-large">';
-        data.forEach(article => {
-          html += `
-            <li>
-              <a href="article.html?file=${article.file}" class="uk-link-reset">
-                <span class="uk-text-bold">${article.title}</span> - ${article.date}
-              </a>
-            </li>`;
-        });
-        html += '</ul>';
-        document.getElementById('articles-list').innerHTML = html;
-      })
-      .catch(error => {
-        document.getElementById('articles-list').innerHTML = '<p>⚠ 記事リストを読み込めませんでした。</p>';
-        console.error('Error loading articles:', error);
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get('lang') || 'jp';
+
+  // 🔹 グローバルナビ用（上部メニュー）
+  fetch('articles.json')
+    .then(res => res.json())
+    .then(data => {
+      const navList = document.getElementById('digest-nav');
+      navList.innerHTML = data.map(entry => {
+        const title = lang === 'en' ? entry.title_en : entry.title_jp;
+        return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
+      }).join('');
+    });
+
+  // 🔸 メイン目次リスト
+  fetch('articles.json?nocache=' + new Date().getTime())
+    .then(response => response.json())
+    .then(data => {
+      let html = '<ul class="uk-list uk-list-divider uk-text-large">';
+      data.forEach(article => {
+        const title = lang === 'en' ? article.title_en : article.title_jp;
+        html += `
+          <li>
+            <a href="article.html?file=${article.filename}&lang=${lang}" class="uk-link-reset">
+              <span class="uk-text-bold">${title}</span> - ${article.date}
+            </a>
+          </li>`;
       });
-  </script>
+      html += '</ul>';
+      document.getElementById('articles-list').innerHTML = html;
+    })
+    .catch(error => {
+      document.getElementById('articles-list').innerHTML = '<p>⚠ 記事リストを読み込めませんでした。</p>';
+      console.error('Error loading articles:', error);
+    });
+</script>
+
     <script src="js/load_articles.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/uikit.js" async></script>
