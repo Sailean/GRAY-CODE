@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>記事ページ</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <link rel="stylesheet" href="css/sailean_uikit.css" />
-  <link rel="stylesheet" href="css/uikit.css" />
+  <link rel="stylesheet" href="css/sailean_uikit.css">
+  <link rel="stylesheet" href="css/uikit.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
+  <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
+
 <body>
+
+  <nav class="uk-navbar-container">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="javascript:void(0)">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul id="digest-nav"></ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding">
   <div class="uk-container uk-container-expand">
