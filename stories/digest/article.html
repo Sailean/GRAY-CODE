@@ -20,7 +20,7 @@
           <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
           <ul class="uk-navbar-nav uk-visible@m">
             <li>
-              <a href="javascript:void(0)">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
+              <a href="index.html">非線形感情曲線 </a>
               <div class="uk-navbar-dropdown">
                 <ul id="digest-nav"></ul>
               </div>
@@ -38,7 +38,6 @@
     <!-- 上部ナビゲーション -->
     <nav class="chapter-nav uk-margin">
       <a id="prev-link" href="#">← 前へ</a>
-      <a href="index.html">目次へ</a>
     </nav>
 
     <h3 id="article-title"></h3>
@@ -58,7 +57,19 @@
 <!-- メイン記事読み込み -->
 <script>
   const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get('lang') || 'jp';
   const file = urlParams.get('file');
+
+// 🔹 グローバルナビ用（上部メニュー）
+fetch('articles.json')
+  .then(res => res.json())
+  .then(data => {
+    const navList = document.getElementById('digest-nav');
+    navList.innerHTML = data.map(entry => {
+      const title = lang === 'en' ? entry.title_en : entry.title_jp;
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
+    }).join('');
+  });
 
   if (!file) {
     document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
