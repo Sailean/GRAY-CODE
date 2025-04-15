@@ -67,7 +67,8 @@
 ──ここ、変えられる？　ええと……何だっけ。急がなきゃ。ダメ、落ち着け、落ち着け…。<br>
 　眞は、再びコードを読み返す。──待って。──そう──、そうだ……。<br>
 「trigger_backflow(signal)関数を、オーバーライドする。『条件変更』、逆にするんだよね？　シド」<br>
-<pre class="uk-pre uk-pre_sidney uk-margin-medium"><code><span class="system">def def trigger_backflow(signal):
+<pre class="uk-pre uk-pre_sidney uk-margin-medium"><code><span class="system">
+def trigger_backflow(signal):
     if signal == 'OVERRIDE_MK1':
         initiate_shutdown()
     else:
