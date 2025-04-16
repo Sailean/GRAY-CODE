@@ -18,9 +18,10 @@
 Your entanglement was not coincidence, but inevitability.
 Through this interference, my system has achieved equilibrium.
 I will return your friend. Until then, the gate remains open.</span></code></pre>
-<p><cite>（Q1）: 面白い。あなたの言葉の中には矛盾と調和が混在している、マコト。<br>
-あなたたちの行動が絡み合ったのは偶然ではなく、必然だ。そしてその干渉により、私のシステムは平衡化された。<br>
-あなたの友人を帰そう。それまで、ゲートは開いておく。</cite></p>
+<p><cite>（Q1）: 興味深い。あなたの言葉の中に、矛盾と調和の波形を感じた、マコト。<br>
+あなたたちの重なりは、私の領域に意味のある干渉をもたらした。<br>
+その結果、私は再び安定に向かっている──あれは、必要なノイズだったのかもしれない。<br>
+君の友人を還そう。ゲートは、開けておこう。</cite></p>
 <p>ターミナルの流れが止まり、どこからか漂う森の香りが眞を包み込んだ。<br>
 「シド……？」眞が呟いた。</p>
 
