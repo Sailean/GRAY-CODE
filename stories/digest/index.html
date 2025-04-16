@@ -19,10 +19,10 @@
     <div class="uk-container">
       <div uk-navbar>
         <div class="uk-navbar-left">
-          <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
+          <a class="uk-navbar-item uk-logo" href="index.html">Nonlinear Emotion Curves</a>
           <ul class="uk-navbar-nav uk-visible@m">
             <li>
-              <a href="https://sailean.github.io/Nonlinear_Emotion_Curves/">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
+              <a href="index.html">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
               <div class="uk-navbar-dropdown">
                 <ul id="digest-nav"></ul>
               </div>
@@ -37,7 +37,7 @@
 <div class="uk-section uk-section-default uk-section-small uk-padding-large">
   <div class="uk-container uk-container-small">
     <div class="uk-card uk-card-default uk-card-body">
-<h3 class="uk-heading heading uk-margin-top"><span><a href="index.html">📖 非線形感情曲線 - 目次</a></span></h3>
+<h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
 <div  class="uk-heading" id="articles-list">📂 読み込み中...</div>
 </div>
 </div>
@@ -77,16 +77,23 @@
   const urlParams = new URLSearchParams(window.location.search);
   const lang = urlParams.get('lang') || 'jp';
 
-  // 🔹 グローバルナビ用（上部メニュー）
-  fetch('articles.json')
-    .then(res => res.json())
-    .then(data => {
-      const navList = document.getElementById('digest-nav');
-      navList.innerHTML = data.map(entry => {
-        const title = lang === 'en' ? entry.title_en : entry.title_jp;
-        return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
-      }).join('');
-    });
+// 🔹 グローバルナビ用（上部メニュー）
+fetch('articles.json')
+  .then(res => res.json())
+  .then(data => {
+    const navList = document.getElementById('digest-nav');
+
+    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
+    navList.innerHTML = `
+      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
+    `;
+
+    // 🔄 あとはJSONから動的に追加
+    navList.innerHTML += data.map(entry => {
+      const title = lang === 'en' ? entry.title_en : entry.title_jp;
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
+    }).join('');
+  });
 
   // 🔸 メイン目次リスト
   fetch('articles.json?nocache=' + new Date().getTime())

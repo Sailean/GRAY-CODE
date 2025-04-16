@@ -13,14 +13,15 @@
 
 <body>
 
+  <!--  navigation  -->
   <nav class="uk-navbar-container">
     <div class="uk-container">
       <div uk-navbar>
         <div class="uk-navbar-left">
-          <a class="uk-navbar-item uk-logo" href="#">Nonlinear Emotion Curves</a>
+          <a class="uk-navbar-item uk-logo" href="index.html">Nonlinear Emotion Curves</a>
           <ul class="uk-navbar-nav uk-visible@m">
             <li>
-              <a href="https://sailean.github.io/Nonlinear_Emotion_Curves/">非線形感情曲線 </a>
+              <a class="uk-navbar-item uk-logo" href="index.html">非線形感情曲線 </a>
               <div class="uk-navbar-dropdown">
                 <ul id="digest-nav"></ul>
               </div>
@@ -30,18 +31,16 @@
       </div>
     </div>
   </nav>
-  <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding">
   <div class="uk-container uk-container-expand">
-
     <!-- 上部ナビゲーション -->
     <nav class="chapter-nav uk-margin">
       <a id="prev-link" href="#">← 前へ</a>
     </nav>
-
-    <h3 id="article-title"></h3>
-    <p id="article-date">📜 記事を読み込み中...</p>
+    <h3 id="article-chapter" class="heading"></h3>
+    <h3 id="article-title" class="heading"></h3>
+    <p id="article-date" class="heading">📜 記事を読み込み中...</p>
     <div id="article-content" class="uk-card uk-card-default uk-card-body">  
     </div>
     <!-- 下部ナビゲーション：次へだけ -->
@@ -65,7 +64,14 @@ fetch('articles.json')
   .then(res => res.json())
   .then(data => {
     const navList = document.getElementById('digest-nav');
-    navList.innerHTML = data.map(entry => {
+
+    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
+    navList.innerHTML = `
+      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
+    `;
+
+    // 🔄 あとはJSONから動的に追加
+    navList.innerHTML += data.map(entry => {
       const title = lang === 'en' ? entry.title_en : entry.title_jp;
       return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
     }).join('');
@@ -144,12 +150,12 @@ fetch('articles.json')
 
 <!-- オプション：演出系 -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const lastMessage = document.querySelector('.uk-pre p:last-of-type');
-    if (lastMessage) {
+  function runAkiraLogEffects() {
+    const anchor = document.getElementById('cursor-anchor');
+    if (anchor) {
       const cursor = document.createElement('span');
       cursor.id = 'terminal-cursor';
-      lastMessage.appendChild(cursor);
+      anchor.parentNode.insertBefore(cursor, anchor.nextSibling);
     }
 
     const userSpans = document.querySelectorAll('.timestamp span.user');
@@ -167,8 +173,12 @@ fetch('articles.json')
         msg.style.opacity = '1';
       }, index * 50);
     });
-  });
+  }
+
+  // ページ読み込み時に1回だけ実行
+  document.addEventListener('DOMContentLoaded', runAkiraLogEffects);
 </script>
+
 
 <!-- スクリプト類 -->
 <script src="js/load_articles.js"></script>
