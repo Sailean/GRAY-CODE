@@ -67,7 +67,7 @@ Akira shrugged. “Then if I’m about to get shot, Sid, you’d better come sav
 He winked. Sidney stared at him for a long moment. His voice dropped low.<br>
 “What if I’m your enemy?”<br>
 
-<p>Akira’s gaze was calm and still. “You’re not. You’re on my side.”<br>
+Akira’s gaze was calm and still. “You’re not. You’re on my side.”<br>
 Sidney arched an eyebrow, swirling his glass. “Is that so.”<br>
 After a pause, his voice went quiet.<br>
 “What if I already stole your research and sold it?”<br>
@@ -220,119 +220,119 @@ Sidney chuckled.<br>
 as long as people are involved, there’ll be mistakes. Always.”<br>
 He stirred his drink again, voice steady.<br>
 “Believing it’s foolproof? That’s the biggest mistake of all.<br>
-That’s why I eliminated risk altogether.”</p>
+That’s why I eliminated risk altogether.”<br>
 
 <p>Akira looked up, stunned.<br>
-<br>
+
 “You mean...?”<br>
-<br>
+
 “Yeah. I made sure I’d never pass on my DNA.”<br>
-<br>
+
 He sipped and smiled.<br>
-<br>
+
 “If you’ve failed to protect someone once,<br>
 you don’t get to promise to protect anyone else.<br>
 For me, family is a liability.”<br>
-<br>
+
 Akira always thought Sidney was a striking figure.<br>
 He looked younger than his age, tall and lean with sculpted features and a well-trimmed beard.<br>
 His skin was bronze, his grayish-blue eyes sharp enough to read minds.<br>
 Long black hair, tied loosely at the nape. Subtle but expensive clothes.<br>
-<br>
+
 He must’ve been popular back in the day. Probably still is.<br>
-<br>
+
 Akira thought of a stunning woman he’d met at a Nexus party—<br>
 introduced as “a friend” by Sidney.<br>
 She claimed to be an artist, but even Akira recognized her—one of the top American models.<br>
 They didn’t hide their relationship, but never confirmed it either.<br>
-<br>
+
 “Sid...” Akira started, but then stopped. It’s private.<br>
-<br>
+
 Sidney laughed softly to himself.<br>
-<br>
+
 What am I even doing, saying this stuff?<br>
-<br>
+
 He raised his glass again and flashed a grin.<br>
-<br>
+
 “If you think it’s important, then now’s the time.<br>
 Call her. Message her. Talk it through, properly.”<br>
-<br>
+
 “I will...<br>
 Thanks, Sid.”<br>
-<br>
+
 Akira lifted his glass like a child apologizing to a parent.<br>
 Sidney raised his own.<br>
-<br>
+
 “To you, Akira—the world’s most sincere idiot.”<br>
-<br>
+
 Their glasses clinked.<br>
-<br>
+
 “Hey... Sid.” Akira looked at the poster on the wall again.<br>
-<br>
+
 “If something ever happened to me—<br>
 Would you... check in on Emiko? Just a little?”<br>
-<br>
+
 “I don’t hire plant geneticists, you know.”<br>
-<br>
+
 Akira laughed. “Not what I meant.<br>
 As a friend.<br>
 You’re the only one I can say this to.”<br>
-<br>
+
 “I don’t make promises.<br>
 But this is America—anything could happen.<br>
 If she needs help, I’ll be there.”<br>
-<br>
+
 Sidney instantly regretted saying something so ominous.<br>
-<br>
+
 “You’re bold when it comes to research.<br>
 But when it’s women... you’re hopeless.<br>
 You need to redo middle school. Emiko’s your first, right?”<br>
-<br>
+
 Akira frowned. “No.<br>
 She’s the second.”<br>
-<br>
+
 Sidney raised his brows. “Really?<br>
 So what happened to the first one? Did you dump her?”<br>
-<br>
+
 Akira gave him a side glance. “No.<br>
 She dumped me.<br>
 Said I was like a robot.”<br>
-<br>
+
 Sidney chuckled.<br>
-<br>
+
 “Damn. Harsh. Don’t worry, Akira. You just lack experience.”<br>
-<br>
+
 He reached across the table and patted his friend’s shoulder.<br>
-<br>
+
 “But Emiko shows you a face she shows no one else.<br>
 She wants to lean on you.<br>
 You’ve got this, Akira.”<br>
-<br>
+
 “Shows me a face no one else sees...?”<br>
-<br>
+
 Sidney nodded.<br>
-<br>
+
 “She’s giving you a chance to win her heart again.<br>
 Step up.”<br>
-<br>
+
 “Sid... I—”<br>
 Akira faltered. Sidney winked and stood.<br>
-<br>
+
 “That’s enough talk.<br>
 Tonight, take an Uber.<br>
 This city’s not safe for guys with baby faces like you.”<br>
-<br>
+
 Akira remembered the hackathon where they first met.<br>
 He sighed, slightly exasperated.<br>
-<br>
+
 “Yeah... I know.<br>
 But I’ll never get used to this part of America.”<br>
-<br>
+
 “Smart boy.<br>
 Keep our little secret.<br>
 I’ll walk you to the main street—my hotel’s just past it.”<br>
-<br>
+
 Akira stood as well. “Thanks, Sid.<br>
 Really.”<br>
-<br>
+
 He smiled, looking up at the tall man by his side.</p>
