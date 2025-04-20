@@ -21,7 +21,7 @@
           <a class="uk-navbar-item uk-logo" href="index.html">Nonlinear Emotion Curves</a>
           <ul class="uk-navbar-nav uk-visible@m">
             <li>
-              <a class="uk-navbar-item uk-logo" href="index.html">非線形感情曲線 </a>
+              <a href="index.html">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
               <div class="uk-navbar-dropdown">
                 <ul id="digest-nav"></ul>
               </div>
@@ -38,9 +38,8 @@
     <nav class="chapter-nav uk-margin">
       <a id="prev-link" href="#">← 前へ</a>
     </nav>
-    <h3 id="article-chapter" class="heading"></h3>
-    <h3 id="article-title" class="heading"></h3>
-    <p id="article-date" class="heading">📜 記事を読み込み中...</p>
+    <h3 id="article-title" class="heading">読み込み中…</h3>
+    <h4 id="article-meta"  class="heading"></h4>
     <div id="article-content" class="uk-card uk-card-default uk-card-body">  
     </div>
     <!-- 下部ナビゲーション：次へだけ -->
@@ -60,93 +59,199 @@
   const file = urlParams.get('file');
 
 // 🔹 グローバルナビ用（上部メニュー）
-fetch('articles.json')
+// ❶ 使う JSON ファイルを言語ごとに切り替える
+const navSource = lang === 'en'
+  ? 'en_articles.json'
+  : 'articles.json';
+
+fetch(navSource)
   .then(res => res.json())
   .then(data => {
     const navList = document.getElementById('digest-nav');
 
-    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
+    // ❷ 「目次に戻る」リンクも言語ごとに
     navList.innerHTML = `
-      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
+      <li>
+        <a href="index.html">
+          ${lang === 'en' ? 'Table of Contents' : '目次（Index）'} 
+        </a>
+      </li>
     `;
 
-    // 🔄 あとはJSONから動的に追加
+    // ❸ 各章リンクのテキストを言語ごとに変える
     navList.innerHTML += data.map(entry => {
-      const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
+      const title = lang === 'en'
+        ? entry.title_en
+        : entry.title_jp;
+
+      const linkText = lang === 'en'
+        ? `Chapter ${entry.chapter}: ${title}`
+        : `第${entry.chapter}章 ${title}`;
+
+      return `
+        <li>
+          <a href="article.html?file=${entry.filename}&lang=${lang}">
+            ${linkText}
+          </a>
+        </li>`;
     }).join('');
-  });
+  })
+  .catch(err => console.error(err));
 
   if (!file) {
     document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
   } else {
-    fetch('articles.json?nocache=' + new Date().getTime())
+    fetch(lang === 'en' ? 'en_articles.json' : 'articles.json')
       .then(response => response.json())
       .then(fileMap => {
-        const meta = fileMap.find(entry => entry.filename === file);
-        const base = file.endsWith('.en.md') ? 'en_articles' : 'articles';
+        const meta = fileMap.find(e => e.filename === file);
+        const base = lang === 'en' ? 'en_articles' : 'articles';
 
+        // ルビ辞書（必要な人名どんどん追加してOK！）
+        const rubyMap = {
+          '朗': 'あきら',
+          '眞': 'まこと',
+          '英美子': 'えみこ'
+        };
+
+        // ルビ適用関数
+        function applyRuby(str) {
+          return str.replace(/朗|眞|英美子/g, match => {
+            const rt = rubyMap[match];
+            return `<ruby>${match}<rt>${rt}</rt></ruby>`;
+          });
+        }
+
+        // 章タイトル表示（羅馬数字または Chapter）
+        const roman = ['', 'Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ'];
+        const chap = meta.chapter;
+
+        if (lang === 'en') {
+          document.getElementById('article-title').innerText =
+            `Chapter ${chap}: ${meta.title_en}`;
+        } else {
+          const rawTitle = `${roman[chap]}. ${meta.title_jp}`;
+          const rubyTitle = applyRuby(rawTitle); // ← ここでルビ適用！
+          document.getElementById('article-title').innerHTML = rubyTitle; //         innerHTMLに変更！
+        }
+
+
+        // ❷ メタ情報（日付＋場所＋ルビ処理）
+        let metaHtml = '';
+
+        if (lang === 'en') {
+          if (meta.timestamp) {
+            const dt = new Date(meta.timestamp);
+            const opts = {
+              year:   'numeric',
+              month:  'long',
+              day:    'numeric',
+              hour:   'numeric',
+              minute: '2-digit',
+              hour12: true
+            };
+            const la = new Intl.DateTimeFormat('en-US', {
+              ...opts,
+              timeZone: 'America/Los_Angeles'
+            }).format(dt);
+            const jp = new Intl.DateTimeFormat('en-US', {
+              ...opts,
+              timeZone: 'Asia/Tokyo'
+            }).format(dt);
+            metaHtml = `${la} — LA / ${jp} JST`;
+          } else {
+            metaHtml = `${meta.date} — ${meta.location_en}`;
+          }
+        } else {
+          if (meta.timestamp) {
+            const dt = new Date(meta.timestamp);
+            const opts = {
+              year:   'numeric',
+              month:  'numeric',
+              day:    'numeric',
+              hour:   'numeric',
+              minute: '2-digit',
+              hour12: true
+            };
+            const la = new Intl.DateTimeFormat('ja-JP', {
+              ...opts,
+              timeZone: 'America/Los_Angeles'
+            }).format(dt);
+            const jp = new Intl.DateTimeFormat('ja-JP', {
+              ...opts,
+              timeZone: 'Asia/Tokyo'
+            }).format(dt);
+
+            const rubyLocation = applyRuby(meta.location_jp);
+            metaHtml = `${la} ${rubyLocation} / ${jp} 日本時間`;
+          } else {
+            const [Y, M, D] = meta.date.split('-');
+            const rubyLocation = applyRuby(meta.location_jp);
+            metaHtml = `${Y}年${+M}月${+D}日・${rubyLocation}`;
+          }
+        }
+        document.getElementById('article-meta').innerHTML = metaHtml;
+
+        // ❸ 本文の読み込み
         fetch(`${base}/${file}`)
-          .then(response => response.text())
+          .then(r => r.text())
           .then(text => {
             document.getElementById('article-content').innerHTML = marked.parse(text);
-            document.getElementById('article-title').innerText = meta?.title_jp || '(タイトル未設定)';
-            document.getElementById('article-date').innerText = meta?.date || '(日付不明)';
-          })
-          .catch(error => {
-            document.getElementById('article-content').innerHTML = '<p>⚠ 記事が見つかりません。</p>';
-            console.error('Markdown 読み込みエラー:', error);
           });
-      })
-      .catch(error => {
-        document.getElementById('article-content').innerHTML = '<p>⚠ メタ情報（articles.json）の取得に失敗しました。</p>';
-        console.error('JSON 読み込みエラー:', error);
-      });
-  }
-</script>
 
-<!-- 前へ／次へリンク -->
-<script>
-  fetch('articles.json')
-    .then(res => res.json())
-    .then(data => {
-      const params = new URLSearchParams(window.location.search);
-      const file = params.get('file');
-      const index = data.findIndex(item => item.filename === file);
+        // ─────────────────────────────
+        // 前後ナビの設定
+        const idx = fileMap.findIndex(e => e.filename === file);
 
-      if (index > -1) {
-        const prev = data[index - 1];
-        const next = data[index + 1];
-
-        if (prev) {
-          document.getElementById('prev-link').href = `article.html?file=${prev.filename}`;
-          document.getElementById('prev-link').innerText = `← ${prev.title_jp}`;
+        // 「前へ」
+        if (idx > 0) {
+          const prev = fileMap[idx - 1];
+          const a = document.getElementById('prev-link');
+          a.href = `article.html?file=${prev.filename}&lang=${lang}`;
+          a.innerText = lang === 'en'
+            ? `◀ Chapter ${prev.chapter}: ${prev.title_en}`
+            : `◀ 第${prev.chapter}章 ${prev.title_jp}`;
         } else {
           document.getElementById('prev-link').style.visibility = 'hidden';
         }
 
-        if (next) {
-          document.getElementById('next-link').href = `article.html?file=${next.filename}`;
-          document.getElementById('next-link').innerText = `${next.title_jp} →`;
+        // 「次へ」
+        if (idx < fileMap.length - 1) {
+          const next = fileMap[idx + 1];
+          const a = document.getElementById('next-link');
+          a.href = `article.html?file=${next.filename}&lang=${lang}`;
+          a.innerText = lang === 'en'
+            ? `Chapter ${next.chapter}: ${next.title_en} ▶`
+            : `第${next.chapter}章 ${next.title_jp} ▶`;
         } else {
           document.getElementById('next-link').style.visibility = 'hidden';
         }
-      }
-    });
-</script>
+      })
+      .catch(error => {
+        document.getElementById('article-content').innerHTML = '<p>⚠ メタ情報の取得に失敗しました。</p>';
+        console.error('JSON 読み込みエラー:', error);
+      });
 
-<script>
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+      // ページ先頭へスムーズスクロール
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+  const topBtn = document.getElementById('topbutton');
+
+  // スクロールしたら表示・隠す
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      topBtn.style.display = 'block';
+    } else {
+      topBtn.style.display = 'none';
+    }
+  });
+});
   }
 </script>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const topBtn = document.getElementById("topbutton");
-    topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-  });
-</script>
+
 
 <!-- オプション：演出系 -->
 <script>
@@ -174,7 +279,6 @@ fetch('articles.json')
       }, index * 50);
     });
   }
-
   // ページ読み込み時に1回だけ実行
   document.addEventListener('DOMContentLoaded', runAkiraLogEffects);
 </script>
@@ -183,9 +287,9 @@ fetch('articles.json')
 <!-- スクリプト類 -->
 <script src="js/load_articles.js"></script>
 <script src="js/scripts.js"></script>
-<script src="js/uikit.js" async></script>
+<script src="js/uikit.js"></script>
 <script src="js/uikit-icons.min.js"></script>
-<script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
+<script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -35,11 +35,16 @@
   <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding-large">
-  <div class="uk-container uk-container-small">
-    <div class="uk-card uk-card-default uk-card-body">
-<h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
-<div  class="uk-heading" id="articles-list">📂 読み込み中...</div>
-</div>
+  <div class="uk-container">
+    
+    <div class="uk-grid" uk-grid>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp"><h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
+        <div  class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
+      </div>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-en"><h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
+        <div  class="uk-heading" id="articles-list-en">📂 読み込み中...</div>
+      </div>
+
 </div>
   <!-- # お知らせ # -->
   <div class="uk-section uk-section-default uk-section-small uk-padding-large">
@@ -56,6 +61,7 @@
           <li>
             <a class="uk-accordion-title" href>What's New</a>
             <div class="uk-accordion-content">
+              <p>2025.04.18 　"Nonlinear Emotion Curves" 英語版全ストーリーを順次公開中です。</p>
               <p>2025.04.02 　「非線形感情曲線」全ストーリーを公開しました。</p>
               <p>2025.03.16 　一部を公開しました。</p>
             </div>
@@ -96,26 +102,46 @@ fetch('articles.json')
   });
 
   // 🔸 メイン目次リスト
-  fetch('articles.json?nocache=' + new Date().getTime())
-    .then(response => response.json())
-    .then(data => {
-      let html = '<ul class="uk-list uk-list-divider uk-text-large">';
-      data.forEach(article => {
-        const title = lang === 'en' ? article.title_en : article.title_jp;
-        html += `
-          <li>
-            <a href="article.html?file=${article.filename}&lang=${lang}" class="uk-link-reset">
-              <span class="uk-text-bold">${title}</span> - ${article.date}
-            </a>
-          </li>`;
-      });
-      html += '</ul>';
-      document.getElementById('articles-list').innerHTML = html;
-    })
-    .catch(error => {
-      document.getElementById('articles-list').innerHTML = '<p>⚠ 記事リストを読み込めませんでした。</p>';
-      console.error('Error loading articles:', error);
+// 🔹 日本語目次リスト（articles.json）
+fetch('articles.json?nocache=' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    let html = '<ul class="uk-list uk-list-divider">';
+    data.forEach(article => {
+      html += `
+        <li>
+          <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
+            <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
+          </a>
+        </li>`;
     });
+    document.getElementById('articles-list-jp').innerHTML = html;
+  })
+  .catch(error => {
+    document.getElementById('articles-list-jp').innerHTML = '<p>⚠ 日本語目次を読み込めませんでした。</p>';
+    console.error('Error loading JP articles:', error);
+  });
+
+// 🔹 英語目次リスト（en_articles.json）
+fetch('en_articles.json?nocache=' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    let html = '<ul class="uk-list uk-list-divider">';
+    data.forEach(article => {
+      html += `
+        <li>
+          <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
+            <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
+          </a>
+        </li>`;
+    });
+    document.getElementById('articles-list-en').innerHTML = html;
+  })
+  .catch(error => {
+    document.getElementById('articles-list-en').innerHTML = '<p>⚠ English index failed to load.</p>';
+    console.error('Error loading EN articles:', error);
+  });
+
 </script>
 
     <script src="js/load_articles.js"></script>
