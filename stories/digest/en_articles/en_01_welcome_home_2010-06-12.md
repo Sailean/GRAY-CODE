@@ -1,24 +1,16 @@
 <p>Emiko trudged up the stairs to their apartment, a grocery bag swinging from each hand.<br>
 She didn’t slow down, just tilted her head and wiped the sweat from her forehead onto her shoulder.<br>
-*June’s barely started, and it’s already this hot?*<br>
-*I should’ve grabbed more beer.*</p>
+<span class="voice-in">June’s barely started, and it’s already this hot? I should’ve grabbed more beer.</span></p>
 
 <p>At the door, she shifted both bags to one hand and fished out the key from her jeans pocket.<br>
-Just as she slid it into the lock, the door creaked open—from the inside.</p>
-
-<p>“—!”<br>
-Startled, she stepped back and nearly lost her balance.<br>
-But then she saw the familiar face peeking through the gap—and broke into a smile.</p>
-
-<p>“You’re back already? Welcome home. You scared me.”<br>
+Just as she slid it into the lock, the door creaked open—from the inside.<br>
+“—!”<br>
+Startled, she stepped back and nearly lost her balance.But then she saw the familiar face peeking through the gap—and broke into a smile.<br>
+“You’re back already? Welcome home. You scared me.”<br>
 “Emi... I just got here. Sorry. Let me take those.”</p>
 
-<p>Akira took the bags from her hands, stepped over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.</p>
-
-<p>“Thanks,” Emiko said, picking up his jacket and bag.<br>
-She chuckled softly and followed.</p>
-
-<p>Akira paused, turning with a curious look.<br>
+<p>Akira took the bags from her hands, stepped over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.“Thanks,” Emiko said, picking up his jacket and bag.<br>
+She chuckled softly and followed.Akira paused, turning with a curious look.<br>
 “Hmm? What’s funny?”<br>
 She grinned. “This is heavier than the groceries.”<br>
 “Ah—yeah, sorry. Laptop’s in there. You could’ve just left it.”<br>
@@ -29,34 +21,26 @@ She grinned. “This is heavier than the groceries.”<br>
 
 <p>He set the groceries down by the bed and peeked into one of the bags.<br>
 “Oh—eggs! Finally! I can have tamago kake gohan again. Are you making rice?”<br>
-Emiko laughed. “I figured you'd want that. Of course I’m making rice. Tonight or tomorrow—your choice. Everything else is pretty basic though.”</p>
-
-<p>As he began pulling out ingredients and laying them on the table, Akira said,<br>
-“No way—this is a feast. Tofu’s fresh, not frozen. These veggies look amazing. I could eat them raw. This is perfect.”</p>
-
-<p>“So no nasty questions, just good vibes at the Q&amp;A? That’s a relief.”<br>
-Emiko placed his bag down and picked up the jacket.</p>
-
-<p>“Well, not nasty exactly... but there were some sharp critiques, as always.<br>
-Still, that’s how you learn. Honestly, it was fun.”</p>
-
-<p>She hung the jacket on a hanger and wrinkled her nose.<br>
-“Yeah, I get it. I’ll take this to the cleaners. Wear your spare tomorrow, okay? Mind if I check the pockets?”<br>
-“Thanks. Kyushu was crazy hot. Feels cool here though. Like I’m alive again.”</p>
-
-<p>Emiko had gone home from campus earlier just to switch on the A/C before heading out to shop.<br>
-“Yeah... summer’s already here. Humid too...”</p>
-
-<p>She reached into the jacket pocket and pulled out a few folded papers.<br>
-Then blinked. “Wait—this is my paper. Akira, did you peer-review me?”</p>
-
-<p>He gave a sheepish grin.<br>
-“Of course not. I read it on the plane. It’s fascinating—gene networks, huh? I’ve been thinking about it nonstop.”</p>
-
-<p>Emiko gave a knowing smile and shifted the subject.<br>
-“So... how’s San Jose this year? Cooler than here, right?”</p>
-
-<p>She placed the beer into the fridge as they talked.<br>
+Emiko laughed. “I figured you'd want that. Of course I’m making rice. Tonight or tomorrow—your choice. Everything else is pretty basic though.”<br>
+As he began pulling out ingredients and laying them on the table, Akira said,<br>
+“No way—this is a feast. Tofu’s fresh, not frozen. These veggies look amazing. I could eat them raw. This is perfect.”<br>
+“So no nasty questions, just good vibes at the Q&amp;A? That’s a relief.”
+Emiko placed his bag down and picked up the jacket.<br>
+“Well, not nasty exactly... but there were some sharp critiques, as always. Still, that’s how you learn. Honestly, it was fun.”<br>
+She hung the jacket on a hanger and wrinkled her nose.<br>
+“I’ve seen how much you put into this. That kind of work—most people never notice. But they did. And you deserve every bit of it.”<br>
+She glanced at him, softening. “They saw it, Akira. What I’ve always seen in you. And now… they finally do too.”<br>
+She wrinkled her nose again at the sweat lingering in his jacket.<br>
+“Let me send this to the cleaners. Wear your spare one tomorrow, okay? Mind if I check the pockets?”<br>
+“Thanks. Kyushu was crazy hot. Feels cool here though. Like I’m alive again.”<br>
+Emiko had gone home from campus earlier just to switch on the A/C before heading out to shop.<br>
+“Yeah... summer’s already here. Humid too...”<br>
+She reached into the jacket pocket and pulled out a few folded papers.<br>
+Then blinked. “Wait—this is my paper. Akira, did you peer-review me?”<br>He gave a sheepish grin.<br>
+“Peer-review? You kidding? I wouldn’t survive page one. But honestly, it was fascinating—I read the whole thing on the flight. That gene network stuff stuck with me.”<br>
+Emiko gave a knowing smile and shifted the subject.<br>
+“Oh, Akira… I was kidding. But… thank you. That means a lot. So... how’s San Jose this year? Cooler than here, right?”<br>
+She placed the beer into the fridge as they talked.<br>
 “The humidity’s still low, so it’s manageable if you stay in the shade.<br>
 Still dry as ever. Wildfires are becoming the norm now.”</p>
 
@@ -100,7 +84,7 @@ Their lips parted, and Akira murmured into her hair, “Let’s shower together.
 <p>“Of course. Fresh from the store.”</p>
 
 <p>She burst into laughter.<br>
-*Fresh? Condoms? Really?*</p>
+<span class="voice-in">Fresh? Condoms? Really?</span></p>
 
 <p>Coming from ever-serious Akira, it was hilariously out of character—and therefore, even funnier.<br>
 But at the same time... it was a relief.</p>
@@ -115,7 +99,7 @@ Whenever he came back, the same anxiety returned.</p>
 <p>The detergent scent on his shirt was unfamiliar—something foreign, mixed in with the nostalgic scent she knew by heart.<br>
 Her heart pounded. Her body buzzed with happiness... but her thoughts slipped somewhere else.</p>
 
-<p>*Too late now. No point thinking about it.*<br>
+<p><span class="voice-in">Too late now. No point thinking about it.</span><br>
 She said nothing of the anxiety swirling in her chest, and simply nodded.<br>
 “You’re right.”</p>
 
@@ -139,6 +123,8 @@ Akira was now staring at the beer like it was a lab sample.<br>
 <p>She walked off toward the bathroom, still giggling.<br>
 Through the mirror, she caught a glimpse of Akira holding the can to his forehead, then his neck—flinching each time as the icy metal shocked his skin.</p>
 
+<p  class="uk-text-center">＊＊＊</p>
+                
 <p>“Approach? What kind of approach?”<br>
 Emiko stood over the boiling pot and asked without looking up.<br>
 She dipped thin slices of pork into the broth with chopsticks, letting them swirl before lifting them out.</p>
@@ -181,7 +167,7 @@ He chewed thoughtfully, then started plating the salad, topping it with the chil
 She admired his confidence—and felt a twinge of envy stab quietly in her chest.</p>
 
 <p>“You’re really sure of yourself, huh.”<br>
-*How can he chase his theories so directly, without hesitation?*</p>
+<span class="voice-in">How can he chase his theories so directly, without hesitation?</span></p>
 
 <p>She thought about her days in the lab—running repetitive experiments, staring into Petri dishes where nothing ever seemed to appear the way it should.<br>
 Fragments of stressed plants, gene traces that refused to show up, contaminants slipping through despite every precaution...</p>
@@ -256,6 +242,7 @@ She pressed a hand to her forehead, sighing in defeat.</p>
 “I like it a little burnt. Let’s eat it anyway.”<br>
 He gave her a warm grin.</p>
 
+<p  class="uk-text-center">＊＊＊</p>
 
 <p class="uk-margin-top">Breathless murmurs filled the tiny bedroom, muffled as if in deference to the paper-thin apartment walls.<br>
 The dim orange glow of a side lamp shimmered on Emiko’s damp forehead.</p>
@@ -307,26 +294,22 @@ And as if holding something fragile inside himself, Akira closed his eyes.</p>
 <p>Their sweat-soaked bodies lay side by side, tangled in silence.<br>
 Still catching her breath, Emiko stared up at the apartment ceiling through half-lidded eyes.</p>
 
-<p>*Why is human reproduction so deeply tied to emotion? And why...*</p>
+<p><span class="voice-in">Why is human reproduction so deeply tied to emotion? And why.../span></p>
 
 <p>As her thoughts cooled, the familiar question rose up again.</p>
 
-<p>*Emotion gets in the way.*<br>
-*Every time you touch me, I feel like I might overflow.*</p>
+<p><span class="voice-in">Emotion gets in the way. 
+Every time you touch me, I feel like I might overflow.</span></p>
 
 <p>She whispered it again, the mantra buried deep in her heart:<br>
-*If I can’t speak my feelings... I’d rather not have them at all.*</p>
+<span class="voice-in">If I can’t speak my feelings... I’d rather not have them at all.</span></p>
 
 <p>Akira’s sweat dripped from above, landing softly on her forehead.<br>
 Their eyes met.<br>
 A single tear slid down Emiko’s cheek.</p>
 
-<p>*You once asked me what the tears meant.*<br>
-*And I told you, “My emotions just... overflowed.”*</p>
-
-<p>*Since then, you stopped asking.*</p>
-
+<p><span class="voice-in">You once asked me what the tears meant. And I told you,<br>
+“My emotions just... overflowed.”</span></p>
 <p>He wiped the tear gently with his finger.<br>
-And said nothing.<br>
-Just held her, wordlessly, as she cradled the unspoken in silence.</p>
-
+<p><span class="voice-in">Since then, you stopped asking.</span></p>
+<p>And Akira said nothing. Just held her, wordlessly, as she cradled the unspoken in silence.</p>
