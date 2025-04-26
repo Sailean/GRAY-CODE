@@ -100,16 +100,16 @@ Emiko stood over the boiling pot and asked without looking up.<br>
 She dipped thin slices of pork into the broth with chopsticks, letting them swirl before lifting them out.<br>
 “Ah—sorry. I meant my approach to modeling emotion.”<br>
 Akira mixed shredded cabbage, lettuce, and arugula with a pair of tongs as he spoke.<br>
-“If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.In fact,... the more ambiguous people <span class="uk-text-emphasis">think</span> emotions are, the more likely there's some underlying pattern.”<br>
+“If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.In fact,... the more ambiguous people <span class="uk-text-emphasis uk-text-bold">think</span> emotions are, the more likely there's some underlying pattern.”<br>
 He paused, then added, “That’s the idea, anyway...”<br>
 “Patterns, huh... So it all starts with theory, after all.”<br>
 Emiko transferred the blanched meat into ice water to cool.<br>
 “Put this on the salad, will you?”<br>
-She laid the drained pork on paper towels and pulled a jar of homemade dressing from the fridge.br>
+She laid the drained pork on paper towels and pulled a jar of homemade dressing from the fridge.<br>
 “Well, yeah. Everything starts with a theory. Then—wait, did you say something?”<br>
 Akira looked up mid-mix, confused.<br>
 “This pork here—” she gestured toward the meat, then shifted her gaze to the salad still in his hands.<br>
-“Goes <span class="uk-text-emphasis">on</span> that salad you’ve been mixing non-stop.”br>
+“Goes <span class="uk-text-emphasis uk-text-bold">on</span> that salad you’ve been mixing non-stop.”<br>
 She picked up a bowl of halved cherry tomatoes and handed it to him.<br>
 “And these too.”<br>
 Akira took the bowl instinctively.<br>
@@ -125,7 +125,7 @@ She admired his confidence—and felt a twinge of envy stab quietly in her chest
 <span class="voice-in">How can he chase his theories so directly, without hesitation?</span><br>
 She thought about her days in the lab—running repetitive experiments, staring into Petri dishes where nothing ever seemed to appear the way it should.<br>
 Fragments of stressed plants, gene traces that refused to show up, contaminants slipping through despite every precaution...<br>
-<span class="uk-text-emphasis">I might never find that key gene. Ever.</span><br>
+<span class="uk-text-emphasis uk-text-bold">I might never find that key gene. Ever.</span><br>
 She wrung out a sponge and placed it aside, exhaling quietly.<br>
 Akira, still cheerful, lifted another tomato slice.<br>
 “That’s why I believe in this. And just like this salad? I already know it’s going to taste amazing—especially with this pork.”
@@ -134,7 +134,7 @@ Emiko chuckled.<br>
 She couldn’t tell if he was joking or just dead serious.<br>
 “I’m totally serious,” he grinned.<br>
 “Everything you cook is amazing. But since I’ve been in the States? I’ve really come to appreciate it.”<br>
-<span class="uk-text-emphasis">Then maybe you should just stay here forever...</span><br>
+<span class="uk-text-emphasis uk-text-bold">Then maybe you should just stay here forever...</span><br>
 The thought flickered through her mind—but she swallowed it back down.</p>
 “...So your contract’s another year, right?”<br>
 She set the empty bowl in the sink. “You’re coming back to Japan... right?”<br>
@@ -203,7 +203,7 @@ He held her head gently.<br>
 “Say it out loud.”<br>
 His voice brushed her ear like static, sending a current down her spine.<br>
 She arched again, her hair cascading over Akira’s bare chest, sticking slightly to his skin like silk touched by steam.<br>
-“Let me hear you,” he murmured—<span class="uk-text-emphasis">your feelings</span>, he added silently.<br>
+“Let me hear you,” he murmured—<span class="uk-text-emphasis uk-text-bold">your feelings</span>, he added silently.<br>
 She answered in gasps, in tiny cries.<br>
 And as if holding something fragile inside himself, Akira closed his eyes.<br>
 Their sweat-soaked bodies lay side by side, tangled in silence.<br>
