@@ -287,7 +287,7 @@ He held her head gently.<br>
 His voice brushed her ear like static, sending a current down her spine.<br>
 She arched again, her hair cascading over Akira’s bare chest, sticking slightly to his skin like silk touched by steam.<br>
 
-“Let me hear you,” he murmured—*your feelings*, he added silently.<<br>
+“Let me hear you,” he murmured—*your feelings*, he added silently.<br>
 
 She answered in gasps, in tiny cries.<br>
 And as if holding something fragile inside himself, Akira closed his eyes.<br>
