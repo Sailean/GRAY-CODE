@@ -97,11 +97,10 @@ Through the mirror, she caught a glimpse of Akira holding the can to his forehea
 
 <p class="uk-margin-medium-top">“Approach? What kind of approach?”<br>
 Emiko stood over the boiling pot and asked without looking up.<br>
-She dipped thin slices of pork into the broth with chopsticks, letting them swirl before lifting them out.</p>
+She dipped thin slices of pork into the broth with chopsticks, letting them swirl before lifting them out.<br>
 “Ah—sorry. I meant my approach to modeling emotion.”<br>
 Akira mixed shredded cabbage, lettuce, and arugula with a pair of tongs as he spoke.<br>
-“If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.”br>
-“In fact, the more ambiguous people <span class="uk-text-emphasis">think</span> emotions are, the more likely there's some underlying pattern.”<br>
+“If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.In fact,... the more ambiguous people <span class="uk-text-emphasis">think</span> emotions are, the more likely there's some underlying pattern.”<br>
 He paused, then added, “That’s the idea, anyway...”<br>
 “Patterns, huh... So it all starts with theory, after all.”<br>
 Emiko transferred the blanched meat into ice water to cool.<br>
