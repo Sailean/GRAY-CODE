@@ -4,15 +4,17 @@ She didn’t slow down, just tilted her head and wiped the sweat from her forehe
 At the door, she shifted both bags to one hand and fished out the key from her jeans pocket.<br>
 Just as she slid it into the lock, the door creaked open—from the inside.<br>
 “—!”<br>
-Startled, she stepped back and nearly lost her balance.But then she saw the familiar face peeking through the gap—and broke into a smile.<br>
+Startled, she stepped back and nearly lost her balance. But then she saw the familiar face peeking through the gap—and broke into a smile.<br>
 “You’re back already? Welcome home. You scared me.”<br>
 “Emi... I just got here. Sorry. Let me take those.”<br>
-Akira took the bags from her hands, stepped over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.“Thanks,” Emiko said, picking up his jacket and bag. The soft-zip travel bag was just big enough for a laptop, shirts, and a week’s worth of conference notes.<br>
-She chuckled softly and followed.Akira paused, turning with a curious look.<br>
-“Hmm? What’s funny?”<br>
-She grinned. “This is heavier than the groceries.”<br>
-“Ah—yeah, sorry. Laptop’s in there. You could’ve just left it.”<br>
-“Easier to carry it in than trip over it. So—how was the conference?”<br>
+Akira took the grocery bags from her hands, stepping over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.<br>
+"Thanks," Emiko said, picking up his jacket and the shoulder bag he had left by the door.<br>
+She chuckled softly as she lifted it.<br>
+Akira paused mid-step and turned with a puzzled look.<br>
+"Eh? What is it, Emi?"<br>
+She smiled lightly. "Of course... you carry the groceries but leave me the heavy one."<br>
+"Ah—yeah, sorry. The laptop’s in there. Suitcase’s already inside... You really didn’t have to carry it."<br>
+"Easier to just carry it in than step over it. So—how was the conference?"<br>
 Akira nodded as he walked.<br>
 “Still a niche field, but people are working hard. I got some new ideas. It really energized me.”<br>
 He set the groceries down by the bed and peeked into one of the bags.<br>
@@ -21,7 +23,8 @@ Emiko laughed. “I figured you'd want that. Of course I’m making rice. Tonigh
 As he began pulling out ingredients and laying them on the table, Akira said,<br>
 “No way—this is a feast. Tofu’s fresh, not frozen. These veggies look amazing. I could eat them raw. This is perfect.”<br>
 “So no nasty questions, just good vibes at the Q&amp;A? That’s a relief.”<br>
-Emiko placed his bag down and picked up the jacket.<br>
+Emiko placed his laptop shoulder bag down by the bed and picked up his jacket.<br>
+
 “Well, not nasty exactly... but there were some sharp critiques, as always. Still, that’s how you learn. Honestly, it was fun.”<br>
 She hung the jacket on a hanger and wrinkled her nose.<br>
 “I’ve seen how much you put into this. That kind of work—most people never notice. But they did. And you deserve every bit of it.”<br>
@@ -142,7 +145,7 @@ She set the empty bowl in the sink. “You’re coming back to Japan... right?�
 Akira glanced down, thoughtful. “Sid invited me to join Nexus, but... I’ve still got things I want to do here.”<br>
 Emiko let out a quiet breath. Her gaze dropped.<br>
 “I saw that. He mentioned it on the mailing list.”<br>
-She hesitated, then added, “Still, it’s impressive. Q-Nexus in Sidney’s no joke.”<br>
+She hesitated, then added, “Still, it’s impressive. NQsus in Sidney’s no joke.”<br>
 “He keeps a low profile, but yeah—he’s legit. But I want to go back to the university.”<br>
 Akira began plating the salad. “Back to Okano’s lab. I started this research there. I want to finish it properly.”<br>
 “Back when it launched, Okano said, ‘I want this lab to be a place where you can research freely.’”<br>
@@ -168,9 +171,8 @@ She lunged for the grill tray.<br>
 The thick slices of deep-fried tofu were covered in tomato sauce and cheese—beautifully baked.<br>
 But the finely chopped green onions on top were now thoroughly blackened.<br>
 “I meant to check on it... and completely forgot.”<br>
-She pressed a hand to her forehead, sighing in defeat.<br>
-Akira peeked over her shoulder.<br>
-“I like it a little burnt. Let’s eat it anyway.”<br>
+She pressed a hand to her forehead, sighing in defeat. Akira peeked over her shoulder.<br>
+“Looks perfect to me. Let’s eat!”<br>
 He gave her a warm grin.</p>
 
 <p class="uk-text-center uk-margin-medium-top">＊＊＊</p>
