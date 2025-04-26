@@ -46,7 +46,7 @@ He stood there in just his underwear, casually stretching.<br>
 He grabbed a T-shirt and switched the A/C to cool with the remote. “Let me help with dinner later, okay? You didn’t have to cook—I mean, we could’ve eaten out.”<br>
 Emiko laughed. “At least eat properly while you’re in Japan. Tonight, it’s on me.”<br>
 She mentally mapped out the evening menu—start with a quick salad, then...<br>
-While sorting the groceries, she tucked the perishables into the fridge and left the rest by the sink.</p>
+While sorting the groceries, she tucked the perishables into the fridge and left the rest by the sink.<br>
 <span class="voice-in">Ugh, the beer warmed up on the way home... I want to save the ice, maybe I should toss this one in the freezer...</span><br>
 “Hey, Akira—”<br>
 She turned around—and was suddenly wrapped in his arms.<br>
@@ -102,7 +102,7 @@ She dipped thin slices of pork into the broth with chopsticks, letting them swir
 Akira mixed shredded cabbage, lettuce, and arugula with a pair of tongs as he spoke.<br>
 “If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.”br>
 “In fact, the more ambiguous people <span class="uk-text-emphasis">think</span> emotions are, the more likely there's some underlying pattern.”<br>
-He paused, then added, “That’s the idea, anyway...”br>
+He paused, then added, “That’s the idea, anyway...”<br>
 “Patterns, huh... So it all starts with theory, after all.”<br>
 Emiko transferred the blanched meat into ice water to cool.<br>
 “Put this on the salad, will you?”<br>
