@@ -143,7 +143,7 @@ She set the empty bowl in the sink. “You’re coming back to Japan... right?�
 Akira glanced down, thoughtful. “Sid invited me to join Nexus, but... I’ve still got things I want to do here.”<br>
 Emiko let out a quiet breath. Her gaze dropped.<br>
 “I saw that. He mentioned it on the mailing list.”<br>
-She hesitated, then added, “Still, it’s impressive. Q-Nexus in Sydney’s no joke.”<br>
+She hesitated, then added, “Still, it’s impressive. Q-Nexus in Sidney’s no joke.”<br>
 “He keeps a low profile, but yeah—he’s legit. But I want to go back to the university.”<br>
 Akira began plating the salad. “Back to Okano’s lab. I started this research there. I want to finish it properly.”<br>
 “Back when it launched, Okano said, ‘I want this lab to be a place where you can research freely.’”<br>
