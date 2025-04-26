@@ -120,7 +120,7 @@ Akira was now staring at the beer like it was a lab sample.<br>
 “The fastest way is direct contact—maximum surface area means maximum conductivity.”<br>
 
 Emiko sighed and smiled, shaking her head.<br>
-“Akira, stop. This isn’t a conference. No one here needs a thermodynamics lecture. Just leave it on the table like a normal person.”</p>
+“Akira, stop. This isn’t a conference. No one here needs a thermodynamics lecture. Just leave it on the table like a normal person.”<br>
 
 She walked off toward the bathroom, still giggling.<br>
 Through the mirror, she caught a glimpse of Akira holding the can to his forehead, then his neck—flinching each time as the icy metal shocked his skin.</p>
@@ -135,7 +135,7 @@ She dipped thin slices of pork into the broth with chopsticks, letting them swir
 Akira mixed shredded cabbage, lettuce, and arugula with a pair of tongs as he spoke.<br>
 “If we can combine more types of quantifiable data, then maybe we can model how emotions shift over time.”br>
 
-“In fact, the more ambiguous people *think* emotions are, the more likely there's some underlying pattern.”<br>
+“In fact, the more ambiguous people <span class="uk-text-emphasis">think</span> emotions are, the more likely there's some underlying pattern.”<br>
 He paused, then added, “That’s the idea, anyway...”br>
 
 “Patterns, huh... So it all starts with theory, after all.”<br>
@@ -148,98 +148,98 @@ She laid the drained pork on paper towels and pulled a jar of homemade dressing 
 Akira looked up mid-mix, confused.br>
 
 “This pork here—” she gestured toward the meat, then shifted her gaze to the salad still in his hands.<br>
-“Goes *on* that salad you’ve been mixing non-stop.”br>
+“Goes <span class="uk-text-emphasis">on</span> that salad you’ve been mixing non-stop.”br>
 
 She picked up a bowl of halved cherry tomatoes and handed it to him.<br>
 “And these too.”br>
 
 Akira took the bowl instinctively.<br>
-Emiko continued as she rinsed the pot, her tone soft but pointed.</p>
+Emiko continued as she rinsed the pot, her tone soft but pointed.<br>
 
 “You know, Akira... there’s a lot you can’t discover unless you actually try it out.<br>
-Sometimes the best theories come from accidental findings.”</p>
+Sometimes the best theories come from accidental findings.”<br>
 
 “Sure,” Akira nodded, tossing a tomato into his mouth. “But even in chaos, there are rules. That’s my job—to find them.”<br>
-He chewed thoughtfully, then started plating the salad, topping it with the chilled pork.</p>
+He chewed thoughtfully, then started plating the salad, topping it with the chilled pork.<br>
 
-“Emotion seems messy. But I think there are hidden rules, invisible patterns.”</p>
+“Emotion seems messy. But I think there are hidden rules, invisible patterns.”<br>
 
 His certainty made Emiko pause.<br>
-She admired his confidence—and felt a twinge of envy stab quietly in her chest.</p>
+She admired his confidence—and felt a twinge of envy stab quietly in her chest.<br>
 
 “You’re really sure of yourself, huh.”<br>
-<span class="voice-in">How can he chase his theories so directly, without hesitation?</span></p>
+<span class="voice-in">How can he chase his theories so directly, without hesitation?</span><br>
 
-<p>She thought about her days in the lab—running repetitive experiments, staring into Petri dishes where nothing ever seemed to appear the way it should.<br>
-Fragments of stressed plants, gene traces that refused to show up, contaminants slipping through despite every precaution...</p>
+She thought about her days in the lab—running repetitive experiments, staring into Petri dishes where nothing ever seemed to appear the way it should.<br>
+Fragments of stressed plants, gene traces that refused to show up, contaminants slipping through despite every precaution...<br>
 
-<p>*I might never find that key gene. Ever.*</p>
+<span class="uk-text-emphasis">I might never find that key gene. Ever.</span><br>
 
-<p>She wrung out a sponge and placed it aside, exhaling quietly.</p>
+She wrung out a sponge and placed it aside, exhaling quietly.<br>
 
-<p>Akira, still cheerful, lifted another tomato slice.<br>
-“That’s why I believe in this. And just like this salad? I already know it’s going to taste amazing—especially with this pork.”</p>
+Akira, still cheerful, lifted another tomato slice.<br>
+“That’s why I believe in this. And just like this salad? I already know it’s going to taste amazing—especially with this pork.”
 
-<p>Emiko chuckled.<br>
+Emiko chuckled.<br>
 “That’s dramatic.”<br>
-She couldn’t tell if he was joking or just dead serious.</p>
+She couldn’t tell if he was joking or just dead serious.<br>
 
-<p>“I’m totally serious,” he grinned.<br>
-“Everything you cook is amazing. But since I’ve been in the States? I’ve really come to appreciate it.”</p>
+“I’m totally serious,” he grinned.<br>
+“Everything you cook is amazing. But since I’ve been in the States? I’ve really come to appreciate it.”<br>
 
-<p>*Then maybe you should just stay here forever...*<br>
+<span class="uk-text-emphasis">Then maybe you should just stay here forever...</span><br>
 The thought flickered through her mind—but she swallowed it back down.</p>
 
-<p>“...So your contract’s another year, right?”<br>
-She set the empty bowl in the sink. “You’re coming back to Japan... right?”</p>
+“...So your contract’s another year, right?”<br>
+She set the empty bowl in the sink. “You’re coming back to Japan... right?”<br>
 
-<p>“Yeah. That’s the plan.”<br>
-Akira glanced down, thoughtful. “Sid invited me to join Nexus, but... I’ve still got things I want to do here.”</p>
+“Yeah. That’s the plan.”<br>
+Akira glanced down, thoughtful. “Sid invited me to join Nexus, but... I’ve still got things I want to do here.”<br>
 
-<p>Emiko let out a quiet breath. Her gaze dropped.<br>
+Emiko let out a quiet breath. Her gaze dropped.<br>
 “I saw that. He mentioned it on the mailing list.”<br>
-She hesitated, then added, “Still, it’s impressive. Q-Nexus in Sydney’s no joke.”</p>
+She hesitated, then added, “Still, it’s impressive. Q-Nexus in Sydney’s no joke.”<br>
 
-<p>“He keeps a low profile, but yeah—he’s legit. But I want to go back to the university.”<br>
-Akira began plating the salad. “Back to Okano’s lab. I started this research there. I want to finish it properly.”</p>
+“He keeps a low profile, but yeah—he’s legit. But I want to go back to the university.”<br>
+Akira began plating the salad. “Back to Okano’s lab. I started this research there. I want to finish it properly.”<br>
 
-<p>“Back when it launched, Okano said, ‘I want this lab to be a place where you can research freely.’”<br>
-He topped the salad with pork slices. “I was the first grad student there. It’s grown a lot since then, but that’s not why I want to go back.”</p>
+“Back when it launched, Okano said, ‘I want this lab to be a place where you can research freely.’”<br>
+He topped the salad with pork slices. “I was the first grad student there. It’s grown a lot since then, but that’s not why I want to go back.”<br>
 
-<p>He looked up, distant for a moment.<br>
-“I want to create something that understands emotion—and connects people. I think that’s possible. And that lab... it’s the closest place to it.”</p>
+He looked up, distant for a moment.<br>
+“I want to create something that understands emotion—and connects people. I think that’s possible. And that lab... it’s the closest place to it.”<br>
 
-<p>Emiko said nothing.<br>
-She carried the empty bowl to the sink and turned on the water.</p>
+Emiko said nothing.<br>
+She carried the empty bowl to the sink and turned on the water.<br>
 
-<p>“Sid told me, ‘Your research needs the environment I can give you.’”<br>
-Akira laughed quietly. “Sounds like him, right?”</p>
+“Sid told me, ‘Your research needs the environment I can give you.’”<br>
+Akira laughed quietly. “Sounds like him, right?”<br>
 
-<p>“Yeah. It comes through clearly in the list too.”<br>
+“Yeah. It comes through clearly in the list too.”<br>
 Emiko smiled faintly. “He used to be in the military, didn’t he? That explains the... intensity.”</p>
 
-<p>“He was a signal officer, yeah. Knows everything about communications. Super helpful. And strong—really strong. I want you to meet him sometime.”</p>
+“He was a signal officer, yeah. Knows everything about communications. Super helpful. And strong—really strong. I want you to meet him sometime.”<br>
 
-<p>Akira seemed about to say more—but went quiet.<br>
-Emiko turned her head slightly. “What?”</p>
+Akira seemed about to say more—but went quiet.<br>
+Emiko turned her head slightly. “What?”<br>
 
-<p>He looked up, like he was trying to find the right words.<br>
-“My theory... it only exists because I was here. In Japan. So I want to finish it here.”</p>
+He looked up, like he was trying to find the right words.<br>
+“My theory... it only exists because I was here. In Japan. So I want to finish it here.”<br>
 
-<p>Then his nose twitched.<br>
-“Wait. Emiko, is something... burning?”</p>
+Then his nose twitched.<br>
+“Wait. Emiko, is something... burning?”<br>
 
-<p>“Huh?”<br>
-She whipped around. “—Oh no!!”</p>
+“Huh?”<br>
+She whipped around. “—Oh no!!”<br>
 
-<p>She lunged for the grill tray.<br>
+She lunged for the grill tray.<br>
 The thick slices of deep-fried tofu were covered in tomato sauce and cheese—beautifully baked.<br>
-But the finely chopped green onions on top were now thoroughly blackened.</p>
+But the finely chopped green onions on top were now thoroughly blackened.<br>
 
-<p>“I meant to check on it... and completely forgot.”<br>
-She pressed a hand to her forehead, sighing in defeat.</p>
+“I meant to check on it... and completely forgot.”<br>
+She pressed a hand to her forehead, sighing in defeat.<br>
 
-<p>Akira peeked over her shoulder.<br>
+Akira peeked over her shoulder.<br>
 “I like it a little burnt. Let’s eat it anyway.”<br>
 He gave her a warm grin.</p>
 
@@ -287,7 +287,7 @@ He held her head gently.<br>
 His voice brushed her ear like static, sending a current down her spine.<br>
 She arched again, her hair cascading over Akira’s bare chest, sticking slightly to his skin like silk touched by steam.<br>
 
-“Let me hear you,” he murmured—*your feelings*, he added silently.<br>
+“Let me hear you,” he murmured—<span class="uk-text-emphasis">your feelings</span>, he added silently.<br>
 
 She answered in gasps, in tiny cries.<br>
 And as if holding something fragile inside himself, Akira closed his eyes.<br>
