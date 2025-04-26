@@ -13,9 +13,6 @@ This story is entirely fictional.
 - `stories/jp/` — Japanese Markdown  
 - `stories/digest/` — JSON-driven viewer (HTML/CSS/JS)
 
-📦 **Releases (PDF/ZIP)**  
-See [Releases](https://github.com/Sailean/Nonlinear_Emotion_Curves/releases) for full downloads.
-
 📄 **License**  
 Creative Commons BY-NC-SA 4.0  
 See [LICENSE](./LICENSE) for details.
@@ -34,9 +31,6 @@ See [LICENSE](./LICENSE) for details.
 - `stories/en/` 英語版（Markdown）  
 - `stories/jp/` 日本語版（Markdown）  
 - `stories/digest/` JSON 目次ビューア（HTML/CSS/JS）
-
-📦 **全文ダウンロード（PDF/ZIP）**：  
-<https://github.com/Sailean/Nonlinear_Emotion_Curves/releases>
 
 🔖 **ライセンス**：  
 Creative Commons 表示・非営利・継承 4.0（CC BY-NC-SA 4.0）  
