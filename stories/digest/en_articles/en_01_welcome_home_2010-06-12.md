@@ -108,7 +108,7 @@ Emiko transferred the blanched meat into ice water to cool.<br>
 “Put this on the salad, will you?”<br>
 She laid the drained pork on paper towels and pulled a jar of homemade dressing from the fridge.br>
 “Well, yeah. Everything starts with a theory. Then—wait, did you say something?”<br>
-Akira looked up mid-mix, confused.br>
+Akira looked up mid-mix, confused.<br>
 “This pork here—” she gestured toward the meat, then shifted her gaze to the salad still in his hands.<br>
 “Goes <span class="uk-text-emphasis">on</span> that salad you’ve been mixing non-stop.”br>
 She picked up a bowl of halved cherry tomatoes and handed it to him.<br>
