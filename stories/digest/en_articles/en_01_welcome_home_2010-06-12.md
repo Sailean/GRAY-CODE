@@ -7,7 +7,7 @@ Just as she slid it into the lock, the door creaked open—from the inside.<br>
 Startled, she stepped back and nearly lost her balance.But then she saw the familiar face peeking through the gap—and broke into a smile.<br>
 “You’re back already? Welcome home. You scared me.”<br>
 “Emi... I just got here. Sorry. Let me take those.”<br>
-Akira took the bags from her hands, stepped over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.“Thanks,” Emiko said, picking up his jacket and bag.<br>
+Akira took the bags from her hands, stepped over his bulky suitcase—with his suit jacket draped over it—and disappeared into the narrow hallway.“Thanks,” Emiko said, picking up his jacket and bag. The soft-zip travel bag was just big enough for a laptop, shirts, and a week’s worth of conference notes.<br>
 She chuckled softly and followed.Akira paused, turning with a curious look.<br>
 “Hmm? What’s funny?”<br>
 She grinned. “This is heavier than the groceries.”<br>
@@ -25,7 +25,7 @@ Emiko placed his bag down and picked up the jacket.<br>
 “Well, not nasty exactly... but there were some sharp critiques, as always. Still, that’s how you learn. Honestly, it was fun.”<br>
 She hung the jacket on a hanger and wrinkled her nose.<br>
 “I’ve seen how much you put into this. That kind of work—most people never notice. But they did. And you deserve every bit of it.”<br>
-She glanced at him, softening. “They saw it, Akira. What I’ve always seen in you. And now… they finally do too.”<br>
+She glanced at him, softening.<br>
 She wrinkled her nose again at the sweat lingering in his jacket.<br>
 “Let me send this to the cleaners. Wear your spare one tomorrow, okay? Mind if I check the pockets?”<br>
 “Thanks. Kyushu was crazy hot. Feels cool here though. Like I’m alive again.”<br>
@@ -125,7 +125,7 @@ She admired his confidence—and felt a twinge of envy stab quietly in her chest
 <span class="voice-in">How can he chase his theories so directly, without hesitation?</span><br>
 She thought about her days in the lab—running repetitive experiments, staring into Petri dishes where nothing ever seemed to appear the way it should.<br>
 Fragments of stressed plants, gene traces that refused to show up, contaminants slipping through despite every precaution...<br>
-<span class="uk-text-emphasis uk-text-bold">I might never find that key gene. Ever.</span><br>
+<span class="uk-text-emphasis uk-text-bold">—I might never find that key gene. Ever.</span><br>
 She wrung out a sponge and placed it aside, exhaling quietly.<br>
 Akira, still cheerful, lifted another tomato slice.<br>
 “That’s why I believe in this. And just like this salad? I already know it’s going to taste amazing—especially with this pork.”
@@ -134,7 +134,7 @@ Emiko chuckled.<br>
 She couldn’t tell if he was joking or just dead serious.<br>
 “I’m totally serious,” he grinned.<br>
 “Everything you cook is amazing. But since I’ve been in the States? I’ve really come to appreciate it.”<br>
-<span class="uk-text-emphasis uk-text-bold">Then maybe you should just stay here forever...</span><br>
+<span class="uk-text-emphasis uk-text-bold">—Then maybe you should just stay here forever...</span><br>
 The thought flickered through her mind—but she swallowed it back down.</p>
 “...So your contract’s another year, right?”<br>
 She set the empty bowl in the sink. “You’re coming back to Japan... right?”<br>
