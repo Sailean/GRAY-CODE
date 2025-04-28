@@ -123,14 +123,20 @@ fetch(navSource)
         }
 
         // 章タイトル表示（羅馬数字または Chapter）
-        const roman = ['', 'Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ'];
+        function toRoman(num) {
+        const romanNumerals = [
+    '', 'Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ', 'Ⅶ', 'Ⅷ', 'Ⅸ', 'Ⅹ',
+    'Ⅺ', 'Ⅻ', 'ⅩⅢ', 'ⅩⅣ', 'ⅩⅤ', 'ⅩⅥ', 'ⅩⅦ', 'ⅩⅧ', 'ⅩⅨ', 'ⅩⅩ'
+        ];
+        return romanNumerals[num] || num;
+        }
         const chap = meta.chapter;
 
         if (lang === 'en') {
           document.getElementById('article-title').innerText =
             `Chapter ${chap}: ${meta.title_en}`;
         } else {
-          const rawTitle = `${roman[chap]}. ${meta.title_jp}`;
+          const rawTitle = `${toRoman(chap)}. ${meta.title_jp}`;
           const rubyTitle = applyRuby(rawTitle); // ← ここでルビ適用！
           document.getElementById('article-title').innerHTML = rubyTitle; //         innerHTMLに変更！
         }
