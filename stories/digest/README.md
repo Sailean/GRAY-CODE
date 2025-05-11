@@ -1,6 +1,3 @@
-# KAGUTUCHI
-A bilingual sci-fi epic about fire, memory, and the soul of AI — spanning myth, war, and quantum code.
-
 # Nonlinear Emotion Curves  
 *A bilingual sci-fi novel about quantum AI, memory, and emotion.*
 The story takes place in Japan and America from 2010 to 2024.
@@ -29,8 +26,7 @@ See LICENSE for more details.
 
 ---
 
-## 📝 Notes in Japanese（日本語案内）
-
+## 📝非線形感情曲線
 このディレクトリは、オリジナルSF小説「非線形感情曲線」の全文を公開しています。  
 舞台は2010年～2024の日本とアメリカ。ニューラルネットワークの黎明期に「感情を理解するAI」を追い求めた研究者の軌跡を描いています。
 このお話は完全なるフィクションです。
