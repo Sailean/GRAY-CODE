@@ -6,7 +6,8 @@
     "date": "2010-06-12",
     "location_jp": "東京-朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
-    "filename": "01_welcome_home_2010-06-12.md"
+    "filename": "01_welcome_home_2010-06-12.md",
+    "draft": true
   },
   {
     "chapter": 2,
@@ -15,7 +16,8 @@
     "date": "2010-06-13-",
     "location_jp": "東京 朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
-    "filename": "02_drifted_2010-06-13.md"
+    "filename": "02_drifted_2010-06-13.md",
+    "draft": true
   },
   {
     "chapter": 3,
@@ -24,7 +26,8 @@
     "date": "2010-10-15-",
     "location_jp": "カリフォルニア州 サンノゼ",
     "location_en": "",
-    "filename": "03_billys_bar_2010-10-15.md"
+    "filename": "03_billys_bar_2010-10-15.md",
+    "draft": true
   },
   {
     "chapter": 4,
@@ -33,7 +36,8 @@
     "date": "2010-11-24-",
     "location_jp": "カリフォルニア州 サンノゼ",
     "location_en": "",
-    "filename": "04_carl_lab_2010-11-24.md"
+    "filename": "04_carl_lab_2010-11-24.md",
+    "draft": true
   },
   {
     "chapter": 5,
@@ -42,7 +46,8 @@
     "date": "2011-03-25",
     "location_jp": "朗の生家　緑川 英美子",
     "location_en": "",
-    "filename": "05_akira_notebook_2011-03-25.md"
+    "filename": "05_akira_notebook_2011-03-25.md",
+    "draft": true
   },
   {
     "chapter": 6,
@@ -51,7 +56,8 @@
     "date": "2024-12-20-",
     "location_jp": "眞の部屋",
     "location_en": "",
-    "filename": "06_makoto_log_2024-12-20.md"
+    "filename": "06_makoto_log_2024-12-20.md",
+    "draft": true
   },
   {
     "chapter": 7,
@@ -60,7 +66,8 @@
     "date": "2024-12-21-",
     "location_jp": "ロスアンゼルス ベルエア",
     "location_en": "",
-    "filename": "07_sidney_2024-12-21.md"
+    "filename": "07_sidney_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 8,
@@ -69,7 +76,8 @@
     "date": "2024-12-21-",
     "location_jp": "松本市 英美子と眞の家",
     "location_en": "",
-    "filename": "08_reunion_2024-12-21.md"
+    "filename": "08_reunion_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 9,
@@ -78,7 +86,8 @@
     "date": "2024-12-21-",
     "location_jp": "英美子と眞の家",
     "location_en": "",
-    "filename": "09_the_past_2024-12-21.md"
+    "filename": "09_the_past_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 10,
@@ -87,7 +96,8 @@
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
     "location_en": "",
-    "filename": "10_qube_one_2024-12-21.md"
+    "filename": "10_qube_one_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 11,
@@ -96,7 +106,8 @@
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
     "location_en": "",
-    "filename": "11_emiko_akira_arato_2024-12-21.md"
+    "filename": "11_emiko_akira_arato_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 12,
@@ -105,7 +116,8 @@
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
     "location_en": "",
-    "filename": "12_failsafe_2024-12-21.md"
+    "filename": "12_failsafe_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 13,
@@ -114,7 +126,8 @@
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
     "location_en": "",
-    "filename": "13_akira_existence_2024-12-21.md"
+    "filename": "13_akira_existence_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 14,
@@ -123,7 +136,8 @@
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
     "location_en": "",
-    "filename": "14_welcome_back_2024-12-21.md"
+    "filename": "14_welcome_back_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 15,
@@ -132,6 +146,7 @@
     "date": "2024-12-25-",
     "location_jp": "松本市　緑川 英美子",
     "location_en": "",
-    "filename": "15_epilogue_2024-12-25.md"
+    "filename": "15_epilogue_2024-12-25.md",
+    "draft": true
   }
 ]
