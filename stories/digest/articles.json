@@ -7,7 +7,7 @@
     "location_jp": "東京-朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
     "filename": "01_welcome_home_2010-06-12.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 2,
@@ -17,7 +17,7 @@
     "location_jp": "東京 朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
     "filename": "02_drifted_2010-06-13.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 3,
@@ -27,7 +27,7 @@
     "location_jp": "カリフォルニア州 サンノゼ",
     "location_en": "",
     "filename": "03_billys_bar_2010-10-15.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 4,
@@ -37,7 +37,7 @@
     "location_jp": "カリフォルニア州 サンノゼ",
     "location_en": "",
     "filename": "04_carl_lab_2010-11-24.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 5,
@@ -47,7 +47,7 @@
     "location_jp": "朗の生家　緑川 英美子",
     "location_en": "",
     "filename": "05_akira_notebook_2011-03-25.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 6,
