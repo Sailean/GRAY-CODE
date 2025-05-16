@@ -192,7 +192,11 @@ rt {
   margin-top: 1rem;
 }
 
-
+/* 目次のスタイリング */
+.draft-entry {
+  opacity: 0.6;
+  font-style: italic;
+}
 
 .article-item {
   padding: 0.625rem; /* 10px → 0.625rem */
