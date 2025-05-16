@@ -229,7 +229,7 @@
   }
 
   /* -- トップに戻るボタン -- */
-  function initScrollTopButton() {
+  function scrollToTop() {
     const topBtn = document.getElementById('topbutton');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
