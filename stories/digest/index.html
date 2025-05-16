@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>非線形感情曲線 - ダイジェスト</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="../css/ailean_uikit.css">
-  <link rel="stylesheet" href="../css/uikit.css">
-  <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="css/sailean_uikit.css">
+  <link rel="stylesheet" href="css/uikit.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
   <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
   <style>
   </style>
@@ -35,16 +35,16 @@
   <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding-large">
-  <div class="uk-container">    
+  <div class="uk-container">
+    
     <div class="uk-grid" uk-grid>
-      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp">
-  <h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
-  <div class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
-</div>
-<div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body">
-  <h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
-  <div class="uk-heading" id="articles-list-en">📂 Loading...</div>
-</div>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp"><h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
+        <div  class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
+      </div>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-en"><h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
+        <div  class="uk-heading" id="articles-list-en">📂 読み込み中...</div>
+      </div>
+
 </div>
   <!-- # お知らせ # -->
   <div class="uk-section uk-section-default uk-section-small uk-padding-large">
@@ -76,7 +76,7 @@
   </blockquote>
   </div>
   </div>
-</div></div>
+</div>
 <footer class="uk-text-small uk-text-muted uk-margin-large-top uk-text-center">
   <p>
     This story was inspired by my first steps into AI around 2022—especially large language models.<br>
@@ -99,79 +99,65 @@ fetch('articles.json')
   .then(res => res.json())
   .then(data => {
     const navList = document.getElementById('digest-nav');
+
+    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
     navList.innerHTML = `
       <li><a href="index.html">📘 目次（Index）に戻る</a></li>
     `;
 
+    // 🔄 あとはJSONから動的に追加
     navList.innerHTML += data.map(entry => {
       const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      const label = lang === 'en'
-        ? `Chapter ${entry.chapter}: ${title}`
-        : `第${entry.chapter}章 ${title}`;
-      if (entry.draft === true) {
-        return `<li><span style="color:gray;">${label}（編集中）</span></li>`;
-      }
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
     }).join('');
   });
 
-
-
   // 🔸 メイン目次リスト
 // 🔹 日本語目次リスト（articles.json）
-data.forEach(article => {
-  if (article.draft === true) {
-    html += `
-      <li>
-        <span class="uk-text-bold" style="color: gray;">
-          第${article.chapter}章 ${article.title_jp}（編集中）
-        </span> - <span style="color: gray;">${article.date}</span>
-      </li>`;
-  } else {
-    html += `
-      <li>
-        <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
-          <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
-        </a>
-      </li>`;
-  }
-});
-
+fetch('articles.json?nocache=' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    let html = '<ul class="uk-list uk-list-divider">';
+    data.forEach(article => {
+      html += `
+        <li>
+          <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
+            <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
+          </a>
+        </li>`;
+    });
+    document.getElementById('articles-list-jp').innerHTML = html;
+  })
+  .catch(error => {
+    document.getElementById('articles-list-jp').innerHTML = '<p>⚠ 日本語目次を読み込めませんでした。</p>';
+    console.error('Error loading JP articles:', error);
+  });
 
 // 🔹 英語目次リスト（en_articles.json）
-data.forEach(article => {
-  if (article.draft === true) {
-    html += `
-      <li>
-        <span class="uk-text-bold" style="color: gray;">
-          Chapter ${article.chapter}: ${article.title_en} (Coming Soon)
-        </span> - <span style="color: gray;">${article.date}</span>
-      </li>`;
-  } else {
-    html += `
-      <li>
-        <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
-          <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
-        </a>
-      </li>`;
-  }
-});
+fetch('en_articles.json?nocache=' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    let html = '<ul class="uk-list uk-list-divider">';
+    data.forEach(article => {
+      html += `
+        <li>
+          <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
+            <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
+          </a>
+        </li>`;
+    });
+    document.getElementById('articles-list-en').innerHTML = html;
+  })
+  .catch(error => {
+    document.getElementById('articles-list-en').innerHTML = '<p>⚠ English index failed to load.</p>';
+    console.error('Error loading EN articles:', error);
+  });
 
 </script>
 
-    <script src="../js/load_articles.js"></script>
-  <script src="../js/load_articles.js"></script>
-<script src="../js/load_articles.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  loadArticleList("articles-list-jp", "articles.json", "jp");
-  loadArticleList("articles-list-en", "en_articles.json", "en");
-});
-</script>
-
-
-  <script src="../js/scripts.js"></script>
-  <script src="../js/uikit.js" async></script>
+    <script src="js/load_articles.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/uikit.js" async></script>
   <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
 </body>
 
