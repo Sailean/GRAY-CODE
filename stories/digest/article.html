@@ -79,24 +79,34 @@ fetch(navSource)
     `;
 
     // ❸ 各章リンクのテキストを言語ごとに変える
-    navList.innerHTML += data.map(entry => {
-      const title = lang === 'en'
-        ? entry.title_en
-        : entry.title_jp;
+navList.innerHTML += data.map(entry => {
+  const title = lang === 'en'
+    ? entry.title_en
+    : entry.title_jp;
 
-      const linkText = lang === 'en'
-        ? `Chapter ${entry.chapter}: ${title}`
-        : `第${entry.chapter}章 ${title}`;
+  const linkText = lang === 'en'
+    ? `Chapter ${entry.chapter}: ${title}`
+    : `第${entry.chapter}章 ${title}`;
 
-      return `
-        <li>
-          <a href="article.html?file=${entry.filename}&lang=${lang}">
-            ${linkText}
-          </a>
-        </li>`;
-    }).join('');
-  })
-  .catch(err => console.error(err));
+  // 🔸 draft が true の場合はリンクなし＆注記表示
+  if (entry.draft === true) {
+    return `
+      <li class="draft-entry">
+        <span style="color: gray;">
+          ${linkText} ${lang === 'en' ? '(Coming Soon)' : '（編集中）'}
+        </span>
+      </li>`;
+  }
+
+  // 🔹 通常リンク
+  return `
+    <li>
+      <a href="article.html?file=${entry.filename}&lang=${lang}">
+        ${linkText}
+      </a>
+    </li>`;
+}).join('');
+
 
   if (!file) {
     document.getElementById('article-content').innerHTML = '<p>⚠ 記事が指定されていません。</p>';
