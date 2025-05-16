@@ -112,46 +112,7 @@ fetch('articles.json')
     }).join('');
   });
 
-  // 🔸 メイン目次リスト
-// 🔹 日本語目次リスト（articles.json）
-fetch('articles.json?nocache=' + new Date().getTime())
-  .then(response => response.json())
-  .then(data => {
-    let html = '<ul class="uk-list uk-list-divider">';
-    data.forEach(article => {
-      html += `
-        <li>
-          <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
-            <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
-          </a>
-        </li>`;
-    });
-    document.getElementById('articles-list-jp').innerHTML = html;
-  })
-  .catch(error => {
-    document.getElementById('articles-list-jp').innerHTML = '<p>⚠ 日本語目次を読み込めませんでした。</p>';
-    console.error('Error loading JP articles:', error);
-  });
-
-// 🔹 英語目次リスト（en_articles.json）
-fetch('en_articles.json?nocache=' + new Date().getTime())
-  .then(response => response.json())
-  .then(data => {
-    let html = '<ul class="uk-list uk-list-divider">';
-    data.forEach(article => {
-      html += `
-        <li>
-          <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
-            <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
-          </a>
-        </li>`;
-    });
-    document.getElementById('articles-list-en').innerHTML = html;
-  })
-  .catch(error => {
-    document.getElementById('articles-list-en').innerHTML = '<p>⚠ English index failed to load.</p>';
-    console.error('Error loading EN articles:', error);
-  });
+ 
 
 </script>
 
