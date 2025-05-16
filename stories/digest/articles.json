@@ -3,10 +3,11 @@
     "chapter": 1,
     "title_jp": "おかえり",
     "title_en": "Welcome Home",
-    "date": "2010-06-12-",
-    "location_jp": "東京 朗と英美子のアパート",
+    "date": "2010-06-12",
+    "location_jp": "東京-朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
-    "filename": "en_01_welcome_home_2010-06-12_edited.md"
+    "filename": "01_welcome_home_2010-06-12.md",
+    "draft": false
   },
   {
     "chapter": 2,
@@ -15,7 +16,8 @@
     "date": "2010-06-13-",
     "location_jp": "東京 朗と英美子のアパート",
     "location_en": "Tokyo — Akira & Emiko’s Apartment",
-    "filename": "Chapter01_edited_full.md"
+    "filename": "02_drifted_2010-06-13.md",
+    "draft": false
   },
   {
     "chapter": 3,
@@ -23,8 +25,9 @@
     "title_en": "Billy’s Bar",
     "date": "2010-10-15-",
     "location_jp": "カリフォルニア州 サンノゼ",
-    "location_en": "San Jose",
-    "filename": "en_03_billys_bar_2010-10-15_edited.md"
+    "location_en": "",
+    "filename": "03_billys_bar_2010-10-15.md",
+    "draft": false
   },
   {
     "chapter": 4,
@@ -32,8 +35,9 @@
     "title_en": "Carl Lab",
     "date": "2010-11-24-",
     "location_jp": "カリフォルニア州 サンノゼ",
-    "location_en": "San Jose",
-    "filename": "en_04_carl_lab_2010-11-24_edited.md"
+    "location_en": "",
+    "filename": "04_carl_lab_2010-11-24.md",
+    "draft": false
   },
   {
     "chapter": 5,
@@ -42,7 +46,8 @@
     "date": "2011-03-25",
     "location_jp": "朗の生家　緑川 英美子",
     "location_en": "",
-    "filename": "en_05_akira_notebook_2011-03-25_edited.md"
+    "filename": "05_akira_notebook_2011-03-25.md",
+    "draft": false
   },
   {
     "chapter": 6,
@@ -51,7 +56,8 @@
     "date": "2024-12-20-",
     "location_jp": "眞の部屋",
     "location_en": "",
-    "filename": "en_06_makoto_log_2024-12-20_edited.md"
+    "filename": "06_makoto_log_2024-12-20.md",
+    "draft": true
   },
   {
     "chapter": 7,
@@ -59,8 +65,9 @@
     "title_en": "Sidney",
     "date": "2024-12-21-",
     "location_jp": "ロスアンゼルス ベルエア",
-    "location_en": "Los Angeles",
-    "filename": "en_07_sidney_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "07_sidney_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 8,
@@ -68,8 +75,9 @@
     "title_en": "Reunion",
     "date": "2024-12-21-",
     "location_jp": "松本市 英美子と眞の家",
-    "location_en": "Emiko & Makoto’s House",
-    "filename": "en_08_reunion_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "08_reunion_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 9,
@@ -77,8 +85,9 @@
     "title_en": "The Past",
     "date": "2024-12-21-",
     "location_jp": "英美子と眞の家",
-    "location_en": "Emiko & Makoto’s House",
-    "filename": "en_09_the_past_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "09_the_past_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 10,
@@ -86,8 +95,9 @@
     "title_en": "Qube One",
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
-    "location_en": "Makoto’s Room",
-    "filename": "en_10_qube_one_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "10_qube_one_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 11,
@@ -95,8 +105,9 @@
     "title_en": "Emiko, Akira, and Arato",
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
-    "location_en": "Makoto’s Room",
-    "filename": "en_11_emiko_akira_arato_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "11_emiko_akira_arato_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 12,
@@ -104,8 +115,9 @@
     "title_en": "Real-Time Failsafe Implementation",
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
-    "location_en": "Makoto’s machine",
-    "filename": "en_12_failsafe_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "12_failsafe_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 13,
@@ -113,8 +125,9 @@
     "title_en": "The Existence of Akira",
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
-    "location_en": "Makoto’s machine",
-    "filename": "en_13_akira_existence_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "13_akira_existence_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 14,
@@ -122,8 +135,9 @@
     "title_en": "Welcome Back",
     "date": "2024-12-21-",
     "location_jp": "眞の部屋",
-    "location_en": "Makoto’s Room",
-    "filename": "en_14_welcome_back_2024-12-21_edited.md"
+    "location_en": "",
+    "filename": "14_welcome_back_2024-12-21.md",
+    "draft": true
   },
   {
     "chapter": 15,
@@ -131,7 +145,8 @@
     "title_en": "Epilogue",
     "date": "2024-12-25-",
     "location_jp": "松本市　緑川 英美子",
-    "location_en": "Makoto’s Room",
-    "filename": "en_15_epilogue_2024-12-25_edited.md"
+    "location_en": "",
+    "filename": "15_epilogue_2024-12-25.md",
+    "draft": true
   }
 ]
