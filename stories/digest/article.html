@@ -130,27 +130,26 @@
         以下 ─ 便利関数たち
      ====================================================== */
   /* -- グローバルナビ -- */
-fetch('articles.json')
-  .then(res => res.json())
-  .then(data => {
+  function buildGlobalNav(list) {
     const navList = document.getElementById('digest-nav');
+    const tocLabel = lang === 'en' ? 'Table of Contents' : '目次（Index）';
+
     navList.innerHTML = `
-      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
+      <li><a href="index.html">${tocLabel}</a></li>
+      ${list.map(a => {
+        const title = lang === 'en' ? a.title_en : a.title_jp;
+        const label = lang === 'en'
+          ? `Chapter ${a.chapter}: ${title}`
+          : `第${a.chapter}章 ${title}`;
+        return `
+          <li>
+            <a href="article.html?file=${a.filename}&lang=${lang}">
+              ${label}
+            </a>
+          </li>`;
+      }).join('')}
     `;
-    navList.innerHTML += data.map(entry => {
-      const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
-      const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      const label = lang === 'en'
-        ? `Chapter ${entry.chapter}: ${title}`
-        : `第${entry.chapter}章 ${title}`;
-      if (entry.draft === true) {
-        // グレー表示、リンク無し
-        return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
-      }
-      // 公開済みのみリンク
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
-    }).join('');
-  });
+  }
 
   /* -- タイトル & 日付場所 -- */
   function setArticleHeader(meta) {
