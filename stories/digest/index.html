@@ -35,15 +35,17 @@
   <!--  navigation  -->
 
 <div class="uk-section uk-section-default uk-section-small uk-padding-large">
-  <div class="uk-container">
-    
-    <div class="uk-grid" uk-grid>
-      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp"><h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
-        <div  class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
-      </div>
-      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-en"><h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
-        <div  class="uk-heading" id="articles-list-en">📂 読み込み中...</div>
-      </div>
+  <div class="uk-container">    
+<div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body">
+  <h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
+  <div class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
+</div>
+<div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body">
+  <h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
+  <div class="uk-heading" id="articles-list-en">📂 Loading...</div>
+</div>
+</div>
+
 
 </div>
   <!-- # お知らせ # -->
@@ -99,23 +101,22 @@ fetch('articles.json')
   .then(res => res.json())
   .then(data => {
     const navList = document.getElementById('digest-nav');
-
-    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
     navList.innerHTML = `
       <li><a href="index.html">📘 目次（Index）に戻る</a></li>
     `;
 
-    // 🔄 あとはJSONから動的に追加
-navList.innerHTML += data.map(entry => {
-  const title = lang === 'en' ? entry.title_en : entry.title_jp;
-  const label = lang === 'en' ? `Chapter ${entry.chapter}: ${title}` : `第${entry.chapter}章 ${title}`;
+    navList.innerHTML += data.map(entry => {
+      const title = lang === 'en' ? entry.title_en : entry.title_jp;
+      const label = lang === 'en'
+        ? `Chapter ${entry.chapter}: ${title}`
+        : `第${entry.chapter}章 ${title}`;
+      if (entry.draft === true) {
+        return `<li><span style="color:gray;">${label}（編集中）</span></li>`;
+      }
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
+    }).join('');
+  });
 
-  if (entry.draft === true) {
-    return `<li><span style="color:gray;">${label}（編集中）</span></li>`;
-  }
-
-  return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
-}).join('');
 
 
   // 🔸 メイン目次リスト
@@ -162,13 +163,14 @@ data.forEach(article => {
 
     <script src="../js/load_articles.js"></script>
   <script src="../js/load_articles.js"></script>
+<script src="../js/load_articles.js"></script>
 <script>
-// --- ここを追加！ ---
 document.addEventListener("DOMContentLoaded", () => {
   loadArticleList("articles-list-jp", "articles.json", "jp");
   loadArticleList("articles-list-en", "en_articles.json", "en");
 });
 </script>
+
 
   <script src="../js/scripts.js"></script>
   <script src="../js/uikit.js" async></script>
