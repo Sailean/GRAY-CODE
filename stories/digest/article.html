@@ -51,7 +51,7 @@
   </div>
 
   <!-- 上へ戻るボタン -->
-  <div id="topbutton" onclick="scrollToTop()" class="arrow" title="上へ戻る">↑</div>
+  <div id="topbutton" onclick="initScrollTopButton()" class="arrow" title="上へ戻る">↑</div>
 
 <!-- メイン記事読み込み（完全版） -->
 <script type="module">
@@ -229,7 +229,7 @@
   }
 
   /* -- トップに戻るボタン -- */
-  function scrollToTop() {
+  function initScrollTopButton() {
     const topBtn = document.getElementById('topbutton');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
