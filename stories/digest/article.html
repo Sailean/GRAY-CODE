@@ -58,6 +58,9 @@
     const urlParams = new URLSearchParams(window.location.search);
     const file = urlParams.get('file');
 
+    const lang = urlParams.get('lang') || 'jp';  // ←これを必ず最初に宣言！
+
+    
     // 🔹 グローバルナビ用（上部メニュー）
     // ❶ 使う JSON ファイルを言語ごとに切り替える
     const navSource = lang === 'en'
