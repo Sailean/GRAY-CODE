@@ -99,18 +99,24 @@ fetch('articles.json')
   .then(res => res.json())
   .then(data => {
     const navList = document.getElementById('digest-nav');
-
-    // 💡 固定リンク：目次（index.html）へのリンクを最初に追加
     navList.innerHTML = `
       <li><a href="index.html">📘 目次（Index）に戻る</a></li>
     `;
-
-    // 🔄 あとはJSONから動的に追加
     navList.innerHTML += data.map(entry => {
+      const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
       const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
+      const label = lang === 'en'
+        ? `Chapter ${entry.chapter}: ${title}`
+        : `第${entry.chapter}章 ${title}`;
+      if (entry.draft === true) {
+        // グレー表示、リンク無し
+        return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
+      }
+      // 公開済みのみリンク
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
     }).join('');
   });
+
 
  // 🔸 メイン目次リスト
 // 🔹 日本語目次リスト（articles.json）

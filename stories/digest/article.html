@@ -205,38 +205,58 @@ fetch(navSource)
             document.getElementById('article-content').innerHTML = marked.parse(text);
           });
 
-        // ─────────────────────────────
-        // 前後ナビの設定
-        const idx = fileMap.findIndex(e => e.filename === file);
+// ─────────────────────────────
+// 前後ナビの設定
+const idx = fileMap.findIndex(e => e.filename === file);
 
-        // 「前へ」
-        if (idx > 0) {
-          const prev = fileMap[idx - 1];
-          const a = document.getElementById('prev-link');
-          a.href = `article.html?file=${prev.filename}&lang=${lang}`;
-          a.innerText = lang === 'en'
-            ? `◀ Chapter ${prev.chapter}: ${prev.title_en}`
-            : `◀ 第${prev.chapter}章 ${prev.title_jp}`;
-        } else {
-          document.getElementById('prev-link').style.visibility = 'hidden';
-        }
+// 「前へ」
+if (idx > 0) {
+  const prev = fileMap[idx - 1];
+  const a = document.getElementById('prev-link');
+  if (prev.draft === true) {
+    // draftはリンク無し＆グレー
+    a.href = "#";
+    a.innerHTML = lang === 'en'
+      ? `<span style="color:gray;">◀ Chapter ${prev.chapter}: ${prev.title_en} (Coming Soon)</span>`
+      : `<span style="color:gray;">◀ 第${prev.chapter}章 ${prev.title_jp}（編集中）</span>`;
+    a.style.pointerEvents = "none";
+    a.style.color = "gray";
+  } else {
+    a.href = `article.html?file=${prev.filename}&lang=${lang}`;
+    a.innerText = lang === 'en'
+      ? `◀ Chapter ${prev.chapter}: ${prev.title_en}`
+      : `◀ 第${prev.chapter}章 ${prev.title_jp}`;
+    a.style.pointerEvents = "";
+    a.style.color = "";
+  }
+} else {
+  document.getElementById('prev-link').style.visibility = 'hidden';
+}
 
-        // 「次へ」
-        if (idx < fileMap.length - 1) {
-          const next = fileMap[idx + 1];
-          const a = document.getElementById('next-link');
-          a.href = `article.html?file=${next.filename}&lang=${lang}`;
-          a.innerText = lang === 'en'
-            ? `Chapter ${next.chapter}: ${next.title_en} ▶`
-            : `第${next.chapter}章 ${next.title_jp} ▶`;
-        } else {
-          document.getElementById('next-link').style.visibility = 'hidden';
-        }
-      })
-      .catch(error => {
-        document.getElementById('article-content').innerHTML = '<p>⚠ メタ情報の取得に失敗しました。</p>';
-        console.error('JSON 読み込みエラー:', error);
-      });
+// 「次へ」
+if (idx < fileMap.length - 1) {
+  const next = fileMap[idx + 1];
+  const a = document.getElementById('next-link');
+  if (next.draft === true) {
+    // draftはリンク無し＆グレー
+    a.href = "#";
+    a.innerHTML = lang === 'en'
+      ? `<span style="color:gray;">Chapter ${next.chapter}: ${next.title_en} ▶ (Coming Soon)</span>`
+      : `<span style="color:gray;">第${next.chapter}章 ${next.title_jp} ▶（編集中）</span>`;
+    a.style.pointerEvents = "none";
+    a.style.color = "gray";
+  } else {
+    a.href = `article.html?file=${next.filename}&lang=${lang}`;
+    a.innerText = lang === 'en'
+      ? `Chapter ${next.chapter}: ${next.title_en} ▶`
+      : `第${next.chapter}章 ${next.title_jp} ▶`;
+    a.style.pointerEvents = "";
+    a.style.color = "";
+  }
+} else {
+  document.getElementById('next-link').style.visibility = 'hidden';
+}
+
 
       // ページ先頭へスムーズスクロール
       function scrollToTop() {
