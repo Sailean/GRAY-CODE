@@ -155,9 +155,12 @@ data.forEach(article => {
 </script>
 
     <script src="../js/load_articles.js"></script>
-    <script>
+<script>
+// --- ここを追加！ ---
+document.addEventListener("DOMContentLoaded", () => {
   loadArticleList("articles-list-jp", "articles.json", "jp");
   loadArticleList("articles-list-en", "en_articles.json", "en");
+});
 </script>
   <script src="../js/scripts.js"></script>
   <script src="../js/uikit.js" async></script>
