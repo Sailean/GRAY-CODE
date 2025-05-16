@@ -14,7 +14,7 @@ const loadArticleList = (targetId, jsonPath, lang = 'jp') => {
 
         html += `
           <li class="article-item">
-            <a href="article.html?file=${filename}&lang=${lang}" class="uk-link-reset">
+            <a href="enedited_article.html?file=${filename}&lang=${lang}" class="uk-link-reset">
               <div class="article-title">第${chapter}章 ${title}</div>
               <div class="article-date">${date}</div>
             </a>
