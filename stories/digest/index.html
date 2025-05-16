@@ -106,11 +106,17 @@ fetch('articles.json')
     `;
 
     // 🔄 あとはJSONから動的に追加
-    navList.innerHTML += data.map(entry => {
-      const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">第${entry.chapter}章 ${title}</a></li>`;
-    }).join('');
-  });
+navList.innerHTML += data.map(entry => {
+  const title = lang === 'en' ? entry.title_en : entry.title_jp;
+  const label = lang === 'en' ? `Chapter ${entry.chapter}: ${title}` : `第${entry.chapter}章 ${title}`;
+
+  if (entry.draft === true) {
+    return `<li><span style="color:gray;">${label}（編集中）</span></li>`;
+  }
+
+  return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
+}).join('');
+
 
   // 🔸 メイン目次リスト
 // 🔹 日本語目次リスト（articles.json）
