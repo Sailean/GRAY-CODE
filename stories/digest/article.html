@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="../css/ailean_uikit.css">
   <link rel="stylesheet" href="../css/uikit.css">
-  <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
   <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
@@ -116,7 +116,17 @@ navList.innerHTML += data.map(entry => {
       .then(fileMap => {
         const meta = fileMap.find(e => e.filename === file);
         const base = lang === 'en' ? 'en_articles' : 'articles';
-
+        
+        // 🔒 draft 記事を表示させない処理をここに入れる
+  if (meta?.draft === true) {
+    document.getElementById('article-title').innerText = 'この記事は現在編集中です';
+    document.getElementById('article-meta').innerText = '';
+    document.getElementById('article-content').innerHTML = '<p style="color:gray;">この章はまだ公開されていません。</p>';
+    document.getElementById('prev-link').style.visibility = 'hidden';
+    document.getElementById('next-link').style.visibility = 'hidden';
+    return;
+  }
+        
         // ルビ辞書（必要な人名どんどん追加してOK！）
         const rubyMap = {
           '朗': 'あきら',
