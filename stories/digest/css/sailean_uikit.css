@@ -192,6 +192,12 @@ rt {
   margin-top: 1rem;
 }
 
+/* 目次非公開の装飾 */
+.draft-entry {
+  opacity: 0.6;
+  font-style: italic;
+  cursor: default;
+}
 
 
 .article-item {
