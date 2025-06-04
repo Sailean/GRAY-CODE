@@ -17,7 +17,7 @@ This story is entirely fictional.
 
 ## 📚 Read Online
 
-- Digest edition: https://sailean.github.io/KAGUTUCHI/stories/digest/index.html
+- Digest edition: https://sailean.github.io/Ghosts-of-the-Model/stories/digest/index.html
 
 ## ⚖️ License
 
