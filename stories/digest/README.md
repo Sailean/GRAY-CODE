@@ -32,7 +32,7 @@ See LICENSE for more details.
 このお話は完全なるフィクションです。
 
 📚 **オンライン版：**  
-https://sailean.github.io/KAGUTUCHI/stories/digest/index.html
+https://sailean.github.io/Ghosts-of-the-Model/stories/digest/index.html
 
 
 📂 ディレクトリ構成：
