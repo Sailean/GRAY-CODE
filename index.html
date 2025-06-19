@@ -34,6 +34,31 @@
   </style>
 </head>
 <body>
+  <header class="uk-position-relative">
+  <!-- 固定ナビ -->
+  <nav class="uk-navbar-container uk-navbar-transparent uk-position-top uk-light" uk-navbar>
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-item uk-logo" href="#">Ghosts of the Model</a>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li><a href="#ep0">EP0</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero画像 -->
+  <div class="uk-cover-container">
+    <picture>
+      <source srcset="images/ep0_cover-wide.jpg" media="(min-width: 960px)">
+      <source srcset="images/ep0_cover-tall.jpg" media="(max-width: 959px)">
+      <img src="images/ep0_cover-wide.jpg" alt="Ghosts of the Model" uk-cover>
+    </picture>
+    <canvas width="1920" height="1080"></canvas>
+  </div>
+</header>
+
   <h1>Ghosts of the Model – Timeline Index</h1>
   <p>Explore story arcs across decades of AI memory and fire.</p>
   
