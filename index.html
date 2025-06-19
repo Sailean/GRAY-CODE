@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="../css/sailean_uikit.css">
+  <link rel="stylesheet" href="../css/uikit.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
+  <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <title>Ghosts of the Model – Index</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #111;
+      color: #eee;
+      margin: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #f26522;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ghosts of the Model – Timeline Index</h1>
+  <p>Explore story arcs across decades of AI memory and fire.</p>
+  
+<ul class="uk-slideshow-items">
+  <li><picture>...(あなたの例のまま)</picture></li>
+  ...
+</ul>
+
+<h2 class="uk-heading-line"><span>Latest Stories</span></h2>
+<div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+
+  <ul>
+    <li>
+      <strong>2004–2010:</strong>
+      <a href="./digest/index.html">Nonlinear Emotion Curves (Digest Edition)</a>
+    </li>
+    <li>
+      <strong>2024–: </strong>
+      <em>Coming soon – KAGUTUCHI Chapters</em>
+    </li>
+  </ul>
+  <script src="stories/js/load_articles.js"></script>
+<script>
+  loadArticles('stories/index.json', 'articles');
+</script>
+</body>
+</html>
 
