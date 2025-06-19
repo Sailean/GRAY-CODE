@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <link rel="stylesheet" href="stories/css/sailean_uikit.css">
+  <link rel="stylesheet" href="stories/css/sailean_uikit.css">
   <link rel="stylesheet" href="stories/css/uikit.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
   <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <title>Ghosts of the Model – Index</title>
+
+ <title>Ghosts of the Model – Techno-SF Story Index</title>
   <style>
     body {
       font-family: "Helvetica Neue", sans-serif;
@@ -35,7 +37,7 @@
     }
   </style>
 </head>
-<body>
+
 <body>
   
   <!-- ナビゲーション（上部固定） -->
@@ -72,11 +74,18 @@
   <h1>Ghosts of the Model – Timeline Index</h1>
   <p>Explore story arcs across decades of AI memory and fire.</p>
 
-  <!-- スライド -->
-<ul class="uk-slideshow-items">
-  <li><picture>...(例のまま)</picture></li>
-  ...
-</ul>
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+  <ul class="uk-slideshow-items">
+    <li>
+      <img src="images/slide1.webp" alt="" uk-cover>
+    </li>
+    <!-- 他のスライドも追加 -->
+  </ul>
+
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+</div>
+
 
 <h2 class="uk-heading-line"><span>Latest Stories</span></h2>
 <div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
@@ -95,8 +104,11 @@
   <script src="stories/js/load_articles.js"></script>
   <div id="article-container" class="uk-grid uk-grid-match uk-child-width-1-2@m" uk-grid></div>
 <script>
-  loadArticleCards('article-container', 'your_articles.json', 'en'); // or 'jp'
+  document.addEventListener('DOMContentLoaded', () => {
+    loadArticleCards('article-container', 'your_articles.json', 'en');
+  });
 </script>
+
 </body>
 </html>
 
