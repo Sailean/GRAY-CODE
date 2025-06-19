@@ -1,61 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Ghosts of the Model – Index</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: #111;
-      color: #eee;
-      margin: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #f26522;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
 <body>
-  <h1>Ghosts of the Model – Timeline Index</h1>
-  <p>Explore story arcs across decades of AI memory and fire.</p>
-  
-<ul class="uk-slideshow-items">
-  <li><picture>...(あなたの例のまま)</picture></li>
-  ...
-</ul>
+  <!-- ナビゲーション（上部固定） -->
+  <div class="uk-position-top uk-position-z-index uk-background-primary uk-light">
+    <nav class="uk-navbar-container uk-navbar" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="/">Ghosts-of-the-Model</a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stories">Stories</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-<h2 class="uk-heading-line"><span>Latest Stories</span></h2>
-<div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+  <!-- TOP画像 -->
+  <div class="uk-cover-container uk-height-large uk-visible@s">
+    <img src="images/top_pc.jpg" alt="Top Visual" uk-cover>
+  </div>
+  <div class="uk-cover-container uk-hidden@s">
+    <img src="images/top_mobile.jpg" alt="Top Visual Mobile" uk-cover>
+  </div>
 
-  <ul>
-    <li>
-      <strong>2004–2010:</strong>
-      <a href="./digest/index.html">Nonlinear Emotion Curves (Digest Edition)</a>
-    </li>
-    <li>
-      <strong>2024–: </strong>
-      <em>Coming soon – KAGUTUCHI Chapters</em>
-    </li>
-  </ul>
-  <script src="stories/js/load_articles.js"></script>
-<script>
-  loadArticles('stories/index.json', 'articles');
-</script>
+  <!-- テキストや記事ブロック -->
+  <section class="uk-section">
+    <div class="uk-container">
+      <h2>Story Digest</h2>
+      <p>Welcome to Ghosts of the Model — A nonlinear techno-sf experience...</p>
+    </div>
+  </section>
 </body>
-</html>
-
