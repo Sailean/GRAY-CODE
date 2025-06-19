@@ -1,6 +1,8 @@
 # Ghosts-of-the-Model  
 ## すべてはすべてを内包し、その全てはつながっている  
 
+[読む Read](#episodes) ｜ [創作ログ Dev-log](#log) ｜ [フィードバック Feedback](https://github.com/Sailean/Ghosts-of-the-Model/issues)
+
 > SF長編プロジェクト｜連載形式｜未完成｜成長型生命体  
 
 ---
