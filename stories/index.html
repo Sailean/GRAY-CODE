@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +35,18 @@
 <body>
   <h1>Ghosts of the Model – Timeline Index</h1>
   <p>Explore story arcs across decades of AI memory and fire.</p>
+<ul class="uk-slideshow-items">
+  <li><picture>...(あなたの例のまま)</picture></li>
+  ...
+</ul>
+
+<h2 class="uk-heading-line"><span>Latest Stories</span></h2>
+<div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+
+<script src="stories/js/load_articles.js"></script>
+<script>
+  loadArticles('stories/index.json', 'articles');
+</script>
 
   <ul>
     <li>
