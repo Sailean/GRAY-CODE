@@ -36,30 +36,38 @@
   </style>
 </head>
 <body>
-  <header class="uk-position-relative">
-  <!-- 固定ナビ -->
-  <nav class="uk-navbar-container uk-navbar-transparent uk-position-top uk-light" uk-navbar>
-    <div class="uk-navbar-left">
-      <a class="uk-navbar-item uk-logo" href="images/logo_300.png">Ghosts of the Model</a>
-    </div>
-    <div class="uk-navbar-right">
-      <ul class="uk-navbar-nav">
-        <li><a href="#ep0">EP0</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero画像 -->
-  <div class="uk-cover-container">
-    <picture>
-      <source srcset="images/ep0_cover-wide.jpg" media="(min-width: 960px)">
-      <source srcset="images/ep0_cover-tall.jpg" media="(max-width: 959px)">
-      <img src="images/GHOSTS_header_hero_2000px.webp" alt="Ghosts of the Model" uk-cover>
-    </picture>
-    <canvas width="1920" height="1080"></canvas>
+<body>
+  
+  <!-- ナビゲーション（上部固定） -->
+  <div class="uk-position-top uk-position-z-index uk-background-primary uk-light">
+    <nav class="uk-navbar-container uk-navbar" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="images/logo_300.png">Ghosts-of-the-Model</a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stories">Stories</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</header>
+
+  <!-- TOP画像 -->
+  <div class="uk-cover-container uk-height-large uk-visible@s">
+    <img src="images/images/GHOSTS_header_hero_2000px.webp" alt="Top Visual" uk-cover>
+  </div>
+  <div class="uk-cover-container uk-hidden@s">
+    <img src="images/top_mobile.jpg" alt="Top Visual Mobile" uk-cover>
+  </div>
+
+  <!-- テキストや記事ブロック -->
+  <section class="uk-section">
+    <div class="uk-container">
+      <h2>Story Digest</h2>
+      <p>Welcome to Ghosts of the Model — A nonlinear techno-sf experience...</p>
+    </div>
+  </section>
 
   <h1>Ghosts of the Model – Timeline Index</h1>
   <p>Explore story arcs across decades of AI memory and fire.</p>
