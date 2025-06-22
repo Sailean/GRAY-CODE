@@ -119,28 +119,6 @@ fetch('articles.json')
     }).join('');
   });
 
-
- // 🔸 メイン目次リスト
-// 🔹 日本語目次リスト（articles.json）
-// data.forEach(article => {
-//   if (article.draft === true) {
-//     html += `
-//       <li>
-//         <span class="uk-text-bold" style="color: gray;">
-//           第${article.chapter}章 ${article.title_jp}（編集中）
-//         </span> - <span style="color: gray;">${article.date}</span>
-//       </li>`;
-//   } else {
-//     html += `
-//       <li>
-//         <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
-//           <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
-//         </a>
-//       </li>`;
-//   }
-// });
-
-
 // 🔹 英語目次リスト（en_articles.json）
 data.forEach(article => {
   if (article.draft === true) {
