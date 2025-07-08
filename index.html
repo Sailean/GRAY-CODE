@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <link rel="stylesheet" href="stories/css/sailean_uikit.css">
-  <link rel="stylesheet" href="stories/css/uikit.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
-  <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ghosts of the Model-0</title>
+	<link rel="stylesheet" href="stories/css/uikit.css" />
+	<link rel="stylesheet" href="stories/css/sailean_uikit.css" />
+	<link rel="stylesheet" href="stories/css/magnific-popup.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
  <title>Ghosts of the Model – Techno-SF Story Index</title>
   <style>
@@ -40,11 +40,18 @@
 
 <body>
   
-  <!-- ナビゲーション（上部固定） -->
-  <div class="uk-position-top uk-position-z-index uk-background-primary uk-light">
-    <nav class="uk-navbar-container uk-navbar" uk-navbar>
+<!-- ナビゲーション（上部固定） -->
+  <div class="uk-position-top uk-position-z-index uk-section-secondaryuk-padding-remove-vertical">
+    <div class="tm-header">
+    <div class="uk-light uk-position-z-index" uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
+				<div class="uk-container"><!-- uk-container -->
+          <div uk-navbar><!-- ナビバー -->
       <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="images/logo_300.png">Ghosts-of-the-Model</a>
+              <a class="uk-navbar-item uk-logo" href="index.html">
+							<picture>
+							<source srcset="images/logo_300.png" width="150" media="(max-width: 640px)">
+							<img id="logo" src="images/logo_300.png" width="300"  alt="Ghosts of the Model_logo" title="Ghosts of the Model">
+							</picture></a>
       </div>
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
@@ -54,61 +61,128 @@
       </div>
     </nav>
   </div>
+</div>
+</div>
+</div>
 
-  <!-- TOP画像 -->
-  <div class="uk-cover-container uk-height-large uk-visible@s">
-    <img src="images/images/GHOSTS_header_hero_2000px.webp" alt="Top Visual" uk-cover>
-  </div>
-  <div class="uk-cover-container uk-hidden@s">
-    <img src="images/top_mobile.jpg" alt="Top Visual Mobile" uk-cover>
-  </div>
+	<div id="nav-placeholder"></div>
+
+<div class="uk-section-secondary"> <!-- slideshowのsection -->
+<div class="uk-position-relative js-slideshow-animation"
+     uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: fade; finite: true"
+     aria-label="slideshow">
+				<!-- <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30"> -->
+				<ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide1#### -->
+							<img src="images/GHOSTS_header_original_2500px_mask.webp" alt="slide3" uk-cover>
+						</div>
+						<div
+							class="uk-padding uk-position-center uk-text-center uk-transition-slide-top">
+							<h1 class="heading">Explore story arcs across decades of AI memory and fire.</h1>
+						</div> <!-- slide1表示テキスト -->
+					</li>
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide2#### -->
+							<img src="images/helicopter2.webp" alt="slide2" uk-cover>
+						</div>						
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h1 class="heading uk-heading-medium">Welcome to Ghosts of the Model</h1><!-- slide2表示テキスト -->
+						</div>
+					</li>
+
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide3#### -->
+							<img src="images/Sidne_preaches_real-time_fail-safe_08.webp" alt="slide1"
+								uk-cover>
+						</div>						
+						<div
+							class="uk-overlay uk-position-bottom uk-text-center uk-animation-kenburns linehight-overlay">
+							<h2 class="heading uk-positeion-bottom"><a href="stories/digest/index.html">Nonlinear Emotion Curves (Digest Edition)</a></h2><!-- slide3表示テキスト -->
+						</div>
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h1 class="heading uk-heading-medium">A nonlinear techno-SF experience</h1>
+						</div>
+					</li>
+
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse">
+							<a class="uk-navbar-item uk-logo" href="index.html">
+							<picture>
+							<source srcset="images/mobile_logo.webp" media="(max-width: 640px)">
+							<img id="logo" src="images/logo_2000.webp"  alt="Ghosts of the Model_logo" title="Ghosts of the Model">
+							</picture></a>
+							</div>		
+						<div class="uk-overlay uk-position-bottom uk-text-center uk-transition-slide-bottom linehight-overlay">
+							<h1 class="heading uk-positeion-bottom"><a class="uk-button-text" href="stories\ghost_relay\index.html">Go to episode 0</a></h1><!-- slide4表示テキスト -->
+						</div>
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h1 class="heading uk-heading-medium uk-dark"></h1>
+						</div>
+					</li>
+				</ul>
+
+				<a class="uk-slidenav-small uk-position-bottom-left uk-position-small uk-hidden-hover" href
+					uk-slidenav-previous uk-slideshow-item="previous"></a>
+				<a class="uk-slidenav-small uk-position-bottom-right uk-position-small uk-hidden-hover" href
+					uk-slidenav-next uk-slideshow-item="next"></a>
+			</div>
+		</div>
+
+
+<div class="section">
+  <div class="uk-container uk-margin-large-top">
 
   <!-- テキストや記事ブロック -->
-  <section class="uk-section">
-    <div class="uk-container">
-      <h2>Story Digest</h2>
+      <h2 class="g-h uk-light">Story Digest</h2>
       <p>Welcome to Ghosts of the Model — A nonlinear techno-sf experience...</p>
-    </div>
-  </section>
-
+ 
   <h1>Ghosts of the Model – Timeline Index</h1>
   <p>Explore story arcs across decades of AI memory and fire.</p>
 
-<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
-  <ul class="uk-slideshow-items">
-    <li>
-      <img src="images/slide1.webp" alt="" uk-cover>
-    </li>
-    <!-- 他のスライドも追加 -->
-  </ul>
 
-  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-</div>
-
-
-<h2 class="uk-heading-line"><span>Latest Stories</span></h2>
 <div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+<h2 class="uk-heading-line uk-light"><span>Latest Stories</span></h2>
 
-  <ul>
-    <li>
-      <strong>2010–2024:</strong>
-      <a href="stories/digest/index.html">Nonlinear Emotion Curves (Digest Edition)</a>
-    </li>
-    <li>
-      <strong>2024–: </strong>
-      <em>Coming soon – KAGUTUCHI Chapters</em>
-    </li>
-  </ul>
-  
+<ul class="story-index">
+  <!-- ▽ 過去編 ▽ -->
+  <li>
+    <strong>2002 — OPERATION GHOST RELAY:</strong>
+    <a href="stories/ghost_relay/index.html">Episode 0 : Dust & Fire</a>
+  </li>
+
+  <!-- ▽ 中間編 ▽ -->
+  <li>
+    <strong>2010–2024 — Nonlinear Emotion Curves:</strong>
+    <a href="stories/digest/index.html">Digest Edition (Ep 1-5)</a>
+  </li>
+
+  <!-- ▽ 現在・続き ▽ -->
+  <li>
+    <strong>2024-12 — KAGUTUCHI Incident:</strong>
+    <em>Coming soon — Chapters α / β</em>
+  </li>
+</ul>
+
   <script src="stories/js/load_articles.js"></script>
   <div id="article-container" class="uk-grid uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+     </div>
+  </section>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     loadArticleCards('article-container', 'your_articles.json', 'en');
   });
 </script>
 
+
+	</div>
+	<!--  フッター # -->
+	<div id="footer-placeholder"></div>
+	<script src="../js/load_articles.js"></script>
+	<script src="stories/js/uikit.js"></script>
+	<script src="stories/js/uikit-icons.min.js"></script>
+	<script src="stories/js/custom-lightbox.js"></script>
 </body>
 </html>
 
