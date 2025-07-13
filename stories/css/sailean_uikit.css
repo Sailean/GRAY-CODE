@@ -16,16 +16,16 @@
 
  @charset "UTF-8";
 
- html {
-   font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif, "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   font-size: 1rem; /* 16px → 1rem */
-   font-weight: normal;
-   line-height: 1.5;
-   -webkit-text-size-adjust: 100%;
-   background: #f2f2f2;
-   color: #1f1b1b;
-   font-variant-ligatures: none;
- }
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "游ゴシック", "Yu Gothic" "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    background: #d5d4d3f3;
+    color: #312d2d;
+    font-variant-ligatures: none;
+}
  
  body {
   font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif; /* 例: 日本語小説向けフォント */
