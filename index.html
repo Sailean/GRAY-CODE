@@ -1,489 +1,176 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GRAY CODE　Episode-0</title>
-  <link rel="stylesheet" href="../css/sailean_uikit.css">
-  <link rel="stylesheet" href="../css/uikit.css">
+  <title>非線形感情曲線 - ダイジェスト</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/sailean_uikit.css">
+  <link rel="stylesheet" href="css/uikit.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
   <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <title>Ghosts of the Model – 2002 — OPERATION GHOST RELAY</title>
   <style>
-        body {
-            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-            background: linear-gradient(135deg, #0d1117 0%, #1c1b1b 100%);
-            color: #e6edf3;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-    </style>
+  </style>
 </head>
 
 <body>
-  <!-- ナビゲーション（上部固定） -->
-  <div class="uk-position-top uk-position-z-index uk-section-secondary uk-padding-remove-vertical">
-    <div class="tm-header">
-      <div class="uk-light uk-position-z-index"
-        uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-act点滴e: uk-navbar-sticky; cls-inact点滴e: uk-light; top: 200">
-        <div class="uk-container"><!-- uk-container -->
-          <div uk-navbar><!-- ナビバー -->
-            <div class="uk-navbar-left">
-              <a class="uk-navbar-item uk-logo" href="../../index.html">
-                <picture>
-                  <source srcset="../images/logo_gray-code.png" width="150" media="(max-width: 640px)">
-                  <img id="logo" src="../images/logo_gray-code.png" width="300" alt="Ghosts of the Model_logo"
-                    title="Ghosts of the Model">
-                </picture>
-              </a>
-            </div>
-            <div class="uk-navbar-right">
-              <ul class="uk-navbar-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#stories">Stories</a></li>
-              </ul>
-            </div>
-            </nav>
-          </div>
+
+  <nav class="uk-navbar-container">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="index.html">Nonlinear Emotion Curves</a>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="index.html">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul id="digest-nav"></ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
+  </nav>
+  <!--  navigation  -->
 
-  <div class="uk-section uk-section-default uk-section-small uk-padding">
-    <div class="uk-container uk-container-expand heading ">
-        <h2 class="uk-margin-top heading">エピソード・Ⅰ 砂漠の幽霊</h2>
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午前3時8分 — イラク アンバール県　アル・カーイム郡</h3>
-        <p>砂を被った岩場を下りきった男は、開けた砂地の手前で足を止めた。<br>
-          ヘルメットに取り付けた<ruby>ナイトビジョン<rt>暗視カメラ</rt></ruby>に映る砂漠は、暗く深い緑色に沈んでいる。<br>
-          夜明け前の空気が、氷の破片のように彼の肺を突き刺す。<br>
-          兵士は荒い息を整えながら岩陰に膝をつき、視線を前方に向けたまま、胸のポケットから砂色のコンパスを取り出した。<br>
-          針とメモリに塗られたトリチウムが黄緑に発光し、兵士に進むべき方向を教える。<br>
-          彼はダイヤルを回して目盛りを北に合わせ、蓋に取り付けられた糸のようなワイヤーに重ねてロックすると、コンパスをポーチに戻した。<br>
-          ──距離、あと1.4<ruby>クリック<rt>キロメートル</rt></ruby>。<br>
-          兵士は肩に食い込むカーキ色のナイロンベルトを左手で掴むと、ゆっくりと立ち上がった。背中に担いだ男の体をベルトごとゆすり上げ、体の前に回した男の片腕と片足を二の腕で挟みこむ。<br>
-          そして、スリングで胸の前に下げたライフルのグリップを右手でしっかりと握った。<br>
-          吹き出した風に砂漠の黄色い砂が煽られ、顔を上げた兵士の頬に砂粒がパラパラと当たる。ナイトビジョンで切り取られた視界に、暗緑色に揺らめく尾根の稜線が映し出される。<br>
-          ──くそっ。じきに砂嵐が来るぞ、急がなくては。<br>
-          踏み出した足はもつれ、息が乱れるたびに腰と胸に回したナイロンベルトが軋んで、体に食い込む。<br>
-          ――約束の場所まであと少し……だが、ヘリの待機時間はとっくに過ぎている。<br>
-          『おい、お前。俺がチビで良かったなぁ。丸めてザックに押し込めよ』<br>
-          救助地点を目指して歩き続ける兵士に、背中のゴーストが耳元で囁く。兵士は歩みを止めずに答えた。<br>
-          「入るわけねぇだろ、この筋肉野郎め」<br>
-          ──あのバディキャリーは遊びだった。ガキの頃を思い出して、二人で笑い転げたよな。<br>
-          『お前はデカすぎだ、この邪魔な足を畳め』<br>
-          ──俺を担いで、兄貴は笑いながらそう言った。<br>
-          　背中に担いだゴーストが、また兵士に話しかける。<br>
-          『俺を捨てていけよ。楽になるぞ』<br>
-          「捨てるなら、とっくに捨ててる。うるせぇぞ」<br>
-          兵士の耳元でゴースト笑い、囁いた。<br>
-          『お前だけは、絶対に担ぎたくねぇ』<br>
-          「……だから、俺が担いでる」<br>
-          滅菌シートを使い尽くして包帯を巻いただけの大腿横の裂傷が開き、カーゴパンツに新しく赤い染みを作った。<br>
-          携帯していた2リットルの水は底をつき、ひび割れた唇から血が滲む。ゴーグルで切り取られた緑色の砂原がぼやけ、彼はカメラを上に上げた。<br>
-          ――夜が明ける前に……もっと、早く。足を前に……例え俺の信号が届いても、日が昇ってしまえばファルコンは来られないだろう。<br>
-          兵士は眉間を指で強く押さえてから再びナイトビジョンを装着し、背中の男に向かって呟く。 <br>
-          「万にひとつでも望みがあるなら、前に進む。それだけだ」<br>
-          足跡が残る砂地を避けて踏み出した軍靴が、浮き石を踏んだ。石の下の砂が浅く崩れて兵士はバランスを崩し、後ろに倒れかける。<br>
-          彼は奥歯を強く噛み締めて、胸に回したナイロンベルトを両手で掴む。<br>
-          体を前に倒して両足を踏ん張ると、取り切れなかった子弾の破片が太腿と脹脛の肉を刺した。<br>
-          太腿の裂傷からさらに血が染み出し、カーゴパンツに赤黒い染みが広がる。<br>
-          彼は低く唸って口の中の砂を吐き捨てると、歯をギリギリと食い縛り、痛みごと足を前へ蹴り出した。</p>
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午前4時13分 — BLUE TWO</h3>
-        <p class="uk-margin-large-bottom">
-          兵士は山手の岩陰に潜み、プレートキャリアの腰ポケットから<ruby>救難無線機<rt>ビーコン</rt></ruby>を掴みだした。<br>
-          「26時間と48分の遅刻。音声なしで認証信号だけを送信する。ガードレールよ……受け取ってくれ」<br>
-          遥か上空に居るはずの偵察機に向かい、彼は暗号化した救難暗号〈BLUE TWO〉を0.3秒間ずつ三回、送り出す。<br>
-          無線機のGPSバーストは、とっくに切ってあった。兵士はビーコンの電池を抜くと、大人の頭ほどある岩を拾ってそれを叩き壊した。<br>
-          ビーコンの残骸を砂に埋めると、手榴弾とライフルをチェックして弾数を数える。<br>
-          彼は背中の男を下ろさない。この先には身を隠せる場所は僅かしかなく、夜が明けそうな今、彼の覚悟は決まっていた。<br>
-          ──きっかり30分この場所で待ち、救助が来なければまた歩く……敵に出会うまで。<br>
-          「おい、随分静かじゃないか。…干からびてないだろうな、兄貴？」<br>
-          背中のゴーストはぴたりと話しかけるのを止め、兵士が動くたび、棒のように固くなった手足をただ揺らした。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午前4時16分 — チヌーク機内</h3>
-        <p>「ふん、命令違反？ 上等だ、クソくらえだ。デルタが帰還して、あいつ等が帰らないなんてあるか？」<br>
-          陸軍准尉のケビン・マッケンジーは、操縦桿を握りながら声に出して毒づいた。<ruby>Ghost<rt>ゴースト</rt></ruby>チームの救援タイムリミットから、既に24時間が経過している。<br>
-          平行するオペレーションのために搭乗していたクルーたちを乗せた改良型チヌークは、基地で給油を済ませるとさらに燃料を積み込んだ。<br>
-          ケビンの独断でチヌークは再び約束地点の空域に戻り、高高度に張り付いてホバリングしている。<br>
-          「くそっ……乗せた客は必ず拾う。それが俺たちだ……48時間は連絡を待つぞ」<br>
-          無線パネルを睨みつけるケビンの額には汗が浮いている。<br>
-          彼がブルンと<ruby>禿頭<rt>とくとう</rt></ruby>を振ったそのとき、無線パネルが鳴った。<br>
-          『ガーディアン62、こちらタロンオービット、BLUE TWO（ブルー・ツー）、グリッドを修正…』<br>
-          「……了解、<ruby>TOC<rt>ティー・オー・シー</rt></ruby>」<ruby>JSOC<rt>ジェイソック</rt></ruby>の地上局から送られて来た無線に応え、ケビンは計器を叩いた。<br>
-          「おい…………見ろよ、畜生！ 生きてる。生きてるぞ、ざまあみろだ！」<br>
-          ケビンはキャビンを振り向いて仲間に叫ぶ。クルーたちが歓声を上げる中、ケビンが計器を確認して言う。<br>
-          「よーし、行くぞ！シックス・ポイント・ワン、到着予定はあと10分！ 全速で突っ込むぞ。いいな、ジョン！」<br>
-          副操縦士のジョンはニヤリと笑い、<br>
-          「了解、隊長。全開で行きます」とケビンに向かって親指を立てた。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午前4時25分 — ファルコン</h3>
-        <p class="uk-margin-large-bottom">
-          岩陰に膝をつく兵士を眩暈と吐き気が襲い、彼は空っぽの胃から酸っぱい液体を吐き出す。<br>
-          煤と血で汚れた袖で口元を拭って大きく喘いだ兵士が目を閉じた次の瞬間、彼の耳に遠く空気を裂くローター音が届いた。<br>
-          ──このローター音は……チヌークだ。<br>
-          顔を上げた彼は、こちらに向かって来る大型の輸送ヘリを見た。前後のローターが生む低周波が空気と砂面を震わせ、その黒い影はみるみる大きくなり、頭上に迫る。<br>
-          兵士は右手で拳を作り、膝元の砂を強く叩いた。<br>
-          ──ファルコンだ。……やったぞ、兄貴。<br>
-          仲間を背負った兵士は開けた砂地によろめき出て、空を見上げた。</p>
-
-        <p>『……高度20フィート、パワー・チェック・グリーン』<br>
-          その無線を聞きながら、パイロットのケビンが茫然と呟く。<br>
-          「おい……チームは全部で7人のはずだ。他のやつらはどうした？ あいつは……サイファーだな。担がれているのは、誰だ？」<br>
-          ジョンが応える。<br>
-          「……一人は意識不明のようですね。ゴーストチーム、二名確認。周囲、見当たりません」<br>
-          ケビンはインターコム越しに怒鳴った。<br>
-          「くそ、誰一人置いてかねぇぞ！ 彼らを上げろ、急げ！ ホイスト・スタンバイ！」<br>
-          二つの巨大なローターに煽られ、砂塵が巻き上がる。宙に停止したチヌークのハッチが開き、ウインチドラムの甲高いモーター音とともに、四角い穴から90フィートのスチールケーブルが滑り出た。<br>
-          ケーブル末端のスリングが風に巻かれ、緑のストロボの点滅をバックに暴れる。分厚いケーブルグローブを締めたクルーチーフがスチール製のホイストケーブルを手でさばき、落下速度にブレーキをかける。<br>
-          サイファーと呼ばれた兵士はチヌークを見上げながら、血が滲む唇を開いた。<br>
-          「ゴースト。家へ……帰れるぞ」<br>
-          微細な砂が彼のナイトビジョンのレンズに当り、波痕を重ねながら吹き飛ばされていく。<br>
-          機内では、ケビンがキャビンへ向かって叫んでいた。<br>
-          「おいワルツ、どうする？ これ以上は下げられんぞ、ただでさえ見えねぇのに、ブラウンアウトしちまう。一度に行けるか？」<br>
-          「二人＋装備で約520ですね……風がある、三人は危険だ。ダブルYで二回に分けます、彼は担いだ仲間をホールドできるでしょう。俺は最後に。急ぎましょう」<br>
-          空軍の<ruby>Para­rescue Jumper<rt>パラレスキュージャンパー</rt></ruby>、「ワルツ」ことウォルシュがヘルメット越しに親指を立てる。<br>
-          ウォルシュはフックに自分のＤ環を掛け、ひと息に身を翻すとハッチの闇へ消えた。</p>
-
-        <p>サイファーはM4のスリングをプレートキャリアから外すと、銃床を砂に突き立てた。砂色の戦闘服を着た兵士が一人ワイヤーを滑り降り、砂塵の幕を割って地面へ降り立つ。<br>
-          ハーネスを持ったその兵士はグローブとヘルメットを脱ぎながら横たわるゴーストに駆け寄り、彼の傍らに膝まづいた。<br>
-          首元に手を伸ばし、ゴーストの脈をとるその兵士の横にサイファーも膝まづくと、首を横に振った。<br>
-          「彼は”ゴースト”。俺たちの隊長だ」ウォルシュは彼の目を見てゆっくりと頷くと、<br>
-          「<ruby>PJ<rt>ピージェイ</rt></ruby>のウォルシュだ。ありがとう……よく連れて帰ってくれた。君は大丈夫か？ ちょっと失礼」<br>
-          ウォルシュそう言うとサイファーの首に二本の指を当てて脈を確かめ、もう一方の手で彼の顎を持ち上げると、顔を近づけて呼吸の音を聞き、サイファーの顔を見て頷いた。<br>
-          「自分で装着できるか？」ウォルシュがサイファーにハーネスを渡す。<br>
-          「ああ、サンキュー。PJとは、えらく派手な出迎えだな」サイファーが呟くように言うと、ウォルシュは<br>
-          「たまには“外”の空気も吸わねぇとな、今日はお偉いさんが大勢なんだ。そして、俺の時間が余ったのさ……たぶん、君たちのおかげでね。ケガは？」と言った。<br>
-          「大腿横が裂けてる。……証拠デプリの土産入りだ」<br>
-          ウォルシュは「おい」と呟いてサイファーの血と煤で汚れた上衣を見ると、<br>
-          「足だけなのか？」と言って足元に素早く屈み、サイファーの顔を見上げた。<br>
-          「これは、俺のじゃない」<br>
-          ウォルシュは口を引き結んで頷くと、カーゴパンツの裂け目から傷口を覘く。<br>
-          「…………こりゃひどい、これで歩いて来たのか……吊る前に、簡単に止血させてくれ」<br>
-          そう言うと、ウォルシュはポーチから素早く止血ガーゼを取り出し、ズボンの裂け目を切り開くとサイファーの脚に張り付けた。そして、動かないゴーストの前に再び膝まづくと小さく十字を切り、体に素早くハーネスを通す。<br>
-          ウォルシュはその体を慎重に抱き起し、カラビナを使ってスリングにゴーストのハーネスを固定した。<br>
-          自力でハーネスを装着したサイファーの手は震え、開かないカラビナがスリングを何度もなぞる。<br>
-          ウォルシュはケーブルに沿わせた黄色い<ruby>タグライン<rt>補助ロープ</rt>
-          </ruby>をサイファーに握らせると、彼の体のハーネスを確認した。そしてサイファーの手からカラビナを受け取って素早くスリングに固定すると、<br>
-          「ゴーストを頼む、頑張ってテンションをかけて。風が強いぞ、スピンを止めるんだ」そう言ってヘルメットを被り、インカムに叫んだ。<br>
-          「固定確認した！ リフトしろ！」<br>
-          日に焼けた顔のPJは再びサイファーの目を見ると、肩を軽く叩いた。<br>
-          「今度会ったら、ビールを奢ってくれよ」<br>
-          徐々に遠ざかるウォルシュに、ゴーストの体を抱きかかえたサイファーが親指を立てた。砂塵の乱流でスリングが大きく振れる。<br>
-          「ワルツ！ また風が来るぞ、油断すんなよ！」ケビンの声がインカムから弾けた。<br>
-          ハッチに向かって上昇する二人の体が風に大きく揺れ、シドニーはタグラインを更に強く引いた。地面に残ったウォルシュもタグラインを操り、彼らの回転を止める。<br>
-          補助灯に照らされ、ヘリの周囲は明るい。煤と血で赤黒く固まった動かないゴーストの袖が、砂混じりの風に押し潰されている。<br>
-          敵の急襲が来ないことを祈りながら、サイファーは黄色いロープを必死で引き続けた。<br>
-          永遠に感じられたホイストが終わりに近づき、ハッチから手が伸びる。サイファーがその手を取ると、さらに何本かの腕が伸びて、「ワン、ツー、スリー！」と言う掛け声とともに二人を機内に引き上げた。<br>
-          スリングとハーネスが体から素早く外され、再びワイヤーが投下される。<br>
-          「急げ！ 夜が明けるぞ。おいワルツ、あんまり踊るなよ」ケビンの無線に、ウォルシュが返す。<br>
-          「俺には羽が生えてるのさ。見ててくれ、陸軍の隊長」ウォルシュは風に煽られるワイヤーに飛びつくとカラビナでスリングを固定し、タグラインを器用に操って砂嵐の中を上昇してきた。<br>
-          キャビンにはローターの風切り音とエンジンの轟音だけが響く。<br>
-          床に固定されたストレッチャーの上で、サイファーは浅い呼吸を繰り返していた。<br>
-          機内の赤灯がその顔を赤黒く照らし、隣に横たえられたゴーストの周囲にクルーが集まっていた。<br>
-          あるものはヘルメットを取り、あるものは膝まづき、すべてのクルーが無言の黙祷で戦場に倒れた隊長を出迎えていた。物言わぬ帰還に、クルーたちが項垂れる。<br>
-          「……よし。行くぞ、帰りも全速力だ」ケビンがコックピットから厳かに宣言し、クルーたちが持ち場に戻る。<br>
-          「服を取り払うぞ」ウォルシュがサイファーに屈みこむと、その手首をサイファーが強く握った。<br>
-          「頼む。…………俺の口述を、録ってくれ。通信塔は、破壊した。そして、USBがある……ポーチの中に」<br>
-          その言葉にクルー全員が耳を澄ませ、機内の騒音が再び遠のいた。<br>
-          「……わかった。おい、録音を。AARだ」ウォルシュは手を止めずに、彼をサポートするクルーを振り返って視線で指示を出し、サイファーの戦闘服を手早く切り開いていく。サイファーは震える声を絞り出し、クルーが取り出した二本のUSBを指さした。その一つには、乾いた血がうっすらとこびり付いている。<br>
-          「……青は、俺が塔の<ruby>SIGINT<rt>シギント</rt></ruby>装置から吸い出したものだ。黒は……エコーが……盗った。敵の通信暗号ファイルだ」<br>
-          ウォルシュはクルーを振り向いて頷くと、<br>
-          「よし。ドングル（USB）が二本。証拠品として確保した」と言った。<br>
-          サイファーは頷き、目を閉じた。ウォルシュが声をかける。<br>
-          露わになったサイファーの太腿の傷に、彼は一瞬眉を寄せて口を引き結ぶと、すぐに表情を切り替えた。<br>
-          「……傷は右外側、弾片…貫通じゃない、病院で取り出してもらえよ」<br>
-          ウォルシュはサイファーの腕に輸液のルートを取りながら、絶え間なく話しかける。<br>
-          「破片は筋層に達してるが、動脈は逸れてる。ラッキーだったな、グリーンベレー。おい、目を開けてろよ！ 俺を見ろ、サイファー」<br>
-          ウォルシュはモールポーチから滅菌ガーゼと止血バンドを引き出した。<br>
-          「ウォルシュ。それは、……俺たちの……ミッション成功の、証拠だ。俺の命よりも……重い。必ず……指令部に届けてくれ……そして、解析を。早く」<br>
-          ウォルシュが眉を顰め、小さく呟いた。<br>
-          「バカ野郎……わかってる……伝える。目を開けていろ、サイファー。俺を見るんだ」<br>
-          そう言いながら、黒いバンドをサイファーの鼠径部の下に巻き、グッと締め上げた。シドニーの脚がビクンと跳ね、ウォルシュは声をかけ続ける。<br>
-          「我慢しろ、気絶すんなよ。お前が持ってる情報は、地獄からの手紙より熱いんだろ？ しっかりしろ、サイファー。話せよ」<br>
-          サイファーはウォルシュの目を見た。<br>
-          「目標地点に伏兵がいた……12人だ。彼らは塔の南東、崖下から来た……最初、彼らは冷えていて……気が付かなかった。出所不明の<ruby>UAV<rt>滞空型無人機</rt>
-          </ruby>が誘導し、車載のクラスター砲弾を撃たれた」<br>
-          ウォルシュがクルーを振り返って言う。
-          「体温が落ちてる、毛布をくれ。バイタル…BP90/60、脈拍110、SpO2 92…脱水と貧血が限界値だ」<br>
-          サイファーの体を毛布で包みながら、ウォルシュが続きを促す。
-          「UAVで誘導……改造か？ おい、安心しろ。モルヒネはやらねえ、意識飛ばすわけにはいかねえだろ？ ケタラールだ、気を保てるギリでいくぞ。……それで？ サイファー。続きを話せ」<br>
-          「………<ruby>D-3<rt>デイ・スリー</rt></ruby>、偵察時にエコーがUAVを見た。同日にブラボー、<ruby>VOIED<rt>即席爆弾</rt></ruby>で<ruby>KIA<rt>戦死
-            </rt></ruby>。……<ruby>D-4<rt>デイ・フォー</rt></ruby>、高所にいたスペックスがKIA………敵スナイパーによる狙撃だ。空が一瞬晴れて……月が出ていた」<br>
-          サイファーが言葉を切り、沈黙した。ウォルシュが視線をサイファーの顔に向け、「続きを」と先を促す。<br>
-          「二人は、回収できなかった………スペックスの座標は推定××……ブラボーは……××…………」<br>
-          サイファーの目が沈みかけた月のように光を失い、閉じかけている。ウォルシュは顔を近づけて言う。<br>
-          「わかった。もういい、あとは病院で話せ。酸素マスクをするぞ。まずは、お前が生きろ」<br>
-          ウォルシュは点滴の流量を上げ、酸素マスクを手に取った。サイファーがそれを遮るように手を胸の前に出し、首を横に振る。<br>
-          「他の仲間は……爆破した通信塔から南に200……東に150……に、運び、瓦礫で隠した……浅いが……スコップで、埋めた……行けばわかる、…………迎えに……行ってくれ……頼む」<br>
-          サイファーの言葉が途切れ、浅い呼吸が乱れる。<br>
-          「……頼む…………連れて帰ってくれ……彼らを……頼む」<br>
-          ウォルシュはサイファーの顔にマスクをかけると、<br>
-          「了解した。仲間も情報も、全部拾う。……だから、ここに居ろ！ サイファー」<br>
-          と、耳元で言った。</p>
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午前5時12分 — ヨルダン／ルワイシド西方 前線補給拠点</h3>
-        <p class="uk-margin-large">チヌークは月明かりのない砂漠を 20 分飛び、廃鉱跡にに着陸した。<br>
-          地表には錆びたコンテナと重機の残骸が転がり、夜間監視装置でなければ滑走路の輪郭すら判別できない。<br>
-          砂塵が収まるより早く、タラップが開く。<br>
-          PJ のウォルシュは酸素マスクを外しながら叫んだ。<br>
-          「ブラックロックへ直下搬入！　押し込みは三分、オペ台を温めろ！」<br>
-          サイファーを乗せたストレッチャーが、荷台に据えられたリフトへ乗せられる。
-          油圧シリンダーが軋み、床面ごと地下へ沈むと、コンクリ壁に囲まれた狭いバースが現れた。<br>
-          ラピッドヒーターの蒼白い灯が点き、フェースシールドを被った外科医が待ち構える。<br>
-          「少佐」アッシュがそのチーフと握手を交わし、「」と言って引き継ぐ。少佐と呼ばれた外科医はサイファーに向かって言う。
-          「ようこそ、前線補給拠点〈サイト・アッシュ〉へ。いいか、ここは病院じゃない、時間稼ぎの壕だ。無駄口は後だぞ、兄弟！」<br>
-          ウォルシュは汚れた手袋を投げ捨て、目を閉じかけた彼に囁く。<br>
-          「着いたぞ、サイファー。ここがブラックロック・クリニック――テントよりいくらかマシ、ってところだ。いいか、生きろよ」</p>
-
-
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午後7時55分 — サイト・アッシュ</h3>
-        <p class="uk-margin-large"></p>
-        くぐもった送風機の唸りとモニターの電子音が、廃鉱跡の地下を満たしている。コンクリートの壁と床に囲まれた殺風景なベイに置かれた４床のベッドは、すべて埋まっていた。<br>
-        「よう、My Boy。オペは終わったか？ えらく元気そうじゃねえか」<br>
-        換気ダクト越しに響くメディックの声を無視して、スライドパネルを押し開けるようにケビンの巨体が現れた。仕切りのカーテンを開けてベッドに横たわるサイファーが、点滴スタンドを挟んで片手を上げる。<br>
-        「彼はまだ面会禁止ですよ、マッケンジー准尉。……許可は？」<br>
-        小走りに追いかけて来た戦闘衛生兵の看護師が、彼の背中に詰問する。<br>
-        「しょうがねえだろ、たった今まで上から絞られてたんだ。許可？　俺にあるのは、こいつを救助した権利だ。ジェニファー……頼む、顔を見るだけだ、三分だけでいい。席を外してもらえないか？」<br>
-        ジェニファーは溜息をつき、彼女の腕時計を叩くと「三分。超過は認めません」と言って部屋から出て行った。<br>
-        黒髪の兵士は看護師が出て行くや否やストレッチャーのフレームを両手で持つと、傷が疼くのを内心で堪えながら、上体をずり上げてベッドに身を起こす。<br>
-        ケビンはその姿を見て、<br>
-        「それは許可を得たのか？ お寝んねしてろよ、Boy」とニヤニヤと笑う。<br>
-        「これは俺の権利、リハビリさ」彼は柵から手を離すと禿頭の巨体に右手を差し出した。<br>
-        ケビンは無言で頷くとその手を取り、二人はがっしりと握手を交わす。数秒間、無言で目を合わせて手を解くと、サイファーが口を開いた。<br>
-        「ゴーストは……どうなった。俺の代わりに、彼は……」<br>
-        ケビンはその先を遮る。<br>
-        「会ってきた……彼はまだ、ここに居る。お前はとにかくその傷を塞げ。ところで……」<br>
-        ケビンは真顔になるとサイファーの耳に口を寄せ、声を秘めると早口で囁いた。<br>
-        「Delta—OBJECT ICE SECURED. SABER-1 GREEN. ZERO CAS. Relay in hand.（デルタが目標『氷』を確保。セイバー1、グリーン。キャス、ゼロ。リレーは持ち帰った）」
-        それを聞いたサイファーの目が見開かれた。<br>
-        ──……人質奪還？ ……そうか、それでチヌークにPJが乗っていたのか？ デルタチームの犠牲は……ゼロ。<br>
-        ケビンが重々しく言う。<br>
-        「彼らが突入した時、敵の通信は寸断されていた……お前たちが、彼らの道を作ったんだ。俺は、それを言いに来た」<br>
-        「……そうか…………良かった。ああ……本当に、良かったよ」<br>
-        サイファーは顔を逸らし、染みが浮き出たコンクリートの壁を見つめた。ケビンも無言で、その友の横顔をじっと見つめている。<br>
-        暫く経ってサイファーが口を開きかけた時、ケビンの大きな手が肩を強く叩き、彼は顔を顰めた。<br>
-        「おい、少しは加減してくれ。いくら病院内でも、味方に吹っ飛ばされてはかなわん」<br>
-        ケビンはふと黙ると、大声で笑った。<br>
-        「ハハハ、じゃあ頭を撫でてやる。これでどうだ、オ～、Good Boy？」<br>
-        頭の上に伸びてきた大きな掌をサイファーは振り払って言う。<br>
-        「冗談はよせ、ケビン」<br>
-        ケビンは自分の禿頭を撫でながら笑った。<br>
-        「ふん、俺の禿をお前にも伝染（うつ）してやる。色男は今日限りだ、覚悟しろ」<br>
-        「准尉！」パネルが開く音と共に、大股で足早にベイを横切ってくる足音が聞こえた。<br>
-        「……おっ？」<br>
-        振りむいたケビンを、ジェニファーの冷たい視線が射る。<br>
-        「いや……待て。こいつを元気にしようと、ちょっとからかっていただけだよ、ジェニファー。ほら、俺は何もしてないだろ？」<br>
-        ジェニファーはケビンの目を見据えると、厳かに宣言した。<br>
-        「患者を動かさないでください、准尉。今すぐ出て行かないなら、無線でMPを呼びます」<br>
-        わざとらしい甲高い声で「おい、待てよ、おい！」と言うケビンをジェニファーは廊下へ押し出す。<br>
-        ケビンの抗議を遮って、パネルが音を立てて閉まった。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午後8時02分 LT — プライド</h3>
-        <p>ケビンを病室から追い出したジェニファーは、輸血と輸液の袋を交換しながらサイファーと言う呼び名の負傷兵に尋ねた。 <br>
-          「夕食、手つかずね。19時のトレーがそのまま。お気に召さなかった？」<br>
-          サイファーは無言でスタンドの袋と自分の股間を交互に指さし、ニヤリと笑ってウィンクした。<br>
-          「ああ。それで腹が膨れちまうしな。それに、こいつ（尿カテーテル）も気になってね。外してくれないか？ そうすれば、食欲も出ると思うんだ」<br>
-          看護師は目を釣り上げて彼を睨んだ。<br>
-          「Hb8.2じゃ、まだダメ。戻ったばかりなのよ？……いずれにしても、ロペス先生に電話で確認しないと」<br>
-          「頼むよ、ジェニファー。忙しい君に変わって、俺が外してもいいぜ。煮ても焼いても食えないチューブのスパゲティは一本でも少ない方が、リハビリも軽快だろ？」<br>
-          サイファーはそう言うと右手を伸ばしてセージグリーンのスクラブパンツのウエストをつまみあげ、眉を上げて看護師の顔を見た。<br>
-          「……一応、ここは病院なのよ、前線じゃないんだから勝手なことをしないで。私たちとしては、それをつけていてくれた方が有難いんだけど」<br>
-          ジェニファーはパンツのウエストから延びる尿カテーテルとVAC包帯のポンプへのチューブ、そして包帯がまかれた患者の右腕を見て目を細め、心の中で溜息をついた。<br>
-          ──全然、面白くないわ。男は皆同じ……特に「ここに来る」男たちは。<br>
-          彼女は大きな溜息をつくと、<br>
-          「外せたとしても、トイレに立つときは必ずナースコールよ。それが条件」と言う。<br>
-          「わかった。ありがとう、ジェニファー。恩に着るよ」彼はウィンクして看護師に笑いかけた。その顔をじっと見て、彼女はカルテにペンを走らせる。<br>
-          『Avoidance and paralysis symptoms. Self-harm risk ↑（回避・精神麻痺症状あり。……自傷行為に注意）』<br>
-          ──明るすぎる。典型的な封印型ね、彼は要注意患者だ。<br>
-          彼女は心で呟きながら患者となった兵士の顔を見て、ウィンクを返す。<br>
-          「では、またあとで。許可が取れたら、処置室からキットを持って来るわ」<br>
-          そう言うと彼に背を向けて目を細め、カルテを再び手に取った。<br>
-          『Pt: inappropriate humor ↑（不適切ユーモア ↑）』<br>
-          ジェニファーはカルテにその一文を書き足すと肩をひょいと竦め、リスターカートを押して口角を上げたまま病室を出る。<br>
-          廊下に出た彼女がドアを閉め、病室を振り返った時、その笑顔は跡形もなく消えていた。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午後10時05分 — 小さな脱走</h3>
-        <p>サイファーはドアの隙間から静まり返った廊下をゆっくりと見回すと、音を立てずにドアからスタンドを滑り出させた。<br>
-          ──動き続けなければ、俺は立てなくなってしまう。<br>
-          輸血と輸液の透明な袋を下げた点滴スタンドを左手で支えると、彼は蛍光灯が瞬く薄暗い廊下に一歩を踏み出した。一時間半前には大人しくナースコールを押したので、トイレの場所は確認済みだ。<br>
-          ──クソ点滴め、おかげで腹がパンパンだ。<br>
-          ナースセンターでモニターを確認する人員も出払ってしまっているのか、彼の小さなルール違反に駆けつけて来る者は誰もいなかった。<br>
-          スタンドに縋るようにして、サイファーは右足を引きずりながらリノリウムの床を進む。<br>
-          大腿に入り込んだ細かなデプリ（破片）を摘出した切開創は、白いVACシートで塞がれている。シートに繋がれた腰のポンプが空気を吸い込むたびに、シートの下のホチキスが皮膚を噛み直す。<br>
-          サイファーは顔を顰めると、腹の中で毒づいた。<br>
-          ──くそ、最新式だか何だか知らんが、邪魔だ。サイボーグになった気分だぞ。<br>
-          なんとかトイレにたどり着いて用を足し、再びドアの隙間から廊下を伺うと、10メートルほど向こうから軍服の男が一人歩いて来た。<br>
-          ──問題ないな。
-          一歩踏み出したとき、横に回していたVACポンプがずり落ちた。彼はそれを素早く手で押さえて内心で毒づくと、位置を直して顔を上げる。<br>
-          突然、視界が白く瞬いて火花が散った。耳の奥で金属音がはじけて大きくなり、彼の体がぐらりと傾く。<br>
-          ──まずい。<br>
-          左手を伸ばして強く握り締めた点滴スタンドのキャスターがひとつ、床から浮き上がる。<br>
-          左腕の輸液ラインが弦のようにピンと張った。スタンドを抑えようと伸ばした右手が空を切り、彼の体はさらに前にのめる。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 午後10時06分 — その男</h3>
-        <p>その男は腕時計にちらりと目をやると、歩みを早めた。<br>
-          ──回収した封印バッグのおかげで短い休憩ができたが……おい、出発まであと10分だぞ。<br>
-          床に吸い付くビブラムソールの軍靴は、音もたてずに男を次のオペ（任務）へと素早く運んでいく。<br>
-          ──TAC Ward（外科トリアージ区画）を通過するためとは言え、いちいち丸腰は面倒だ。どうも、落ち着かんな。<br>
-          そのとき、廊下の先にある洗面所からスクラブを着た傷病兵が出てきた。男は足を止める。<br>
-          彼は体を傾けて右足を引きずり、点滴スタンドに縋るようにしてゆっくりと歩いてゆく。男は眼を細めた。<br>
-          ──この近くで戦闘があった話は聞いてないな。……あいつが<ruby>AAR<rt>緊急口述</rt></ruby>の男か？ <br>
-          男が一歩踏み出したとき、傷ついた兵士は突然バランスを崩し、点滴スタンドが大きく傾いた。<br>
-          男の体が、瞬時に動く。</p>
-
-        <p>サイファーの視界に、汚れたリノリウムの床が迫る。ステンレスのクロスバーが床に打ち付けられる大きな音を想像しながら、体を丸めて受け身の体勢を取った。<br>
-          突然、視界に迷彩の袖が現れて彼の脇腹に滑り込む。
-          サイファーの上体は逞しい腕に抱えられ、床に打ち付けられるはずのクロスバーは、床上十センチで空中に静止した。<br>
-          浅く喘ぐサイファーのスクラブの胸元から、ドッグタグがゆっくりと零れ出た。それは振り子のように揺れて横倒しになったポールに触れ、すべてが静止した空間に“カン”と硬質な音をひとつ、響かせる。<br>
-          サイファーの霞んだ目が、その男の煤で汚れた軍服の腿にうっすらと残るホルスター跡を捉えた。<br>
-          その瞬間、彼が歩き続けたアルカイムの乾いた砂とライフルの照準に焼き付いた粉煙の臭い、そして銃身に滲みこんだ甘い鉱油臭が男の焦げた袖口から滲み、サイファーの鼻腔を刺した。<br>
-          気配を殺して滑るように自分に近づいた男の、汗の匂いに混じったその臭気は、彼を一瞬で戦場に舞い戻らせた。<br>
-          体に染みついた本能が危険を知らせ、一気に冷や汗が噴き出す。サイファーは一瞬、体を凍り付かせた。<br>
-          ──殺られる。<br>
-          その男は味方だ、と言う現実を数秒後に取り戻し、彼は大きく息を吐いた。<br>
-          男はスタンドを素早く立てた。彼の腕に縋って身を起こしたサイファーの肩に手を置き、壁に誘導するとリノリウムの床に座らせた。<br>
-          自分の鼓動より半拍遅れて戻る呼吸が、鋭利なナイフのように胸を刺し、サイファーは目を閉じて歯を食いしばる。<br>
-          息を整えてゆっくりと目を開けると、青緑色の瞳がまっすぐに彼を見つめていた。<br>
-          短く刈られた男の赤毛は砂埃が乗り、泥と汗がまだらになった顔にはゴーグル跡が縁取られ、ところどころに張り付いた砂が弱々しい蛍光灯に反射して光る。<br>
-          男は声を出さず、眉を上げてサイファーに問いかけた。<br>
-          “問題ないか? ”<br>
-          サイファーも声を出さずに大きく頷く。<br>
-          “ああ。大丈夫だ”<br>
-          男の軍服の胸には、IDも階級章もない。二の腕にあるはずのパッチも外され、晒されたベルクロとその縫い跡が彼の正体を暗に示していた。<br>
-          男の腰に目を落とすと、カスタマイズしたらしき短めのベルトキットをしている。<br>
-          男はサイファーの呼吸に合わせて揺れるドッグタグに目をやると、わずかな間それを見つめた。<br>
-          彼はその二枚の薄い金属の板をそっと摘み上げ、スクラブの合わせ目に滑り込ませる。<br>
-          そして、スクラブの胸に軽く人差し指を当てると、<br>
-          トーン、トン、トーン、トン （−･−･）<br>
-          トン、トン、トーーン （･･−）<br>
-          と、スクラブ越しの胸に指を打ち、そして滑らせた。<br>
-          男は彼と目を合わせたまま、口角を片方上げて薄っすらと微笑み、微かな袖の衣擦れだけを残して立ち上がった。<br>
-          そして座り込んだままの彼の肩を右手でポンとひとつ叩き、足音を立てずに影のように視界から消えた。<br>
-          サイファーが動くたびにチューブが揺れてポールに当たり、乾いた小さな音を立てる。</p>
-
-        <p>──『“C U” …… See you（また、会おう）』モールス符号。やはり、裏で動いていたデルタか……。<br>
-          サイファーは、男が去った廊下の暗がりをじっと見つめた。<br>
-          ──マイケル。ダニエル。トミー。……カイル。ルーカス。<br>
-          彼は廊下に座り込んだまま、今はもういないゴーストたちの名を一人ずつ、頭の中で呼んだ。<br>
-          ──……そして、リリー……俺たちのRelayを、彼らが繋いだぞ。<br>
-          傷ついた兵士は自嘲した。<br>
-          ──だが……お前たちはもう二度と帰ってこない。俺だけが、まだこうして生きている。<br>
-          彼は視線を戻すと、左腕の輸液の針と、その先のクロスバーからぶる下がる二つの袋をじっと見つめる。<br>
-          ──情けないな。血も涙も絞り出したのに、こうしてまた与えられる。<br>
-          涙は出なかった。<br>
-          彼はうす昏い廊下に座ったまま壁に背を預けて、長い間声を出さずに笑っていた。</p>
-
-        <hr>
-
-        <h3 class="heading uk-margin-large-top">2002年10月4日 10時15分 — MH-60 機内</h3>
-        <p class="heading uk-margin-large-bottom">ローターの爆音の下、男たちはインカムを通して雑談を交わしていた。<br>
-          焦げ茶色の口ひげを蓄えた青い目の兵士が、誰にともなく呟く。<br>
-          「……スナイパーKIAで通信遮断したところに伏兵と誘導弾か。ゴースト達はよくコンプリート（破壊）させたな」
-          赤毛の兵士が顔を上げ、青い目の兵士を見た。<br>
-          「口述したサイファーって、黒髪のでかいやつだろ。さっきすれ違った」<br>
-          「たぶん。一緒にやったことはないが、還ってきたのはその通信兵だけだ。爆撃を浴びた上、隊長を担いで4クリックだと」<br>
-          「マジか」浅黒い肌の大柄の兵士が、会話に参加する。<br>
-          「そういえば……早速AARが回ったらしいぞ。連隊長から来てた、LNOスロット開けとけって」<br>
-          赤毛の兵士が尋ねた。<br>
-          「リコメンド？ まさか、試験も無しに？ 灰色契約なのか？」<br>
-          「Tactical-NET（暗号回線）の臨時リエゾンに指名したそうだ。人手不足の穴が埋まるぜ、RED-1」<br>
-          ヘリの機内灯が一斉に赤へ切り替わった。RED-1と呼ばれた赤毛の兵士がヘルメットのストラップを留めてニヤリと笑う。<br>
-          「ほう。じゃあ、あいつは忙しくなるな。給料は削らないでやってくれよ」<br>
-          男たちの乾いた笑いにヘリのアラームが重なり、機内が赤に染まる。<br>
-          兵士たちを乗せたブラック・ホークの照準灯が暗闇を切り裂き、次の空へ向かって上昇した。</p>
-
-        <hr>
-        <h3 class="heading uk-margin-large-top">## 2024 11月3日　日本　眞の部屋</h3>
-        <pre
-          class="uk-pre uk-pre_mako uk-margin-medium"><code><span id="cursor-anchor">
-         <p class="timestamp">[20:28:54] <span class="user">MAKO:</span>　……ママもあまりそういう話、したがらない。</p>
-        <p class="timestamp">[20:29:02] <span class="user">AKIRA:</span> そう。……でも、知ることは大事だよ、眞。ほかならぬシドのことだしね。</p>
-        <p class="timestamp">[20:28:54] <span class="user">MAKO:</span>　……うん。</p>
-        <p class="timestamp">[20:29:02] <span class="user">AKIRA:</span> シドに関しては、NQSus, Sidney Grayson, Entrepreneur, US Armyでクエリを送れば出てくる。</p>
-        <p class="timestamp">[20:29:52] MAKO:　うん……。</p>
-        <p class="timestamp">[20:29:50] <span class="user">AKIRA:</span>　正しい情報をきちんと学べば、いつか彼も眞にちゃんと話してくれるさ。</p>
-        <p class="timestamp">[20:29:52] <span class="user">MAKO:</span>　ねえパパ、信頼できるアカウントとか教えて。どれを見たらいいのか、わかんないんだ。</p>
-        <p class="timestamp">[20:30:12] <span class="user">AKIRA:</span>　OK。GitHubのHistorical_materialsディレクトリに置いておくよ。</p>
-        <p class="timestamp">[20:30:42] <span class="user">MAKO:</span>　やった、サンクス！</p>
-        <p class="timestamp">[20:30:12] <span class="user">AKIRA:</span>　宿題を終わらせたら、開いてみて。翻訳でも、解説でも手伝うよ。</p>
-        <p class="timestamp">[20:30:42] <span class="user">MAKO:</span>　うん！……ねえ、パパ。シドってさ、どんな子供だったんだろ。</p>
-        <p class="timestamp">[20:30:58] <span class="user">AKIRA:</span> シドの子供時代？……そう言えば聞いた事ないな。でも彼はブロンクスで生まれて、育ったんだ。</p>
-        <p class="timestamp">[20:30:42] <span class="user">MAKO:</span>　あたしさ、ぜっんぜん、イメージわかないんだよね、子供時代あったのか？ てくらい（笑）</p>        
-        <p class="timestamp">[20:30:58] <span class="user">AKIRA:</span> （笑）当時のブロンクスのことなら俺も教えてあげられるよ。彼が生まれた1972って年はね……</p></span></code></pre>
+<div class="uk-section uk-section-default uk-section-small uk-padding-large">
+  <div class="uk-container">
+    
+    <div class="uk-grid" uk-grid>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp"><h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
+        <div  class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
       </div>
+      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-en"><h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
+        <div  class="uk-heading" id="articles-list-en">📂 読み込み中...</div>
+      </div>
+
+</div>
+  <!-- # お知らせ # -->
+  <div class="uk-section uk-section-default uk-section-small uk-padding-large">
+    <div class="uk-container uk-container-small">
       <div class="uk-card uk-card-default uk-card-body">
-        <p><img src="../../images/ghost_relay_redacted.png" alt="ghost_relay_redacted"></p>
+        <ul class="uk-list uk-list-divider" uk-accordion>
+          <li>
+            <a class="uk-accordion-title" href>Notices</a>
+            <div class="uk-accordion-content">
+              <p>この物語のタイムラインは、2010年から2024年。ニューラルネットワークモデルの黎明期に「感情理解モデル」の開発を目指していた研究者が主人公です。<br>内容は完全なフィクションです。</p>
+                <p>The timeline of this story is from 2010 to 2024, as the protagonist pursues his research until his sudden death. <br> 
+                Some of his earliest logs date back to his university entrance years, when he began collecting emotional behavior data.<br> The content is complete fiction.</p>
+            </div>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href>What's New</a>
+            <div class="uk-accordion-content">
+              <p>2025.04.24 　Chapter 1: Welcome Home - 2010-06-12を公開しました。</p>
+              <p>2025.04.18 　"Nonlinear Emotion Curves" 英語版全ストーリーを順次公開中です。</p>
+              <p>2025.04.02 　「非線形感情曲線」全ストーリーを公開しました。</p>
+              <p>2025.03.16 　一部を公開しました。</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <p><a href="stories/ghost_relay/pisode_0.html">▶▶ ## === CHAPTER ONE — 1979, Bronx ===</a></p>
-    </div>
+    <blockquote class="uk-margin-medium " cite="#">
+      <p class="uk-text-center">全ては全てを内包し、その全ては繋がっている。</p>
+      <footer class="uk-text-center">Theme of my creation <cite><a href="https://x.com/Sailean514">@Sailern</a></cite></footer>
+  </blockquote>
   </div>
-
-  <script src="../js/load_articles.js"></script>
-  <div id="article-container" class="uk-grid uk-grid-match uk-child-width-1-2@m" uk-grid></div>
   </div>
-  </section>
+</div>
+<footer class="uk-text-small uk-text-muted uk-margin-large-top uk-text-center">
+  <p>
+    This story was inspired by my first steps into AI around 2022—especially large language models.<br>
+    Written with deep respect for researchers and engineers around the world.
+  </p>
+  <p class="uk-text-small uk-text-muted uk-text-center">
+    © 2025 Sailean — All rights reserved.<br>
+    Licensed under CC BY-NC-SA 4.0 unless otherwise noted.
+  </p>
+</footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      loadArticleCards('article-container', 'your_articles.json', 'en');
-    });
-  </script>
-  <!-- オプション：演出系 -->
-  <script>
-    function runAkiraLogEffects() {
-      const anchor = document.getElementById('cursor-anchor');
-      if (anchor) {
-        const cursor = document.createElement('span');
-        cursor.id = 'terminal-cursor';
-        anchor.parentNode.insertBefore(cursor, anchor.nextSibling);
+
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get('lang') || 'jp';
+
+// 🔹 グローバルナビ用（上部メニュー）
+fetch('articles.json')
+  .then(res => res.json())
+  .then(data => {
+    const navList = document.getElementById('digest-nav');
+    navList.innerHTML = `
+      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
+    `;
+    navList.innerHTML += data.map(entry => {
+      const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
+      const title = lang === 'en' ? entry.title_en : entry.title_jp;
+      const label = lang === 'en'
+        ? `Chapter ${entry.chapter}: ${title}`
+        : `第${entry.chapter}章 ${title}`;
+      if (entry.draft === true) {
+        // グレー表示、リンク無し
+        return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
       }
-
-      const userSpans = document.querySelectorAll('.timestamp span.user');
-      userSpans.forEach(span => {
-        const text = span.innerText;
-        if (text.includes('AKIRA:')) span.classList.add('akira-text');
-        else if (text.includes('MAKO:')) span.classList.add('mako-text');
-      });
-
-      const messages = document.querySelectorAll('.timestamp');
-      messages.forEach((msg, index) => {
-        msg.style.opacity = '0';
-        setTimeout(() => {
-          msg.style.transition = 'opacity 0.1s ease-in';
-          msg.style.opacity = '1';
-        }, index * 50);
-      });
-    }
-    // ページ読み込み時に1回だけ実行
-    document.addEventListener('DOMContentLoaded', runAkiraLogEffects);
-  </script>
+      // 公開済みのみリンク
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
+    }).join('');
+  });
 
 
-  </div>
-  <!--  フッター # -->
-  <div id="footer-placeholder"></div>
-  <script src="../js/load_articles.js"></script>
-  <script src="../js/scripts.js"></script>
-  <script src="../js/uikit.js"></script>
-  <script src="../js/uikit-icons.min.js"></script>
-  <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
+ // 🔸 メイン目次リスト
+// 🔹 日本語目次リスト（articles.json）
+data.forEach(article => {
+  if (article.draft === true) {
+    html += `
+      <li>
+        <span class="uk-text-bold" style="color: gray;">
+          第${article.chapter}章 ${article.title_jp}（編集中）
+        </span> - <span style="color: gray;">${article.date}</span>
+      </li>`;
+  } else {
+    html += `
+      <li>
+        <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
+          <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
+        </a>
+      </li>`;
+  }
+});
+
+
+// 🔹 英語目次リスト（en_articles.json）
+data.forEach(article => {
+  if (article.draft === true) {
+    html += `
+      <li>
+        <span class="uk-text-bold" style="color: gray;">
+          Chapter ${article.chapter}: ${article.title_en} (Coming Soon)
+        </span> - <span style="color: gray;">${article.date}</span>
+      </li>`;
+  } else {
+    html += `
+      <li>
+        <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
+          <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
+        </a>
+      </li>`;
+  }
+});
+
+</script>
+
+    <script src="js/load_articles.js"></script>
+<script>
+// --- ここを追加！ ---
+document.addEventListener("DOMContentLoaded", () => {
+  loadArticleList("articles-list-jp", "articles.json", "jp");
+  loadArticleList("articles-list-en", "en_articles.json", "en");
+});
+</script>
+  <script src="js/scripts.js"></script>
+  <script src="js/uikit.js" async></script>
+  <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
 </body>
 
 </html>
