@@ -1,176 +1,229 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>非線形感情曲線 - ダイジェスト</title>
-  <meta name="description" content="">
-  <link rel="stylesheet" href="css/sailean_uikit.css">
-  <link rel="stylesheet" href="css/uikit.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
-  <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRAY CODE-0</title>
+	<link rel="stylesheet" href="stories/css/uikit.css" />
+	<link rel="stylesheet" href="stories/css/sailean_uikit.css" />
+	<link rel="stylesheet" href="stories/css/magnific-popup.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<title>Ghosts of the Model – Techno-SF Story Index</title>
+	<style>
+		body {
+			font-family: "Helvetica Neue", sans-serif;
+			background-color: #111;
+			color: #eee;
+			margin: 2rem;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			color: #f26522;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		li {
+			margin-bottom: 1rem;
+		}
+
+		a {
+			color: #ffd700;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+			color: #5f551b;
+		}
+	</style>
 </head>
 
 <body>
 
-  <nav class="uk-navbar-container">
-    <div class="uk-container">
-      <div uk-navbar>
-        <div class="uk-navbar-left">
-          <a class="uk-navbar-item uk-logo" href="index.html">Nonlinear Emotion Curves</a>
-          <ul class="uk-navbar-nav uk-visible@m">
-            <li>
-              <a href="index.html">非線形感情曲線 <span uk-navbar-parent-icon></span></a>
-              <div class="uk-navbar-dropdown">
-                <ul id="digest-nav"></ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!--  navigation  -->
+	<!-- ナビゲーション（上部固定） -->
+	<div class="uk-position-top uk-position-z-index uk-section-secondary uk-padding-remove-vertical">
+		<div class="tm-header">
+			<div class="uk-light uk-position-z-index"
+				uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
+				<div class="uk-container"><!-- uk-container -->
+					<div uk-navbar><!-- ナビバー -->
+						<div class="uk-navbar-left">
+							<a class="uk-navbar-item uk-logo" href="index.html">
+								<picture>
+									<source srcset="stories/images/logo_gray-code.png" width="150"
+										media="(max-width: 640px)">
+									<img id="logo" src="stories/images/logo_gray-code.png" width="300"
+										alt="Ghosts of the Model_logo" title="Ghosts of the Model">
+								</picture>
+							</a>
+						</div>
+						<div class="uk-navbar-right">
+							<ul class="uk-navbar-nav">
+								<li><a href="#about">About</a></li>
+								<li><a href="#stories">Stories</a></li>
+							</ul>
+						</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div class="uk-section uk-section-default uk-section-small uk-padding-large">
-  <div class="uk-container">
-    
-    <div class="uk-grid" uk-grid>
-      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-jp"><h3 class="uk-heading heading uk-margin-top"><span>📖 非線形感情曲線 - 目次</span></h3>
-        <div  class="uk-heading" id="articles-list-jp">📂 読み込み中...</div>
-      </div>
-      <div class="uk-width-1-2@m uk-width-1-1@s uk-card uk-card-default uk-card-body" id="articles-list-en"><h3 class="uk-heading heading uk-margin-top"><span>📖 Nonlinear Emotion Curves</span></h3>
-        <div  class="uk-heading" id="articles-list-en">📂 読み込み中...</div>
-      </div>
+		<div id="nav-placeholder"></div>
 
-</div>
-  <!-- # お知らせ # -->
-  <div class="uk-section uk-section-default uk-section-small uk-padding-large">
-    <div class="uk-container uk-container-small">
-      <div class="uk-card uk-card-default uk-card-body">
-        <ul class="uk-list uk-list-divider" uk-accordion>
-          <li>
-            <a class="uk-accordion-title" href>Notices</a>
-            <div class="uk-accordion-content">
-              <p>この物語のタイムラインは、2010年から2024年。ニューラルネットワークモデルの黎明期に「感情理解モデル」の開発を目指していた研究者が主人公です。<br>内容は完全なフィクションです。</p>
-                <p>The timeline of this story is from 2010 to 2024, as the protagonist pursues his research until his sudden death. <br> 
-                Some of his earliest logs date back to his university entrance years, when he began collecting emotional behavior data.<br> The content is complete fiction.</p>
-            </div>
-          </li>
-          <li>
-            <a class="uk-accordion-title" href>What's New</a>
-            <div class="uk-accordion-content">
-              <p>2025.04.24 　Chapter 1: Welcome Home - 2010-06-12を公開しました。</p>
-              <p>2025.04.18 　"Nonlinear Emotion Curves" 英語版全ストーリーを順次公開中です。</p>
-              <p>2025.04.02 　「非線形感情曲線」全ストーリーを公開しました。</p>
-              <p>2025.03.16 　一部を公開しました。</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <blockquote class="uk-margin-medium " cite="#">
-      <p class="uk-text-center">全ては全てを内包し、その全ては繋がっている。</p>
-      <footer class="uk-text-center">Theme of my creation <cite><a href="https://x.com/Sailean514">@Sailern</a></cite></footer>
-  </blockquote>
-  </div>
-  </div>
-</div>
-<footer class="uk-text-small uk-text-muted uk-margin-large-top uk-text-center">
-  <p>
-    This story was inspired by my first steps into AI around 2022—especially large language models.<br>
-    Written with deep respect for researchers and engineers around the world.
-  </p>
-  <p class="uk-text-small uk-text-muted uk-text-center">
-    © 2025 Sailean — All rights reserved.<br>
-    Licensed under CC BY-NC-SA 4.0 unless otherwise noted.
-  </p>
-</footer>
+		<div class="uk-section-secondary"> <!-- slideshowのsection -->
+			<div class="uk-position-relative js-slideshow-animation"
+				uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: fade; finite: true"
+				aria-label="slideshow">
+				<!-- <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30"> -->
+				<ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide1#### -->
+							<img src="images/GHOSTS_header_hero_2000px_green.webp" alt="slide3" uk-cover>
+						</div>
+						<div class="uk-padding uk-position-center uk-text-center uk-transition-slide-top">
+							<h2 class="uk-text-lead uk-text-italic">
+								"But violence keeps repeating itself. It breeds hatred, and sometimes I can't help but feel like it will never end..."
+								「でも、暴力は連鎖するわ。それは憎しみを呼び、永遠に途切れることはないと……私は、そう思ってしまうの……
+							</h2>
+						</div> <!-- slide1表示テキスト -->
+					</li>
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide2#### -->
+							<img src="images/helicopter-2.webp" alt="slide2" uk-cover>
+						</div>
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h2 class="uk-text-lead uk-text-italic">
+								"Yeah, you're right. But to break that cycle, someone has to step in and face it directly."
+								「ああ、そのとおりだ。だが、そのループを止めるためには、誰かがその中に踏み込まなければならないんだ」
+						</div>
+					</li>
 
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse"><!-- ###slide3#### -->
+							<img src="images/Sidne_preaches_real-time_fail-safe_09.webp" alt="slide1" uk-cover>
+						</div>
+						<div
+							class="uk-overlay uk-position-bottom uk-text-center uk-animation-kenburns linehight-overlay">
+							<h2 class="heading uk-positeion-bottom"><a href="stories/digest/index.html">Nonlinear
+									Emotion Curves (Digest Edition)</a></h2><!-- slide3表示テキスト -->
+						</div>
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h3 class="heading">Everything contains everything and all is
+								interconnected.<br>すべてはすべてを内包し、そのすべては繋がっている。</h3>
+						</div>
+					</li>
 
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse">
+							<a class="uk-navbar-item uk-logo" href="index.html">
+								<picture>
+									<source srcset="stories/images/logo_gray-code.png" media="(max-width: 640px)">
+									<img id="logo" src="stories/images/logo_gray-code.png" alt="GRAY CODE logo"
+										title="GRAY CODE">
+								</picture>
+							</a>
+						</div>
+						<div
+							class="uk-overlay uk-position-bottom uk-text-center uk-transition-slide-bottom linehight-overlay">
+							<h2 class="heading uk-positeion-bottom"><a class="uk-button-text"
+									href="stories/ghost_relay/01-akirabot-conversation-log_01.html">Go to the
+									"Beginning"</a></h2><!-- slide4表示テキスト -->
+						</div>
+						<div class="uk-position-center uk-transition-slide-top uk-padding">
+							<h1 class="heading uk-heading-medium uk-dark"></h1>
+						</div>
+					</li>
+				</ul>
 
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get('lang') || 'jp';
-
-// 🔹 グローバルナビ用（上部メニュー）
-fetch('articles.json')
-  .then(res => res.json())
-  .then(data => {
-    const navList = document.getElementById('digest-nav');
-    navList.innerHTML = `
-      <li><a href="index.html">📘 目次（Index）に戻る</a></li>
-    `;
-    navList.innerHTML += data.map(entry => {
-      const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
-      const title = lang === 'en' ? entry.title_en : entry.title_jp;
-      const label = lang === 'en'
-        ? `Chapter ${entry.chapter}: ${title}`
-        : `第${entry.chapter}章 ${title}`;
-      if (entry.draft === true) {
-        // グレー表示、リンク無し
-        return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
-      }
-      // 公開済みのみリンク
-      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
-    }).join('');
-  });
-
-
- // 🔸 メイン目次リスト
-// 🔹 日本語目次リスト（articles.json）
-data.forEach(article => {
-  if (article.draft === true) {
-    html += `
-      <li>
-        <span class="uk-text-bold" style="color: gray;">
-          第${article.chapter}章 ${article.title_jp}（編集中）
-        </span> - <span style="color: gray;">${article.date}</span>
-      </li>`;
-  } else {
-    html += `
-      <li>
-        <a href="article.html?file=${article.filename}&lang=jp" class="uk-link-reset">
-          <span class="uk-text-bold">第${article.chapter}章 ${article.title_jp}</span> - ${article.date}
-        </a>
-      </li>`;
-  }
-});
+				<a class="uk-slidenav-small uk-position-bottom-left uk-position-small uk-hidden-hover" href
+					uk-slidenav-previous uk-slideshow-item="previous"></a>
+				<a class="uk-slidenav-small uk-position-bottom-right uk-position-small uk-hidden-hover" href
+					uk-slidenav-next uk-slideshow-item="next"></a>
+			</div>
+		</div>
 
 
-// 🔹 英語目次リスト（en_articles.json）
-data.forEach(article => {
-  if (article.draft === true) {
-    html += `
-      <li>
-        <span class="uk-text-bold" style="color: gray;">
-          Chapter ${article.chapter}: ${article.title_en} (Coming Soon)
-        </span> - <span style="color: gray;">${article.date}</span>
-      </li>`;
-  } else {
-    html += `
-      <li>
-        <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
-          <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
-        </a>
-      </li>`;
-  }
-});
+		<div class="section">
+			<div class="uk-container uk-margin-large-top">
 
-</script>
+				<!-- テキストや記事ブロック -->
 
-    <script src="js/load_articles.js"></script>
-<script>
-// --- ここを追加！ ---
-document.addEventListener("DOMContentLoaded", () => {
-  loadArticleList("articles-list-jp", "articles.json", "jp");
-  loadArticleList("articles-list-en", "en_articles.json", "en");
-});
-</script>
-  <script src="js/scripts.js"></script>
-  <script src="js/uikit.js" async></script>
-  <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous" async></script>
+				<h1>GRAY CODE – Timeline Index</h1>
+				<p>Explore story arcs across decades of memory and fire.</p>
+
+
+				<div id="articles" class="uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+				<h2 class="uk-heading-line uk-light"><span>Latest Stories</span></h2>
+
+				<ul class="story-index">
+					<!-- ▽ 導入 ▽ -->
+					<li>
+						</strong><a href="stories/ghost_relay/01-akirabot-conversation-log_01.html"><strong>2025 —
+								Leak</strong></a>
+
+					</li>
+					<!-- ▽ 過去編 ▽ -->
+					<li>
+						<a href="stories/ghost_relay/02.html"><strong>2002 — Ghost Relay</strong></a>
+
+					</li>
+
+					<!-- ▽ 中間編 ▽ -->
+					<li>
+						<a href="stories/digest/index.html"><strong>2010–2024 — Ghosts of the Model : Q1
+								Incident</strong></a>
+					</li>
+
+					<!-- ▽ 現在・続き ▽ -->
+					<li>
+						<strong>2024-12 — KAGUTUCHI </strong>
+						<em>Coming soon — Chapters α / β</em>
+					</li>
+				</ul>
+
+				<script src="stories/js/load_articles.js"></script>
+				<div id="article-container" class="uk-grid uk-grid-match uk-child-width-1-2@m" uk-grid></div>
+			</div>
+			</section>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					loadArticleCards('article-container', 'your_articles.json', 'en');
+				});
+			</script>
+
+			<hr>
+		</div>
+		<!--  フッター # -->
+		<div class="uk-section uk-section-secondary uk-section-xsmall"><!-- フッター -->
+			<div class="uk-container">
+				<p class="uk-text-center">GRAY CODE</p>
+				<p class="uk-text-center uk-text-nowrap">&copy; 2024-2025 @Sailean514
+				</p>
+				<p class="uk-text-center">
+					<a class="uk-icon-button" href="https://x.com/Sailean514">
+						<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							class="uk-icon-image" viewBox="0 0 24 24">
+							<path
+								d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+							</path>
+						</svg>
+					</a>
+				</p>
+			</div>
+		</div><!-- フッターの閉じ -->
+		<script src="../js/load_articles.js"></script>
+		<script src="stories/js/uikit.js"></script>
+		<script src="stories/js/uikit-icons.min.js"></script>
+		<script src="stories/js/custom-lightbox.js"></script>
 </body>
 
 </html>
