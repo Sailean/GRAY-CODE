@@ -51,7 +51,7 @@
   },
   {
     "chapter": 6,
-    "title_jp": "眞のログ",
+    "title_jp": "眞のログ_1",
     "title_en": "Makoto’s Log",
     "date": "2024-12-20-",
     "location_jp": "眞の部屋",
@@ -59,8 +59,28 @@
     "filename": "06_makoto_log_2024-12-20.md",
     "draft": true
   },
-  {
+    {
     "chapter": 7,
+    "title_jp": "眞のログ_2",
+    "title_en": "Makoto’s Log",
+    "date": "2024-12-20-",
+    "location_jp": "眞の部屋",
+    "location_en": "",
+    "filename": "06_makoto_log_2024-12-20_02.md",
+    "draft": true
+  },
+    {
+    "chapter": 8,
+    "title_jp": "眞のログ_3",
+    "title_en": "Makoto’s Log",
+    "date": "2024-12-20-",
+    "location_jp": "眞の部屋",
+    "location_en": "",
+    "filename": "06_makoto_log_2024-12-20/03.md",
+    "draft": true
+  },
+  {
+    "chapter": 9,
     "title_jp": "シドニー",
     "title_en": "Sidney",
     "date": "2024-12-21-",
@@ -70,7 +90,7 @@
     "draft": true
   },
   {
-    "chapter": 8,
+    "chapter": 10,
     "title_jp": "再会",
     "title_en": "Reunion",
     "date": "2024-12-21-",
@@ -80,7 +100,7 @@
     "draft": true
   },
   {
-    "chapter": 9,
+    "chapter": 11,
     "title_jp": "過去",
     "title_en": "The Past",
     "date": "2024-12-21-",
@@ -90,7 +110,7 @@
     "draft": true
   },
   {
-    "chapter": 10,
+    "chapter": 12,
     "title_jp": "キューブ・ワン",
     "title_en": "Qube One",
     "date": "2024-12-21-",
@@ -100,7 +120,7 @@
     "draft": true
   },
   {
-    "chapter": 11,
+    "chapter": 13,
     "title_jp": "英美子とアキラと朗",
     "title_en": "Emiko, Akira, and Arato",
     "date": "2024-12-21-",
@@ -110,7 +130,7 @@
     "draft": true
   },
   {
-    "chapter": 12,
+    "chapter": 14,
     "title_jp": "即時安全保護実装",
     "title_en": "Real-Time Failsafe Implementation",
     "date": "2024-12-21-",
@@ -120,7 +140,7 @@
     "draft": true
   },
   {
-    "chapter": 13,
+    "chapter": 15,
     "title_jp": "朗の実存",
     "title_en": "The Existence of Akira",
     "date": "2024-12-21-",
@@ -130,7 +150,7 @@
     "draft": true
   },
   {
-    "chapter": 14,
+    "chapter": 16,
     "title_jp": "ただいま",
     "title_en": "Welcome Back",
     "date": "2024-12-21-",
@@ -140,7 +160,7 @@
     "draft": true
   },
   {
-    "chapter": 15,
+    "chapter": 17,
     "title_jp": "エピローグ",
     "title_en": "Epilogue",
     "date": "2024-12-25-",
