@@ -87,7 +87,7 @@
     "location_jp": "ロスアンゼルス ベルエア",
     "location_en": "",
     "filename": "07_sidney_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 10,
@@ -97,7 +97,7 @@
     "location_jp": "松本市 英美子と眞の家",
     "location_en": "",
     "filename": "08_reunion_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 11,
@@ -107,7 +107,7 @@
     "location_jp": "英美子と眞の家",
     "location_en": "",
     "filename": "09_the_past_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 12,
@@ -117,7 +117,7 @@
     "location_jp": "眞の部屋",
     "location_en": "",
     "filename": "10_qube_one_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 13,
@@ -127,7 +127,7 @@
     "location_jp": "眞の部屋",
     "location_en": "",
     "filename": "11_emiko_akira_arato_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 14,
@@ -137,7 +137,7 @@
     "location_jp": "眞のマシン",
     "location_en": "",
     "filename": "12_failsafe_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 15,
@@ -147,7 +147,7 @@
     "location_jp": "眞のマシン",
     "location_en": "",
     "filename": "13_akira_existence_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 16,
@@ -157,7 +157,7 @@
     "location_jp": "眞の部屋",
     "location_en": "",
     "filename": "14_welcome_back_2024-12-21.md",
-    "draft": true
+    "draft": false
   },
   {
     "chapter": 17,
@@ -167,6 +167,6 @@
     "location_jp": "松本市　緑川 英美子",
     "location_en": "",
     "filename": "15_epilogue_2024-12-25.md",
-    "draft": true
+    "draft": false
   }
 ]
