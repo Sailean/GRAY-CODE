@@ -193,7 +193,7 @@ rt {
 }
 
 
-
+/* 記事中のテキスト制御 */
 .article-item {
   padding: 0.625rem; /* 10px → 0.625rem */
   border-bottom: 0.0625rem solid #ddd; /* 1px → 0.0625rem */
@@ -214,7 +214,7 @@ rt {
 
 #article-content {
   font-size: 1rem; /* 18px → 1.125rem */
-  line-height: 1.3; /* 相対値の方が調整しやすい */
+  line-height: 1.5; /* 相対値の方が調整しやすい */
   text-align: justify;
 }
 
