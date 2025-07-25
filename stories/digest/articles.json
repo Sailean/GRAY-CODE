@@ -131,7 +131,7 @@
   },
     {
     "chapter": 14,
-    "title_jp": "リカーシヴ・ループ・オーバーロード",
+    "title_jp": "過剰注意機構",
     "title_en": "Recursive Loop Overload",
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
@@ -141,7 +141,7 @@
   },
   {
     "chapter": 15,
-    "title_jp": "<ruby>即時安全保護実装<rt>リアル・タイム・フェールセーフ・インプリメント</rt></ruby>",
+    "title_jp": "即時安全保護実装",
     "title_en": "Real-Time Failsafe Implementation",
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
