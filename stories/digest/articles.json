@@ -131,7 +131,7 @@
   },
     {
     "chapter": 14,
-    "title_jp": "過剰注意機構",
+    "title_jp": "再帰的過剰注意機構",
     "title_en": "Recursive Loop Overload",
     "date": "2024-12-21-",
     "location_jp": "眞のマシン",
