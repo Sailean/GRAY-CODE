@@ -1,1 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "Ghost Relay Leak — ChatUI (Akira Bot × Makoto)",
+    "status": "published",
+    "url": "https://sailean.github.io/GRAY-CORD/stories/01_leak_chat.md",
+    "file": "stories/01_leak_chat.md"
+  },
+  {
+    "id": 2,
+    "title": "Ghost Relay Op — Sid & Michael Evac",
+    "status": "published",
+    "url": "https://sailean.github.io/GRAY-CORD/stories/02_ghost_relay_op.md",
+    "file": "stories/02_ghost_relay_op.md"
+  },
+  {
+    "id": 3,
+    "title": "ChatUI 後編 — Sid 噂 & Childhood Pivot",
+    "status": "published",
+    "url": "https://sailean.github.io/GRAY-CORD/stories/03_chatui_after.md",
+    "file": "stories/03_chatui_after.md"
+  },
+  {
+    "id": 4,
+    "title": "Bronx Origins — Naomi & Green Beret Bid",
+    "status": "draft",
+    "url": "",
+    "file": "drafts/04_bronx_origins.md"
+  },
+  {
+    "id": 5,
+    "title": "1990s Missions — Ceiba Night & P2P Foreshadow",
+    "status": "draft",
+    "url": "",
+    "file": "drafts/05_1990s_missions.md"
+  },
+  {
+    "id": 6,
+    "title": "Cover‑Up & Base Ejection — Dog‑Tag Cameo",
+    "status": "draft",
+    "url": "",
+    "file": "drafts/06_coverup_basekick.md"
+  },
+  {
+    "id": 7,
+    "title": "Bel‑Air Window — First Glimpse of Arisa’s Art",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+  {
+    "id": 8,
+    "title": "Side‑Hustle Era — Nvidia Plays & Secret Basement",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+  {
+    "id": 9,
+    "title": "Encounter with Arisa — Into Deep Waters",
+    "status": "published",
+    "url": "https://sailean.github.io/GRAY-CORD/stories/09_arisa_encounter.md",
+    "file": "stories/09_arisa_encounter.md"
+  },
+  {
+    "id": 10,
+    "title": "Hackathon in San Jose — Sid × Akira First Link",
+    "status": "draft",
+    "url": "",
+    "file": "drafts/10_hackathon_sj.md"
+  },
+  {
+    "id": 11,
+    "title": "Tokyo Arc — Akira & Emiko Cohabitation",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+  {
+    "id": 12,
+    "title": "Graduate Labs — Sid & Akira Deepen Ties",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+  {
+    "id": 13,
+    "title": "Bel‑Air Basement Incident — Ex‑Husband Night",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+{
+  "id": 14,
+  "title_jp": "非線形感情曲線",
+  "title_en": "Nonlinear_Emotion_Curves",
+  "status": "published",
+  "date": "2024-12-21",
+  "location_jp": "日本・眞と英美子の家",
+  "location_en": "",
+  "url": "https://sailean.github.io/GRAY-CORD/stories/digest/index.md",
+  "file": "stories/digest/index.md"
+  },
+  {
+    "id": 15,
+    "title": "Pacific Fire & Proposal — Wedding 2025‑01‑15",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  },
+  {
+    "id": 16,
+    "title": "Infertility Arc → Muscle Dependency → Loop to Ch. 1",
+    "status": "planned",
+    "url": "",
+    "file": ""
+  }
+]
 
