@@ -1,119 +1,114 @@
 [
   {
     "id": 1,
-    "title": "Ghost Relay Leak — ChatUI (Akira Bot × Makoto)",
+    "title_en": "Ghost Relay Leak — ChatUI (Akira Bot × Makoto)",
+    "title_jp": "ゴーストリレー・リーク—ChatUI",
     "status": "published",
     "url": "https://sailean.github.io/GRAY-CORD/stories/01_leak_chat.md",
     "file": "stories/01_leak_chat.md"
   },
   {
     "id": 2,
-    "title": "Ghost Relay Op — Sid & Michael Evac",
+    "title_en": "Ghost Relay Op — Sid & Michael Evac",
+    "title_jp": "ゴーストリレー作戦—Sid & Michael",
     "status": "published",
     "url": "https://sailean.github.io/GRAY-CORD/stories/02_ghost_relay_op.md",
     "file": "stories/02_ghost_relay_op.md"
   },
   {
     "id": 3,
-    "title": "ChatUI 後編 — Sid 噂 & Childhood Pivot",
+    "title_en": "ChatUI後編 — Sid噂 & Childhood Pivot",
+    "title_jp": "ChatUI後編—Sid噂と幼少期",
     "status": "published",
     "url": "https://sailean.github.io/GRAY-CORD/stories/03_chatui_after.md",
     "file": "stories/03_chatui_after.md"
   },
   {
     "id": 4,
-    "title": "Bronx Origins — Naomi & Green Beret Bid",
+    "title_en": "Bronx Origins — Naomi & Green Beret Bid",
+    "title_jp": "ブロンクス起源—Naomi & Green Beret",
     "status": "draft",
     "url": "",
     "file": "drafts/04_bronx_origins.md"
   },
   {
     "id": 5,
-    "title": "1990s Missions — Ceiba Night & P2P Foreshadow",
+    "title_en": "1990s Missions — Ceiba Night & P2P Foreshadow",
+    "title_jp": "1990年代の任務—セイバの夜",
     "status": "draft",
     "url": "",
     "file": "drafts/05_1990s_missions.md"
   },
   {
     "id": 6,
-    "title": "Cover‑Up & Base Ejection — Dog‑Tag Cameo",
+    "title_en": "Cover‑Up & Base Ejection — Dog‑Tag Cameo",
+    "title_jp": "隠蔽と基地追放—Dog‑Tag",
     "status": "draft",
     "url": "",
     "file": "drafts/06_coverup_basekick.md"
   },
   {
-    "id": 7,
-    "title": "Bel‑Air Window — First Glimpse of Arisa’s Art",
-    "status": "planned",
-    "url": "",
-    "file": ""
-  },
-  {
     "id": 8,
-    "title": "Side‑Hustle Era — Nvidia Plays & Secret Basement",
+    "title_en": "Side‑Hustle Era — Nvidia Plays & Secret Basement",
+    "title_jp": "副業期—Nvidia & 秘密の地下",
     "status": "planned",
     "url": "",
     "file": ""
   },
   {
     "id": 9,
-    "title": "Encounter with Arisa — Into Deep Waters",
+    "title_en": "Encounter with Arisa — Into Deep Waters",
+    "title_jp": "アリサとの出会い",
     "status": "published",
     "url": "https://sailean.github.io/GRAY-CORD/stories/09_arisa_encounter.md",
     "file": "stories/09_arisa_encounter.md"
   },
   {
     "id": 10,
-    "title": "Hackathon in San Jose — Sid × Akira First Link",
+    "title_en": "Hackathon in San Jose — Sid × Akira First Link",
+    "title_jp": "サンノゼ・ハッカソン—Sid×朗",
     "status": "draft",
     "url": "",
     "file": "drafts/10_hackathon_sj.md"
   },
   {
     "id": 11,
-    "title": "Tokyo Arc — Akira & Emiko Cohabitation",
-    "status": "planned",
-    "url": "",
-    "file": ""
-  },
-  {
-    "id": 12,
-    "title": "Graduate Labs — Sid & Akira Deepen Ties",
+    "title_en": "Tokyo Arc — Akira & Emiko Cohabitation",
+    "title_jp": "東京アーク—朗と英美子の同棲",
     "status": "planned",
     "url": "",
     "file": ""
   },
   {
     "id": 13,
-    "title": "Bel‑Air Basement Incident — Ex‑Husband Night",
+    "title_en": "Bel‑Air Basement Incident — Ex‑Husband Night",
+    "title_jp": "ベルエア地下室事件",
     "status": "planned",
     "url": "",
     "file": ""
   },
-{
-  "id": 14,
-  "title_jp": "非線形感情曲線",
-  "title_en": "Nonlinear_Emotion_Curves",
-  "status": "published",
-  "date": "2024-12-21",
-  "location_jp": "日本・眞と英美子の家",
-  "location_en": "",
-  "url": "https://sailean.github.io/GRAY-CORD/stories/digest/index.md",
-  "file": "stories/digest/index.md"
+  {
+    "id": 14,
+    "title_en": "Non‑linear Emotion Curve — Makoto Growth Digest",
+    "title_jp": "非線形感情曲線—ダイジェスト",
+    "status": "published",
+    "url": "https://sailean.github.io/GRAY-CORD/stories/12_failsafe_2024-12-21.md",
+    "file": "stories/12_failsafe_2024-12-21.md"
   },
   {
     "id": 15,
-    "title": "Pacific Fire & Proposal — Wedding 2025‑01‑15",
+    "title_en": "Pacific Fire & Proposal — Wedding 2025‑01‑15",
+    "title_jp": "太平洋の火災とプロポーズ—結婚 2025‑01‑15",
     "status": "planned",
     "url": "",
     "file": ""
   },
   {
     "id": 16,
-    "title": "Infertility Arc → Muscle Dependency → Loop to Ch. 1",
+    "title_en": "Infertility Arc → Muscle Dependency → Loop to Ch.1",
+    "title_jp": "不妊治療→筋トレ依存→第1章へ",
     "status": "planned",
     "url": "",
     "file": ""
   }
 ]
-
