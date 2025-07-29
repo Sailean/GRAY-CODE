@@ -1,148 +1,229 @@
 {
-  "arc:ghosts_of_the_model": [
+  "arc:Ghosts of the Model": [
     {
-      "id": 77,
+      "id": 37,
+      "title": "En 01 Welcome Home",
+      "date": "2010-06-12",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/en_articles/en_01_welcome_home_2010-06-12.md",
+      "location": null
+    },
+    {
+      "id": 19,
       "title": "Welcome Home",
       "date": "2010-06-12",
-      "file": "src/stories/ghosts_of_the_model/articles/01_welcome_home_2010-06-12.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/01_welcome_home_2010-06-12.md",
       "location": null
     },
     {
-      "id": 78,
+      "id": 20,
+      "title": "Drifted",
+      "date": "2010-06-13",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/02_drifted_2010-06-13.md",
+      "location": null
+    },
+    {
+      "id": 21,
+      "title": "Billys Bar",
+      "date": "2010-10-15",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/03_billys_bar_2010-10-15.md",
+      "location": null
+    },
+    {
+      "id": 38,
+      "title": "En 03 Billys Bar 2010-10-15 Edited",
+      "date": "2010-10-15",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/en_articles/en_03_billys_bar_2010-10-15_edited.md",
+      "location": null
+    },
+    {
+      "id": 22,
       "title": "Carl Lab",
       "date": "2010-11-24",
-      "file": "src/stories/ghosts_of_the_model/articles/04_carl_lab_2010-11-24.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/04_carl_lab_2010-11-24.md",
       "location": null
     },
     {
-      "id": 79,
+      "id": 39,
+      "title": "En 04 Carl Lab 2010-11-24 Edited",
+      "date": "2010-11-24",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/en_articles/en_04_carl_lab_2010-11-24_edited.md",
+      "location": null
+    },
+    {
+      "id": 23,
       "title": "Akira Notebook",
       "date": "2011-03-25",
-      "file": "src/stories/ghosts_of_the_model/articles/05_akira_notebook_2011-03-25.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/05_akira_notebook_2011-03-25.md",
       "location": null
     },
     {
-      "id": 81,
+      "id": 40,
+      "title": "En 06 Makoto Log 2024-12-20 Edited",
+      "date": "2024-12-20",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/en_articles/en_06_makoto_log_2024-12-20_edited.md",
+      "location": null
+    },
+    {
+      "id": 24,
+      "title": "Makoto Log",
+      "date": "2024-12-20",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/06_makoto_log_2024-12-20.md",
+      "location": null
+    },
+    {
+      "id": 34,
+      "title": "Makoto Log 2024-12-20 02",
+      "date": "2024-12-20",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/06_makoto_log_2024-12-20_02.md",
+      "location": null
+    },
+    {
+      "id": 35,
+      "title": "Makoto Log 2024-12-20 03",
+      "date": "2024-12-20",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/06_makoto_log_2024-12-20_03.md",
+      "location": null
+    },
+    {
+      "id": 31,
       "title": "Akira Existence",
       "date": "2024-12-21",
-      "file": "src/stories/ghosts_of_the_model/articles/13_akira_existence_2024-12-21.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/13_akira_existence_2024-12-21.md",
       "location": null
     },
     {
-      "id": 80,
-      "title": "Sidney",
+      "id": 29,
+      "title": "Emiko Akira Arato",
       "date": "2024-12-21",
-      "file": "src/stories/ghosts_of_the_model/articles/07_sidney_2024-12-21.md",
-      "location": null
-    }
-  ],
-  "person:Akira": [
-    {
-      "id": 79,
-      "title": "Akira Notebook",
-      "date": "2011-03-25",
-      "file": "src/stories/ghosts_of_the_model/articles/05_akira_notebook_2011-03-25.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/11_emiko_akira_arato_2024-12-21.md",
       "location": null
     },
     {
-      "id": 81,
-      "title": "Akira Existence",
+      "id": 41,
+      "title": "En 07 Sidney 2024-12-21 Edited",
       "date": "2024-12-21",
-      "file": "src/stories/ghosts_of_the_model/articles/13_akira_existence_2024-12-21.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/en_articles/en_07_sidney_2024-12-21_edited.md",
       "location": null
-    }
-  ],
-  "FBI": [
+    },
     {
-      "id": 56,
-      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
-      "date": "2016-01-01",
-      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "id": 30,
+      "title": "Failsafe",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/12_failsafe_2024-12-21.md",
       "location": null
-    }
-  ],
-  "NDA": [
+    },
     {
-      "id": 56,
-      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
-      "date": "2016-01-01",
-      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "id": 36,
+      "title": "Failsafe 2024-12-21 02",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/12_failsafe_2024-12-21_02.md",
       "location": null
-    }
-  ],
-  "人物:Sidney": [
+    },
     {
-      "id": 56,
-      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
-      "date": "2016-01-01",
-      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "id": 28,
+      "title": "Qube One",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/10_qube_one_2024-12-21.md",
       "location": null
-    }
-  ],
-  "person:Sidney": [
+    },
     {
-      "id": 80,
+      "id": 26,
+      "title": "Reunion",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/08_reunion_2024-12-21.md",
+      "location": null
+    },
+    {
+      "id": 25,
       "title": "Sidney",
       "date": "2024-12-21",
-      "file": "src/stories/ghosts_of_the_model/articles/07_sidney_2024-12-21.md",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/07_sidney_2024-12-21.md",
+      "location": null
+    },
+    {
+      "id": 27,
+      "title": "The Past",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/09_the_past_2024-12-21.md",
+      "location": null
+    },
+    {
+      "id": 32,
+      "title": "Welcome Back",
+      "date": "2024-12-21",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/14_welcome_back_2024-12-21.md",
+      "location": null
+    },
+    {
+      "id": 33,
+      "title": "Epilogue",
+      "date": "2024-12-25",
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/articles/15_epilogue_2024-12-25.md",
+      "location": null
+    },
+    {
+      "id": 18,
+      "title": "Ghosts Of The Model",
+      "date": null,
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/ghosts_of_the_model.md",
+      "location": null
+    },
+    {
+      "id": 17,
+      "title": "Readme",
+      "date": null,
+      "file": "GRAY-CODE/src/stories/ghosts_of_the_model/README.md",
       "location": null
     }
   ],
   "arc:Ghost Relay": [
     {
-      "id": 76,
-      "title": "Ghost Relay — Falcon",
+      "id": 12,
+      "title": "Ghost Relay Falcon",
       "date": null,
-      "file": "src/stories/ghost_relay/articles/03_ghost_relay_falcon.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/03_ghost_relay_falcon.md",
       "location": null
     },
     {
-      "id": 75,
-      "title": "Ghost Relay — Op",
+      "id": 11,
+      "title": "Ghost Relay Op",
       "date": null,
-      "file": "src/stories/ghost_relay/articles/02_ghost_relay_op.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/02_ghost_relay_op.md",
       "location": null
     },
     {
-      "id": 74,
-      "title": "Leak — Chat",
+      "id": 14,
+      "title": "Ghost Relay Sight-ash",
       "date": null,
-      "file": "src/stories/ghost_relay/articles/01_leak_chat.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/05_ghost_relay_sight-ash.md",
       "location": null
     },
     {
-      "id": 4,
-      "title": "PJ・ワルツ —Sid & waltz",
+      "id": 15,
+      "title": "Ghost Relay The-man",
       "date": null,
-      "file": "stories/04_ghost_relay_waltz.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/06_ghost_relay_the-man.md",
       "location": null
     },
     {
-      "id": 6,
-      "title": "その男 —Sid & Red-1",
+      "id": 13,
+      "title": "Ghost Relay Waltz",
       "date": null,
-      "file": "stories/06_ghost_relay_the-man.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/04_ghost_relay_waltz.md",
       "location": null
     },
     {
-      "id": 3,
-      "title": "ファルコン —Sid & Michael",
+      "id": 10,
+      "title": "Leak Chat",
       "date": null,
-      "file": "stories/03_ghost_relay_falcon.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/01_leak_chat.md",
       "location": null
     },
     {
-      "id": 5,
-      "title": "ー「サイト・アッシュ」—Sid & Kevin",
+      "id": 16,
+      "title": "Leak Chat After",
       "date": null,
-      "file": "stories/05_ghost_relay_sight-ash.md",
-      "location": null
-    },
-    {
-      "id": 2,
-      "title": "砂漠の幽霊 —Sid & Michael",
-      "date": null,
-      "file": "stories/02_ghost_relay_op.md",
+      "file": "GRAY-CODE/src/stories/ghost_relay/articles/07_leak_chat_after.md",
       "location": null
     }
   ]
