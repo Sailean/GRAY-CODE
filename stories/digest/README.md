@@ -1,4 +1,4 @@
-# Nonlinear Emotion Curves  
+# Ghosts of the Model 
 *A bilingual sci-fi novel about quantum AI, memory, and emotion.*
 The story takes place in Japan and America from 2010 to 2024.
 Its main character is a researcher working on emotional intelligence models during the early days of neural networks.  
@@ -27,7 +27,7 @@ See LICENSE for more details.
 ---
 
 ## 📝非線形感情曲線
-このディレクトリは、オリジナル長編SF小説「非線形感情曲線」のダイジェスト版を公開しています。  
+このディレクトリは、オリジナル長編SF小説「Ghosts of the Model-非線形感情曲線」のダイジェスト版を公開しています。  
 2010年～2024の日本とアメリカを舞台に、ニューラルネットワークの黎明期に「感情を理解するAI」を追い求めた研究者の軌跡を描いています。
 このお話は完全なるフィクションです。
 
