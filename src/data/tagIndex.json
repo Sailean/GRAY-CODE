@@ -1,0 +1,149 @@
+{
+  "arc:ghosts_of_the_model": [
+    {
+      "id": 77,
+      "title": "Welcome Home",
+      "date": "2010-06-12",
+      "file": "src/stories/ghosts_of_the_model/articles/01_welcome_home_2010-06-12.md",
+      "location": null
+    },
+    {
+      "id": 78,
+      "title": "Carl Lab",
+      "date": "2010-11-24",
+      "file": "src/stories/ghosts_of_the_model/articles/04_carl_lab_2010-11-24.md",
+      "location": null
+    },
+    {
+      "id": 79,
+      "title": "Akira Notebook",
+      "date": "2011-03-25",
+      "file": "src/stories/ghosts_of_the_model/articles/05_akira_notebook_2011-03-25.md",
+      "location": null
+    },
+    {
+      "id": 81,
+      "title": "Akira Existence",
+      "date": "2024-12-21",
+      "file": "src/stories/ghosts_of_the_model/articles/13_akira_existence_2024-12-21.md",
+      "location": null
+    },
+    {
+      "id": 80,
+      "title": "Sidney",
+      "date": "2024-12-21",
+      "file": "src/stories/ghosts_of_the_model/articles/07_sidney_2024-12-21.md",
+      "location": null
+    }
+  ],
+  "person:Akira": [
+    {
+      "id": 79,
+      "title": "Akira Notebook",
+      "date": "2011-03-25",
+      "file": "src/stories/ghosts_of_the_model/articles/05_akira_notebook_2011-03-25.md",
+      "location": null
+    },
+    {
+      "id": 81,
+      "title": "Akira Existence",
+      "date": "2024-12-21",
+      "file": "src/stories/ghosts_of_the_model/articles/13_akira_existence_2024-12-21.md",
+      "location": null
+    }
+  ],
+  "FBI": [
+    {
+      "id": 56,
+      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
+      "date": "2016-01-01",
+      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "location": null
+    }
+  ],
+  "NDA": [
+    {
+      "id": 56,
+      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
+      "date": "2016-01-01",
+      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "location": null
+    }
+  ],
+  "人物:Sidney": [
+    {
+      "id": 56,
+      "title": "侵入した元夫をシドニーが「始末」し、FBIとNDAを交わす",
+      "date": "2016-01-01",
+      "file": "drafts/侵入した元夫をシドニーが始末しfbiとndaを交わす.md",
+      "location": null
+    }
+  ],
+  "person:Sidney": [
+    {
+      "id": 80,
+      "title": "Sidney",
+      "date": "2024-12-21",
+      "file": "src/stories/ghosts_of_the_model/articles/07_sidney_2024-12-21.md",
+      "location": null
+    }
+  ],
+  "arc:Ghost Relay": [
+    {
+      "id": 76,
+      "title": "Ghost Relay — Falcon",
+      "date": null,
+      "file": "src/stories/ghost_relay/articles/03_ghost_relay_falcon.md",
+      "location": null
+    },
+    {
+      "id": 75,
+      "title": "Ghost Relay — Op",
+      "date": null,
+      "file": "src/stories/ghost_relay/articles/02_ghost_relay_op.md",
+      "location": null
+    },
+    {
+      "id": 74,
+      "title": "Leak — Chat",
+      "date": null,
+      "file": "src/stories/ghost_relay/articles/01_leak_chat.md",
+      "location": null
+    },
+    {
+      "id": 4,
+      "title": "PJ・ワルツ —Sid & waltz",
+      "date": null,
+      "file": "stories/04_ghost_relay_waltz.md",
+      "location": null
+    },
+    {
+      "id": 6,
+      "title": "その男 —Sid & Red-1",
+      "date": null,
+      "file": "stories/06_ghost_relay_the-man.md",
+      "location": null
+    },
+    {
+      "id": 3,
+      "title": "ファルコン —Sid & Michael",
+      "date": null,
+      "file": "stories/03_ghost_relay_falcon.md",
+      "location": null
+    },
+    {
+      "id": 5,
+      "title": "ー「サイト・アッシュ」—Sid & Kevin",
+      "date": null,
+      "file": "stories/05_ghost_relay_sight-ash.md",
+      "location": null
+    },
+    {
+      "id": 2,
+      "title": "砂漠の幽霊 —Sid & Michael",
+      "date": null,
+      "file": "stories/02_ghost_relay_op.md",
+      "location": null
+    }
+  ]
+}

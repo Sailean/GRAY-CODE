@@ -1,0 +1,35 @@
+[
+  {
+    "id": null,
+    "title": "Leak — Chat",
+    "year": 2002,
+    "date": null,
+    "file": "stories/ghost_relay/01_leak_chat.md",
+    "tags": [
+      "arc:Ghost Relay"
+    ],
+    "summary": null
+  },
+  {
+    "id": null,
+    "title": "Ghost Relay — Op",
+    "year": 2002,
+    "date": null,
+    "file": "stories/ghost_relay/02_ghost_relay_op.md",
+    "tags": [
+      "arc:Ghost Relay"
+    ],
+    "summary": null
+  },
+  {
+    "id": null,
+    "title": "Ghost Relay — Falcon",
+    "year": 2002,
+    "date": null,
+    "file": "stories/ghost_relay/03_ghost_relay_falcon.md",
+    "tags": [
+      "arc:Ghost Relay"
+    ],
+    "summary": null
+  }
+]
