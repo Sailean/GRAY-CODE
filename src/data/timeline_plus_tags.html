@@ -1,0 +1,215 @@
+<!doctype html><meta charset="utf-8">
+<title>GRAY CORD — Chronological Timeline (Tags + Edit)</title>
+<style>
+:root{ --fg:#111827; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; --bg:#fff; }
+*{box-sizing:border-box}
+body{font:14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans JP', sans-serif; margin:20px; color:var(--fg); background:var(--bg)}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 12px}
+h1{margin:0 12px 0 0;font-size:20px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls input[type="text"]{padding:6px 8px;border:1px solid var(--line);border-radius:8px;min-width:220px}
+.chk{display:inline-flex;gap:6px;align-items:center;padding:2px 6px;border:1px solid var(--line);border-radius:999px;background:#f8fafc}
+.btn{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:#f9fafb;cursor:pointer}
+.btn:hover{background:#eef2ff;border-color:#c7d2fe}
+.year{margin-top:22px;border-left:4px solid #999;padding-left:8px;display:flex;align-items:center;gap:8px}
+.year a{color:var(--muted);text-decoration:none;font-size:12px}
+.badge{font-size:12px;padding:2px 6px;border-radius:6px;margin-left:6px;color:#111}
+.published{background:#e6ffe6;border:1px solid #8bc48b}
+.draft{background:#fff5e6;border:1px solid #e2a55e}
+.planned{background:#eef;border:1px solid #99a}
+.note{background:#eee;border:1px solid #bbb}
+ul{margin:6px 0 16px 24px;padding-left:12px;border-left:1px dashed #e5e7eb}
+li{margin:6px 0}
+small{color:var(--muted)}
+.error{background:#fee;border:1px solid #e66;padding:8px;border-radius:8px;margin:8px 0}
+.tags{display:inline-flex;gap:6px;flex-wrap:wrap;margin-left:8px}
+.tag{font-size:11px;padding:2px 6px;border:1px solid #d1d5db;border-radius:999px;background:#f3f4f6;color:#374151}
+.tools{display:inline-flex;gap:8px;margin-left:8px}
+.tools a{font-size:12px;text-decoration:none;color:var(--accent)}
+.fold{cursor:pointer;font-size:12px;color:var(--accent);border:none;background:transparent;margin-left:6px}
+.legend{margin:6px 0 12px;color:var(--muted);font-size:12px}
+.hidden{display:none !important}
+</style>
+<header>
+  <h1>Chronological Timeline (Tags + Edit)</h1>
+  <div class="controls">
+    <input id="q" type="text" placeholder="Search text…">
+    <input id="t" type="text" placeholder="Tags (comma/space) e.g. Tomás FARC">
+    <label class="chk"><input type="checkbox" class="f-status" value="published" checked>published</label>
+    <label class="chk"><input type="checkbox" class="f-status" value="draft" checked>draft</label>
+    <label class="chk"><input type="checkbox" class="f-status" value="planned" checked>planned</label>
+    <label class="chk"><input type="checkbox" class="f-status" value="note" checked>note</label>
+    <label class="chk"><input type="checkbox" id="linksOnly">links only</label>
+    <button class="btn" id="expand">expand all</button>
+    <button class="btn" id="collapse">collapse all</button>
+  </div>
+</header>
+<div class="legend">Type tags and press Enter. AND 検索（すべてのタグを含むイベントのみ）。GitHub の <em>blob</em> / <em>edit</em> 直リンク付き。</div>
+<div id="msg"></div>
+<div id="root"></div>
+<script type="module">
+const base = new URL('.', import.meta.url);
+async function safeJson(url){
+  try{
+    const res = await fetch(url);
+    if(!res.ok) throw new Error(res.status+' '+res.statusText);
+    return await res.json();
+  }catch(e){
+    const m = document.getElementById('msg');
+    const div = document.createElement('div');
+    div.className='error';
+    div.textContent = `⚠️ Failed to load ${url}: ${e.message}`;
+    m.append(div);
+    return null;
+  }
+}
+// Load data (same dir → ../data fallback)
+const toc = (await safeJson(new URL('./toc.json', base))) 
+         || (await safeJson(new URL('../data/toc.json', base))) || [];
+const timeline = (await safeJson(new URL('./timeline.json', base))) 
+              || (await safeJson(new URL('../data/timeline.json', base))) || [];
+
+const tocMap = new Map((toc||[]).map(x=>[String(x.id), x]));
+
+// Configure GitHub repo info for edit links
+const GH_REPO = "Sailean/GRAY-CODE";   // ←必要に応じて変更
+const GH_BRANCH = "main";
+function ghBlob(path){ return `https://github.com/${GH_REPO}/blob/${GH_BRANCH}/${path}`; }
+function ghEdit(path){ return `https://github.com/${GH_REPO}/edit/${GH_BRANCH}/${path}`; }
+
+const root = document.getElementById('root');
+const q = document.getElementById('q');
+const t = document.getElementById('t');
+const linkToggle = document.getElementById('linksOnly');
+const chkStatuses = Array.from(document.querySelectorAll('.f-status'));
+const expandBtn = document.getElementById('expand');
+const collapseBtn = document.getElementById('collapse');
+
+function tokenizeTags(s){
+  return (s||'').split(/[,\s]+/).map(x=>x.trim()).filter(Boolean);
+}
+
+function build(){
+  root.innerHTML = '';
+  const statusAllow = new Set(chkStatuses.filter(c=>c.checked).map(c=>c.value));
+  const needle = (q.value||'').toLowerCase().trim();
+  const tags = new Set(tokenizeTags(t.value.toLowerCase()));
+  const linksOnly = linkToggle.checked;
+
+  for (const y of [...timeline].sort((a,b)=>a.year-b.year)) {
+    const section = document.createElement('section');
+    const h = document.createElement('div'); h.className='year'; h.id='y'+y.year;
+    const H = document.createElement('h2'); H.textContent = y.year; H.style.margin='0';
+    const fold = document.createElement('button'); fold.className='fold'; fold.textContent='fold';
+    const anchor = document.createElement('a'); anchor.href = '#y'+y.year; anchor.textContent='#';
+    h.append(H, fold, anchor); section.append(h);
+
+    const ul = document.createElement('ul');
+    let count=0;
+
+    const items = [...(y.items||[])].sort((a,b)=>(a.date||a.date_start||'').localeCompare(b.date||b.date_start||''));
+    for (const ev of items) {
+      const status = ev.status || 'note';
+      if(!statusAllow.has(status)) continue;
+
+      // text search
+      const hay = [(ev.title_jp||''),(ev.title_en||''),(ev.location||''),(ev.actors||[]).join(' '),(ev.notes||''),(ev.tags||[]).join(' ')].join(' ').toLowerCase();
+      if(needle && !hay.includes(needle)) continue;
+
+      // tag AND filter
+      const evTags = new Set((ev.tags||[]).map(x=>String(x).toLowerCase()));
+      let tagsOk = true;
+      for(const tg of tags){ if(!evTags.has(tg)) { tagsOk=false; break; } }
+      if(!tagsOk) continue;
+
+      // link resolution
+      let linkInfo = null;
+      if (ev.refs && ev.refs.length){
+        for(const id of ev.refs){
+          const t = tocMap.get(String(id));
+          if(t && t.status==='published' && t.url){ linkInfo = t; break; }
+        }
+      }
+      if(linksOnly && !linkInfo) continue;
+
+      const li = document.createElement('li');
+      const title = document.createElement('span');
+      const badge = document.createElement('span');
+      badge.className = `badge ${status}`; badge.textContent = status;
+
+      if(linkInfo){
+        const a = document.createElement('a');
+        a.href = linkInfo.url; a.target = '_blank';
+        a.textContent = (ev.title_jp || ev.title_en || '(untitled)');
+        title.append(a);
+      }else{
+        title.textContent = (ev.title_jp || ev.title_en || '(untitled)');
+      }
+      li.append(title, badge);
+
+      // tools: GitHub edit/view if file known (from first ref that has file)
+      if (ev.refs && ev.refs.length){
+        for(const id of ev.refs){
+          const t = tocMap.get(String(id));
+          if(t && t.file){
+            const repoPath = `src/${t.file}`; // adjust if structure differs
+            const tools = document.createElement('span'); tools.className='tools';
+            const view = document.createElement('a'); view.href = ghBlob(repoPath); view.target='_blank'; view.textContent='view';
+            const edit = document.createElement('a'); edit.href = ghEdit(repoPath); edit.target='_blank'; edit.textContent='edit';
+            tools.append(view, edit);
+            li.append(tools);
+            break;
+          }
+        }
+      }
+
+      // tags
+      if(ev.tags && ev.tags.length){
+        const box = document.createElement('span'); box.className='tags';
+        for(const tg of ev.tags){
+          const chip = document.createElement('span'); chip.className='tag'; chip.textContent = tg;
+          chip.addEventListener('click', ()=>{
+            const cur = tokenizeTags(t.value); if(!cur.includes(tg)) cur.push(tg);
+            t.value = cur.join(' '); build();
+          });
+          box.append(chip);
+        }
+        li.append(box);
+      }
+
+      if (ev.location || ev.actors) {
+        const meta = document.createElement('small');
+        meta.textContent = ` — ${ev.location||''}${ev.actors?(' / '+ev.actors.join(', ')) : ''}`;
+        li.append(' ', meta);
+      }
+      ul.append(li); count++;
+    }
+
+    if(count===0){ ul.classList.add('hidden'); fold.textContent='fold'; }
+    fold.addEventListener('click', ()=>{
+      ul.classList.toggle('hidden');
+      fold.textContent = ul.classList.contains('hidden') ? 'expand' : 'fold';
+    });
+
+    section.append(ul);
+    root.append(section);
+  }
+}
+
+[q, t, linkToggle, ...chkStatuses].forEach(el => el.addEventListener('input', build));
+document.getElementById('expand').addEventListener('click', ()=>{
+  root.querySelectorAll('ul').forEach(u=>u.classList.remove('hidden'));
+  root.querySelectorAll('.fold').forEach(b=>b.textContent='fold');
+});
+document.getElementById('collapse').addEventListener('click', ()=>{
+  root.querySelectorAll('ul').forEach(u=>u.classList.add('hidden'));
+  root.querySelectorAll('.fold').forEach(b=>b.textContent='expand');
+});
+build();
+
+// hash jump
+if(location.hash){
+  const target = document.querySelector(location.hash);
+  if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>

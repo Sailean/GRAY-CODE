@@ -1,0 +1,640 @@
+[
+  {
+    "year": 1972,
+    "items": [
+      {
+        "date": "1972-??-??",
+        "type": "note",
+        "title_jp": "Sidney 誕生（ブロンクス）",
+        "title_en": "Birth of Sidney (Bronx)",
+        "actors": [
+          "Sidney"
+        ],
+        "location": "Bronx, NY",
+        "refs": [
+          4
+        ],
+        "status": "note",
+        "notes": "時代背景メモ。家族構成やBronxの空気、70s治安などの資料リンクを追記。",
+        "uid": "1972-birth-sid",
+        "tags": [
+          "Backstory",
+          "Birth",
+          "Bronx",
+          "Sidney"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 1973,
+    "items": []
+  },
+  {
+    "year": 1974,
+    "items": []
+  },
+  {
+    "year": 1975,
+    "items": []
+  },
+  {
+    "year": 1976,
+    "items": []
+  },
+  {
+    "year": 1977,
+    "items": []
+  },
+  {
+    "year": 1978,
+    "items": []
+  },
+  {
+    "year": 1979,
+    "items": []
+  },
+  {
+    "year": 1980,
+    "items": []
+  },
+  {
+    "year": 1981,
+    "items": []
+  },
+  {
+    "year": 1982,
+    "items": []
+  },
+  {
+    "year": 1983,
+    "items": []
+  },
+  {
+    "year": 1984,
+    "items": []
+  },
+  {
+    "year": 1985,
+    "items": []
+  },
+  {
+    "year": 1986,
+    "items": []
+  },
+  {
+    "year": 1987,
+    "items": []
+  },
+  {
+    "year": 1988,
+    "items": []
+  },
+  {
+    "year": 1989,
+    "items": []
+  },
+  {
+    "year": 1990,
+    "items": []
+  },
+  {
+    "year": 1991,
+    "items": []
+  },
+  {
+    "year": 1992,
+    "items": []
+  },
+  {
+    "year": 1993,
+    "items": []
+  },
+  {
+    "year": 1994,
+    "items": []
+  },
+  {
+    "year": 1995,
+    "items": []
+  },
+  {
+    "year": 1996,
+    "items": [
+      {
+        "date": "1996-??-??",
+        "type": "incident",
+        "title_jp": "プトゥマヨ・セイバの夜（村焼失事件）",
+        "title_en": "Ceiba Night, Putumayo (Village Burn)",
+        "actors": [
+          "Sidney",
+          "Michael",
+          "Brick",
+          "Tomás"
+        ],
+        "location": "Putumayo, Colombia",
+        "refs": [
+          5
+        ],
+        "status": "draft",
+        "notes": "LEDビーコン誤認／長老の言葉／行方不明の伏線（Tomás）。",
+        "uid": "1996-ceiba-night",
+        "tags": [
+          "Beacon",
+          "Brick",
+          "CIVCAS",
+          "Ceiba",
+          "FARC",
+          "Michael",
+          "Putumayo",
+          "ROE",
+          "Sidney",
+          "Tomás",
+          "VillageBurn"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 1997,
+    "items": [
+      {
+        "date_start": "1997-01-01",
+        "date_end": "2001-12-31",
+        "type": "arc",
+        "title_jp": "ODA配属・各地訓練と任務",
+        "title_en": "ODA Assignments & Training",
+        "actors": [
+          "Sidney",
+          "Michael"
+        ],
+        "location": "Various (US/LATAM)",
+        "refs": [
+          5
+        ],
+        "status": "draft",
+        "notes": "後のGhost Relayへ繋がる通信／P2P伏線を配置。",
+        "uid": "1997-oda-arc",
+        "tags": [
+          "Foreshadow",
+          "LATAM",
+          "Michael",
+          "ODA",
+          "P2P",
+          "Sidney",
+          "Training"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 1998,
+    "items": []
+  },
+  {
+    "year": 1999,
+    "items": []
+  },
+  {
+    "year": 2000,
+    "items": []
+  },
+  {
+    "year": 2001,
+    "items": [
+      {
+        "date": "2001-??-??",
+        "type": "incident",
+        "title_jp": "隠蔽処理と基地追放（Dog-Tag スタフォード登場）",
+        "title_en": "Cover-Up & Base Ejection — Dog-Tag Cameo",
+        "actors": [
+          "Sidney",
+          "Red1",
+          "Stafford"
+        ],
+        "location": "US Base",
+        "refs": [
+          6
+        ],
+        "status": "draft",
+        "notes": "非公式任務の余波で更迭。グレー契約の伏線。",
+        "uid": "2001-coverup-ejection",
+        "tags": [
+          "Base",
+          "CoverUp",
+          "DogTag",
+          "Ejection",
+          "Red1",
+          "Sidney",
+          "Stafford"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2002,
+    "items": [
+      {
+        "date": "2002-10-??",
+        "type": "incident",
+        "title_jp": "停戦交渉 → 銃撃の混乱（トマス行方不明）",
+        "title_en": "Ceasefire Talk → Ambush (Tomás MIA)",
+        "actors": [
+          "Sidney",
+          "Tomás",
+          "Brick"
+        ],
+        "location": "Putumayo, Colombia",
+        "refs": [],
+        "status": "planned",
+        "notes": "読者非公開の実相：穏健派救出→フロント分裂→後にDDRへ。",
+        "uid": "2002-ceasefire-ambush",
+        "tags": [
+          "Ambush",
+          "Brick",
+          "Ceasefire",
+          "FARC",
+          "MIA",
+          "Sidney",
+          "Split",
+          "Tomás"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2003,
+    "items": []
+  },
+  {
+    "year": 2004,
+    "items": [
+      {
+        "date_start": "2003-01-01",
+        "date_end": "2005-12-31",
+        "type": "arc",
+        "title_jp": "トマス：DDR登録 → NGO現地警備へ",
+        "title_en": "Tomás: DDR Registration → NGO Guard",
+        "actors": [
+          "Tomás"
+        ],
+        "location": "Colombia/Ecuador Border",
+        "refs": [],
+        "status": "note",
+        "notes": "舞台裏設定。公表は後年。",
+        "uid": "2004-tomas-ddr-ngo",
+        "tags": [
+          "DDR",
+          "Ecuador",
+          "Guard",
+          "NGO",
+          "Reintegration",
+          "Tomás"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2005,
+    "items": []
+  },
+  {
+    "year": 2006,
+    "items": []
+  },
+  {
+    "year": 2007,
+    "items": []
+  },
+  {
+    "year": 2008,
+    "items": [
+      {
+        "date_start": "2007-01-01",
+        "date_end": "2012-12-31",
+        "type": "arc",
+        "title_jp": "サイドハッスル期：投資・裏仕事・拠点づくり",
+        "title_en": "Side-Hustle Era: Capital & Safehouse Build",
+        "actors": [
+          "Sidney",
+          "Kevin"
+        ],
+        "location": "LA / Bay Area",
+        "refs": [
+          8
+        ],
+        "status": "planned",
+        "notes": "Nvidia 投資／地下レンジ（秘匿）など。",
+        "uid": "2008-sidehustle",
+        "tags": [
+          "BasementRange",
+          "BelAir",
+          "Finance",
+          "Kevin",
+          "Nvidia",
+          "Safehouse",
+          "Sidney"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2009,
+    "items": []
+  },
+  {
+    "year": 2010,
+    "items": [
+      {
+        "date": "2010-??-??",
+        "type": "incident",
+        "title_jp": "サンノゼ・ハッカソン（朗と初遭遇）",
+        "title_en": "Hackathon in San Jose — First Link with Akira",
+        "actors": [
+          "Sidney",
+          "Akira",
+          "FBI"
+        ],
+        "location": "San Jose, CA",
+        "refs": [
+          10
+        ],
+        "status": "draft",
+        "notes": "FBI 連携／朗に監視が付く→Sidが担当に。",
+        "uid": "2010-hackathon-sj",
+        "tags": [
+          "Akira",
+          "FBI",
+          "Hackathon",
+          "SanJose",
+          "Sidney",
+          "Surveillance"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2011,
+    "items": [
+      {
+        "date": "2011-??-??",
+        "type": "incident",
+        "title_jp": "アリサとの出会い",
+        "title_en": "Encounter with Arisa",
+        "actors": [
+          "Sidney",
+          "Arisa"
+        ],
+        "location": "Los Angeles, CA",
+        "refs": [
+          9
+        ],
+        "status": "published",
+        "notes": "公開済み章にリンク。",
+        "uid": "2011-arisa-encounter",
+        "tags": [
+          "Arisa",
+          "Art",
+          "Encounter",
+          "LA",
+          "Sidney"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "items": [
+      {
+        "date": "2012-??-??",
+        "type": "arc",
+        "title_jp": "東京アーク：朗と英美子、同棲まで",
+        "title_en": "Tokyo Arc — Akira & Emiko Cohabitation",
+        "actors": [
+          "Akira",
+          "Emiko"
+        ],
+        "location": "Tokyo, Japan",
+        "refs": [
+          11
+        ],
+        "status": "planned",
+        "notes": "US 側と並行進行。",
+        "uid": "2012-tokyo-arc",
+        "tags": [
+          "Akira",
+          "Cohabitation",
+          "Emiko",
+          "Tokyo"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2013,
+    "items": [
+      {
+        "date": "2013-??-??",
+        "type": "incident",
+        "title_jp": "ベルエア地下室事件（元夫を制圧）",
+        "title_en": "Bel-Air Basement Incident — Ex-Husband Night",
+        "actors": [
+          "Sidney",
+          "Arisa"
+        ],
+        "location": "Bel-Air, LA",
+        "refs": [
+          13
+        ],
+        "status": "planned",
+        "notes": "FBI 引き渡し。",
+        "uid": "2013-belair-incident",
+        "tags": [
+          "Arisa",
+          "Basement",
+          "ExHusband",
+          "FBI",
+          "Knife",
+          "SelfDefense",
+          "Sidney"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "items": []
+  },
+  {
+    "year": 2015,
+    "items": [
+      {
+        "date": "2015-??-??",
+        "type": "note",
+        "title_jp": "眞の成長ライン（遠隔コミュニケーション）",
+        "title_en": "Makoto Growth Line (Remote Comms)",
+        "actors": [
+          "Makoto",
+          "Sidney"
+        ],
+        "location": "US / Japan",
+        "refs": [
+          14
+        ],
+        "status": "draft",
+        "notes": "非線形感情曲線ダイジェストに統合。",
+        "uid": "2015-makoto-growth",
+        "tags": [
+          "Digest",
+          "Makoto",
+          "Nonlinear",
+          "Remote",
+          "Sidney"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "items": []
+  },
+  {
+    "year": 2017,
+    "items": []
+  },
+  {
+    "year": 2018,
+    "items": []
+  },
+  {
+    "year": 2019,
+    "items": []
+  },
+  {
+    "year": 2020,
+    "items": []
+  },
+  {
+    "year": 2021,
+    "items": []
+  },
+  {
+    "year": 2022,
+    "items": []
+  },
+  {
+    "year": 2023,
+    "items": []
+  },
+  {
+    "year": 2024,
+    "items": [
+      {
+        "date": "2024-12-21",
+        "type": "incident",
+        "title_jp": "再帰的過剰注意機構（Failsafe Trip）",
+        "title_en": "Recursive Loop Overload",
+        "actors": [
+          "Makoto",
+          "AkiraBot"
+        ],
+        "location": "Makoto's Machine",
+        "refs": [
+          14
+        ],
+        "status": "published",
+        "notes": "執筆済み（拡大中）。",
+        "uid": "2024-rlo",
+        "tags": [
+          "AkiraBot",
+          "Failsafe",
+          "Loop",
+          "Makoto",
+          "Overload",
+          "Recursive"
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "items": [
+      {
+        "date": "2025-01-15",
+        "type": "incident",
+        "title_jp": "Sidney と Arisa の結婚",
+        "title_en": "Wedding — Sidney & Arisa",
+        "actors": [
+          "Sidney",
+          "Arisa"
+        ],
+        "location": "Los Angeles, CA",
+        "refs": [
+          15
+        ],
+        "status": "planned",
+        "notes": "章15で扱う。",
+        "uid": "2025-wedding",
+        "tags": [
+          "Arisa",
+          "LosAngeles",
+          "Sidney",
+          "Wedding"
+        ]
+      },
+      {
+        "date": "2025-??-??",
+        "type": "incident",
+        "title_jp": "Ghost Relay Leak（ChatUI 開幕）",
+        "title_en": "Ghost Relay Leak — ChatUI Opening",
+        "actors": [
+          "Makoto",
+          "AkiraBot"
+        ],
+        "location": "Online",
+        "refs": [
+          1,
+          3,
+          2
+        ],
+        "status": "published",
+        "notes": "公開済み 1/3/2 章の複合リンク。",
+        "uid": "2025-ghostrelay-leak",
+        "tags": [
+          "AkiraBot",
+          "ChatUI",
+          "GhostRelay",
+          "Leak",
+          "Makoto",
+          "Opening"
+        ]
+      },
+      {
+        "date": "2025-06-??",
+        "type": "arc",
+        "title_jp": "不妊治療断念 → 筋トレ依存悪化 → 1章へ回帰",
+        "title_en": "Infertility → Muscle Dependency → Loop to Ch.1",
+        "actors": [
+          "Sidney",
+          "Arisa"
+        ],
+        "location": "Los Angeles, CA",
+        "refs": [
+          16
+        ],
+        "status": "planned",
+        "notes": "Ghost Relay 開幕へ接続。",
+        "uid": "2025-infertility-arc",
+        "tags": [
+          "Arisa",
+          "Dependency",
+          "Gym",
+          "Infertility",
+          "Loop",
+          "PTSD",
+          "Sidney"
+        ]
+      }
+    ]
+  }
+]
