@@ -593,8 +593,8 @@
                                 <picture>
                                     <source srcset="../images/logo_gray-code.png" width="150"
                                         media="(max-width: 640px)">
-                                    <img id="logo" src="../images/logo_gray-code.png" width="300" alt="GRAY CODE logo"
-                                        title="GRAY CODE">
+                                    <img id="logo" src="../images/logo_gray-code.png" width="300"
+                                        alt="GRAY CODE logo" title="GRAY CODE">
                                 </picture>
                             </a>
                         </div>
@@ -612,18 +612,17 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="uk-margin-large-top heading uk-light">2025年×月×日　<ruby>漏洩<rt>リーク</rt></ruby></h2>
+          <h2 class="uk-margin-large-top heading uk-light">2025年08月03日　<ruby>漏洩<rt>リーク・２</rt></ruby></h2>
         <div class="log-container">
             <div class="log-header">
-                <h1># AkiraBot Conversation Log - Test No.8</h1>
-                <p><strong>Date:</strong> 2024.11.03 10:08<br>
-                    <strong>Subject:</strong> Mako M.<br>
-                    <strong>Status:</strong> Consciousness Emulation Check - Phase II<br>
-                    <strong>Mode:</strong> VOICE_IO (Real-Time Audio)<br>
-                    <strong>Audio Capture:</strong> ENABLED<br>
-                    <strong>Input Method:</strong> Live Speech Recognition (Japanese)<br>
-                    <strong>Output Method:</strong> Synthesized Voice (JA_f01_akira.v2)
-                </p>
+<h1># AkiraBot Conversation Log - Test No.8</h1>
+<p><strong>Date:</strong> 2024.11.03 10:08<br>
+<strong>Subject:</strong> Mako M.<br>
+<strong>Status:</strong> Consciousness Emulation Check - Phase II<br>
+<strong>Mode:</strong> VOICE_IO (Real-Time Audio)<br>
+<strong>Audio Capture:</strong> ENABLED<br>
+<strong>Input Method:</strong> Live Speech Recognition (Japanese)<br>
+<strong>Output Method:</strong> Synthesized Voice (JA_f01_akira.v2)</p>
                 <div>📘 <em>Recorded and transcribed by MAKO</em></div>
             </div>
 
@@ -652,9 +651,10 @@
             </div>
 
 
-            <div class="button-group">
-                <a href="02.html" class="control-btn nav-link pulse">
-                    <span class="icon"></span>▶▶ 砂漠の幽霊
+
+            <div class="button-group">Ⅰ. 砂漠の幽霊 ＞  = <a href="06.html">その男</a> = ◀◀ 
+                <a href="stories/episode/ep00_bronx.md" class="control-btn nav-link pulse">
+                    <span class="icon"></span>▶▶ 1章 — 1979年 ブロンクス
                 </a>
             </div>
         </div>
@@ -665,28 +665,30 @@
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
-
     <script>
         // メッセージデータ（画像付き）
         const messages = [
-            { time: "20:28:14", speaker: "akira", text: "眞のマシンはRTX3080? 中学生にしては贅沢だな。" },
-            { time: "20:28:23", speaker: "mako", text: "えへへ、あたしからシドにねだったの。", image: "../images/.png" },
-            { time: "20:28:27", speaker: "akira", text: "ああ、なるほどね。例のクリスマスの？" },
-            { time: "20:28:30", speaker: "mako", text: "うん、去年のだよ。今はリクエスト式にしてるんだ。だってシド、言わないと変なもの送ってくるし（笑）" },
-            { time: "20:28:37", speaker: "akira", text: "こら、眞。ダメだろ？ そう言う事言っちゃ。" },
-            { time: "20:28:42", speaker: "mako", text: "へへ、わかってるって……ねえパパ。シドさ、NQSusの前って何してたか知ってる？" },
-            { time: "20:28:46", speaker: "akira", text: "ああ。彼は陸軍の通信兵だったろ？" },
-            { time: "20:28:50", speaker: "mako", text: "それはママから聞いたから、知ってる。" },
-            { time: "20:28:55", speaker: "akira", text: "何か、気になることでもあるの？" },
-            { time: "20:29:04", speaker: "mako", text: "うん。ねえ、パパ……通信兵も、敵と闘うの？" },
-            { time: "20:29:07", speaker: "akira", text: "そりゃあ、兵士だからね。その時が来たら、全員闘うよ。" },
-            { time: "20:29:12", speaker: "mako", text: "……じゃあ、シドも人を殺したことがあるのかな。" },
-            { time: "20:29:13", speaker: "akira", text: "……どうだろう。知りたいの？" },
-            { time: "20:29:20", speaker: "mako", text: "うーん。知りたいような、知りたくないような…………ママもあまりそういう話、したがらない。" },
-            { time: "20:29:23", speaker: "akira", text: "そう。……でも、正しく知ることは大事だよ、眞。ほかならぬシドのことだしね。" },
-            { time: "20:29:26", speaker: "mako", text: "うん……わかってる。でね、これ見て。昨日さ、Redditで拾ったんだ。……ちょっと待って……" },
-            { time: "20:29:28", speaker: "akira", text: "OK……眞、あまりRedditばかり見るなよ？" },
-            { time: "20:29:40", speaker: "mako", text: "もう。パパ、お説教は、あと！ ねえこれ……なんだと思う？", image: "../images/JSOK_s-1.webp" },
+   { time: "20:28:14", speaker: "akira", text: "これは軍事文書の複写に見えるね。機密分類、作戦名、参加者のコードネーム、タイムラインが書かれてる。" },
+            { time: "20:28:23", speaker: "mako", text: "この画像のスレに、ミリオタが沢山集まってた。で、みんなアメリカ人ぽかった。" },
+            { time: "20:28:27", speaker: "akira", text: "ふむ、それで？" },
+            { time: "20:28:30", speaker: "mako", text: "うん。でさ、「サイファー」ってあるでしょ、「ゴースト２」のとこ。" },
+            { time: "20:28:37", speaker: "akira", text: "ああ、コードネームとコールネームだ。サイファーはコールネームだね。" },
+            { time: "20:28:42", speaker: "mako", text: "うん。その「サイファー」はNQSusの創業者だって言ってる人がいたんだよ。" },
+            { time: "20:28:46", speaker: "akira", text: "へえ。で、そのスレは消えちゃったの？" },
+            { time: "20:28:50", speaker: "mako", text: "……うん。昨日の夜見つけたけど、今日学校から帰ってアクセスしたら無くなってた……スレごとスクショしとけばよかった。" },
+            { time: "20:28:55", speaker: "akira", text: "興味深いね。でもこの書類が本物かどうかはわからない。今はこれくらい、誰でも簡単に作れちゃうからな。" },
+            { time: "20:29:04", speaker: "mako", text: "うん……。でも、なんかさ……ドキドキしちゃって……あたし、見ちゃいけないやつを見ちゃったのかなって……それにこれ、ヤバくない？" },
+            { time: "20:29:07", speaker: "akira", text: "なあ、眞。この画像はともかく、彼を理解したいなら、まずは正しい情報をきちんと学ぼう。そうすれば、いつか彼も眞にちゃんと話してくれるさ。" },
+            { time: "20:29:12", speaker: "mako", text: "うん、そうだよね。じゃさ！信頼できるアカウントとか教えて。あたし今まで、ミリタリーって全然興味なくてさ。友達のパパが自衛官だけど、一回お祭りに行っただけだしさ、どれを見たらいいのか、わかんないんだ。" },
+            { time: "20:29:13", speaker: "akira", text: "OK。まずは米軍の公式サイトからかな。他にもピックアップして、GitHubのHistorical_materialsディレクトリに置いておくよ。" },
+            { time: "20:29:20", speaker: "mako", text: "やった、サンクス！" },
+            { time: "20:29:23", speaker: "akira", text: "宿題を終わらせたら、開いてみて。翻訳でも、解説でも手伝うよ。" },
+            { time: "20:29:26", speaker: "mako", text: "うん！……ねえ、パパ。シドってさ、どんな子供だったんだろ。" },
+            { time: "20:29:28", speaker: "akira", text: "シドの子供時代？……そう言えば聞いた事ないな。でも彼はブロンクスで生まれて、育ったんだ。" },
+            { time: "20:29:32", speaker: "mako", text: "うん、ブロンクスってニューヨーク州でしょ。……でさ、あたし、シドって子供時代あったのか？ てくらい、ぜっんぜん、イメージわかないんだよね（笑）" },
+            { time: "20:29:40", speaker: "akira", text: "誰だって子供だったさ、最初はね（笑）。当時のブロンクスのことなら、俺の知識から教えてあげられるよ。必要ならリサーチしても良い。" },
+            { time: "20:29:40", speaker: "mako", text: "ありがとう！ 知りたい。教えて、パパ。" },
+            { time: "20:29:40", speaker: "akira", text: "よし来た。彼が生まれた1972年のブロンクスはね……" },
         ];
 
         let currentMessageIndex = 0;
@@ -795,13 +797,13 @@
         });
     </script>
 
-    <!--  フッター # -->
-    <div id="footer-placeholder"></div>
-    <script src="../js/load_articles.js"></script>
-    <script src="../js/scripts.js"></script>
-    <script src="../js/uikit.js"></script>
-    <script src="../js/uikit-icons.min.js"></script>
-    <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
+  <!--  フッター # -->
+  <div id="footer-placeholder"></div>
+  <script src="../js/load_articles.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/uikit.js"></script>
+  <script src="../js/uikit-icons.min.js"></script>
+  <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
