@@ -17,7 +17,7 @@ This story is entirely fictional.
 
 ## 📚 Read Online
 
-- Digest edition: https://sailean.github.io/Ghosts-of-the-Model/stories/digest/index.html
+- Digest edition: https://sailean.github.io/Ghosts-of-the-Model/src/stories/ghosts_of_the_model/index.html
 
 ## ⚖️ License
 
