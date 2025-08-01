@@ -139,42 +139,7 @@
 		</div>
 	</div><!-- フッターの閉じ -->
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      loadArticleCards('article-container', 'your_articles.json', 'en');
-    });
-  </script>
-  <!-- オプション：演出系 -->
-  <script>
-    function runAkiraLogEffects() {
-      const anchor = document.getElementById('cursor-anchor');
-      if (anchor) {
-        const cursor = document.createElement('span');
-        cursor.id = 'terminal-cursor';
-        anchor.parentNode.insertBefore(cursor, anchor.nextSibling);
-      }
-
-      const userSpans = document.querySelectorAll('.timestamp span.user');
-      userSpans.forEach(span => {
-        const text = span.innerText;
-        if (text.includes('AKIRA:')) span.classList.add('akira-text');
-        else if (text.includes('MAKO:')) span.classList.add('mako-text');
-      });
-
-      const messages = document.querySelectorAll('.timestamp');
-      messages.forEach((msg, index) => {
-        msg.style.opacity = '0';
-        setTimeout(() => {
-          msg.style.transition = 'opacity 0.1s ease-in';
-          msg.style.opacity = '1';
-        }, index * 50);
-      });
-    }
-    // ページ読み込み時に1回だけ実行
-    document.addEventListener('DOMContentLoaded', runAkiraLogEffects);
-  </script>
-
-  <div id="footer-placeholder"></div>
+  
   <script src="../../js/load_articles.js"></script>
   <script src="../../js/scripts.js"></script>
   <script src="../../js/uikit.js"></script>
