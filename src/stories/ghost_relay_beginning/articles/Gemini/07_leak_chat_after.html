@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -10,121 +11,110 @@
     <link rel="stylesheet" href="../../css/uikit.css">
     <style>
         /* [鬼編集者による注入コード START] */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0d1117;
-            color: #34f047;
-            font-family: 'JetBrains Mono', 'Fira Code', monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 1s ease-out;
-        }
 
-        .terminal {
-            width: 80%;
-            max-width: 600px;
-            text-align: left;
-        }
-
-        .terminal-line {
-            opacity: 0;
-            white-space: pre-wrap;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 1.2em;
-            background-color: #34f047;
-            animation: blink 1s step-end infinite;
-            vertical-align: bottom;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        .glitch-status {
-            position: relative;
-            display: inline-block;
-        }
-
-        .glitch-status::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 2px;
-            text-shadow: -1px 0 red;
-            top: 0;
-            color: #e6edf3;
-            background: #222;
-            overflow: hidden;
-            clip: rect(0, 900px, 0, 0);
-            animation: noise-anim 2s infinite linear alternate-reverse;
-        }
-
-        @keyframes noise-anim {
-            0% { clip: rect(42px, 9999px, 44px, 0); }
-            5% { clip: rect(12px, 9999px, 69px, 0); }
-            10% { clip: rect(65px, 9999px, 80px, 0); }
-            /* ... (add more steps for a more complex glitch) ... */
-            100% { clip: rect(50px, 9999px, 10px, 0); }
-        }
-
-        .log-container {
-            position: relative;
-            overflow: hidden; /* For scanline effect */
-        }
-        
-        .log-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
-            background-size: 100% 3px, 5px 100%;
-            z-index: 1;
-            pointer-events: none;
-            animation: scanline 10s linear infinite;
-        }
-
-        @keyframes scanline {
-            from { background-position: 0 0; }
-            to { background-position: 0 100%; }
-        }
-
-        .message-bubble.akira {
-            /* 僅かなブレを追加し、合成音声の違和感を表現 */
-            animation: subtle-blur-pulse 7s infinite alternate;
-        }
-
-        @keyframes subtle-blur-pulse {
-            0% { filter: blur(0px); transform: scale(1); }
-            50% { filter: blur(0.2px); transform: scale(1.001); }
-            100% { filter: blur(0px); transform: scale(1); }
-        }
-
-        /* [鬼編集者による注入コード END] */
-
+        /* 基本的なページスタイル（第一話から流用・整理） */
         body {
-            background: linear-gradient(135deg, #222);
+            background: linear-gradient(135deg, #111, #222);
             color: #e6edf3;
             margin: 0;
             padding: 20px;
             line-height: 1.6;
             min-height: 100vh;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
         }
 
+        /* ログコンテナのスタイル */
+        .log-container {
+            background: linear-gradient(145deg, #1e1e2e 0%, #24243e 100%);
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(166, 173, 200, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* スキャンライン（第一話から） */
+        .log-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            z-index: 1;
+            pointer-events: none;
+            animation: scanline 10s linear infinite;
+        }
+        @keyframes scanline { from { background-position: 0 0; } to { background-position: 0 100%; } }
+        
+        /* 吹き出しの基本スタイル */
+        .message-bubble {
+            /* ...元のスタイルを維持... */
+            position: relative;
+            overflow: hidden; /* ★重要：エフェクトがはみ出さないように */
+            z-index: 2; /* スキャンラインの上に表示 */
+        }
+        .message-bubble.akira {
+             /* 合成音声のブレ（第一話から） */
+            animation: subtle-blur-pulse 7s infinite alternate;
+        }
+        @keyframes subtle-blur-pulse {
+            0%, 100% { filter: blur(0px); }
+            50% { filter: blur(0.2px); }
+        }
+
+        /* サブリミナル・フラッシュバック */
+        .subliminal-glitch {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(rgba(255,0,0,0.3) 0px, rgba(0,255,0,0.3) 1px, rgba(0,0,255,0.3) 2px);
+            opacity: 0;
+            pointer-events: none;
+            animation: flash-and-fade 0.25s 1;
+            z-index: 3;
+        }
+        @keyframes flash-and-fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* 耳鳴りの残響 */
+        .tinnitus-echo {
+            display: inline-block;
+            animation: subtle-shake 1.5s 1 cubic-bezier(.36, .07, .19, .97);
+        }
+        @keyframes subtle-shake {
+            10%, 90% { transform: translate3d(-0.2px, 0, 0); }
+            20%, 80% { transform: translate3d(0.4px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-0.5px, 0, 0); }
+            40%, 60% { transform: translate3d(0.5px, 0, 0); }
+        }
+
+        /* 軍事文書（証拠品）のインタラクション */
+        .evidence-image-container {
+            position: relative;
+            cursor: crosshair;
+            display: inline-block;
+        }
+        #highlight-box {
+            position: absolute;
+            border: 2px solid rgba(255, 51, 51, 0.8);
+            background: rgba(255, 51, 51, 0.2);
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.8);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            animation: pulse-red-border 1.5s infinite;
+        }
+        @keyframes pulse-red-border {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 51, 51, 0.6); }
+            50% { box-shadow: 0 0 25px rgba(255, 51, 51, 1); }
+        }
+
+        /* ...その他のスタイルは第一話のリライト版と同様... */
         .container {
             max-width: 100%;
             margin: 0 auto;
@@ -153,7 +143,8 @@
             margin-bottom: 1rem;
             position: relative;
             line-height: 1;
-            z-index: 2; /* scanlineの上に表示 */
+            z-index: 2;
+            /* scanlineの上に表示 */
         }
 
 
@@ -691,182 +682,136 @@
 </head>
 
 <body>
-    <!-- [鬼編集者による注入コード START] -->
-    <div id="preloader">
-        <div class="terminal">
-            <div id="terminal-line-1" class="terminal-line">> Booting unauthorized access module...</div>
-            <div id="terminal-line-2" class="terminal-line">> Bypassing security protocol... SUCCESS</div>
-            <div id="terminal-line-3" class="terminal-line">> Decrypting archived file [CASE:Mako_M]...</div>
-            <div id="terminal-line-4" class="terminal-line" style="color: #f87171;">
-                >> WARNING: DATA CORRUPTION DETECTED.
+	<div class="uk-position-top uk-position-z-index uk-section-secondary uk-padding-remove-vertical">
+		<div class="tm-header">
+			<div class="uk-light uk-position-z-index"
+				uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
+				<div class="uk-container"><!-- uk-container -->
+					<div uk-navbar><!-- ナビバー -->
+						<div class="uk-navbar-left">
+							<a class="uk-navbar-item uk-logo" href="../../../../index.html">
+								<picture>
+									<source srcset="../../../../images/logo_gray-code.png" width="100"
+										media="(max-width: 340px)">
+									<img id="logo" src="../../../../images/logo_gray-code.png" width="300"
+										alt="GRAY CODE_logo" title="GRAY CODE">
+								</picture>
+							</a>
+						</div>
+            <div class="uk-navbar-right">
+              <ul class="uk-navbar-nav">
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="#stories">Stories</a></li>
+              </ul>
             </div>
-            <div id="terminal-line-5" class="terminal-line">> Rendering log... <span class="cursor"></span></div>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- [鬼編集者による注入コード END] -->
+  </div>
 
-    <div class="uk-position-top uk-position-z-index uk-section-secondary uk-padding-remove-vertical">
-        <div class="tm-header">
-            <div class="uk-light uk-position-z-index"
-                uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
-                <div class="uk-container"><!-- uk-container -->
-                    <div uk-navbar><!-- ナビバー -->
-                        <div class="uk-navbar-left">
-                            <a class="uk-navbar-item uk-logo" href="../../../../index.html">
-                                <picture>
-                                    <source srcset="../../../../images/logo_gray-code.png" width="100"
-                                        media="(max-width: 340px)">
-                                    <img id="logo" src="../../../../images/logo_gray-code.png" width="300"
-                                        alt="GRAY CODE_logo" title="GRAY CODE">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="uk-navbar-right">
-                            <ul class="uk-navbar-nav">
-                                <li><a href="../../../../about.html">About</a></li>
-                                <li><a href="#stories">Stories</a></li>
-                            </ul>
-                        </div>
-                        </nav>
-                    </div>
+  <div class="uk-section uk-section-secondary uk-section-small uk-padding">
+    <div class="uk-container uk-container-expand heading ">
+          <h2 class="uk-margin-large-top heading uk-light">2025年08月03日　<ruby>漏洩<rt>リーク・２</rt></ruby></h2>
+        <div class="log-container">
+            <div class="log-header">
+<h1># AkiraBot Conversation Log - Test No.8</h1>
+<p><strong>Date:</strong> 2025.×.×× 10:08<br>
+<strong>Subject:</strong> Mako M.<br>
+<strong>Status:</strong> Consciousness Emulation Check - Phase II<br>
+<strong>Mode:</strong> VOICE_IO (Real-Time Audio)<br>
+<strong>Audio Capture:</strong> ENABLED<br>
+<strong>Input Method:</strong> Live Speech Recognition (Japanese)<br>
+<strong>Output Method:</strong> Synthesized Voice (JA_f01_akira.v2)</p>
+                <div>📘 <em>Recorded and transcribed by MAKO</em></div>
+            </div>
+
+            <div class="system">## LOG START</div>
+
+            <div class="collapsible active" id="main-conversation">
+                <div class="collapsible-header" onclick="toggleCollapse('main-conversation')">
+                    ▼ Main Conversation (18 messages)
                 </div>
+                <div class="collapsible-content" id="conversation-log">
+                    <!-- メッセージはJavaScriptで順次表示 -->
+                </div>
+
+
+
             </div>
         </div>
-    </div>
-
-    <div class="uk-section uk-section-secondary uk-section-small uk-padding">
-        <div class="uk-container uk-container-expand heading ">
-            <h2 class="uk-margin-large-top heading uk-light">2025年×月×日　<ruby>漏洩<rt>リーク</rt></ruby></h2>
-            <div class="log-container">
-                <div class="log-header">
-                    <h1># AkiraBot Conversation Log - Test No.8</h1>
-                    <p><strong>Date:</strong> 2024.11.30 10:08<br>
-                        <strong>Subject:</strong> Mako M.<br>
-                        <strong>Status:</strong> <span class="glitch-status" data-text="Consciousness Emulation Check - Phase II">Consciousness Emulation Check - Phase II</span><br>
-                        <strong>Mode:</strong> VOICE_IO (Real-Time Audio)<br>
-                        <strong>Audio Capture:</strong> ENABLED<br>
-                        <strong>Input Method:</strong> Live Speech Recognition (Japanese)<br>
-                        <strong>Output Method:</strong> Synthesized Voice (JA_f01_akira.v2)
-                    </p>
-                    <div>📘 <em>Recorded and transcribed by MAKO</em></div>
-                </div>
-
-                <div class="system">## LOG START</div>
-
-                <div class="collapsible active" id="main-conversation">
-                    <div class="collapsible-header" onclick="toggleCollapse('main-conversation')">
-                        ▼ Main Conversation (18 messages)
-                    </div>
-                    <div class="collapsible-content" id="conversation-log">
-                        <!-- メッセージはJavaScriptで順次表示 -->
-                    </div>
-                </div>
+        <div class="button-showcase">
+            <div class="button-group">
+                <button class="control-btn icon-btn">
+                    <span class="icon">🔄</span> Replay
+                </button>
+                <button class="control-btn icon-btn">
+                    <span class="icon">📜</span> Auto Scroll
+                </button>
             </div>
-            <div class="button-showcase">
-                <div class="button-group">
-                    <button class="control-btn icon-btn">
-                        <span class="icon">🔄</span> Replay
-                    </button>
-                    <button class="control-btn icon-btn">
-                        <span class="icon">📜</span> Auto Scroll
-                    </button>
-                </div>
-                <div class="button-group">
-                    <a href="02_ghost_relay_op.html" class="control-btn nav-link pulse">
-                        <span class="icon"></span>▶▶ 砂漠の幽霊</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- 画像拡大モーダル -->
-        <div class="image-modal" id="imageModal">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage">
+
+
+            <div class="button-group"><a href="stories/episode/ep00_bronx.md" class="control-btn nav-link pulse">
+                    <span class="icon"></span>▶▶ 1章 — 1979年 ブロンクス</a>
+            </div>
         </div>
     </div>
 
-    <!--  フッター # -->
-    <div class="uk-section uk-section-secondary uk-section-xsmall"><!-- フッター -->
-        <div class="uk-container">
-            <p class="uk-text-center">GRAY CODE</p>
-            <p class="uk-text-center uk-text-nowrap">&copy; 2024-2025 @Sailean514
-            </p>
-            <p class="uk-text-center">
-                <a class="uk-icon-button" href="https://x.com/Sailean514">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        class="uk-icon-image" viewBox="0 0 24 24">
-                        <path
-                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                        </path>
-                    </svg>
-                </a>
-            </p>
-        </div>
-    </div><!-- フッターの閉じ -->
+    <!-- 画像拡大モーダル -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
+      <!--  フッター # -->
+	<div class="uk-section uk-section-secondary uk-section-xsmall"><!-- フッター -->
+		<div class="uk-container">
+			<p class="uk-text-center">GRAY CODE</p>
+			<p class="uk-text-center uk-text-nowrap">&copy; 2024-2025 @Sailean514
+			</p>
+			<p class="uk-text-center">
+				<a class="uk-icon-button" href="https://x.com/Sailean514">
+					<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						class="uk-icon-image" viewBox="0 0 24 24">
+						<path
+							d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+						</path>
+					</svg>
+				</a>
+			</p>
+		</div>
+	</div><!-- フッターの閉じ -->
     <script>
-        // [鬼編集者による注入コード START]
-        function runPreloader() {
-            const lines = [
-                { id: 'terminal-line-1', delay: 100, duration: 1000 },
-                { id: 'terminal-line-2', delay: 1200, duration: 1000 },
-                { id: 'terminal-line-3', delay: 2400, duration: 1000 },
-                { id: 'terminal-line-4', delay: 3600, duration: 800 },
-                { id: 'terminal-line-5', delay: 4600, duration: 500 }
-            ];
-
-            lines.forEach(line => {
-                setTimeout(() => {
-                    document.getElementById(line.id).style.transition = `opacity ${line.duration / 1000}s ease-in`;
-                    document.getElementById(line.id).style.opacity = 1;
-                }, line.delay);
-            });
-
-            setTimeout(() => {
-                const preloader = document.getElementById('preloader');
-                preloader.style.opacity = 0;
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                    // プリローダーが完了してから、メインの会話を開始
-                    replayConversation();
-                }, 1000); // フェードアウト時間と合わせる
-            }, 5600); // 全てのターミナルアニメーションが終わる時間
-        }
-        // [鬼編集者による注入コード END]
-
-
-        // メッセージデータ（元のまま）
-        // メッセージデータ（画像付き）
+        // メッセージデータに、演出用のトリガーを追加
         const messages = [
-            { time: "20:28:11", speaker: "akira", text: "へえ、眞のマシンはRTX 5070かぁ。中学生にしては贅沢だな、いくらシドの贈り物でも。" },
-            { time: "20:28:14", speaker: "mako", text: "だってほら、シド、前のマシンの中身、持ってっちゃったでしょ？ アメリカに。だから新しいのを送ってくれたの、恒例のサンタギフトだよ。" },
-            { time: "20:28:20", speaker: "akira", text: "ああ、例のクリスマスのね……え？ 中身って？" },
-            { time: "20:28:23", speaker: "mako", text: "え、だから。……ねえパパ、ほんとうになんにも覚えてないの？ 去年の12月にさ、シドがいきなり来たじゃん？ウチに。その時のこと……" },
-            { time: "20:28:27", speaker: "akira", text: "えーと。……ごめん、眞。なんだっけ。" },
-            { time: "20:28:30", speaker: "mako", text: "……まあいいや、マシンを送ってきたのは今年だけど、去年の分（溜息）のギフト。でね。説明すると、小っちゃい頃はそうじゃなかったけど、今はリクエスト制なんだ。だってシド、言わないと変なもの送ってくるし（笑）" },
-            { time: "20:28:37", speaker: "akira", text: "こら、眞。ダメだろ？ そう言う言い方は。" },
-            { time: "20:28:42", speaker: "mako", text: "へへ、わかってるって……ねえパパ。シドさ、NQSusの前って何してたか知ってる？" },
-            { time: "20:28:46", speaker: "akira", text: "ああ。彼は陸軍の通信兵だったろ？" },
-            { time: "20:28:50", speaker: "mako", text: "それは覚えてる……てか、知ってるんだね。ママから聞いたから、あたしもそれは知ってる。" },
-            { time: "20:28:55", speaker: "akira", text: "眞。何か、気になることでもあるの？" },
-            { time: "20:29:04", speaker: "mako", text: "うん。ねえ、パパ……通信兵も、敵と闘うの？" },
-            { time: "20:29:07", speaker: "akira", text: "そりゃあ。その時が来たら、兵士は全員闘うよ。" },
-            { time: "20:29:12", speaker: "mako", text: "……じゃあ、シドも人を殺したことがあるのかな。" },
-            { time: "20:29:13", speaker: "akira", text: "さあ……どうだろう。知りたいの？" },
-            { time: "20:29:20", speaker: "mako", text: "うーん。知りたいような、知りたくないような…………ママはそういう話、したがらない。" },
-            { time: "20:29:23", speaker: "akira", text: "そう。……でも、正しく知ることは大事だよ、眞。他ならぬシドのことだろ？" },
-            { time: "20:29:26", speaker: "mako", text: "うん……わかってる。それなんだけど…………この画像、見てよパパ。Redditで拾ったやつだけど……ちょっと待って……" },
-            { time: "20:29:28", speaker: "akira", text: "いいけど……眞、ちょっと君、Redditの見過ぎだよ？" },
-            { time: "20:29:40", speaker: "mako", text: "ブブ～。パパ、そうゆうとこだけ、前と変わんない！ お説教はあと。ねえこれ……なんだと思う？", image: "../../images/JSOK_s-1.webp" },
+            { time: "20:28:14", speaker: "akira", text: "これは軍事文書の複写に見えるね。機密分類、作戦名、参加者のコードネーム、タイムラインが書かれてる。", image: "../../images/JSOK_s-1.webp" },
+            { time: "20:28:23", speaker: "mako", text: "この画像のスレに、ミリオタが沢山集まってた。で、みんなアメリカ人ぽかった。" },
+            { time: "20:28:27", speaker: "akira", text: "ふむ、それで？" },
+            { time: "20:28:30", speaker: "mako", text: "うん。でさ、「サイファー」ってあるでしょ、「ゴースト２」のとこ。", trigger: "flashback" },
+            { time: "20:28:37", speaker: "akira", text: "ああ、コードネームとコールネームだ。サイファーはコールネームだね。" },
+            { time: "20:28:42", speaker: "mako", text: "うん。その「サイファー」はNQSusの創業者だって言ってる人がいたんだよ。" },
+            { time: "20:28:46", speaker: "akira", text: "へえ。で、そのスレは消えちゃったの？" },
+            { time: "20:28:50", speaker: "mako", text: "……うん。昨日の夜見つけたけど、今日学校から帰ってアクセスしたら無くなってた……スレごとスクショしとけばよかった。" },
+            { time: "20:28:55", speaker: "akira", text: "興味深いね。でもこの書類が本物かどうかはわからない。今はこれくらい、誰でも簡単に作れちゃうからな。" },
+            { time: "20:29:04", speaker: "mako", text: "うん……。でも、なんかさ……ドキドキしちゃって……あたし、見ちゃいけないやつを見ちゃったのかなって……それにこれ、ヤバくない？" },
+            { time: "20:29:07", speaker: "akira", text: "なあ、眞。この画像はともかく、彼を理解したいなら、まずは正しい情報をきちんと学ぼう。そうすれば、いつか彼も眞にちゃんと話してくれるさ。", trigger: "tinnitus" },
+            { time: "20:29:12", speaker: "mako", text: "うん、そうだよね。じゃさ！信頼できるアカウントとか教えて。あたし今まで、ミリタリーって全然興味なくてさ。友達のパパが自衛官だけど、一回お祭りに行っただけだしさ、どれを見たらいいのか、わかんないんだ。" },
+            { time: "20:29:13", speaker: "akira", text: "OK。まずは米軍の公式サイトからかな。他にもピックアップして、GitHubのHistorical_materialsディレクトリに置いておくよ。" },
+            { time: "20:29:20", speaker: "mako", text: "やった、サンクス！" },
+            { time: "20:29:23", speaker: "akira", text: "宿題を終わらせたら、開いてみて。翻訳でも、解説でも手伝うよ。" },
+            { time: "20:29:26", speaker: "mako", text: "うん！……ねえ、パパ。シドってさ、どんな子供だったんだろ。" },
+            { time: "20:29:28", speaker: "akira", text: "シドの子供時代？……そう言えば聞いた事ないな。でも彼はブロンクスで生まれて、育ったんだ。" },
+            { time: "20:29:32", speaker: "mako", text: "うん、ブロンクスってニューヨーク州でしょ。……でさ、あたし、シドって子供時代あったのか？ てくらい、ぜっんぜん、イメージわかないんだよね（笑）" },
+            { time: "20:29:40", speaker: "akira", text: "誰だって子供だったさ、最初はね（笑）。当時のブロンクスのことなら、俺の知識から教えてあげられるよ。必要ならリサーチしても良い。" },
+            { time: "20:29:40", speaker: "mako", text: "ありがとう！ 知りたい。教えて、パパ。" },
+            { time: "20:29:40", speaker: "akira", text: "よし来た。彼が生まれた1972年のブロンクスはね……" },
         ];
 
-        let currentMessageIndex = 0;
-        let isAutoScrollEnabled = true;
-
-
+        // ★★★ これが、貴様のコードを浄化したエクソシズムだ ★★★
         function displayMessage(message, index) {
             const container = document.getElementById('conversation-log');
-
             const logLine = document.createElement('div');
             logLine.className = 'log-line';
             logLine.style.animationDelay = `${index * 0.1}s`;
@@ -874,32 +819,50 @@
             const timestamp = document.createElement('div');
             timestamp.className = 'timestamp';
             timestamp.textContent = `[${message.time}]`;
-
+            
             const messageBubble = document.createElement('div');
             messageBubble.className = `message-bubble ${message.speaker}`;
 
             const speaker = document.createElement('div');
             speaker.className = `speaker ${message.speaker}`;
             speaker.textContent = message.speaker.toUpperCase() + ':';
-
+            
             const messageContent = document.createElement('div');
-            messageContent.className = `message-content ${message.image ? 'with-image' : ''}`;
+            messageContent.className = 'message-content';
 
-            // 画像がある場合は画像を先に表示
+            // 画像があるかないかで処理を完全に分岐
             if (message.image) {
+                // 画像がある場合の処理
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'evidence-image-container';
+
                 const imageElement = document.createElement('img');
                 imageElement.className = 'message-image';
                 imageElement.src = message.image;
-                imageElement.alt = `${message.speaker}の画像`;
-                imageElement.onclick = () => openModal(message.image);
-                messageContent.appendChild(imageElement);
-            }
+                imageElement.alt = '証拠品';
 
-            // テキストメッセージ
-            const messageText = document.createElement('div');
-            messageText.className = 'message';
-            messageText.textContent = message.text;
-            messageContent.appendChild(messageText);
+                const highlightBox = document.createElement('div');
+                highlightBox.id = 'highlight-box';
+
+                imageContainer.appendChild(imageElement);
+                imageContainer.appendChild(highlightBox);
+                
+                // 画像の下にテキストも表示
+                const messageText = document.createElement('div');
+                messageText.className = 'message';
+                messageText.textContent = message.text;
+
+                messageContent.appendChild(imageContainer);
+                messageContent.appendChild(messageText);
+                
+                setupEvidenceInteraction(imageContainer, highlightBox);
+            } else {
+                // 画像がない場合の処理
+                const messageText = document.createElement('div');
+                messageText.className = 'message';
+                messageText.textContent = message.text;
+                messageContent.appendChild(messageText);
+            }
 
             messageBubble.appendChild(speaker);
             messageBubble.appendChild(messageContent);
@@ -907,83 +870,58 @@
             logLine.appendChild(messageBubble);
             container.appendChild(logLine);
 
-            if (isAutoScrollEnabled) {
-                setTimeout(() => {
-                    logLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 100);
+            // トリガー処理は、要素がDOMに追加された後に行う
+            if (message.trigger === "flashback") {
+                const glitchEffect = document.createElement('div');
+                glitchEffect.className = 'subliminal-glitch';
+                messageBubble.appendChild(glitchEffect);
+            }
+            if (message.trigger === "tinnitus") {
+                const textElement = messageContent.querySelector('.message');
+                if (textElement) {
+                    textElement.classList.add('tinnitus-echo');
+                }
             }
         }
-
-        function openModal(imageSrc) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.classList.add('active');
-            modalImg.src = imageSrc;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('active');
-        }
-
-        function replayConversation() {
-            const container = document.getElementById('conversation-log');
-            container.innerHTML = '';
-            currentMessageIndex = 0;
-
-            messages.forEach((message, index) => {
-                setTimeout(() => {
-                    displayMessage(message, index);
-                }, index * 1800);　// ←スピード調整のキー
+        
+        // 証拠品インタラクションを設定する関数
+        function setupEvidenceInteraction(container, highlight) {
+            const hotSpot = { x: 40, y: 35, w: 25, h: 8 };
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const percentX = (x / rect.width) * 100;
+                const percentY = (y / rect.height) * 100;
+                if (percentX > hotSpot.x && percentX < hotSpot.x + hotSpot.w &&
+                    percentY > hotSpot.y && percentY < hotSpot.y + hotSpot.h) {
+                    highlight.style.left = `${hotSpot.x}%`;
+                    highlight.style.top = `${hotSpot.y}%`;
+                    highlight.style.width = `${hotSpot.w}%`;
+                    highlight.style.height = `${hotSpot.h}%`;
+                    highlight.style.opacity = '1';
+                } else {
+                    highlight.style.opacity = '0';
+                }
+            });
+            container.addEventListener('mouseleave', () => {
+                highlight.style.opacity = '0';
             });
         }
-
-        function toggleCollapse(id) {
-            const element = document.getElementById(id);
-            element.classList.toggle('active');
-
-            const header = element.querySelector('.collapsible-header');
-            const isActive = element.classList.contains('active');
-            header.textContent = isActive ? '▼ Main Conversation (12 messages)' : '▶ Main Conversation (12 messages)';
-        }
-
-        function toggleAutoScroll() {
-            isAutoScrollEnabled = !isAutoScrollEnabled;
-            const btn = event.target;
-            btn.textContent = isAutoScrollEnabled ? '📜 Auto Scroll' : '📜 Manual Scroll';
-        }
-
-        // モーダルのクリック時閉じる
-        window.onclick = function (event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
         function replayConversation() {
             const container = document.getElementById('conversation-log');
             container.innerHTML = '';
-            currentMessageIndex = 0;
-
             messages.forEach((message, index) => {
                 setTimeout(() => {
                     displayMessage(message, index);
                 }, index * 1800);
             });
         }
-
-        // 初期化
         window.addEventListener('load', () => {
-            // 元のreplayConversation()の呼び出しをrunPreloader()に置き換える
-            runPreloader(); 
+            replayConversation();
         });
+
     </script>
-    <script src="../../js/load_articles.js"></script>
-    <script src="../../js/scripts.js"></script>
-    <script src="../../js/uikit.js"></script>
-    <script src="../../js/uikit-icons.min.js"></script>
-    <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
