@@ -450,6 +450,24 @@
                 margin-right: 0 !important;
             }
 
+
+        @media (max-width: 768px) {
+            .controls {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                justify-content: center;
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .control-btn {
+                flex: 1;
+                min-width: 80px;
+                padding: 0.6rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
             .message-bubble.akira {
                 margin-left: 20px;
             }
@@ -588,24 +606,7 @@
             transform: scale(1.1);
         }
 
-        /* レスポンシブ対応 */
-        @media (max-width: 768px) {
-            .controls {
-                bottom: 10px;
-                right: 10px;
-                left: 10px;
-                justify-content: center;
-                flex-direction: row;
-                gap: 8px;
-            }
 
-            .control-btn {
-                flex: 1;
-                min-width: 80px;
-                padding: 0.6rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
 
         /* パルス効果（注目を集めたい場合） */
         .pulse {
@@ -836,14 +837,13 @@
 
 
         // メッセージデータ（元のまま）
-        // メッセージデータ（画像付き）
         const messages = [
-            { time: "20:28:11", speaker: "akira", text: "へえ、眞のマシンはRTX 5070かぁ。中学生にしては贅沢だな、いくらシドの贈り物でも。" },
+            { time: "20:28:11", speaker: "akira", text: "へえ、眞のマシンはRTX5070かぁ。中学生にしては贅沢だな、いくらシドの贈り物でも。" },
             { time: "20:28:14", speaker: "mako", text: "だってほら、シド、前のマシンの中身、持ってっちゃったでしょ？ アメリカに。だから新しいのを送ってくれたの、恒例のサンタギフトだよ。" },
             { time: "20:28:20", speaker: "akira", text: "ああ、例のクリスマスのね……え？ 中身って？" },
-            { time: "20:28:23", speaker: "mako", text: "え、だから。……ねえパパ、ほんとうになんにも覚えてないの？ 去年の12月にさ、シドがいきなり来たじゃん？ウチに。その時のこと……" },
-            { time: "20:28:27", speaker: "akira", text: "えーと。……ごめん、眞。なんだっけ。" },
-            { time: "20:28:30", speaker: "mako", text: "……まあいいや、マシンを送ってきたのは今年だけど、去年の分（溜息）のギフト。でね。説明すると、小っちゃい頃はそうじゃなかったけど、今はリクエスト制なんだ。だってシド、言わないと変なもの送ってくるし（笑）" },
+            { time: "20:28:23", speaker: "mako", text: "え、だから。……ねえパパ、覚えてないの？ あの日の記憶、ぜんぶ消えちゃったの？ Q1のことも……" },
+            { time: "20:28:27", speaker: "akira", text: "えーと。Q1？……ごめん、眞。なんだっけ。" },
+            { time: "20:28:30", speaker: "mako", text: "……まあいいや（溜息）。このマシンはね、去年の分のギフト。でね。説明すると、今はリクエスト制なんだ。だってシド、言わないと変なもの送ってくるし（笑）" },
             { time: "20:28:37", speaker: "akira", text: "こら、眞。ダメだろ？ そう言う言い方は。" },
             { time: "20:28:42", speaker: "mako", text: "へへ、わかってるって……ねえパパ。シドさ、NQSusの前って何してたか知ってる？" },
             { time: "20:28:46", speaker: "akira", text: "ああ。彼は陸軍の通信兵だったろ？" },
@@ -961,23 +961,13 @@
             }
         };
 
-        function replayConversation() {
-            const container = document.getElementById('conversation-log');
-            container.innerHTML = '';
-            currentMessageIndex = 0;
-
-            messages.forEach((message, index) => {
-                setTimeout(() => {
-                    displayMessage(message, index);
-                }, index * 1800);
-            });
-        }
-
-        // 初期化
+                // 初期化
         window.addEventListener('load', () => {
             // 元のreplayConversation()の呼び出しをrunPreloader()に置き換える
             runPreloader(); 
         });
+
+
     </script>
     <script src="../../js/load_articles.js"></script>
     <script src="../../js/scripts.js"></script>

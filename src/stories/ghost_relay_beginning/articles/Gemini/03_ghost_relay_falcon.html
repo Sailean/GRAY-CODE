@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRAY CODE　Episode-0</title>
+  <link rel="stylesheet" href="../../css/sailean_uikit.css">
+  <link rel="stylesheet" href="../../css/sailean_uikit_patched.css" />
+  <link rel="stylesheet" href="../../css/uikit.css">
+  <title>Ghosts of the Model – 2002 — 03Y</title>
+  <style>
+    /* [鬼編集者による注入コード START] */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    :root {
+      --cockpit-bg: #1a1a1f;
+      --cockpit-text: #ff9900;
+      /* 計器のアンバー色 */
+      --cockpit-glow: rgba(255, 153, 0, 0.4);
+      --nv-green: #42f560;
+      /* 前章のナイトビジョン色 */
+      --nv-background: #0a1a0a;
+    }
+
+    /* 基本はコックピットのスタイル */
+    body {
+      font-family: 'Orbitron', sans-serif;
+      /* デジタル計器風フォント */
+      background-color: var(--cockpit-bg);
+      color: var(--cockpit-text);
+      margin: 0;
+      line-height: 1.7;
+      min-height: 100vh;
+      text-shadow: 0 0 8px var(--cockpit-glow);
+      animation: helicopter-vibration 0.2s infinite linear;
+      transition: background-color 0.8s ease, color 0.8s ease;
+      /* スムーズな切り替えのため */
+    }
+
+    /* ヘリの振動 */
+    @keyframes helicopter-vibration {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(0, -1px);
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+
+      75% {
+        transform: translate(1px, 0);
+      }
+    }
+
+    /* 計器の走査線 */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 3px;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* 地上視点（サイファー）に切り替わった時のスタイル */
+    .cypher-view {
+      background-color: var(--nv-background) !important;
+      color: var(--nv-green) !important;
+      font-family: 'Special Elite', 'Courier New', monospace !important;
+      text-shadow: 0 0 6px rgba(66, 245, 96, 0.4) !important;
+      animation: breath 8s infinite ease-in-out !important;
+      transition: background-color 0.8s ease, color 0.8s ease;
+    }
+
+    @keyframes breath {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.001);
+      }
+    }
+
+    /* 各視点セクションのコンテナ */
+    .view-section {
+      padding: 4rem 2rem;
+      transition: opacity 0.8s ease;
+    }
+
+    /* 無線通信のスタイル */
+    .radio-chatter {
+      font-style: italic;
+      color: #90ee90;
+      /* 通信っぽい緑色 */
+      border-left: 3px solid #90ee90;
+      padding-left: 1em;
+      margin: 1em 0;
+    }
+
+    /* UIKITのスタイルを上書き */
+    .heading,
+    .uk-heading {
+      color: inherit !important;
+    }
+
+    /* [鬼編集者による注入コード END] */
+  </style>
+</head>
+
+<body>
+  <!-- ナビゲーション（上部固定） -->
+  <div class="uk-position-top uk-position-z-index uk-section-secondary uk-padding-remove-vertical">
+    <div class="tm-header">
+      <div class="uk-light uk-position-z-index"
+        uk-sticky="animation: uk-animation-slide-top; sel-target: uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
+        <div class="uk-container"><!-- uk-container -->
+          <div uk-navbar><!-- ナビバー -->
+            <div class="uk-navbar-left">
+              <a class="uk-navbar-item uk-logo" href="../../../../index.html">
+                <picture>
+                  <source srcset="../../../../images/logo_gray-code.png" width="100" media="(max-width: 340px)">
+                  <img id="logo" src="../../../../images/logo_gray-code.png" width="300" alt="GRAY CODE_logo"
+                    title="GRAY CODE">
+                </picture>
+              </a>
+            </div>
+            <div class="uk-navbar-right">
+              <ul class="uk-navbar-nav">
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="#stories">Stories</a></li>
+              </ul>
+            </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="uk-section uk-section-small uk-padding">
+        <div class="uk-container uk-container-expand heading ">
+                <h2 class="uk-margin-large-top heading">0章 ゴースト・リレー　Ⅰ. 砂漠の幽霊</h2>
+                <h3 class="heading uk-margin-large-top">ファルコン</h3>
+                <p class="uk-heading"><strong>2002年10月4日 午前4時16分</strong></p>
+                    <div id="story-content">
+                        <!-- セクション1: ファルコン視点 -->
+        <div class="view-section" id="falcon-view-1">
+            <div class="uk-container uk-container-small">
+                <p>「ふん、命令違反？ 上等だ、クソくらえだ。デルタが帰還して、あいつらが帰らないなんてあるか？」<br>
+          陸軍准尉のケビン・マッケンジーは、操縦桿を握りながら声に出して毒づいた。<ruby>Ghost<rt>ゴースト</rt></ruby>チームの救援タイムリミットから、既に24時間が経過している。<br>
+          並行するオペレーションのために搭乗していたクルーたちを乗せた特殊作戦仕様のチヌーク・MH‑47は、基地で給油を済ませるとさらに燃料を積み込んだ。<br>
+          チヌークはケビンの独断で再び約束地点へ戻り、<ruby>旋回待機<rt>ホールド</rt></ruby>しながら高高度の上空に貼り付いていた。<br>
+          「くそっ……<ruby>下<rt>おろ</rt></ruby>した客は必ず拾って帰る、それが俺たちだ。まだ48時間経ってねえ、俺は粘るぞ」<br>
+          無線パネルを睨みつけるケビンの額には汗が浮いている。<br>
+          彼が剃り上げた頭をブルンと振ったそのとき、無線パネルが鳴った。<br>
+        <div class="radio-chatter">
+          『ガーディアン62、こちらタロン・オービット。BLUE TWO受信、グリッド修正せよ……』
+        </div>
+        ゴーストからの救難信号は、上空から地上を監視していたタロン偵察機が拾っていた。待ち望んでいたその知らせに、ケビンは息を飲んで呟く。<br>
+        「おい…………聞いたか？ 見ろよ、畜生！ 」<br>
+        彼は<ruby>JSOC<rt>ジェイソック</rt></ruby>の<ruby>TOC（戦術指揮所）<rt>ティー・オー・シー</rt></ruby>地上局から送られて来た無線に応えた。<br>
+        「了解、TOC」<br>
+        ケビンは計器パネルを叩き、キャビンを振り向いて仲間に叫ぶ。<br>
+        「生きてる。生きてるぞ、ざまあみろだ！」<br>
+        クルーたちが歓声を上げる中、ケビンが計器を確認して言う。<br>
+        「よーし、行くぞ！ エンジェルス6.1、<ruby>ETA 10（到着予定10分）<rt>イーティーエー・テン</rt></ruby>！ 全速で突っ込むぞ。いいな、ジョン！」<br>
+        副操縦士のジョンはニヤリと笑い、<br>
+        「了解、隊長。全開で行きます」とケビンに向かって親指を立てた。</div>
+        </div>
+
+        <!-- セクション2: サイファー視点 -->
+        <div class="view-section" id="cypher-view-1">
+          <div class="uk-container uk-container-small">
+            岩陰に膝をつく兵士を眩暈と吐き気が襲い、彼は空っぽの胃から酸っぱい液体を砂の上に吐き出した。煤と血で汚れた袖で口元を拭い、大きく喘ぐ。<br>
+            耐え難い眠気に襲われ、兵士が目を閉じかけた次の瞬間、彼の耳に遠く空気を震わせる振動音が届いた。<br>
+            ──このローター音は……チヌークだ。<br>
+            顔を上げた彼は、遠くに点滅する緑と赤のストロボライトを見て、ナイトビジョンを跳ね上げた。<br>
+            その光は近づくにつれて目を射る光源となり、その光の中に大型の輸送ヘリの黒い影が浮かび上がる。<br>
+            チヌークの前後のローターが生む低周波が空気と大地を震わせた。光をバックに砂が円を描いて舞い上がり、黒い影はみるみる巨大になって兵士の頭上に迫る。<br>
+            兵士は右手で拳を作るとそれを固く握り締め、膝元の砂を強く叩いた。<br>
+            ──ファルコン……ケビンが、来てくれたんだ。……やったぞ、兄貴。<br>
+            仲間を背負った兵士は立ち上がり、わずかに開けた砂地によろめき出ると、その光を見上げた。 </div>
+        </div>
+
+        <!-- セクション3: ファルコン視点 -->
+        <div class="view-section" id="falcon-view-2">
+            <div class="uk-container uk-container-small">
+                <div class="radio-chatter">
+                『高度80フィート、パワー・チェック・グリーン』
+                </div>
+          その無線を聞きながら、パイロットのケビンはナイトビジョン越しに砂地を見下ろした。舞い上がる砂の幕のむこうに、仲間を肩に背負った兵士の輪郭がぼんやりと浮かぶ。<br>
+          「おい……行きに乗せたのは七人のはずだが……俺には二人しか見えねえな？」<br>
+          ジョンが応える。<br>
+          「はい……一人は意識不明のようですね。ゴーストチーム、二名確認。周囲、見当たりません」
+        </div>
+    </div>
+
+        <!-- セクション4: サイファー視点 -->
+        <div class="view-section" id="cypher-view-1">
+          <div class="uk-container uk-container-small">舞い上がる砂と千切れた草が、チヌークのランディングライトに照らされて渦を巻く。<br>
+          地上の兵士は輸送ヘリを見上げながら、血が滲む唇を開いた。<br>
+          「ゴースト。家へ……帰れるぞ」<br>
+          微細な砂が彼のゴーグルに当たり、波痕を重ねながら吹き飛ばされていく。<br>
+          サイファーは地面に膝をついてナイロンベルトを解くと、ゴーストを地面に横たえた。</div>
+        </div>
+
+                <!-- セクション5: ファルコン視点 -->
+        <div class="view-section" id="falcon-view-2">
+            <div class="uk-container uk-container-small">
+               機内では、ケビンがインターコム越しに怒鳴っていた。<br>
+          「二名確認！ 彼らを上げろ、急げ！ ホイスト・スタンバイ！」<br>
+          二つの巨大なローターに煽られ、砂塵が巻き上がる。<br>
+          サイファーはM4のスリングをプレートキャリアから外すと銃床を砂に突き立てた。そしてインターコムのスイッチを入れると、コックピットのケビンに語り掛ける。<br>
+          「ファルコン、こちら通信兵サイファー。ゴースト隊長は意識なし、<ruby>KIA<rt>戦死</rt></ruby>の可能性あり。自分は負傷、歩行可能」<br>
+          ケビンは「くそっ……ゴースト」と呟き、すぐに「……了解！ パラレスキュー、降下準備。医療・遺体搬送装備を用意する」とサイファーに応える。そして、<br>
+          「おい、ジョン。これ以上は下げられんぞ。ただでさえ見えねぇのに、ブラウンアウトしちまう」と副操縦士に顔を向ける。<br>
+          「ええ。この風が心配ですが、今はワルツがいる。彼が何とかしてくれるでしょう」ジョンはそう応え、キャビンを振り返った。<br>
+          宙に停止したチヌークのハッチが開き、ウインチドラムの甲高いモーター音とともに90フィートのスチールケーブルが滑り出た。<br>
+          ケーブル末端のスリングが風に巻かれ、緑のストロボの点滅をバックに暴れる。分厚いケーブルグローブを締めたクルーチーフがスチール製のホイストケーブルを手でさばき、落下速度にブレーキをかけた。<br>
+          ケビンがキャビンへ向かって叫ぶ。<br>
+          「おい、ワルツ！ 何回だ」<br>
+          「二人と装備で約520ポンド（約240キロ）……風がある。Y字スリングを二本使って二回にします。いずれにしても降りて隊長の状況を確認します、急ぎましょう」<br>
+          空軍の<ruby>航空救難員<rt>パラレスキュージャンパー</rt></ruby>、「ワルツ」ことウォルシュがヘルメット越しに親指を立てる。<br>
+          ウォルシュはフックに自分のD環を掛けるとひらりと身を翻し、ハッチの闇へ消えた。</div>
+    </div>
+      </div>
+    </div>
+      <p>Ⅰ. 砂漠の幽霊 ＞ = <a href="02_ghost_relay_op.html">サイファー</a> = ◀◀ ファルコン ▶▶ = <a
+          href="04_ghost_relay_waltz.html">PJ・ワルツ</a> =</p>
+    </div>
+
+    <!--  フッター # -->
+    <div class="uk-section uk-section-secondary uk-section-xsmall"><!-- フッター -->
+      <div class="uk-container">
+        <p class="uk-text-center">GRAY CODE</p>
+        <p class="uk-text-center uk-text-nowrap">&copy; 2024-2025 @Sailean514
+        </p>
+        <p class="uk-text-center">
+          <a class="uk-icon-button" href="https://x.com/Sailean514">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="uk-icon-image" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div><!-- フッターの閉じ -->
+
+ <script>
+    // [鬼編集者による注入コード START]
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.6 // 画面の60%以上を占めたら切り替え
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const viewId = entry.target.id;
+                    if (viewId.includes('cypher')) {
+                        document.body.classList.add('cypher-view');
+                    } else {
+                        document.body.classList.remove('cypher-view');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.view-section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+    // [鬼編集者による注入コード END]
+    </script>
+    <script src="../../js/load_articles.js"></script>
+    <script src="../../js/scripts.js"></script>
+    <script src="../../js/uikit.js"></script>
+    <script src="../../js/uikit-icons.min.js"></script>
+    <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
