@@ -95,34 +95,53 @@
 
 
 
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const lang = urlParams.get('lang') || 'jp';
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get('lang') || 'jp';
 
-      // 🔹 グローバルナビ用（上部メニュー）
-      fetch('articles.json')
-        .then(res => res.json())
-        .then(data => {
-          const navList = document.getElementById('digest-nav');
-          navList.innerHTML = `
+// 🔹 グローバルナビ用（上部メニュー）
+fetch('articles.json')
+  .then(res => res.json())
+  .then(data => {
+    const navList = document.getElementById('digest-nav');
+    navList.innerHTML = `
       <li><a href="index.html">📘 目次（Index）に戻る</a></li>
     `;
-          navList.innerHTML += data.map(entry => {
-            const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
-            const title = lang === 'en' ? entry.title_en : entry.title_jp;
-            const label = lang === 'en'
-              ? `Chapter ${entry.chapter}: ${title}`
-              : `第${entry.chapter}章 ${title}`;
-            if (entry.draft === true) {
-              // グレー表示、リンク無し
-              return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
-            }
-            // 公開済みのみリンク
-            return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
-          }).join('');
-        });
+    navList.innerHTML += data.map(entry => {
+      const lang = (window.location.search.includes('lang=en')) ? 'en' : 'jp';
+      const title = lang === 'en' ? entry.title_en : entry.title_jp;
+      const label = lang === 'en'
+        ? `Chapter ${entry.chapter}: ${title}`
+        : `第${entry.chapter}章 ${title}`;
+      if (entry.draft === true) {
+        // グレー表示、リンク無し
+        return `<li><span style="color:gray;">${label}${lang === 'en' ? ' (Coming Soon)' : '（編集中）'}</span></li>`;
+      }
+      // 公開済みのみリンク
+      return `<li><a href="article.html?file=${entry.filename}&lang=${lang}">${label}</a></li>`;
+    }).join('');
+  });
 
-    </script>
+// 🔹 英語目次リスト（en_articles.json）
+data.forEach(article => {
+  if (article.draft === true) {
+    html += `
+      <li>
+        <span class="uk-text-bold" style="color: gray;">
+          Chapter ${article.chapter}: ${article.title_en} (Coming Soon)
+        </span> - <span style="color: gray;">${article.date}</span>
+      </li>`;
+  } else {
+    html += `
+      <li>
+        <a href="article.html?file=${article.filename}&lang=en" class="uk-link-reset">
+          <span class="uk-text-bold">Chapter ${article.chapter}: ${article.title_en}</span> - ${article.date}
+        </a>
+      </li>`;
+  }
+});
+
+</script>
 
     <script src="../js/load_articles.js"></script>
 
