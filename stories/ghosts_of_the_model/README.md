@@ -17,7 +17,7 @@ This story is entirely fictional.
 
 ## 📚 Read Online
 
-- Digest edition: https://sailean.github.io/Ghosts-of-the-Model/stories/digest/index.html
+- Digest edition: https://sailean.github.io/stories/Ghosts-of-the-Model/stories/digest/index.html
 
 ## ⚖️ License
 
@@ -32,7 +32,7 @@ See LICENSE for more details.
 このお話は完全なるフィクションです。
 
 📚 **オンライン版：**  
-https://sailean.github.io/Ghosts-of-the-Model/stories/digest/index.html
+https://sailean.github.io/stories/Ghosts-of-the-Model/stories/digest/index.html
 
 
 📂 ディレクトリ構成：
