@@ -17,7 +17,7 @@ This story is entirely fictional.
 
 ## 📚 Read Online
 
-- [Digest edition: https://sailean.github.io/GRAY-CODE/src/stories/ghosts_of_the_model/index.html
+- [Digest edition: https://sailean.github.io/GRAY-CODE/stories/ghosts_of_the_model/index.html
 
 ## ⚖️ License
 
@@ -32,7 +32,7 @@ See LICENSE for more details.
 このお話は完全なるフィクションです。
 
 📚 **オンライン版：**  
-https://sailean.github.io/GRAY-CODE/src/stories/ghosts_of_the_model/index.html
+https://sailean.github.io/GRAY-CODE/stories/ghosts_of_the_model/index.html
 
 
 📂 ディレクトリ構成：
