@@ -1,0 +1,201 @@
+Chapter — Green Veil (Colombia, 1996)
+
+The jungle night pressed in like damp cloth, swallowing every breath Sidney Grayson exhaled. Even through the humming fans of the **AN/PRC‑119A SINCGARS** manpack at his shoulders he could feel the weight of the air, fragrant with guava rot and diesel and distant cordite. The battalion net crackled over his bone‑conduction earpiece—loose vowels in rapid Spanish, bursts of laughter that ended too sharply. Somewhere, beyond the black hulks of ceiba and kapok, FARC spotters were listening to the same ether, tracing ghosts across their hand‑rolled frequency charts. He imagined them bent over battered **PRD‑11** direction‑finders, ready to triangulate a wayward transmission and walk mortars onto the grid square the instant he keyed his handset.
+
+He kept his thumb well clear of the PTT.
+
+In the shadows beside him Corporal ‘Brick’ Ramirez mouthed a silent complaint, juggling two spools of bright‑orange fiber and a canvas satchel packed with plastic explosive. Their point man, Staff Sergeant Michael Rosario—twelve years older, half a head taller, the man Sidney still called _brother_—motioned the column forward with two fingers and an easy grin that made the darkness seem somehow optional.
+
+> **0123 Lima** — Río Putumayo floodplain, 4 km NE of Puerto Asís
+
+Three days earlier they had parachuted into a burned‑out pasture, humping forty‑eight kilos of equipment through knee‑deep mud to reach the army patrol base. Officially the mission was _Plan Colombia liaison and communication integration_: an alphabet soup excuse for clandestine fiber bypass work the host nation could later pretend was their own idea. Unofficially, Green Veil was a stopgap—rip a clandestine HF relay out of rebel hands before Bogotá’s political window slammed shut.
+
+Sidney had walked this tightrope before—enemy ears overlapping friendly lies until north and south blurred together—but something about the stillness tonight made his pulse snag. Maybe it was the sporadic gunfire that had whispered along the valley at dusk, maybe the hush that settled afterward, as though the trees themselves held their breath.
+
+---
+
+#### **Ceiba**
+
+The village appeared without warning: a clutch of palm‑thatch roofs slumped beneath the vast moonlit umbrella of a ceiba pentandra. From its buttressed roots the tree rose five, six storeys before exploding into a lattice of branches silvered by cloud‑filtered starlight. A rickety observation platform clung near the crown. Sidney wondered what child had lashed those planks together, what games they played where jaguars still hunted by scent.
+
+Through night‑vision green he caught movement—two skinny legs dangling from the platform’s edge. A boy, no older than ten, swinging his feet while fireflies stitched ribbons around him.
+
+Brick hissed. “Kid’ll spot us.”
+
+“Negative.” Michael’s whisper was a rumble. “He’s our in.”
+
+They ghosted forward. Sidney killed his tilt‑up monocular and let bare eyes adjust. The village smelled of boiled plantain and woodsmoke, a softer note of kerosene. No sentries. No old men playing cards under hurricane lamps. Too quiet for midnight.
+
+Brick eased beneath the ceiba, palmed the tree’s warm flank. “How high?”
+
+“Twenty‑five meters.”
+
+“Lucky I packed rope.”
+
+Sidney caught the awe in Brick’s grin and remembered being eight, climbing the fire escape outside his Bronx apartment, pretending rusted steel was rainforest wood. The memory fluttered away when he felt the hiss of humidity against his ribs. The boy above them had stopped swinging his legs, peering down between the plank gaps.
+
+Michael spoke first, Spanish laced with island cadences. “Buenas noches, amigo. Venimos en paz.”
+
+A pause. Then the boy’s thready voice: “¿Eres del ejército?”
+
+Michael lied like water. “Somos doctores. Buscamos al señor Cura.” We are doctors looking for the priest. It wasn’t even clever, but innocence sometimes wanted only to be invited to play.
+
+The boy disappeared from view. A minute later a length of hemp rope tumbled from the platform, a frayed knot landing at Sidney’s boots. Brick looked at Sidney, raised an eyebrow. _Your call, Cipher._
+
+Sidney shucked his ruck, clipped the SINCGARS to Brick’s harness, and began to climb.
+
+---
+
+#### **Coils & Ghosts**
+
+Up close the platform was a miracle of crudity: green branches hacked flat with machete, nailed crosswise with crooked flooring boards. The boy—skin like polished mahogany, eyes huge—squatted spider‑limbed near the trunk. Around his neck hung something improbable: a plastic flashlight bulb taped to two AAA batteries and wired into a single red LED that blinked every second.
+
+Sidney’s breath caught. That same pulse pattern marked the _tag‑beacon_ the team used on their field antennas. He’d strapped one to the improvised UHF pole they had slotted four kilometers back, thirty feet up a rubber tree to coddle the line‑of‑sight. The LED sequence was encrypted timecode; to a child it was christmas light.
+
+“How did you get that?” Sidney asked in halting Spanish.
+
+The boy shrugged, pointed toward the forest. “Señor soldado lo dejó.” A soldier left it.
+
+Rebels. Or government troops. Or paramilitaries in stolen BDUs. Labels blurred. Sidney swallowed the bitter taste of symmetry—he left signals everywhere he operated, bright crumbs a curious mind could follow back to the witch’s cottage.
+
+He squatted beside the boy, letting the night around them breathe. In the distance frogs hammered out binary, a riff of crickets forming carrier wave. From here he could see the whole village: twenty huts in three rows, an adobe church leaning under a tin roof that glinted dull pewter. Beyond the far homesteads fog pooled over coca rows, moonlit like powdered bone.
+
+“¿Tienes nombre?”
+
+“Tomás.” The boy beamed.
+
+Sidney produced a stick of cherry gum from an inner sleeve pocket, tore the wrapper, and handed it over. The boy’s eyes widened; he accepted it like sacrament.
+
+Below, Michael’s voice drifted up. “Cipher, wrap it.”
+
+Sidney nodded to empty air. In the platform’s corner lay a tangle of coaxial cable, insulation chewed by parrots. He leaned, inspecting. _AN/TTC‑46 fiber drop,_ maybe ninety meters coiled. Useless for these villagers, priceless for FARC running makeshift telephone benches. They’d spliced military fiber into black‑market Cisco rigs, bridging jungle ops to Panama narco money.
+
+He pulled a Leica mini‑imager from his chest pocket, snapped silent pictures. Dates, lengths, splice codes. Evidence enough—intel the brass would brandish at Congress while spraying C‑130 pallets of aid across Bogotá.
+
+“Tomás,” he tried, “escucha. Hoy—mucho fuego, peligro. Tienes que bajar ahora.” Fire is coming. You need to go.
+
+The boy’s smile faltered. He glanced toward smoky horizon, where thunder rolled without lightning.
+
+Sidney felt dread coil behind his heart.
+
+---
+
+#### **Contact**
+
+On the village edge a radio barked. Brick, crouched by the church doorway, keyed sinusoidal squelch—two clicks: _movement._ Sidney flattened against trunk, rifle raised. Through NVG he spotted shapes emerging from treeline north: civilian trucks, headlights taped, beds stacked with something lumpy under tarps.
+
+Michael whispered over intrateam net: “Pumas.” Local paramilitary. Worse than rebels; they considered civilians hazard fuel.
+
+“Orders?” Sidney asked.
+
+Michael’s reply was static‑scarred. “We observe, record, exfil. No hero plays.”
+
+A younger Sidney might have swallowed that. Tonight it lanced him. They were ghosts operating under an SOFA illusion—foreigners without flags, denied by both capitals if caught. Engage and the mission died—in truth, they’d die with it.
+
+Down on the ground villagers began to stir, lanterns lighting doorways. Women in cotton shifts pulled children from hammocks. A dog barked and abruptly went silent. Trucks ground to a halt before the church; men leapt down, brandishing RPKs, machetes, cans of gasoline.
+
+Tomás’s grip found Sidney’s forearm. “¿Quiénes son?”
+
+“Tomás—” Sidney whispered, “escóndete.” He gestured to the trunk, the thick seam where buttress met bark. The boy shook his head, too afraid to move.
+
+Below, Brick hissed. “Fuel cans.”
+
+Sidney’s intestines wrung. _Ambiguous. Could be FARC false‑flag, could be paras blaming FARC. Could be us by omission._
+
+“Cipher,” Michael’s voice: low, loaded, “record only.”
+
+Sidney flipped the miniature Olympus audio pod on his harness, pointed the high‑gain mic dish between slats. He traced the digital compass overlay on his monocular, marking angle and range.
+
+A paracommander shouted: “¡Todos afuera! ¡El Ejército viene! ¡Traidores!” Traitors, the army is coming. A manufactured pretext.
+
+A machete slammed a hut door. Screams. Petrol sloshed. Someone struck a match.
+
+Flames bit thatch. The roar bloomed. Within heartbeats the hut was a kiln, smoke funneling into canopy. Another door kicked. Women fled into the square, chased by rifles.
+
+Sidney tasted copper. He reached for the **PRC‑119A** handset magnet‑clipped at his belt. Harvest two quick blasts—emergency satburst to the gunship loiter stack. On good days that meant fast‑moving A‑37 Dragons, old surplus jets flown by Colombian pilots with Yankee advisers. Tonight maybe nothing. But if he keyed the mic, enemy scanners would ping them before help cleared runway.
+
+He looked at Michael, thirty feet below. Their eyes locked. Michael tapped the barrel of his suppressed **M4A1** twice against his thigh, meaning _stay._
+
+The first gunshot cracked. A woman fell near the ceiba roots, crimson spray illuminated by firelight. Tomás’s gasp rattled the boards. Sidney pulled the boy’s head into his chest; the child moaned, fingernails digging seams of Sidney’s OD blouse.
+
+Under them, leaf‑mottle caught sparks. The ceiba loomed, venerated sentinel now tinder‑kissed. If the tree went up, every coordinate on his map would mean nothing.
+
+---
+
+#### **Broken Optics**
+
+Chaos smeared the square. Rebels—no, paramilitaries—fired into huts, herding the villagers toward a corral of flames. The adobe church bell tolled under random bullets, then crashed. A goat bleated as smoke swallowed the moon.
+
+Sidney knelt at the platform’s edge, rifle hugging shoulder. He centered reticle on a gunman dragging a girl by the hair. The man’s backpack sprouted a plastic fuel nozzle. Range 90 meters. _Single round. M855 will punch spall through him. Do it._
+
+He exhaled half, began second stage of trigger—
+
+“Cipher, _no._” Michael’s radio whisper was iron.
+
+Sidney’s vision blurred. His finger held. The gunman shoved the girl into the church, raised jerrycan overhead.
+
+In the earpiece: “Mission over if you shoot. Think!”
+
+Mission. Cable cuts, splices, data. Sid scraped spit from his palate—village or intel. A scale that never balanced.
+
+He removed finger from trigger.
+
+Below, Brick yanked a woman and two toddlers into the shadows of the ceiba roots, shoved them toward the river path. Paramilitary bullets stuttered. Brick fired a three‑round burst into the dark to draw attention, then melted back.
+
+Sidney felt the platform jolt—Tomás tried to stand. Sid clamped him down.
+
+Then he smelled it—kerosene on bark. Paramilitaries at the base, splashing trunks. One laughed, slapped the ceiba with open palm as though congratulating a bull.
+
+Michael voice: “Cipher, rope down south side, now.”
+
+Sid wrapped Tomás in his arms, hooked a figure‑eight descender to static line Brick had anchored. He clipped the boy into his own harness, whispered: “Cierra los ojos.” The child obeyed.
+
+They stepped off.
+
+At seven meters the world detonated. A wall of heat fanned upward, tossed embers past them. The ceiba ignited as though soaked in napalm—sap hissed like steam, green wood turning white. Sidney’s descent became fall; friction burned gloves, but he landed rolling, shielding Tomás beneath him.
+
+Brick hauled them behind a looted ox cart. His face shone ash‑grey beneath NVG glow. “Mike’s hit.”
+
+Sid scanned—found Michael limping near the schoolhouse, right thigh dark. He laid covering fire, emptying a mag. Flames reflected off brass shells skittering across packed earth.
+
+“Primary objective’s torched,” Brick shouted above roar. “We drag civilians to the tier‑one LZ and call for Pave Low or we stay and die.”
+
+Stay. Die. Sidney looked at Tomás clinging to his vest, tiny heartbeat fluttering. Looked at the LED pendant still blinking on the boy’s chest in perfect SINCGARS cadence—his fault, bright crumb.
+
+“Exfil south.” Sidney slung the boy onto his back piggy‑style, tightened hands over rope belts. Brick heaved Michael over one shoulder.
+
+They ran.
+
+---
+
+#### **Echoes**
+
+A kilometer beyond village perimeter the sky glowed apricot, smoke twisting into dawn. The team crouched in a drainage culvert, lungs rasping.
+
+Michael’s wound pumped arterial red—no exit. PSI pressure bandage slowed it but every pulse added to the stain. He squeezed Sidney’s wrist. “Not your fault,” he rasped.
+
+Sidney wanted to reply but words fractured. Instead he unhooked the boy’s LED pendant, wrapped it around his own dog tags. Tomás stared, eyes reflecting heartbreak.
+
+Brick caught the gesture and turned away.
+
+Sid keyed the PRC‑119A, transmitted a burst: **“Flash Nine, November‑Zero‑Six‑Alpha. Civcas high. Request rôle unved. Fire origin unknown.”**
+
+In Washington, that message would become calculus: collateral damage metrics, drip‑feed for policy committees. In Putumayo it meant helicopters.
+
+He ended with three pulses of the beacon code Tomás had thought a toy. A circle closed.
+
+Hours later, rotorwash battered the clearing. Colombian SF medics loaded Michael first. Sidney followed with the boy. From a stretch seat he watched smoke heave above rainforest canopy like a wounded thing, black on impossible green.
+
+Tomás slept curled against his ribs. The LED pendant blinked between them, steady as remorse.
+
+Sidney forced his eyes shut, but the afterimage of that burning ceiba burned hotter. The tree was sacred, villagers said. Home to ancestral spirits. _We scorched their ghosts too,_ he thought, _by standing still._
+
+He vowed the record would show ambiguity—that no uniform would claim the match. In that vagueness perhaps Tomás’s nightmares could one day fold into something gentler.
+
+Yet as the Huey banked north, Sidney suspected the guilt would keep its own ledger, carved deeper than any after‑action report.
+
+---
+
+##### **Fin.**
+
+_≈ 3,050 words_
