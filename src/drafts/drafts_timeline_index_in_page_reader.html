@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GRAY-CODE Drafts – タイムライン目次 + リーダー</title>
+<style>
+  :root { --bg:#0b0d10; --card:#131720; --ink:#e8edf3; --muted:#93a0b4; --acc:#7cc0ff; --border:#1e2430; }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);background:radial-gradient(1200px 800px at 70% -10%, #142035, var(--bg));}
+  header{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);background:linear-gradient(180deg, rgba(11,13,16,.9), rgba(11,13,16,.6));border-bottom:1px solid var(--border)}
+  .wrap{max-width:1200px;margin:0 auto;padding:18px 16px}
+  h1{margin:0 0 6px;font-weight:800;letter-spacing:.2px}
+  .controls{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center}
+  input,select,button{background:#0f1420;color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+  button{cursor:pointer}
+  main{padding:14px 16px 60px}
+  .layout{display:grid;grid-template-columns:1fr minmax(0,0);gap:14px;transition:grid-template-columns .25s ease}
+  .layout.open{grid-template-columns:1fr minmax(320px, 46vw)}
+  .grid{display:grid;gap:12px}
+  .card{border:1px solid var(--border);border-radius:16px;background:linear-gradient(180deg,#101521,#0c1018);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .card .head{display:flex;gap:10px;align-items:center;padding:14px 14px 6px}
+  .pill{font-size:12px;color:#c9d7ef;background:#0b1628;border:1px solid #20324b;padding:4px 8px;border-radius:999px}
+  .title{font-size:18px;font-weight:700}
+  .meta{color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap}
+  .body{padding:10px 14px 14px;display:grid;gap:8px}
+  .preview{color:#c6d1e4;white-space:pre-line;max-height:9lh;overflow:hidden;mask-image:linear-gradient(180deg,#000 70%, transparent)}
+  .actions{display:flex;gap:10px;flex-wrap:wrap}
+  .actions a,.actions button{ text-decoration:none;color:var(--ink);border:1px solid var(--border);padding:8px 10px;border-radius:10px;background:#0f1420 }
+  .tag{color:#a5f3fc;font-size:12px;border:1px solid #214b4b;background:#0a1616;padding:2px 8px;border-radius:999px}
+  .empty{color:var(--muted);padding:24px;text-align:center}
+  .hint{color:var(--muted);font-size:13px}
+  aside.reader{border-left:1px solid var(--border);background:#0b0f17;position:sticky;top:58px;height:calc(100vh - 58px);overflow:auto}
+  .reader .rhead{position:sticky;top:0;background:linear-gradient(180deg,#0b0f17,rgba(11,15,23,.85));backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 14px;display:flex;gap:8px;align-items:center;z-index:5}
+  .reader .rtitle{font-weight:800;font-size:18px}
+  .reader .rmeta{color:var(--muted);font-size:12px}
+  .reader .rbody{padding:14px;white-space:pre-wrap;word-wrap:break-word}
+  .right{margin-left:auto}
+  footer{border-top:1px solid var(--border);color:var(--muted);font-size:12px;padding:20px 16px 60px;text-align:center}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0b1320;border:1px solid #14203a;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>GRAY-CODE / drafts タイムライン目次 + リーダー</h1>
+      <div class="controls">
+        <input id="search" placeholder="検索（タイトル・本文・タグ）" />
+        <select id="sort">
+          <option value="dateDesc">日付↓（降順）</option>
+          <option value="dateAsc">日付↑（昇順）</option>
+          <option value="nameAsc">ファイル名 A→Z</option>
+          <option value="nameDesc">ファイル名 Z→A</option>
+        </select>
+        <button id="refresh">再読込</button>
+        <button id="export">JSONを保存</button>
+      </div>
+      <div class="hint">公開GitHub APIを使用。必要に応じて <span class="kbd">?token=ghp_xxx</span> をURL末尾に付与でレート制限回避可。 / 深いリンク: <span class="kbd">#file=ファイル名.md</span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="layout" id="layout">
+      <section class="grid" id="list"></section>
+      <aside class="reader" id="reader" hidden>
+        <div class="rhead">
+          <div>
+            <div class="rtitle" id="rtitle">読み込み中…</div>
+            <div class="rmeta"><span id="rdate"></span> · <span id="rfile"></span></div>
+          </div>
+          <span class="right"></span>
+          <button class="btn" id="openGh">GitHub</button>
+          <button class="btn" id="openRaw">RAW</button>
+          <button class="btn" id="copyLink">リンク</button>
+          <button class="btn" id="closeReader">閉じる</button>
+        </div>
+        <div class="rbody" id="rbody"></div>
+      </aside>
+    </div>
+    <div id="empty" class="empty" hidden>該当なし</div>
+  </main>
+
+  <footer>
+    <div>Repo: <span id="repoSpan"></span></div>
+  </footer>
+
+<script>
+// 設定
+const CONFIG = { owner:'Sailean', repo:'GRAY-CODE', branch:'main', path:'src/drafts' };
+const params = new URLSearchParams(location.search);
+for (const k of ['owner','repo','path','branch']) { if (params.get(k)) CONFIG[k] = params.get(k); }
+const GHTOKEN = params.get('token') || '';
+
+const apiBase = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.path}?ref=${CONFIG.branch}`;
+const rawBase = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
+const headers = GHTOKEN ? { Authorization: `Bearer ${GHTOKEN}` } : {};
+
+const state = {
+  all: [],
+  filtered: [],
+  current: null,
+  cacheKey: `gc_drafts_cache_${CONFIG.owner}_${CONFIG.repo}_${CONFIG.path}_${CONFIG.branch}`,
+};
+
+const el = {
+  list: document.getElementById('list'),
+  empty: document.getElementById('empty'),
+  search: document.getElementById('search'),
+  sort: document.getElementById('sort'),
+  refresh: document.getElementById('refresh'),
+  exportBtn: document.getElementById('export'),
+  repoSpan: document.getElementById('repoSpan'),
+};
+
+document.getElementById('repoSpan').textContent = `${CONFIG.owner}/${CONFIG.repo}/${CONFIG.path}@${CONFIG.branch}`;
+
+document.getElementById('refresh').addEventListener('click', bootstrap);
+
+document.getElementById('search').addEventListener('input', applyFilter);
+
+document.getElementById('sort').addEventListener('change', applyFilter);
+
+document.getElementById('export').addEventListener('click', () => downloadJSON(state.filtered));
+
+// Reader controls
+const layout = document.getElementById('layout');
+const reader = document.getElementById('reader');
+const rtitle = document.getElementById('rtitle');
+const rdate = document.getElementById('rdate');
+const rfile = document.getElementById('rfile');
+const rbody = document.getElementById('rbody');
+const btnClose = document.getElementById('closeReader');
+const btnGh = document.getElementById('openGh');
+const btnRaw = document.getElementById('openRaw');
+const btnLink = document.getElementById('copyLink');
+btnClose.addEventListener('click', ()=> closeReader());
+btnLink.addEventListener('click', ()=> { navigator.clipboard.writeText(location.href).then(()=>{ btnLink.textContent='コピー済'; setTimeout(()=>btnLink.textContent='リンク',1200) }) });
+
+bootstrap();
+window.addEventListener('hashchange', onHashChange);
+
+async function bootstrap(){
+  try {
+    el.list.innerHTML = '';
+    el.empty.hidden = true;
+    const cached = loadCache();
+    if(cached){ state.all = cached; }
+    if(state.all.length){ state.filtered = [...state.all]; render(state.filtered); }
+    // 最新取得
+    const fresh = await fetchAllMarkdownAsJSON();
+    state.all = fresh; state.filtered = [...fresh];
+    saveCache(fresh);
+    applyFilter();
+    onHashChange();
+  } catch(err){
+    console.error(err);
+    el.list.innerHTML = `<div class="empty">読み込みエラー：${escapeHtml(String(err.message||err))}<br>必要ならURL末尾に <span class='kbd'>?token=ghp_xxx</span></div>`;
+  }
+}
+
+async function fetchAllMarkdownAsJSON(){
+  const res = await fetch(apiBase, { headers });
+  if(!res.ok) throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
+  const listing = await res.json();
+  const files = listing.filter(x => x.type==='file' && /\.(md|markdown)$/i.test(x.name));
+  const items = await Promise.all(files.map(async f => {
+    const url = `${rawBase}/${encodeURIComponent(f.name)}`;
+    const mdRes = await fetch(url, { headers });
+    const md = mdRes.ok ? await mdRes.text() : '';
+    const meta = extractMeta(md, f.name);
+    return {
+      fileName: f.name,
+      path: f.path || `${CONFIG.path}/${f.name}`,
+      size: f.size,
+      urlGithub: `https://github.com/${CONFIG.owner}/${CONFIG.repo}/blob/${CONFIG.branch}/${CONFIG.path}/${encodeURIComponent(f.name)}`,
+      urlRaw: url,
+      ...meta,
+      body: md,
+    };
+  }));
+  return items.sort((a,b)=> (b.dateNum||0) - (a.dateNum||0));
+}
+
+function extractMeta(md, fileName){
+  let title = '';
+  let dateStr = '';
+  let tags = [];
+  let summary = '';
+  const fm = md.match(/^---[\s\S]*?---/);
+  if(fm){
+    const body = fm[0];
+    title = (body.match(/title:\s*(.*)/)?.[1]||'').trim().replace(/^"|"$/g,'');
+    dateStr = (body.match(/date:\s*([^\n]+)/)?.[1]||'').trim();
+    const tagLine = body.match(/tags?:\s*\[(.*?)\]/i)?.[1] || '';
+    if(tagLine) tags = tagLine.split(',').map(s=>s.trim().replace(/^['"]|['"]$/g,''));
+  }
+  if(!title){ title = (md.match(/^#\s+(.+)$/m)?.[1] || '').trim(); }
+  if(!title){ title = fileName.replace(/\.(md|markdown)$/i,''); }
+  const cleaned = md.replace(/^---[\s\S]*?---/, '').trim();
+  summary = cleaned.split(/\n\n/).slice(0,2).join('\n\n').slice(0, 280);
+  let date = parseDateLoose(dateStr) || parseDateFromFileName(fileName) || parseDateFromBody(md);
+  let dateNum = date ? +date : null;
+  let dateISO = date ? new Date(date).toISOString() : '';
+  if(tags.length === 0){
+    const inline = md.match(/^tags?:\s*(.+)$/mi)?.[1];
+    if(inline) tags = inline.split(/[ ,]+/).map(s=>s.trim()).filter(Boolean);
+  }
+  return { title, summary, dateISO, dateNum, tags };
+}
+
+function parseDateLoose(s){ if(!s) return null; s = s.replace(/[年\/.]/g,'-').replace(/月/g,'-').replace(/日/g,''); const m = s.match(/(20\d{2})-(\d{1,2})-(\d{1,2})/); if(!m) return null; const [_,y,mo,d] = m.map(Number); return new Date(y, mo-1, d); }
+function parseDateFromFileName(name){ const m = name.match(/(20\d{2})[_.-]?(\d{1,2})[_.-]?(\d{1,2})/); if(!m) return null; const [_,y,mo,d] = m.map(Number); return new Date(y, (mo||1)-1, d||1); }
+function parseDateFromBody(md){ const jp = md.match(/(20\d{2})年\s*(\d{1,2})月\s*(\d{1,2})日/); if(jp){ const [_,y,mo,d] = jp.map(Number); return new Date(y, mo-1, d);} const iso = md.match(/(20\d{2})-(\d{1,2})-(\d{1,2})/); if(iso){ const [_,y,mo,d] = iso.map(Number); return new Date(y, mo-1, d);} return null; }
+
+function applyFilter(){
+  const q = (document.getElementById('search').value||'').toLowerCase();
+  const sort = document.getElementById('sort').value;
+  let arr = [...state.all];
+  if(q){ arr = arr.filter(it => it.title.toLowerCase().includes(q) || (it.summary||'').toLowerCase().includes(q) || (it.body||'').toLowerCase().includes(q) || (it.tags||[]).join(',').toLowerCase().includes(q)); }
+  if(sort==='dateAsc') arr.sort((a,b)=> (a.dateNum||0)-(b.dateNum||0));
+  if(sort==='dateDesc') arr.sort((a,b)=> (b.dateNum||0)-(a.dateNum||0));
+  if(sort==='nameAsc') arr.sort((a,b)=> a.fileName.localeCompare(b.fileName));
+  if(sort==='nameDesc') arr.sort((a,b)=> b.fileName.localeCompare(a.fileName));
+  state.filtered = arr;
+  render(arr);
+}
+
+function render(items){
+  el.list.innerHTML = '';
+  if(items.length===0){ el.empty.hidden=false; return; }
+  el.empty.hidden=true;
+  const frag = document.createDocumentFragment();
+  for(const it of items){
+    const div = document.createElement('article');
+    div.className='card';
+    div.innerHTML = `
+      <div class="head">
+        <span class="pill">${formatDate(it.dateISO) || '日付不明'}</span>
+        <div class="title">${escapeHtml(it.title)}</div>
+      </div>
+      <div class="body">
+        <div class="meta">
+          <span>${escapeHtml(it.fileName)}</span>
+          <span> ${it.size ? (it.size/1024).toFixed(1) + ' KB' : ''}</span>
+          ${it.tags && it.tags.length ? `<span> / </span><span>${it.tags.map(t=>`<span class='tag'>${escapeHtml(t)}</span>`).join(' ')}</span>` : ''}
+        </div>
+        <details>
+          <summary>プレビューを開く</summary>
+          <div class="preview">${escapeHtml(it.summary||'（プレビューなし）')}</div>
+        </details>
+        <div class="actions">
+          <button class="btn" data-open="${encodeURIComponent(it.fileName)}">このページで読む</button>
+          <a class="btn" href="${it.urlGithub}" target="_blank" rel="noopener">GitHubで開く</a>
+          <a class="btn" href="${it.urlRaw}" target="_blank" rel="noopener">RAW</a>
+        </div>
+      </div>`;
+    div.querySelector('[data-open]')?.addEventListener('click', (e)=>{
+      const f = decodeURIComponent(e.currentTarget.getAttribute('data-open'));
+      location.hash = `#file=${encodeURIComponent(f)}`; // deeplink
+    });
+    frag.appendChild(div);
+  }
+  el.list.appendChild(frag);
+}
+
+function onHashChange(){
+  const m = location.hash.match(/#file=([^&]+)/);
+  if(m){ const name = decodeURIComponent(m[1]); const it = state.all.find(x=>x.fileName===name); if(it) openReader(it); }
+}
+
+function openReader(it){
+  state.current = it;
+  rtitle.textContent = it.title || it.fileName;
+  rdate.textContent = formatDate(it.dateISO) || '';
+  rfile.textContent = it.fileName;
+  rbody.textContent = it.body || '';
+  btnGh.onclick = ()=> window.open(it.urlGithub, '_blank');
+  btnRaw.onclick = ()=> window.open(it.urlRaw, '_blank');
+  reader.hidden = false; layout.classList.add('open');
+}
+function closeReader(){
+  reader.hidden = true; layout.classList.remove('open');
+  if(location.hash.includes('#file=')) history.replaceState(null,'',location.pathname + location.search);
+}
+
+// 簡易キャッシュ（1時間）
+function saveCache(data){ try{ localStorage.setItem(state.cacheKey, JSON.stringify({t:Date.now(), data})); }catch{} }
+function loadCache(){ try{ const raw = localStorage.getItem(state.cacheKey); if(!raw) return null; const p=JSON.parse(raw); if(Date.now()-p.t>3600*1000) return null; return p.data; }catch{ return null } }
+
+function formatDate(iso){ if(!iso) return ''; const d=new Date(iso); const y=d.getFullYear(); const m=String(d.getMonth()+1).padStart(2,'0'); const day=String(d.getDate()).padStart(2,'0'); return `${y}-${m}-${day}`; }
+function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c])); }
+function downloadJSON(items){ const blob=new Blob([JSON.stringify(items,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`drafts-index-${new Date().toISOString().slice(0,10)}.json`; document.body.appendChild(a); a.click(); URL.revokeObjectURL(a.href); a.remove(); }
+</script>
+</body>
+</html>
