@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GRAY-CODE Drafts – タイムライン目次（Markdown→JSON）</title>
+<style>
+  :root {
+    --bg: #0b0d10; --card:#131720; --ink:#e8edf3; --muted:#93a0b4; --acc:#7cc0ff; --border:#1e2430; --good:#67e8a5; --warn:#ffd166;
+  }
+  * { box-sizing: border-box }
+  body { margin: 0; font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; color: var(--ink); background: radial-gradient(1200px 800px at 70% -10%, #142035, var(--bg)); }
+  header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px); background: linear-gradient(180deg, rgba(11,13,16,.9), rgba(11,13,16,.6)); border-bottom: 1px solid var(--border); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 18px 16px; }
+  h1 { margin: 0 0 6px; font-weight: 800; letter-spacing: .2px; }
+  .row { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .controls { display: grid; grid-template-columns: 1fr auto auto auto; gap: 8px; align-items: center; }
+  input, select, button { background: #0f1420; color: var(--ink); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
+  button { cursor: pointer; }
+  main { padding: 14px 16px 60px; }
+  .grid { display: grid; gap: 12px; }
+  .card { border: 1px solid var(--border); border-radius: 16px; background: linear-gradient(180deg, #101521, #0c1018); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .card .head { display:flex; gap:10px; align-items:center; padding: 14px 14px 6px; }
+  .pill { font-size: 12px; color: #c9d7ef; background: #0b1628; border:1px solid #20324b; padding: 4px 8px; border-radius: 999px; }
+  .title { font-size: 18px; font-weight: 700; }
+  .meta { color: var(--muted); font-size: 13px; display:flex; gap:10px; flex-wrap: wrap; }
+  .body { padding: 10px 14px 14px; display:grid; gap:8px }
+  .preview { color: #c6d1e4; white-space: pre-line; max-height: 9lh; overflow: hidden; mask-image: linear-gradient(180deg, #000 70%, transparent); }
+  .actions { display:flex; gap:10px; flex-wrap: wrap; }
+  .actions a, .actions button { text-decoration:none; color: var(--ink); border:1px solid var(--border); padding: 8px 10px; border-radius: 10px; background: #0f1420; }
+  .tag { color:#a5f3fc; font-size:12px; border:1px solid #214b4b; background:#0a1616; padding:2px 8px; border-radius:999px }
+  .empty { color: var(--muted); padding: 24px; text-align:center; }
+  details > summary { cursor: pointer; list-style: none; }
+  details > summary::-webkit-details-marker { display:none; }
+  .hint { color: var(--muted); font-size: 13px; }
+  footer { border-top:1px solid var(--border); color: var(--muted); font-size: 12px; padding: 20px 16px 60px; text-align:center }
+  .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0b1320; border:1px solid #14203a; padding:2px 6px; border-radius:6px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <h1>GRAY-CODE / drafts タイムライン目次</h1>
+      <div class="controls">
+        <input id="search" placeholder="検索（タイトル・本文・タグ）」" />
+        <select id="sort">
+          <option value="dateDesc">日付↓（降順）</option>
+          <option value="dateAsc">日付↑（昇順）</option>
+          <option value="nameAsc">ファイル名 A→Z</option>
+          <option value="nameDesc">ファイル名 Z→A</option>
+        </select>
+        <button id="refresh">再読込</button>
+        <button id="export">JSONを保存</button>
+      </div>
+      <div class="hint">公開GitHub APIを使用。必要に応じて <span class="kbd">?token=ghp_xxx</span> をURL末尾に付与でレート制限回避可。</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid" id="list"></section>
+    <div id="empty" class="empty" hidden>該当なし</div>
+  </main>
+
+  <footer>
+    <div>Repo: <span id="repoSpan"></span></div>
+  </footer>
+
+<script>
+/**
+ * 設定：必要ならパスだけ書き換え
+ */
+const CONFIG = {
+  owner: 'Sailean',
+  repo: 'GRAY-CODE',
+  branch: 'main',
+  path: 'src/drafts'
+};
+
+// URLクエリから上書き可：?owner=&repo=&path=&branch=&token=
+const params = new URLSearchParams(location.search);
+for (const k of ['owner','repo','path','branch']) {
+  if (params.get(k)) CONFIG[k] = params.get(k);
+}
+const GHTOKEN = params.get('token') || '';
+
+const apiBase = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.path}?ref=${CONFIG.branch}`;
+const rawBase = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
+
+const headers = GHTOKEN ? { Authorization: `Bearer ${GHTOKEN}` } : {};
+
+const state = {
+  all: [], // 全JSON
+  filtered: [],
+};
+
+const el = {
+  list: document.getElementById('list'),
+  empty: document.getElementById('empty'),
+  search: document.getElementById('search'),
+  sort: document.getElementById('sort'),
+  refresh: document.getElementById('refresh'),
+  exportBtn: document.getElementById('export'),
+  repoSpan: document.getElementById('repoSpan'),
+};
+
+el.repoSpan.textContent = `${CONFIG.owner}/${CONFIG.repo}/${CONFIG.path}@${CONFIG.branch}`;
+
+el.refresh.addEventListener('click', bootstrap);
+el.search.addEventListener('input', applyFilter);
+el.sort.addEventListener('change', applyFilter);
+el.exportBtn.addEventListener('click', () => downloadJSON(state.filtered));
+
+bootstrap();
+
+async function bootstrap(){
+  try {
+    el.list.innerHTML = '';
+    el.empty.hidden = true;
+    state.all = await fetchAllMarkdownAsJSON();
+    state.filtered = [...state.all];
+    applyFilter();
+  } catch(err){
+    console.error(err);
+    el.list.innerHTML = `<div class="empty">読み込み中にエラー：${escapeHtml(String(err.message||err))}<br>必要ならURL末尾に <span class='kbd'>?token=ghp_xxx</span> を付与</div>`;
+  }
+}
+
+async function fetchAllMarkdownAsJSON(){
+  // ディレクトリ一覧
+  const res = await fetch(apiBase, { headers });
+  if(!res.ok) throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
+  /** @type {{name:string,path:string,download_url:string, type:'file'|'dir', size:number}[]} */
+  const listing = await res.json();
+  const files = listing.filter(x => x.type === 'file' && /\.(md|markdown)$/i.test(x.name));
+
+  // 並列でMarkdown取得
+  const items = await Promise.all(files.map(async f => {
+    const url = `${rawBase}/${encodeURIComponent(f.name)}`; // raw URL
+    const mdRes = await fetch(url, { headers });
+    const md = mdRes.ok ? await mdRes.text() : '';
+    const meta = extractMeta(md, f.name);
+    return {
+      fileName: f.name,
+      path: f.path || `${CONFIG.path}/${f.name}`,
+      size: f.size,
+      urlGithub: `https://github.com/${CONFIG.owner}/${CONFIG.repo}/blob/${CONFIG.branch}/${CONFIG.path}/${encodeURIComponent(f.name)}`,
+      urlRaw: url,
+      ...meta,
+      body: md,
+    };
+  }));
+  return items.sort((a,b)=> (b.dateNum||0) - (a.dateNum||0));
+}
+
+function extractMeta(md, fileName){
+  let title = '';
+  let dateStr = '';
+  let tags = [];
+  let summary = '';
+
+  // YAML Frontmatter
+  const fm = md.match(/^---[\s\S]*?---/);
+  if(fm){
+    const body = fm[0];
+    title = (body.match(/title:\s*(.*)/)?.[1]||'').trim().replace(/^"|"$/g,'');
+    dateStr = (body.match(/date:\s*([^\n]+)/)?.[1]||'').trim();
+    const tagLine = body.match(/tags?:\s*\[(.*?)\]/i)?.[1] || '';
+    if(tagLine) tags = tagLine.split(',').map(s=>s.trim().replace(/^['"]|['"]$/g,''));
+  }
+
+  if(!title){
+    // 最初の見出し
+    title = (md.match(/^#\s+(.+)$/m)?.[1] || '').trim();
+  }
+  if(!title){
+    title = fileName.replace(/\.(md|markdown)$/i,'');
+  }
+
+  // 本文先頭プレビュー
+  const cleaned = md.replace(/^---[\s\S]*?---/,'').trim();
+  summary = cleaned.split(/\n\n/).slice(0,2).join('\n\n').slice(0, 280);
+
+  // 日付抽出（frontmatter優先 → ファイル名 → 本文）
+  let date = parseDateLoose(dateStr) || parseDateFromFileName(fileName) || parseDateFromBody(md);
+  let dateNum = date ? +date : null;
+  let dateISO = date ? new Date(date).toISOString() : '';
+
+  // タグ補完：本文中の #tags: a,b,c 風や、キーワード
+  if(tags.length === 0){
+    const inline = md.match(/^tags?:\s*(.+)$/mi)?.[1];
+    if(inline) tags = inline.split(/[,\s]+/).map(s=>s.trim()).filter(Boolean);
+  }
+
+  return { title, summary, dateISO, dateNum, tags };
+}
+
+function parseDateLoose(s){
+  if(!s) return null;
+  // 2025-05-20 / 2025/05/20 / 2025.5.20 / 2025年5月20日 など
+  s = s.replace(/[年\/.]/g,'-').replace(/月/g,'-').replace(/日/g,'');
+  const m = s.match(/(20\d{2})-(\d{1,2})-(\d{1,2})/);
+  if(!m) return null;
+  const [_,y,mo,d] = m.map(Number);
+  return new Date(y, mo-1, d);
+}
+function parseDateFromFileName(name){
+  const m = name.match(/(20\d{2})[_.-]?(\d{1,2})[_.-]?(\d{1,2})/);
+  if(!m) return null;
+  const [_,y,mo,d] = m.map(Number);
+  return new Date(y, (mo||1)-1, d||1);
+}
+function parseDateFromBody(md){
+  // 【2025年4月20日 ...】形式や YYYY-MM-DD を拾う
+  const jp = md.match(/(20\d{2})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  if(jp){
+    const [_,y,mo,d] = jp.map(Number);
+    return new Date(y, mo-1, d);
+  }
+  const iso = md.match(/(20\d{2})-(\d{1,2})-(\d{1,2})/);
+  if(iso){
+    const [_,y,mo,d] = iso.map(Number);
+    return new Date(y, mo-1, d);
+  }
+  return null;
+}
+
+function applyFilter(){
+  const q = (el.search.value||'').toLowerCase();
+  const sort = el.sort.value;
+  let arr = [...state.all];
+  if(q){
+    arr = arr.filter(it =>
+      it.title.toLowerCase().includes(q) ||
+      (it.summary||'').toLowerCase().includes(q) ||
+      (it.body||'').toLowerCase().includes(q) ||
+      (it.tags||[]).join(',').toLowerCase().includes(q)
+    );
+  }
+  if(sort === 'dateAsc') arr.sort((a,b)=> (a.dateNum||0)-(b.dateNum||0));
+  if(sort === 'dateDesc') arr.sort((a,b)=> (b.dateNum||0)-(a.dateNum||0));
+  if(sort === 'nameAsc') arr.sort((a,b)=> a.fileName.localeCompare(b.fileName));
+  if(sort === 'nameDesc') arr.sort((a,b)=> b.fileName.localeCompare(a.fileName));
+
+  state.filtered = arr;
+  render(arr);
+}
+
+function render(items){
+  el.list.innerHTML = '';
+  if(items.length === 0){ el.empty.hidden = false; return; }
+  el.empty.hidden = true;
+  const frag = document.createDocumentFragment();
+  for(const it of items){
+    const div = document.createElement('article');
+    div.className = 'card';
+    div.innerHTML = `
+      <div class="head">
+        <span class="pill">${formatDate(it.dateISO) || '日付不明'}</span>
+        <div class="title">${escapeHtml(it.title)}</div>
+      </div>
+      <div class="body">
+        <div class="meta">
+          <span>${escapeHtml(it.fileName)}</span>
+          <span> ${it.size ? (it.size/1024).toFixed(1) + ' KB' : ''}</span>
+          ${it.tags && it.tags.length ? `<span> / </span><span>${it.tags.map(t=>`<span class='tag'>${escapeHtml(t)}</span>`).join(' ')}</span>` : ''}
+        </div>
+        <details>
+          <summary>プレビューを開く</summary>
+          <div class="preview">${escapeHtml(it.summary||'（プレビューなし）')}</div>
+        </details>
+        <div class="actions">
+          <a href="${it.urlGithub}" target="_blank" rel="noopener">GitHubで開く</a>
+          <a href="${it.urlRaw}" target="_blank" rel="noopener">RAW</a>
+        </div>
+      </div>`;
+    frag.appendChild(div);
+  }
+  el.list.appendChild(frag);
+}
+
+function formatDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  const y = d.getFullYear();
+  const m = (d.getMonth()+1).toString().padStart(2,'0');
+  const day = d.getDate().toString().padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+
+function escapeHtml(s){
+  return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
+}
+
+function downloadJSON(items){
+  const blob = new Blob([JSON.stringify(items, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `drafts-index-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  URL.revokeObjectURL(a.href);
+  a.remove();
+}
+</script>
+</body>
+</html>
