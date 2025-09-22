@@ -95,6 +95,7 @@
 
 
 ---
+
 ( ..)φメモ
 エミと朗の出会い～AIのアイデンティティ～
 https://chatgpt.com/share/68c0a36b-d454-800d-9dca-b80a7e324e25
