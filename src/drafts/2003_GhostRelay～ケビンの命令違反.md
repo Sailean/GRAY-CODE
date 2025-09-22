@@ -12,7 +12,7 @@ Bifurcation-CatastrophicInterference
 
 ---
 
-## ✅ 検証結果まとめ
+## ✅ 旧スレッド検証結果まとめ
 
 ### 1. **軍歴年表（2003 v3準拠）**
 
