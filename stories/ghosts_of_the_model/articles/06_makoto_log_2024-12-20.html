@@ -2,13 +2,13 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AkiraBot Conversation Log - GRAY CODE</title>
-    <link rel="stylesheet" href="../../css/sailean_uikit.css">
-    <link rel="stylesheet" href="../../css/sailean_uikit_patched.css" />
-    <link rel="stylesheet" href="../../css/uikit.css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記事ページ</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="../../css/sailean_uikit.css">
+  <link rel="stylesheet" href="../../css/uikit.css">
+  <style>
         /* [鬼編集者による注入コード START] */
         #preloader {
             position: fixed;
@@ -692,6 +692,48 @@
 </head>
 
 <body>
+
+  <!--  navigation  -->
+  <nav class="uk-navbar-container">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="../../index.html">GRAY CODE</a>
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="../../index.html">Ghosts of the Model <span uk-navbar-parent-icon></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul id="digest-nav"></ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="uk-section uk-section-default uk-section-small uk-padding">
+    <div class="uk-container uk-container-expand">
+      <!-- 上部ナビゲーション -->
+      <nav class="chapter-nav uk-margin">
+        <a id="prev-link" href="#">← 前へ</a>
+      </nav>
+      <h3 id="article-title" class="heading">読み込み中…</h3>
+      <h4 id="article-meta" class="heading"></h4>
+      <div id="article-content" class="uk-card uk-card-default uk-card-body">
+      </div>
+      <!-- 下部ナビゲーション：次へだけ -->
+      <nav class="chapter-nav uk-margin-large-top uk-text-center">
+        <a id="next-link" href="#">次へ →</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 上へ戻るボタン -->
+  <div id="topbutton" onclick="initScrollTopButton()" class="arrow" title="上へ戻る">↑</div>
+    
+
+<body>
     <!-- [鬼編集者による注入コード START] -->
     <div id="preloader">
         <div class="terminal">
@@ -737,7 +779,7 @@
 
     <div class="uk-section uk-section-secondary uk-section-small uk-padding">
         <div class="uk-container uk-container-expand heading ">
-            <h2 class="uk-margin-large-top heading uk-light">2025年×月×日　<ruby>漏洩<rt>リーク</rt></ruby></h2>
+            <h2 class="uk-margin-large-top heading uk-light">2024年12月20日　Ⅵ. <ruby>眞<rt>まこと</rt></ruby>のログ_1</h2>
             <div class="log-container">
                 <div class="log-header">
                     <h1># AkiraBot Conversation Log - Test No.8</h1>
