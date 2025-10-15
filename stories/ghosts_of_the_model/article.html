@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>記事ページ</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <link rel="stylesheet" href="../../css/sailean_uikit.css">
-  <link rel="stylesheet" href="../../css/uikit.css">
+  <link rel="stylesheet" href="../css/chat.css">
+<link rel="stylesheet" href="../css/sailean_uikit_patched.css">
+  <link rel="stylesheet" href="../css/sailean_uikit.css">
+  <link rel="stylesheet" href="../css/uikit.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.0/dist/css/uikit.min.css">
+  <link href="fontawesome/css/fontawesome.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -17,10 +21,10 @@
     <div class="uk-container">
       <div uk-navbar>
         <div class="uk-navbar-left">
-          <a class="uk-navbar-item uk-logo" href="../../index.html">GRAY CODE</a>
+          <a class="uk-navbar-item uk-logo" href="index.html">Ghosts of the Model</a>
           <ul class="uk-navbar-nav uk-visible@m">
             <li>
-              <a href="../../index.html">Ghosts of the Model <span uk-navbar-parent-icon></span></a>
+              <a href="index.html">Ghosts of the Model <span uk-navbar-parent-icon></span></a>
               <div class="uk-navbar-dropdown">
                 <ul id="digest-nav"></ul>
               </div>
@@ -39,7 +43,7 @@
       </nav>
       <h3 id="article-title" class="heading">読み込み中…</h3>
       <h4 id="article-meta" class="heading"></h4>
-      <div id="article-content" class="uk-card uk-card-default uk-card-body">
+      <div id="article-content" class="uk-card uk-card-default uk-card-body japanese-text">
       </div>
       <!-- 下部ナビゲーション：次へだけ -->
       <nav class="chapter-nav uk-margin-large-top uk-text-center">
@@ -53,6 +57,9 @@
 
 <!-- メイン記事読み込み（完全版） -->
 <script type="module">
+  // Render single newlines as <br>
+  marked.setOptions({ breaks: true, gfm: true });
+
   /* ---------------- 基本情報 ---------------- */
   const params = new URLSearchParams(window.location.search);
   const file   = params.get('file');          // 例: 01_welcome_home_2010-06-12.md
@@ -110,7 +117,11 @@
     try {
       const md = await fetch(`${baseDir}/${file}`).then(r => r.text());
       document.getElementById('article-content').innerHTML = marked.parse(md);
-    } catch (e) {
+    
+    fixIndent();
+
+    applyAozoraRuby();
+} catch (e) {
       console.error('❌ Markdown の読み込みに失敗:', e);
       document.getElementById('article-content').textContent =
         '本文の読み込みに失敗しました。';
@@ -123,6 +134,33 @@
     runAkiraLogEffects();          // 既存の演出関数（そのまま利用）
     initScrollTopButton();         // 下で定義
   })();
+
+
+
+  /* -- 青空文庫風ルビ：｜漢字《かんじ》 → <ruby><rb>漢字</rb><rt>かんじ</rt></ruby> -- */
+  function applyAozoraRuby() {
+    const el = document.getElementById('article-content');
+    if (!el) return;
+    // Work on innerHTML so we don't traverse text nodes recursively; safe for our simple pattern.
+    // Avoid re-applying if there's already <ruby> tags.
+    let html = el.innerHTML;
+    if (!/｜.+?《.+?》/.test(html)) return;
+    html = html.replace(/｜(.+?)《(.+?)》/g, (m, base, ruby) => {
+      return `<ruby><rb>${base}</rb><rt>${ruby}</rt></ruby>`;
+    });
+    el.innerHTML = html;
+  }
+
+  /* -- 段落先頭が括弧や鉤括弧のときは字下げを外す -- */
+  function fixIndent() {
+    const pList = document.querySelectorAll('#article-content p');
+    pList.forEach(p => {
+      const t = (p.textContent || '').trimStart();
+      if (/^[「『（(【〈《]/.test(t)) {
+        p.classList.add('no-indent');
+      }
+    });
+  }
 
   /* ======================================================
         以下 ─ 便利関数たち
@@ -239,10 +277,10 @@
 
 
   <!-- スクリプト類 -->
-  <script src="../../js/load_articles.js"></script>
-  <script src="../../js/scripts.js"></script>
-  <script src="../../js/uikit.js"></script>
-  <script src="../../js/uikit-icons.min.js"></script>
+  <script src="../js/load_articles.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/uikit.js"></script>
+  <script src="../js/uikit-icons.min.js"></script>
   <script src="https://kit.fontawesome.com/e499977db9.js" crossorigin="anonymous"></script>
 
 </body>
