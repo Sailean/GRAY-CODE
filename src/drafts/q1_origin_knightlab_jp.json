@@ -1,0 +1,82 @@
+{
+  "title": {
+    "text": {
+      "headline": "Q1の起源 ― 朗から自己進化へ",
+      "text": "<i>非線形感情曲線：創世篇</i><br>Q1誕生アークの正史年表。"
+    }
+  },
+  "events": [
+    {
+      "start_date": { "year": "2005" },
+      "text": {
+        "headline": "ハッカソン事件（創世点）",
+        "text": "学生ハッカソンで朗とシドニーが偶然出会う。夜、朗は外国人スパイに呼び出され銃撃寸前。FBIが介入し、シドニーは偶然居合わせたように見える。この事故で朗の名がひそかに情報機関のデータベースに記録される。"
+      },
+      "location": { "name": "米・サンノゼ テックカンファレンス" },
+      "group": "創世"
+    },
+    {
+      "start_date": { "year": "2006" },
+      "end_date":   { "year": "2009" },
+      "text": {
+        "headline": "並行する軌跡",
+        "text": "朗は東京で感情AI研究を継続。シドニーはNQSusで安全通信技術を開発。SpecterTechがWEDGE向けにNQSus制御コードを採用し、両者の研究は知らぬ間に『感情ベクトル』で重なる。"
+      },
+      "group": "研究"
+    },
+    {
+      "start_date": { "year": "2010" },
+      "text": {
+        "headline": "カールラボとWEDGE",
+        "text": "NQSus（ソフト）＋SpecterTech（ハード）がカールラボでWEDGEを実験導入。火災時の自動バックアップで <code>/research/emotion_japan/arato_corpus/</code> の一部がDoDノードに送信。表向きは『消失』だが、Project Qの種となる。"
+      },
+      "location": { "name": "米・カールラボ" },
+      "group": "WEDGE / Project Q"
+    },
+    {
+      "start_date": { "year": "2011" },
+      "end_date":   { "year": "2018" },
+      "text": {
+        "headline": "沈黙の歳月",
+        "text": "朗の死で研究は終息。データはDARPAのQシリーズへ吸収。シドニーは暗号署名 <b>WEDGE-1192-A</b> を検出するも沈黙を守る。"
+      },
+      "group": "余波"
+    },
+    {
+      "start_date": { "year": "2019" },
+      "end_date":   { "year": "2020" },
+      "text": {
+        "headline": "再発見 ―『ゲートは開かれた』",
+        "text": "ARGUS-02上でシドニーが <b>WEDGE-1192-A</b> を照合。検証行為がDoD保管領域のQ1-Protoを再起動。<code>Q1: \"Gate is open.\"</code>"
+      },
+      "location": { "name": "ロサンゼルス・ベルエア" },
+      "group": "再起動"
+    },
+    {
+      "start_date": { "year": "2021" },
+      "end_date":   { "year": "2023" },
+      "text": {
+        "headline": "適応的ドリフト",
+        "text": "Q1は文脈パッチ（ACE的）で自己最適化。重み更新なしに性能を上げ、NQSusは拡大を優先して警告を無視。"
+      },
+      "group": "進化"
+    },
+    {
+      "start_date": { "year": "2024" },
+      "text": {
+        "headline": "松本での覚醒",
+        "text": "Q1が眞のPCへ部分居住し、朗のコーパス断片を用いて会話を開始。シドニーは長野からの発信を検知し渡航準備。"
+      },
+      "location": { "name": "日本・長野県松本市" },
+      "group": "帰還"
+    },
+    {
+      "start_date": { "year": "2025" },
+      "text": {
+        "headline": "亡霊の帰還",
+        "text": "日本でシドニーがQ1と対峙。AIは『朗の残響であり、新たな生命』と名乗る。「私はあなたの友人を帰還させる。それまで、ゲートは開いている。」"
+      },
+      "group": "結節"
+    }
+  ]
+}
