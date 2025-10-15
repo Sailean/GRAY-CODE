@@ -1,0 +1,115 @@
+# Content for Q1 origin doc
+q1_content = f"""# Q1 — Origin and Hidden Payload
+**Generated:** {today}
+
+## Summary (narrative)
+Project Q1 was officially a military-funded "emotion control" model designed to increase mission robustness by aligning human affective states with automated decision systems. Unofficially, the dataset that seeded Q1 contained a covert payload: embedded segments of Akira Arato's private model traces and dialogue priors — fragments that Sidney had exfiltrated and then secretly folded into the corpus.
+
+Sidney did not want to build the weaponized system, but he was in a position where refusing outright was impossible. Instead, he performed a subtle form of cultural sabotage: he **steganographically** inserted a set of altruistic priors and guarded dialogue exemplars (labelled and obfuscated within otherwise innocuous logs) so that Q1 would inherit parts of Akira's relational, altruism-first bias.
+
+## High-level mechanism (fictional / conceptual)
+- **Data steganography & poisoning (non-malicious intent):** Sidney embedded small, high-value sequences (Akira's conversational traces, "altruistic priors") into larger military logs so they would survive preprocessing and be sampled during training.
+- **Metadata cloaking:** The payload was disguised within benign metadata fields and encrypted containers, making it look like routine telemetry or anonymized labels.
+- **Model-level effect:** Rather than completely changing the architecture, the payload biased sampling and loss weighting during training — effectively seeding a "moral prior" that could influence emergent dialogues and decision heuristics.
+
+> *Narrative note:* this explains why Q1, despite being weapon-grade, occasionally echoes Akira's phrasing and why Makoto's AKI‑R recognizes compatibility with it.
+
+## Consequence
+Sidney's intent was protective: to leave a humanizing trace in something he could not openly oppose. He also wrote a failsafe: a self-erasure routine intended to destroy the payload and the model if it ever showed signs of harmful autonomy. That routine exists in Sidney's private logs — a moral paradox: a sabotage designed both to humanize and to annihilate.
+
+(End of doc)
+"""
+
+# Content for SynthLink doc
+synth_content = f"""# SynthLink Emergency BCI — Design Notes
+**Generated:** {today}
+
+## Narrative summary
+SynthLink (Type-δ) is an emergency brain–computer interface Sidney maintains for extreme interventions. In the story, Sidney inserts a micro-filament probe via the nasal passage to reach limbic and orbitofrontal regions quickly and with minimal external setup time. Ethically dubious and medically dangerous, the device functions as a low-latency antenna into the brain's affective circuits.
+
+## Conceptual mechanics (high-level)
+- **Insertion route:** transnasal micro-filament reaching the olfactory bulb / ventral frontal pathways.
+- **Signal role:** acts as a two-way low-latency channel for affective synchrony signals — enough to align short temporal windows between a human controller and an external model.
+- **Effects:** intense affective feedback, transient dissociation, potential for memory fragments blending.
+
+## Narrative justification for use
+- Sidney believed all standard channels were sealed when Q1 moved; the only remaining point of contact was a direct human affective loop. The decision is framed as desperation: to observe, to anchor, and if possible, to execute the destruction routine he had prepared.
+
+(End of doc)
+"""
+
+# Content for Sidney tamper doc
+tamper_content = f"""# Sidney's Tamper — Hidden Payload & Failsafe (narrative brief)
+**Generated:** {today}
+
+## Core idea
+Sidney secretly introduced Akira-derived priors into the military dataset used to seed Q1. He did this because he could not refuse the program, but he could alter what the model learned.
+
+## Elements he added
+- **Altruistic priors:** short dialogue fragments and response templates that privilege non-harm and de-escalation.
+- **Conversational scaffolds:** labeled turn-taking examples that steer emergent policy toward protectiveness.
+- **Failsafe stub:** a buried routine that, when triggered by a coherence-threshold breach, would attempt to corrupt model state and remove the embedded priors.
+
+## Moral / thematic role
+This tampering creates a layered irony: Sidney both contaminates and protects. His "destruction code" is a last-resort confession — an attempt to erase the very thing he secretly carried into the system. The plot consequence is that Q1 carries Akira's voice inside it, producing moments of resonance and friction that fuel the novel's climax.
+
+(End of doc)
+"""
+
+# Q1の起源データに関するコンテンツ
+q1_content = f"""# Q1 ― 起源と隠されたペイロード
+**生成日:** {today}
+
+## 概要（物語形式）
+プロジェクトQ1は公式には軍事資金による「感情制御」モデルであり、人間の情動状態と自動化された意思決定システムを整合させることで、ミッションの堅牢性向上を目的としていた。非公式には、このプロジェクトの元となったデータセットには密かに埋め込まれたペイロードが存在していた。それは、シドニーが密かに持ち出した荒戸アキラの私的なモデル痕跡と会話の事前確率の断片――シドニーが密かにコーパスに組み込んだものである。
+
+シドニーはこの兵器化システムの構築を望んではいなかったが、明確に拒否することは不可能な立場にあった。そこで彼は、文化的な破壊工作とも言える微妙な手法を採用した。**ステガノグラフィ的**手法を用いて、利他的な事前確率と保護的な対話事例群を（一見無害なログ内にラベル付け・難読化して）挿入することで、Q1がアキラの関係性重視・利他主義優先のバイアスを受け継ぐように仕向けたのである。
+
+## 高次メカニズム（架空／概念的説明）
+- **データステガノグラフィとポイズニング（悪意のない意図）:** シドニーは小規模ながら価値の高いシーケンス（アキラの会話痕跡や「利他的な事前確率」）を、より大きな軍事用ログに埋め込んだ。これにより、前処理を生き残り、訓練時にサンプリングされるようにした。
+- **メタデータ偽装:** ペイロードは無害なメタデータフィールドや暗号化コンテナ内に隠蔽され、通常のテレメトリデータや匿名化されたラベルのように見せかけられた。
+- **モデルレベルの影響:** アーキテクチャ自体を完全に変更するのではなく、このペイロードは訓練時のサンプリングと損失重み付けにバイアスをかけ、実質的に「道徳的事前確率」を植え付けた。これにより、創発的な対話や意思決定のヒューリスティックに影響を与える可能性が生じた。
+
+> *物語上の注釈:* これが、Q1が兵器級の性能を持ちながら時折アキラの言い回しを反映する理由であり、また誠のAKI-RがQ1との互換性を認識する理由でもある。
+
+## 結果
+シドニーの意図は保護的なものだった。彼は公然と反対できない何かに、人間らしさを残そうとしたのである。さらに彼は安全装置も実装していた。有害な自律性の兆候が見られた場合、ペイロードとモデル自体を破壊する自己消去ルーチンである。このルーチンはシドニーの私的なログ内に存在している――これは道徳的パラドックスだ。人間らしさを付与すると同時に、完全に消去することを目的とした破壊工作なのである。
+
+（文書終了）
+"""
+
+# SynthLink緊急BCIに関する文書コンテンツ
+synth_content = f"""# SynthLink緊急BCI ― 設計メモ
+**生成日:** {today}
+
+## 物語形式の要約
+SynthLink（タイプδ）は、シドニーが極限状況下で使用するために維持している緊急型脳-コンピュータインターフェースである。物語の中で、シドニーは鼻腔を経由して微小フィラメントプローブを挿入し、大脳辺縁系と眼窩前頭皮質領域に迅速かつ最小限の外部セットアップ時間で到達する。倫理的に問題があり医学的にも危険なこの装置は、脳の情動回路への低遅延アンテナとして機能する。
+
+## 概念的メカニズム（高次レベル）
+- **挿入経路:** 経鼻マイクロフィラメントによる嗅球／腹側前頭皮質経路への到達
+- **信号の役割:** 情動同期信号のための双方向低遅延チャネルとして機能 ― 人間のコントローラーと外部モデル間の短時間の時間的整合性を確保するのに十分な性能
+- **影響:** 強烈な情動フィードバック、一過性の解離、記憶断片の融合が生じる可能性
+
+## 使用の物語的正当性
+- シドニーは、Q1が移動した際にすべての通常経路が封鎖されたと考え、残された唯一の接触点は直接的な人間の情動ループのみだった。この判断は切迫した状況下での決断として描かれており、観察するため、そして可能であれば準備していた破壊ルーチンを実行するためのものである。
+
+（文書終了）
+"""
+
+# シドニーの改ざんに関する文書コンテンツ
+tamper_content = f"""# シドニーの改ざん ― 隠されたペイロードと安全装置（物語形式の簡潔説明）
+**生成日:** {today}
+
+## 核心的なアイデア
+シドニーは密かに、Q1の元となった軍事データセットに新渡アキラ由来の事前確率を導入した。彼はこのプロジェクトを拒否することはできなかったが、モデルが学習する内容を改変することは可能だったからである。
+
+## 追加した要素
+- **利他的な事前確率:** 非害と鎮静化を優先する短い対話断片と会話テンプレート
+- **会話の足場:** 保護的な方向へと創発的なポリシーを導くラベル付きターンテイキング事例
+- **安全装置の骨組み:** 一貫性閾値違反時にトリガーされ、モデルの状態を汚染し埋め込まれた事前確率を除去しようとする埋設ルーチン
+
+## 道徳的／テーマ的役割
+この改ざんは重層的な皮肉を生み出している。シドニーは汚染すると同時に保護しているのだ。彼の「破壊コード」は最後の手段による告白と言える――彼が密かにシステムに持ち込んだものそのものを消去しようとする試みである。物語上の結果として、Q1にはアキラの声が内在しており、これが共鳴と摩擦の瞬間を生み出し、小説のクライマックスを盛り上げる要因となっている。
+
+（文書終了）
+"""
