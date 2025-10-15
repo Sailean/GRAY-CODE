@@ -1,0 +1,383 @@
+Chapter — Green Veil (Colombia, 1996)
+
+The jungle night pressed in like damp cloth, swallowing every breath Sidney Grayson exhaled. Even through the humming fans of the **AN/PRC‑119A SINCGARS** manpack at his shoulders he could feel the weight of the air, fragrant with guava rot and diesel and distant cordite. The battalion net crackled over his bone‑conduction earpiece—loose vowels in rapid Spanish, bursts of laughter that ended too sharply. Somewhere, beyond the black hulks of ceiba and kapok, FARC spotters were listening to the same ether, tracing ghosts across their hand‑rolled frequency charts. He imagined them bent over battered **PRD‑11** direction‑finders, ready to triangulate a wayward transmission and walk mortars onto the grid square the instant he keyed his handset.
+
+He kept his thumb well clear of the PTT.
+
+In the shadows beside him Corporal ‘Brick’ Ramirez mouthed a silent complaint, juggling two spools of bright‑orange fiber and a canvas satchel packed with plastic explosive. Their point man, Staff Sergeant Michael Rosario—twelve years older, being about a head shorter, the man Sidney still called _brother_—motioned the column forward with two fingers and an easy grin that made the darkness seem somehow optional.
+章 ― 緑のベール（コロンビア、1996年）
+
+ジャングルの夜は湿った布のように押し寄せ、シドニー・グレイソンが吐き出す息の一つ一つを飲み込んでいった。肩に背負った携帯型無線機**AN/PRC-119A SINCGARS**のファンの音さえ聞こえる中で、彼は空気の重さを感じていた。グアバの腐った匂いとディーゼル燃料、そして遠くでかすかに漂う火薬の香りが入り混じった空気だ。大隊用無線機の雑音が骨伝導イヤホンを通して聞こえてくる。スペイン語の緩い母音の連なりと、突然終わる笑い声の断片。どこか、セバやカポックの黒い巨木の向こうでは、FARCの監視員がこの同じ無線周波数を傍受し、手書きの周波数チャートに幽霊のような軌跡を描いているに違いない。彼は彼らが使い古した**PRD-11**方向探知機にかがみ込み、送信機の方向を三角測量で特定し、自分の無線機の送信ボタンを押した瞬間に迫撃砲をグリッドスクエアに撃ち込む準備をしている姿を想像した。
+
+彼はPTTボタンに親指を触れさせないようにしていた。
+
+彼の横の影では、ラミレス軍曹が「ブリック」の愛称で呼ばれる人物が、明るいオレンジ色の光ファイバーケーブル2本と、プラスチック爆薬が詰まったキャンバス製の鞄を器用に扱いながら、無言で不満を口にしていた。彼らの先遣隊員であるマイケル・ロサリオ軍曹――シドニーがまだ「兄弟」と呼ぶ、12歳年上で頭一つ分背が低いベテラン――は、2本の指と気軽な笑みで列の前進を合図した。その様子は、まるで暗闇など存在しないかのように思わせるものだった。
+
+> **0123 Lima** — Río Putumayo floodplain, 4 km NE of Puerto Asís
+
+Three days earlier they had parachuted into a burned‑out pasture, humping forty‑eight kilos of equipment through knee‑deep mud to reach the army patrol base. Officially the mission was _Plan Colombia liaison and communication integration_: an alphabet soup excuse for clandestine fiber bypass work the host nation could later pretend was their own idea. Unofficially, Green Veil was a stopgap—rip a clandestine HF relay out of rebel hands before Bogotá’s political window slammed shut.
+
+Sidney had walked this tightrope before—enemy ears overlapping friendly lies until north and south blurred together—but something about the stillness tonight made his pulse snag. Maybe it was the sporadic gunfire that had whispered along the valley at dusk, maybe the hush that settled afterward, as though the trees themselves held their breath.
+
+> **0123 リマ** ― プエルト・アシスの北東4kmに位置するプトゥマヨ川氾濫原
+
+3日前、彼らは焼失した牧草地にパラシュート降下し、膝まで泥に浸かりながら48kgもの装備を担ぎ、軍のパトロール基地まで辿り着いた。公式には、この任務は「コロンビア計画」における連絡・通信統合作戦とされていた。これは表向きの名目で、実際には秘密裏に光ファイバー回線を迂回させる作業を行うための口実だった。現地政府が後に「自分たちの発案だった」と主張できるようなものだ。非公式には、グリーン・ベール作戦は一時的な措置に過ぎなかった。ボゴタの政治的な時間制限が迫る前に、反政府勢力の手から秘密のHF中継装置を回収するための緊急作戦だったのだ。
+
+シドニーは以前にもこの微妙な綱渡りを経験したことがあった――敵の耳に聞こえる友好的な嘘と、北と南の境界が曖昧になる状況――だが、今夜の静けさは何かが違っていた。夕暮れ時に谷間を伝って聞こえてきた散発的な銃声のせいだろうか。あるいは、その後に訪れた静寂のせいかもしれない。まるで木々までもが息をひそめているかのようだった。
+
+---
+
+#### **Ceiba**
+
+The village appeared without warning: a clutch of palm‑thatch roofs slumped beneath the vast moonlit umbrella of a ceiba pentandra. From its buttressed roots the tree rose five, six storeys before exploding into a lattice of branches silvered by cloud‑filtered starlight. A rickety observation platform clung near the crown. Sidney wondered what child had lashed those planks together, what games they played where jaguars still hunted by scent.
+
+Through night‑vision green he caught movement—two skinny legs dangling from the platform’s edge. A boy, no older than ten, swinging his feet while fireflies stitched ribbons around him.
+
+Brick hissed. “Kid’ll spot us.”
+
+“Negative.” Michael’s whisper was a rumble. “He’s our in.”
+
+They ghosted forward. Sidney killed his tilt‑up monocular and let bare eyes adjust. The village smelled of boiled plantain and woodsmoke, a softer note of kerosene. No sentries. No old men playing cards under hurricane lamps. Too quiet for midnight.
+
+Brick eased beneath the ceiba, palmed the tree’s warm flank. “How high?”
+
+“Twenty‑five meters.”
+
+“Lucky I packed rope.”
+
+Sidney caught the awe in Brick’s grin and remembered being eight, climbing the fire escape outside his Bronx apartment, pretending rusted steel was rainforest wood. The memory fluttered away when he felt the hiss of humidity against his ribs. The boy above them had stopped swinging his legs, peering down between the plank gaps.
+
+Michael spoke first, Spanish laced with island cadences. “Buenas noches, amigo. Venimos en paz.”
+
+A pause. Then the boy’s thready voice: “¿Eres del ejército?”
+
+Michael lied like water. “Somos doctores. Buscamos al señor Cura.” We are doctors looking for the priest. It wasn’t even clever, but innocence sometimes wanted only to be invited to play.
+
+The boy disappeared from view. A minute later a length of hemp rope tumbled from the platform, a frayed knot landing at Sidney’s boots. Brick looked at Sidney, raised an eyebrow. _Your call, Cipher._
+
+Sidney shucked his ruck, clipped the SINCGARS to Brick’s harness, and began to climb.
+
+#### **セイバの木**
+
+その村は突然現れた。ヤシ葺きの屋根が幾棟も並び、巨大な月明かりの傘の下に佇むセイバ・ペンタンドラの巨木。その支根から伸びた幹は5階、6階の高さまでそびえ立ち、雲間から差し込む星明かりに銀色に照らされた枝葉の網目へと広がっていた。朽ちた展望台が梢の近くに辛うじて張り付いている。シドニーは、この板を誰がどうやって結び合わせたのか、そしてこの場所でジャガーがまだ嗅覚を頼りに狩りをしていた頃、どんな遊びが行われていたのかと考えた。
+
+夜間視認用の緑色のゴーグルを通して、動きを捉えた――展望台の縁から垂れ下がる2本の痩せた脚。10歳にも満たない少年が、足をぶらぶらさせながら、ホタルがリボンのように周囲を飛び回っている。
+
+ブリックが唸った。「あの子に気づかれるぞ」
+
+「大丈夫だ」マイケルの囁きは唸り声のようだった。「あいつが俺たちの潜入経路だ」
+
+二人は静かに前進した。シドニーは傾斜式の単眼鏡の電源を切り、裸眼で周囲の様子を確かめた。村には茹でたプランテンと薪の煙の匂いが漂い、灯油のほのかな香りも混じっていた。見張りの姿はない。ハリケーンランプの下でトランプに興じる老人たちもいない。真夜中にしては静まり返りすぎている。
+
+ブリックはセイバの木の下に身を潜め、木の温かい幹を手で押さえた。「高さはどれくらいだ？」
+
+「25メートルだ」
+
+「ロープを持ってきて正解だった」
+
+シドニーはブリックの笑みに込められた畏敬の念を感じ取り、8歳の頃のことを思い出した。ブロンクスのアパートの外にある非常階段を駆け上がり、錆びついた鉄の手すりを熱帯雨林の木だと想像して遊んだ日々のことを。その記憶は、湿気を含んだ空気が肋骨にまとわりつく感触とともに消え去った。頭上の少年は足を揺らすのをやめ、板の隙間から下を覗き込んでいた。
+
+先に口を開いたのはマイケルだった。スペイン語に島嶼部特有のリズムが混じった声で言った。「こんばんは、友よ。我々は平和のために来た」
+
+少し間を置いてから、少年のか細い声が返ってきた。「お前、軍隊の人間か？」
+
+マイケルは水のように滑らかに嘘をついた。「我々は医者だ。クラ神父様を探している」私たちは医者で、神父様を探しているのだ。巧妙な嘘ではなかったが、時には無邪気さこそがただ遊びに招かれたいと思うものだ。
+
+少年の姿は視界から消えた。1分後、麻縄の切れ端がプラットフォームから転がり落ち、ほつれた結び目がシドニーのブーツの上に落ちた。ブリックはシドニーを見て、眉をひそめた。＿判断はお前に任せる、サイファー。＿
+
+シドニーはリュックを下ろし、SINCGARSをブリックのハーネスに固定すると、登り始めた。
+---
+
+#### **Coils & Ghosts**
+
+Up close the platform was a miracle of crudity: green branches hacked flat with machete, nailed crosswise with crooked flooring boards. The boy—skin like polished mahogany, eyes huge—squatted spider‑limbed near the trunk. Around his neck hung something improbable: a plastic flashlight bulb taped to two AAA batteries and wired into a single red LED that blinked every second.
+
+Sidney’s breath caught. That same pulse pattern marked the _tag‑beacon_ the team used on their field antennas. He’d strapped one to the improvised UHF pole they had slotted four kilometers back, thirty feet up a rubber tree to coddle the line‑of‑sight. The LED sequence was encrypted timecode; to a child it was christmas light.
+
+“How did you get that?” Sidney asked in halting Spanish.
+
+The boy shrugged, pointed toward the forest. “Señor soldado lo dejó.” A soldier left it.
+
+Rebels. Or government troops. Or paramilitaries in stolen BDUs. Labels blurred. Sidney swallowed the bitter taste of symmetry—he left signals everywhere he operated, bright crumbs a curious mind could follow back to the witch’s cottage.
+
+He squatted beside the boy, letting the night around them breathe. In the distance frogs hammered out binary, a riff of crickets forming carrier wave. From here he could see the whole village: twenty huts in three rows, an adobe church leaning under a tin roof that glinted dull pewter. Beyond the far homesteads fog pooled over coca rows, moonlit like powdered bone.
+
+“¿Tienes nombre?”
+
+“Tomás.” The boy beamed.
+
+Sidney produced a stick of cherry gum from an inner sleeve pocket, tore the wrapper, and handed it over. The boy’s eyes widened; he accepted it like sacrament.
+
+Below, Michael’s voice drifted up. “Cipher, wrap it.”
+
+Sidney nodded to empty air. In the platform’s corner lay a tangle of coaxial cable, insulation chewed by parrots. He leaned, inspecting. _AN/TTC‑46 fiber drop,_ maybe ninety meters coiled. Useless for these villagers, priceless for FARC running makeshift telephone benches. They’d spliced military fiber into black‑market Cisco rigs, bridging jungle ops to Panama narco money.
+
+He pulled a Leica mini‑imager from his chest pocket, snapped silent pictures. Dates, lengths, splice codes. Evidence enough—intel the brass would brandish at Congress while spraying C‑130 pallets of aid across Bogotá.
+
+“Tomás,” he tried, “escucha. Hoy—mucho fuego, peligro. Tienes que bajar ahora.” Fire is coming. You need to go.
+
+The boy’s smile faltered. He glanced toward smoky horizon, where thunder rolled without lightning.
+
+Sidney felt dread coil behind his heart.
+
+#### **コイルと幽霊**
+
+間近で見ると、このプラットフォームは粗雑さの奇跡のような構造だった。緑の枝が鉈で平らに刈り取られ、斜めに打ち込まれた歪な床板で固定されている。少年――磨き上げたマホガニーのような肌と巨大な瞳を持つ――は、幹の近くで蜘蛛のように腰をかがめていた。首には一見すると信じがたい物体がぶら下がっている。プラスチック製の懐中電灯の電球をAAA電池2本にテープで固定し、それらを1つの赤いLEDに接続したもので、1秒ごとに点滅を繰り返している。
+
+シドニーは息を呑んだ。この点滅パターンは、チームが野外アンテナで使用しているタグビーコンと同じものだ。彼は4キロほど前に設置した即興のUHFポールにこれを取り付けていた。ポールはゴムの木の幹から30フィートの高さに固定され、見通し線を確保するためのものだった。LEDの点滅パターンは暗号化されたタイムコードだが、子供にとってはただのクリスマスイルミネーションにしか見えないだろう。
+
+「どうやってこれを手に入れたんだ？」シドニーはぎこちないスペイン語で尋ねた。
+
+少年は肩をすくめ、森の方を指差した。「兵士さんが置いていったんだ」
+反政府勢力か、政府軍か、あるいは盗んだ戦闘服を着た民間軍事組織のメンバーか。区別などもはや意味をなさない。シドニーは、自分が活動する場所には必ず信号を残していること――好奇心旺盛な者ならその痕跡を辿って魔女の小屋までたどり着けるような甘い餌――を思い出し、苦い思いを噛みしめた。
+
+彼は少年のそばに腰を下ろし、周囲の夜の静けさに身を委ねた。遠くではカエルが二進法のような鳴き声を響かせ、コオロギの鳴き声が搬送波を形成していた。ここから見渡せる村全体の光景――3列に並んだ20軒の小屋、ブリキ屋根の下に傾くアドベ造りの教会、その屋根は鈍い錫色に光っていた。さらに奥の集落を越えると、霧がコカの栽培地を覆っており、月明かりに照らされたその姿は粉末状の骨のように白く浮かび上がっていた。
+
+「名前は？」
+
+「トマスです」少年は嬉しそうに微笑んだ。
+
+シドニーは内ポケットからチェリー味のガムを取り出し、包装紙を破って少年に渡した。少年の目は驚きに見開かれ、まるで聖体を受けるかのようにそれを受け取った。
+
+下方では、マイケルの声がかすかに聞こえてきた。「サイファー、接続を完了してくれ」
+
+シドニーは何もない空間に向かって頷いた。プラットホームの隅には、インコにかじられた絶縁体が付いた同軸ケーブルが絡まった状態で放置されていた。彼は身を乗り出してそれを調べた。AN/TTC-46ファイバードロップケーブル――おそらく90メートルほど巻かれた状態だ。このような村人たちには無用の長物だが、FARCが仮設電話台として使うには金にも換えがたい価値があった。彼らは軍用ファイバーを闇市場で入手したシスコ製機器に継ぎ足し、ジャングルでの作戦とパナマの麻薬資金をつなぐ通信回線を構築していたのだ。
+
+彼は胸ポケットからライカ製ミニイメージャーを取り出し、音を立てずに撮影を開始した。日付、長さ、接続コード――これらのデータは十分な証拠となる。軍上層部はこの情報を議会で振りかざし、ボゴタの街にC-130輸送機で援助物資のパレットを投下する際に利用するだろう。
+
+「トマス、聞いて。今日は――火の手が激しくて危険だ。今すぐ下に降りないと。」 火が近づいています。すぐに避難しなければなりません。
+
+少年の笑顔が一瞬揺らぎました。煙が立ち込める地平線の方を見やると、雷鳴が轟いているのに稲妻は見えませんでした。
+
+シドニーは胸の奥に恐怖の渦が巻き起こるのを感じました。
+---
+
+#### **Contact**
+
+On the village edge a radio barked. Brick, crouched by the church doorway, keyed sinusoidal squelch—two clicks: _movement._ Sidney flattened against trunk, rifle raised. Through NVG he spotted shapes emerging from treeline north: civilian trucks, headlights taped, beds stacked with something lumpy under tarps.
+
+Michael whispered over intrateam net: “Pumas.” Local paramilitary. Worse than rebels; they considered civilians hazard fuel.
+
+“Orders?” Sidney asked.
+
+Michael’s reply was static‑scarred. “We observe, record, exfil. No hero plays.”
+
+A younger Sidney might have swallowed that. Tonight it lanced him. They were ghosts operating under an SOFA illusion—foreigners without flags, denied by both capitals if caught. Engage and the mission died—in truth, they’d die with it.
+
+Down on the ground villagers began to stir, lanterns lighting doorways. Women in cotton shifts pulled children from hammocks. A dog barked and abruptly went silent. Trucks ground to a halt before the church; men leapt down, brandishing RPKs, machetes, cans of gasoline.
+
+Tomás’s grip found Sidney’s forearm. “¿Quiénes son?”
+
+“Tomás—” Sidney whispered, “escóndete.” He gestured to the trunk, the thick seam where buttress met bark. The boy shook his head, too afraid to move.
+
+Below, Brick hissed. “Fuel cans.”
+
+Sidney’s intestines wrung. _Ambiguous. Could be FARC false‑flag, could be paras blaming FARC. Could be us by omission._
+
+“Cipher,” Michael’s voice: low, loaded, “record only.”
+
+Sidney flipped the miniature Olympus audio pod on his harness, pointed the high‑gain mic dish between slats. He traced the digital compass overlay on his monocular, marking angle and range.
+
+A paracommander shouted: “¡Todos afuera! ¡El Ejército viene! ¡Traidores!” Traitors, the army is coming. A manufactured pretext.
+
+A machete slammed a hut door. Screams. Petrol sloshed. Someone struck a match.
+
+Flames bit thatch. The roar bloomed. Within heartbeats the hut was a kiln, smoke funneling into canopy. Another door kicked. Women fled into the square, chased by rifles.
+
+Sidney tasted copper. He reached for the **PRC‑119A** handset magnet‑clipped at his belt. Harvest two quick blasts—emergency satburst to the gunship loiter stack. On good days that meant fast‑moving A‑37 Dragons, old surplus jets flown by Colombian pilots with Yankee advisers. Tonight maybe nothing. But if he keyed the mic, enemy scanners would ping them before help cleared runway.
+
+He looked at Michael, thirty feet below. Their eyes locked. Michael tapped the barrel of his suppressed **M4A1** twice against his thigh, meaning _stay._
+
+The first gunshot cracked. A woman fell near the ceiba roots, crimson spray illuminated by firelight. Tomás’s gasp rattled the boards. Sidney pulled the boy’s head into his chest; the child moaned, fingernails digging seams of Sidney’s OD blouse.
+
+Under them, leaf‑mottle caught sparks. The ceiba loomed, venerated sentinel now tinder‑kissed. If the tree went up, every coordinate on his map would mean nothing.
+
+#### **接触**
+
+村の境界付近で無線機が鳴り響いた。ブリックは教会の扉の陰に身を潜め、正弦波スケルチを調整した。2回のクリック音――「動きあり」。シドニーは木の幹に体を押し付け、ライフルを構えた。暗視ゴーグル越しに、北の林縁から人影が現れるのを確認した。民間のトラックだ。ヘッドライトはテープで目張りされ、荷台には何かが塊状に積まれ、防水シートがかけられていた。
+
+マイケルはチーム内通信で囁いた。「ピューマだ」。地元の民兵組織だ。反政府勢力よりさらに危険で、彼らは民間人を「危険因子」と見なしていた。
+
+「指示は？」シドニーが尋ねた。
+
+マイケルの返答は雑音混じりだった。「監視と記録を行い、安全に撤退する。英雄的な行動は禁物だ」
+
+若い頃のシドニーなら、この言葉を素直に受け入れたかもしれない。しかし今宵、それは彼の胸を鋭く突き刺した。彼らはSOFA協定の幻想の下で活動する幽霊のような存在――どちらの首都からも旗を与えられず、もし捕捉されれば両国から見捨てられる外国人だ。戦闘に参加すれば、任務は失敗に終わる――いや、むしろ彼ら自身がその結末と共に消えることになるだろう。
+
+地上では、村人たちが動き始め、玄関にランタンの明かりが灯った。綿の寝巻き姿の女性たちがハンモックから子供たちを降ろしていた。犬が吠えた後、突然静かになった。トラックは教会の前で急停車し、男たちが降りてRPK軽機関銃やマチェーテ、ガソリン缶を振りかざした。
+
+トマスの手がシドニーの前腕をつかんだ。「お前たちは誰だ？」
+
+「トマス――」シドニーは囁いた。「隠れろ」。彼は支柱と樹皮の接合部にある太い継ぎ目を指差した。少年は首を横に振った。動くのが怖くてたまらない様子だった。
+
+下方では、ブリックが唸るように言った。「燃料缶だ」
+
+シドニーの内臓が締め付けられた。「曖昧な情報だ。FARCの偽装工作かもしれないし、寄生虫がFARCのせいにしている可能性もある。あるいは我々の情報漏れが原因かもしれない」
+
+「暗号通信」マイケルの声が低々と、しかし重みを込めて響いた。「録音のみ許可」
+
+シドニーはハーネスに装着した小型オリンパス製音声記録装置を操作し、高指向性マイクを格子状の隙間に向けて構えた。単眼鏡に映るデジタル方位コンパスの表示を追跡しながら、角度と距離を記録していく。
+
+パラコマンド部隊の一人が叫んだ。「全員外に出ろ！ 軍が来る！ 裏切り者め！」――これは意図的に作られた口実だった。
+
+鉈が小屋の扉を叩く音がした。悲鳴が上がる。ガソリンが音を立てて流れた。誰かがマッチを擦る音がした。
+
+炎が茅葺き屋根を舐めた。轟音が響き渡る。瞬く間に小屋は窯と化し、煙が樹冠へと立ち上った。別の扉も蹴破られ、女性たちが広場へ逃げ出す。ライフルを持った兵士たちが追いかける。
+
+シドニーは血の味を感じた。ベルトに磁石で固定した**PRC-119A**携帯無線機に手を伸ばす。緊急用衛星通信をガンシップの滞空待機隊列に送信する。運が良ければ、高速で移動するA-37ドラゴン機――旧式の余剰ジェット機で、コロンビア人パイロットがヤンキー軍のアドバイザーと共に操縦している――が駆けつけてくれるだろう。今夜は運がないかもしれない。だがもしマイクに声を乗せれば、敵のスキャナーに検知され、救援機が滑走路を離れる前に居場所がバレてしまう。
+
+彼は30フィート下にいるマイケルを見つめた。二人の視線が交わる。マイケルは消音機能付きの**M4A1**の銃身を太ももに2回叩きつけ、「待機」の合図を送った。
+
+最初の銃声が轟いた。女性の一人がセバの根元付近で倒れ、血しぶきが焚き火の光に照らされた。トマスの息を飲む音が板張りの床に響いた。シドニーは少年の頭を自分の胸に引き寄せた。少年はうめき声を上げ、爪先でシドニーのOD色のブラウスの縫い目を掻きむしった。
+
+彼らの足元では、葉の模様が火花を捉えた。崇拝される守護樹であるセバの木が、今や火の粉を浴びた焚き木のように燃え盛っていた。もしこの木が燃え落ちれば、彼の地図に記されたすべての座標は意味をなさなくなるだろう。
+
+---
+
+#### **Broken Optics**
+
+Chaos smeared the square. Rebels—no, paramilitaries—fired into huts, herding the villagers toward a corral of flames. The adobe church bell tolled under random bullets, then crashed. A goat bleated as smoke swallowed the moon.
+
+Sidney knelt at the platform’s edge, rifle hugging shoulder. He centered reticle on a gunman dragging a girl by the hair. The man’s backpack sprouted a plastic fuel nozzle. Range 90 meters. _Single round. M855 will punch spall through him. Do it._
+
+He exhaled half, began second stage of trigger—
+
+“Cipher, _no._” Michael’s radio whisper was iron.
+
+Sidney’s vision blurred. His finger held. The gunman shoved the girl into the church, raised jerrycan overhead.
+
+In the earpiece: “Mission over if you shoot. Think!”
+
+Mission. Cable cuts, splices, data. Sid scraped spit from his palate—village or intel. A scale that never balanced.
+
+He removed finger from trigger.
+
+Below, Brick yanked a woman and two toddlers into the shadows of the ceiba roots, shoved them toward the river path. Paramilitary bullets stuttered. Brick fired a three‑round burst into the dark to draw attention, then melted back.
+
+Sidney felt the platform jolt—Tomás tried to stand. Sid clamped him down.
+
+Then he smelled it—kerosene on bark. Paramilitaries at the base, splashing trunks. One laughed, slapped the ceiba with open palm as though congratulating a bull.
+
+Michael voice: “Cipher, rope down south side, now.”
+
+Sid wrapped Tomás in his arms, hooked a figure‑eight descender to static line Brick had anchored. He clipped the boy into his own harness, whispered: “Cierra los ojos.” The child obeyed.
+
+They stepped off.
+
+At seven meters the world detonated. A wall of heat fanned upward, tossed embers past them. The ceiba ignited as though soaked in napalm—sap hissed like steam, green wood turning white. Sidney’s descent became fall; friction burned gloves, but he landed rolling, shielding Tomás beneath him.
+
+Brick hauled them behind a looted ox cart. His face shone ash‑grey beneath NVG glow. “Mike’s hit.”
+
+Sid scanned—found Michael limping near the schoolhouse, right thigh dark. He laid covering fire, emptying a mag. Flames reflected off brass shells skittering across packed earth.
+
+“Primary objective’s torched,” Brick shouted above roar. “We drag civilians to the tier‑one LZ and call for Pave Low or we stay and die.”
+
+Stay. Die. Sidney looked at Tomás clinging to his vest, tiny heartbeat fluttering. Looked at the LED pendant still blinking on the boy’s chest in perfect SINCGARS cadence—his fault, bright crumb.
+
+“Exfil south.” Sidney slung the boy onto his back piggy‑style, tightened hands over rope belts. Brick heaved Michael over one shoulder.
+
+They ran.
+
+#### **破損した光学機器**
+
+カオスが四角い広場を乱雑に塗りつぶした。反政府勢力――いや、準軍事組織の兵士たちが、小屋に向けて発砲しながら村人を炎の囲いへと追い立てていた。アドベ造りの教会の鐘が乱射される銃弾の下でも響き続け、やがて轟音を立てて崩れ落ちた。ヤギが鳴き声を上げ、煙が月の光を飲み込んでいった。
+
+シドニーは台の縁に膝をつき、ライフルを肩に抱えた。照準器を少女の髪を掴んで引きずる銃撃者の頭部に合わせた。男のバックパックからはプラスチック製の燃料ノズルが突き出ていた。距離90メートル。［単発。M855弾なら貫通時にスパル（金属片）を発生させる。撃て］
+
+彼は息を半分吐き、トリガーの第二段階を引き始めた――
+
+「サイファー、［中止］」マイケルの無線から漏れる声は鉄のように重厚だった。
+
+シドニーの視界がぼやけた。指はトリガーに触れたままだった。銃撃者は少女を教会内に押し込むと、ジェリカンを頭上に掲げた。
+
+イヤホンから聞こえてきたのは「発砲すれば任務は失敗だ。考えろ」という警告だった。
+
+任務。ケーブルの切断と接続、データ処理。シドニーは舌の上の唾を拭いながら考えた――村を救うか、それとも情報を優先するか。決して均衡することのない天秤のように。
+
+彼はトリガーから指を離した。
+
+下方では、ブリックが女性と2人の幼児をセイバの木の根の陰に引きずり込み、川岸の方へと押しやった。準軍事組織の銃弾が途切れ途切れに鳴り響いた。ブリックは注意を引くため暗闇に向けて3発のバースト射撃を放ち、すぐに姿を消した。
+
+シドニーはプラットフォームが揺れるのを感じた――トマスが立とうとした。シドは彼を押さえつけた。
+
+その時、彼はその臭いに気づいた――樹皮に染み込んだ灯油の匂いだ。基地の武装勢力が幹に液体を撒いている。一人が笑いながら、まるで闘牛を称えるかのように掌を広げてセビヤの木を叩いた。
+
+マイケルの声：「サイファー、南側にロープを下ろせ、今すぐだ」
+
+シドはトマスを腕に抱き、ブリックが固定した静索にフィギュアエイト・デビエーターを固定した。少年を自分のハーネスに固定し、囁いた：「目を閉じて」。その子供は言われた通りにした。
+
+彼らは踏み出した。
+
+7メートル地点で、世界が爆発した。熱波の壁が上方に広がり、火の粉が彼らの頭上を飛び越えていった。セビヤの木はまるでナパームに浸されたかのように燃え上がり、樹液が蒸気のように音を立て、緑色の木材が白く変わっていった。シドニーの降下は落下へと変わり、摩擦で手袋が焼けたが、彼は転がりながら着地し、トマスを自分の体で庇った。
+
+ブリックは略奪された牛車の陰に彼らを引きずり込んだ。彼の顔はNVGの光の下で灰白色に輝いていた。「マイクがやられた」
+
+シドニーは周囲を見渡すと、学校の近くに足を引きずりながら歩くマイケルを見つけた。右太ももが黒く焦げている。彼は援護射撃を行い、マガジンを空にした。炎が装薬の金属片に反射し、踏み固められた土の上を滑るように動いていた。
+
+「主要目標は焼き払われた」ブリックは轟音に負けじと叫んだ。「民間人を第一級降下地帯まで運び、パヴェローを呼ぶか、それともここで死ぬかだ」
+
+留まるか、死ぬか。シドニーはベストにしがみつくトマスを見た。小さな心臓がかすかに鼓動している。少年の胸で点滅し続けるLEDペンダントが、完璧なSINCGARS通信のリズムで光っているのを見た――これは自分のせいだ、輝く小さな破片だ。
+
+「南へ脱出する」シドニーは少年を背中におぶい、ピギーバックスタイルで背負った。ロープベルトの上に手をしっかりと固定する。ブリックはマイケルを片肩に担ぎ上げた。
+
+彼らは走り出した。
+
+---
+
+#### **Echoes**
+
+A kilometer beyond village perimeter the sky glowed apricot, smoke twisting into dawn. The team crouched in a drainage culvert, lungs rasping.
+
+Michael’s wound pumped arterial red—no exit. PSI pressure bandage slowed it but every pulse added to the stain. He squeezed Sidney’s wrist. “Not your fault,” he rasped.
+
+Sidney wanted to reply but words fractured. Instead he unhooked the boy’s LED pendant, wrapped it around his own dog tags. Tomás stared, eyes reflecting heartbreak.
+
+Brick caught the gesture and turned away.
+
+Sid keyed the PRC‑119A, transmitted a burst: **“Flash Nine, November‑Zero‑Six‑Alpha. Civcas high. Request rôle unved. Fire origin unknown.”**
+
+In Washington, that message would become calculus: collateral damage metrics, drip‑feed for policy committees. In Putumayo it meant helicopters.
+
+He ended with three pulses of the beacon code Tomás had thought a toy. A circle closed.
+
+Hours later, rotorwash battered the clearing. Colombian SF medics loaded Michael first. Sidney followed with the boy. From a stretch seat he watched smoke heave above rainforest canopy like a wounded thing, black on impossible green.
+
+Tomás slept curled against his ribs. The LED pendant blinked between them, steady as remorse.
+
+Sidney forced his eyes shut, but the afterimage of that burning ceiba burned hotter. The tree was sacred, villagers said. Home to ancestral spirits. _We scorched their ghosts too,_ he thought, _by standing still._
+
+He vowed the record would show ambiguity—that no uniform would claim the match. In that vagueness perhaps Tomás’s nightmares could one day fold into something gentler.
+
+Yet as the Huey banked north, Sidney suspected the guilt would keep its own ledger, carved deeper than any after‑action report.
+
+#### **残響**
+
+村の境界から1キロメートルほど離れた空が、アプリコット色に染まり、煙が夜明けの風にねじれていた。チームは排水用の暗渠に身をかがめ、肺がかすれるような音を立てていた。
+
+マイケルの傷口からは動脈血がどくどくと流れ出ていた――止血の見込みはない。PSIの圧力包帯で出血は抑えられたものの、脈打つたびに血の跡が広がっていく。シドニーはシドニーの手首を握り、「お前のせいじゃない」とかすれた声で言った。
+
+シドニーは返事をしたいと思ったが、言葉は断片的にしか出てこなかった。代わりに少年のLEDペンダントを外し、自分の持つドッグタグに巻きつけた。トマスはじっと見つめ、その瞳には深い悲しみが映っていた。
+
+ブリックはその仕草に気づき、顔を背けた。
+
+シドはPRC-119A通信機を操作し、短いメッセージを送信した：**「フラッシュ9、ノーベンバー06アルファ。民間人の被害が拡大中。役割変更を要請。出火原因は不明」**
+
+ワシントンでは、このメッセージはやがて「付随的被害」の統計データとなり、政策委員会への逐次報告材料となるだろう。プトゥマヨ地方では、これはヘリコプターの出動を意味する。
+
+彼は最後に、トマスがおもちゃだと思っていたビーコンコードを3回鳴らした。これで一連の出来事に一つの区切りがついた。
+
+数時間後、ローターの風圧が開けた場所を襲った。コロンビア軍特殊部隊の衛生兵が最初にマイケルを担架に乗せた。続いてシドニーが少年を担架に乗せた。座席から見上げると、煙が熱帯雨林の樹冠をまるで傷ついた生き物のようにうねりながら立ち上り、不可能なほど深い緑の空に黒い影を落としていた。
+
+トマスはシドニーの肋骨に体を預けて眠っていた。二人の間にはLEDペンダントが点滅しており、それは後悔の念のように揺るぎない光を放っていた。
+
+シドニーは目を閉じようとしたが、その瞬間に見た焼け落ちるセビヤの木の残像の方がずっと熱く感じられた。その木は村人たちにとって神聖な存在だった。祖先の霊が宿る場所だと信じられていた。「俺たちは彼らの霊までも焼き払ったんだ」とシドニーは思った。「ただ立ち尽くしていただけで」
+
+彼は記録には曖昧さが残るようにしようと決めた――どの軍服もこの事件の責任を主張できないように。そしてその曖昧さの中に、いつの日かトマスの悪夢がより穏やかな形へと変わっていく余地が生まれることを願っていた。
+
+しかしヒューイが北へ旋回し始めると、シドニーは罪悪感が独自の帳簿をつけていることに気づいた。それは事後報告書よりも深く、深く刻み込まれていくのだった。
+
+---
+
+##### **Fin.**
+
+_≈ 3,050 words_
