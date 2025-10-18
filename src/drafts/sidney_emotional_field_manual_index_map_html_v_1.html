@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidney Grayson — Emotional Field Manual : INDEX MAP v1.6 (CRT + Ambient Audio)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      background: #050706;
+      color: #b0ffb3;
+      font-family: "Share Tech Mono", monospace;
+      text-shadow: 0 0 6px #0f3;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(0deg, rgba(0, 255, 0, 0.03) 0px, rgba(0, 255, 0, 0.02) 1px, transparent 2px);
+      mix-blend-mode: overlay;
+      opacity: 0.2;
+      pointer-events: none;
+      animation: scan 6s linear infinite;
+    }
+
+    @keyframes scan {
+      from {
+        background-position-y: 0;
+      }
+
+      to {
+        background-position-y: 100%;
+      }
+    }
+
+    .screen {
+      width: 90%;
+      height: 90vh;
+      margin: 5vh auto;
+      border: 2px solid #0f3;
+      padding: 1rem 1.5rem;
+      background: radial-gradient(circle at center, rgba(0, 64, 32, 0.25) 0%, rgba(0, 0, 0, 0.9) 80%);
+      box-shadow: 0 0 20px #0f3;
+      overflow-y: auto;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background: #0f3;
+      animation: blink 1s steps(1) infinite;
+      vertical-align: bottom;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .terminal-line {
+      margin: .25rem 0;
+    }
+
+    /* Phase colors */
+    .phase-naomi {
+      color: #99ffe0;
+      text-shadow: 0 0 6px #00ffaa;
+    }
+
+    .phase-irina {
+      color: #ff7b7b;
+      text-shadow: 0 0 6px #ff4444;
+    }
+
+    .phase-reina {
+      color: #a3c4ff;
+      text-shadow: 0 0 6px #5fa6ff;
+    }
+
+    .phase-marla {
+      color: #d9a3ff;
+      text-shadow: 0 0 6px #c060ff;
+    }
+
+    .phase-alisa {
+      color: #ffe3a3;
+      text-shadow: 0 0 6px #ffd45f;
+    }
+
+    .phase-final {
+      color: #b0ffb3;
+      text-shadow: 0 0 6px #0f3;
+    }
+  </style>
+</head>
+
+<body onclick="startAudio()" style="cursor:pointer">
+  <div class="screen" id="terminal"></div>
+
+  <!-- Audio -->
+  <audio id="typeSound"
+    src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_12e566bb69.mp3?filename=typewriter-1.mp3"></audio>
+  <audio id="ambientHum"
+    src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3ab946d9cf.mp3?filename=ambient-low-hum-loop-1.mp3"
+    loop></audio>
+  <audio id="keyClicks"
+    src="https://cdn.pixabay.com/download/audio/2023/03/03/audio_d3bda7e8d5.mp3?filename=keyboard-clicks-loop-14625.mp3"
+    loop></audio>
+
+  <script>
+    function startAudio() {
+      document.getElementById('ambientHum').play().catch(() => { });
+      document.getElementById('keyClicks').play().catch(() => { });
+      document.getElementById('typeSound').play().catch(() => { });
+      document.body.style.cursor = "default";
+    }
+    const lines = [
+      { t: "[ACCESS GRANTED] :: Sidney Grayson — Emotional Field Manual v1.6", c: "phase-final" },
+      { t: "[MODE] Typewriter + CRT Simulation — Emotional Index Online", c: "phase-final" },
+      { t: "---------------------------------------------", c: "phase-final" },
+      { t: "> Loading timeline dataset: 1990–2025", c: "phase-final" },
+      { t: "> Importing subject profiles: Naomi / Irina / Reina / Marla / Alisa", c: "phase-final" },
+      { t: "> Emotional gradient: ACTIVE", c: "phase-final" },
+      { t: "> Phase synchronization: STABLE", c: "phase-final" },
+      { t: "> Transmission mode: RESEND ENABLED", c: "phase-final" },
+      { t: "---------------------------------------------", c: "phase-final" },
+      { t: "1990 :: Naomi :: 初恋／理想の喪失 — “帰る場所がない”", c: "phase-naomi" },
+      { t: "1999 :: Irina :: 任務中の恋と裏切り — “愛は暗号化不能”", c: "phase-irina" },
+      { t: "2004 :: Reina :: PTSD回復期の静的共感 — “触れない優しさ”", c: "phase-reina" },
+      { t: "2008 :: Marla :: 依存と取引の夜 — “救済＝堕落”", c: "phase-marla" },
+      { t: "2017 :: Alisa :: 再会と共進化 — “愛は報告書ではなく再送信”", c: "phase-alisa" },
+      { t: "2025 :: 統合完了 — “Resend Success. Emotional integrity restored.”", c: "phase-final" },
+      { t: "---------------------------------------------", c: "phase-final" },
+      { t: "[LOG END]", c: "phase-final" }
+    ];
+
+    const terminal = document.getElementById('terminal');
+    const typeSound = document.getElementById('typeSound');
+    const ambientHum = document.getElementById('ambientHum');
+    const keyClicks = document.getElementById('keyClicks');
+
+    let index = 0;
+
+    function typeLine(obj, callback) {
+      const line = obj.t;
+      let i = 0;
+      const div = document.createElement('div');
+      div.classList.add('terminal-line');
+      div.classList.add(obj.c);
+      terminal.appendChild(div);
+      function typeChar() {
+        if (i < line.length) {
+          div.textContent += line.charAt(i);
+          if (typeSound && i % 3 === 0) {
+            typeSound.currentTime = 0;
+            typeSound.play().catch(() => { });
+          }
+          i++;
+          setTimeout(typeChar, 35 + Math.random() * 35);
+        } else {
+          callback();
+        }
+      }
+      typeChar();
+    }
+
+    function nextLine() {
+      if (index < lines.length) {
+        typeLine(lines[index], () => {
+          index++;
+          terminal.scrollTop = terminal.scrollHeight;
+          setTimeout(nextLine, 300);
+        });
+      } else {
+        const cursor = document.createElement('span');
+        cursor.classList.add('cursor');
+        terminal.appendChild(cursor);
+      }
+    }
+
+    // ambient start after load
+    window.addEventListener('load', () => {
+      ambientHum.volume = 0.3;
+      keyClicks.volume = 0.15;
+      ambientHum.play().catch(() => { });
+      keyClicks.play().catch(() => { });
+      nextLine();
+    });
+  </script>
+</body>
+
+</html>
