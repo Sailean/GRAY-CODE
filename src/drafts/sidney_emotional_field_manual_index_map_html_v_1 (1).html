@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidney Grayson — Emotional Field Manual : INDEX MAP v1.7 (CRT + Robust Audio)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    * { box-sizing: border-box; }
+    body { background:#050706; color:#b0ffb3; font-family:"Share Tech Mono", monospace; text-shadow:0 0 6px #0f3; overflow:hidden; position:relative; }
+    /* CRT overlay noise */
+    body::after { content:""; position:fixed; inset:0; background:repeating-linear-gradient(0deg, rgba(0,255,0,0.03) 0px, rgba(0,255,0,0.02) 1px, transparent 2px); mix-blend-mode:overlay; opacity:0.2; pointer-events:none; animation:scan 6s linear infinite; }
+    @keyframes scan { from{background-position-y:0;} to{background-position-y:100%;} }
+
+    .screen { width:90%; height:90vh; margin:5vh auto; border:2px solid #0f3; padding:1rem 1.5rem; background:radial-gradient(circle at center, rgba(0,64,32,0.25) 0%, rgba(0,0,0,0.9) 80%); box-shadow:0 0 20px #0f3; overflow-y:auto; }
+    .cursor { display:inline-block; width:10px; height:1em; background:#0f3; animation:blink 1s steps(1) infinite; vertical-align:bottom; margin-left:4px; }
+    @keyframes blink { 50% { opacity:0; } }
+    .terminal-line { margin:.25rem 0; }
+
+    /* Phase colors */
+    .phase-naomi { color:#99ffe0; text-shadow:0 0 6px #00ffaa; }
+    .phase-irina { color:#ff7b7b; text-shadow:0 0 6px #ff4444; }
+    .phase-reina { color:#a3c4ff; text-shadow:0 0 6px #5fa6ff; }
+    .phase-marla { color:#d9a3ff; text-shadow:0 0 6px #c060ff; }
+    .phase-alisa { color:#ffe3a3; text-shadow:0 0 6px #ffd45f; }
+    .phase-final { color:#b0ffb3; text-shadow:0 0 6px #0f3; }
+
+    /* Start overlay */
+    .overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.75); backdrop-filter: blur(2px); z-index:999; }
+    .overlay-inner { text-align:center; border:2px solid #0f3; padding:1.25rem 1.5rem; box-shadow:0 0 18px #0f3; background:rgba(0,32,16,0.6); }
+    .btn { display:inline-block; padding:.5rem .9rem; border:2px solid #15a34a; color:#b9ffbf; background:#0b1f14; text-decoration:none; cursor:pointer; box-shadow:0 0 10px #0f3; }
+    .btn:hover { background:#113421; color:#e4ffe6; }
+    .controls { position:fixed; right:16px; bottom:16px; z-index:50; display:flex; gap:.5rem; align-items:center; background:#0b1f14; border:1px solid #155a31; padding:.4rem .6rem; box-shadow:0 0 8px #0f3; }
+    .controls label { font-size:.8rem; color:#a6f7ad; }
+    .controls input[type="range"] { accent-color:#36e07a; }
+  </style>
+</head>
+<body>
+  <!-- CLICK-TO-START OVERLAY (unlocks audio policies on GitHub Pages / mobile) -->
+  <div class="overlay" id="startOverlay">
+    <div class="overlay-inner">
+      <div class="phase-final" style="margin-bottom:.5rem">[ ACCESS REQUIRED ]</div>
+      <div class="phase-final" style="margin-bottom:1rem">Click / Tap to initialize audio + begin transmission.</div>
+      <button class="btn" id="startBtn">▶ START SESSION</button>
+      <div style="margin-top:.75rem; font-size:.85rem; color:#98f7a3">※ ブラウザの自動再生制限により、手動開始が必要です。</div>
+    </div>
+  </div>
+
+  <div class="screen" id="terminal" role="log" aria-live="polite"></div>
+
+  <!-- Audio (with preload & playsinline for iOS) -->
+  <audio id="typeSound" preload="auto" playsinline crossorigin="anonymous" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_12e566bb69.mp3?filename=typewriter-1.mp3"></audio>
+  <audio id="ambientHum" preload="auto" playsinline loop crossorigin="anonymous" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3ab946d9cf.mp3?filename=ambient-low-hum-loop-1.mp3"></audio>
+  <audio id="keyClicks" preload="auto" playsinline loop crossorigin="anonymous" src="https://cdn.pixabay.com/download/audio/2023/03/03/audio_d3bda7e8d5.mp3?filename=keyboard-clicks-loop-14625.mp3"></audio>
+
+  <!-- Minimal controls (mute / volume) -->
+  <div class="controls" id="controls" style="display:none">
+    <button class="btn" id="muteBtn" title="Mute / Unmute">🔊</button>
+    <label>VOL <input id="vol" type="range" min="0" max="1" step="0.01" value="0.35"></label>
+  </div>
+
+  <script>
+    const terminal = document.getElementById('terminal');
+    const typeSound = document.getElementById('typeSound');
+    const ambientHum = document.getElementById('ambientHum');
+    const keyClicks = document.getElementById('keyClicks');
+    const startBtn = document.getElementById('startBtn');
+    const overlay = document.getElementById('startOverlay');
+    const controls = document.getElementById('controls');
+    const vol = document.getElementById('vol');
+    const muteBtn = document.getElementById('muteBtn');
+
+    const lines = [
+      {t:"[ACCESS GRANTED] :: Sidney Grayson — Emotional Field Manual v1.7", c:"phase-final"},
+      {t:"[MODE] Typewriter + CRT Simulation — Emotional Index Online", c:"phase-final"},
+      {t:"---------------------------------------------", c:"phase-final"},
+      {t:"> Loading timeline dataset: 1990–2025", c:"phase-final"},
+      {t:"> Importing subject profiles: Naomi / Irina / Reina / Marla / Alisa", c:"phase-final"},
+      {t:"> Emotional gradient: ACTIVE", c:"phase-final"},
+      {t:"> Phase synchronization: STABLE", c:"phase-final"},
+      {t:"> Transmission mode: RESEND ENABLED", c:"phase-final"},
+      {t:"---------------------------------------------", c:"phase-final"},
+      {t:"1990 :: Naomi :: 初恋／理想の喪失 — “帰る場所がない”", c:"phase-naomi"},
+      {t:"1999 :: Irina :: 任務中の恋と裏切り — “愛は暗号化不能”", c:"phase-irina"},
+      {t:"2004 :: Reina :: PTSD回復期の静的共感 — “触れない優しさ”", c:"phase-reina"},
+      {t:"2008 :: Marla :: 依存と取引の夜 — “救済＝堕落”", c:"phase-marla"},
+      {t:"2017 :: Alisa :: 再会と共進化 — “愛は報告書ではなく再送信”", c:"phase-alisa"},
+      {t:"2025 :: 統合完了 — “Resend Success. Emotional integrity restored.”", c:"phase-final"},
+      {t:"---------------------------------------------", c:"phase-final"},
+      {t:"[LOG END]", c:"phase-final"}
+    ];
+
+    let index = 0; let muted = false;
+
+    function typeLine(obj, callback) {
+      const line = obj.t; let i = 0;
+      const div = document.createElement('div'); div.classList.add('terminal-line', obj.c);
+      terminal.appendChild(div);
+      (function typeChar(){
+        if (i < line.length) {
+          div.textContent += line.charAt(i);
+          if (!muted && typeSound && i % 3 === 0) { try { typeSound.currentTime = 0; typeSound.play(); } catch(e){} }
+          i++; setTimeout(typeChar, 35 + Math.random()*35);
+        } else { callback(); }
+      })();
+    }
+
+    function nextLine() {
+      if (index < lines.length) {
+        typeLine(lines[index], () => { index++; terminal.scrollTop = terminal.scrollHeight; setTimeout(nextLine, 300); });
+      } else {
+        const cursor = document.createElement('span'); cursor.classList.add('cursor'); terminal.appendChild(cursor);
+      }
+    }
+
+    function startAudio(){
+      overlay.style.display = 'none'; controls.style.display = 'flex';
+      ambientHum.volume = vol.value * 0.8; keyClicks.volume = vol.value * 0.4; typeSound.volume = Math.min(1, vol.value*1.0);
+      const playAll = [ambientHum.play(), keyClicks.play()].map(p => p.catch(()=>{}));
+      Promise.all(playAll).finally(()=>{ nextLine(); });
+    }
+
+    startBtn.addEventListener('click', startAudio);
+    vol.addEventListener('input', ()=>{ ambientHum.volume = vol.value * 0.8; keyClicks.volume = vol.value * 0.4; typeSound.volume = Math.min(1, vol.value*1.0); });
+    muteBtn.addEventListener('click', ()=>{ muted = !muted; ambientHum.muted = keyClicks.muted = muted; muteBtn.textContent = muted ? '🔇' : '🔊'; });
+  </script>
+</body>
+</html>
